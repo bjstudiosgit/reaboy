@@ -77,54 +77,7 @@
   });
 
   // ==========================================================================
-  // 1. Lab Voice Guide Player (EN-GB MP3 Narration)
-  // ==========================================================================
-  const voicePlayer = $('#voice-player');
-  const voiceBar = $('#voice-bar');
-  const voiceStatus = $('#voice-status');
-  const voiceBtns = $$('.voice-btn');
-
-  if (voicePlayer && voiceBtns.length) {
-    let activeBtn = null;
-
-    voiceBtns.forEach((btn) => {
-      btn.addEventListener('click', () => {
-        const src = btn.dataset.voice;
-        const title = btn.dataset.title;
-
-        if (activeBtn === btn && !voicePlayer.paused) {
-          voicePlayer.pause();
-          voiceBar.classList.remove('playing');
-          voiceStatus.textContent = `Paused: ${title}`;
-          return;
-        }
-
-        voiceBtns.forEach((b) => b.classList.remove('active'));
-        btn.classList.add('active');
-        activeBtn = btn;
-
-        if (!voicePlayer.src.endsWith(src)) {
-          voicePlayer.src = src;
-        }
-        voicePlayer.play().then(() => {
-          voiceBar.classList.add('playing');
-          voiceStatus.textContent = `Now Playing: ${title}`;
-        }).catch(() => {
-          showToast('Click again to allow browser audio playback.');
-        });
-      });
-    });
-
-    voicePlayer.addEventListener('ended', () => {
-      voiceBar.classList.remove('playing');
-      voiceStatus.textContent = 'Briefing complete — select another track anytime.';
-      if (activeBtn) activeBtn.classList.remove('active');
-      activeBtn = null;
-    });
-  }
-
-  // ==========================================================================
-  // 2. Web Audio API 4-Channel Game Boy APU Synthesizer + Oscilloscope
+  // 1. Web Audio API 4-Channel Game Boy APU Synthesizer + Oscilloscope
   // ==========================================================================
   let audioCtx = null;
   let analyser = null;
