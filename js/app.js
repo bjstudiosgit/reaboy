@@ -20,6 +20,29 @@
     toastTimer = setTimeout(() => toast.classList.remove('show'), 2600);
   }
 
+  // --- Theme Switcher (Classic Paper <-> Lab Dark) ---
+  const THEME_KEY = 'reaboy_theme_v1';
+  const themeBtn = $('#theme-toggle-btn');
+  function applyTheme(theme) {
+    if (theme === 'dark') {
+      document.documentElement.removeAttribute('data-theme');
+      if (themeBtn) themeBtn.textContent = '☀ Classic Paper';
+    } else {
+      document.documentElement.setAttribute('data-theme', 'classic');
+      if (themeBtn) themeBtn.textContent = '◐ Lab Dark';
+    }
+  }
+  const savedTheme = localStorage.getItem(THEME_KEY) || 'classic';
+  applyTheme(savedTheme);
+  if (themeBtn) {
+    themeBtn.addEventListener('click', () => {
+      const next = document.documentElement.getAttribute('data-theme') === 'classic' ? 'dark' : 'classic';
+      localStorage.setItem(THEME_KEY, next);
+      applyTheme(next);
+      showToast(next === 'classic' ? 'Switched to Classic Paper style' : 'Switched to Lab Dark style');
+    });
+  }
+
   // --- Mobile Navigation Toggle ---
   const mobileBtn = $('#mobile-menu-btn');
   const navLinks = $('#nav-links');
