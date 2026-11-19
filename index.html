@@ -105,7 +105,6 @@
       <a class="brand" href="index.html">
         <span class="brand-mark" aria-hidden="true">R</span>
         <span>ReaBoy</span>
-        <span class="version-tag">v1.0.1 BETA</span>
       </a>
       <button class="mobile-menu-btn" id="mobile-menu-btn" type="button" aria-expanded="false" aria-controls="nav-links">MENU</button>
       <nav class="nav-links" id="nav-links" aria-label="Primary Navigation">
@@ -408,7 +407,7 @@
             <h2>How we built ReaBoy from<br>256 bytes of 1989 silicon.</h2>
           </div>
           <p>
-            Instead of guessing or patching around bugs, we built ReaBoy using a three-phase scientific reverse-engineering methodology: static disassembly, byte-identical reassembly, and instrumented cycle-level CPU execution.
+            Built with our <strong>REA (Reverse Engineer Anything)</strong> methodology: we started at byte <code>$0000</code> of the canonical 256-byte DMG-01 boot ROM, statically decoded all <strong>200 executable code bytes</strong> (121 Sharp SM83 instructions across 38 basic blocks and 57 CFG edges) and <strong>56 embedded data bytes</strong>, audited all 12 memory-mapped I/O registers (<code>$FF11–$FF50</code>), and reassembled the entire image with <strong>RGBDS v1.0.4</strong> to prove <strong>0 byte mismatches</strong> and an identical SHA-256 hash before executing a single instruction in our C# SM83 core.
           </p>
         </div>
 
