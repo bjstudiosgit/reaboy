@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ReaBoy v1.0.1 BETA — Official User Manual &amp; Technical Guide | BJ Studios</title>
+  <meta name="description" content="Official User Manual for ReaBoy v1.0.1 BETA Game Boy (DMG-01) emulator on Windows x64. Installation, drag & drop controls, Bootix firmware, MBC1 battery saves, CLI flags, and SHA-256 verification.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0f380f">
+  <link rel="canonical" href="https://scientificbrad.github.io/ReaBoy/manual.html">
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Press+Start+2P&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Install and Play Game Boy Games on ReaBoy v1.0.1 BETA",
+    "description": "Step-by-step guide to installing ReaBoy on Windows x64, loading .gb ROMs via drag and drop, configuring controls, and managing MBC1 battery saves.",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "name": "Download or Install ReaBoy",
+        "text": "Download the standalone ReaBoy.exe, extract the portable ZIP, or run the one-line PowerShell installer."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Launch ReaBoy.exe",
+        "text": "Open ReaBoy.exe. The emulator starts on the no-cartridge logo screen using the embedded CC0 Bootix DMG v1.2 firmware."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Drag and Drop Your Game ROM",
+        "text": "Drag any monochrome .gb Game Boy ROM directly onto the ReaBoy window, or press Ctrl+O to open it via File > Open ROM."
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to manual content</a>
+
+  <div class="beta-ribbon">
+    <div class="wrap beta-ribbon-inner">
+      <span class="beta-pill">USER MANUAL · v1.0.1 BETA</span>
+      <span>ReaBoy Official Documentation — BJ Studios, Manchester</span>
+      <a href="index.html">← Back to Main Lab</a>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="wrap nav-bar">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">R</span>
+        <span>ReaBoy</span>
+        <span class="version-tag">v1.0.1 BETA</span>
+      </a>
+      <button class="mobile-menu-btn" id="mobile-menu-btn" type="button" aria-expanded="false" aria-controls="nav-links">MENU</button>
+      <nav class="nav-links" id="nav-links" aria-label="Manual Navigation">
+        <a href="index.html">Home</a>
+        <a href="index.html#drop-lab">ROM Inspector</a>
+        <a href="index.html#how-we-made-it">How We Made It</a>
+        <a href="index.html#beta-lab">Game Tests</a>
+        <a class="active" href="manual.html">User Manual</a>
+        <button class="chip-btn" type="button" onclick="window.print()">Print / Save PDF</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrap manual-layout">
+    <aside class="manual-toc" aria-label="Manual table of contents">
+      <h3>Manual Contents</h3>
+      <ul>
+        <li><a href="#quick-start">1. Quick Start &amp; Requirements</a></li>
+        <li><a href="#package">2. Production Package Contents</a></li>
+        <li><a href="#menus">3. Menus, Video &amp; Audio</a></li>
+        <li><a href="#controls">4. Controls &amp; Key Remapping</a></li>
+        <li><a href="#boot-rom">5. Boot Firmware &amp; Bootix v1.2</a></li>
+        <li><a href="#saves">6. Battery Saves &amp; Settings</a></li>
+        <li><a href="#cli">7. Command-Line &amp; Headless Mode</a></li>
+        <li><a href="#checksums">8. SHA-256 Verification</a></li>
+        <li><a href="#compatibility">9. Compatibility &amp; BETA Roadmap</a></li>
+      </ul>
+    </aside>
+
+    <article class="manual-article">
+      <div class="manual-block">
+        <p class="eyebrow">OFFICIAL DOCUMENTATION · PRODUCT VERSION 1.0.1.0 (BETA)</p>
+        <h1 style="margin:0 0 0.6rem;font-size:clamp(1.9rem,3.4vw,2.6rem);">ReaBoy User Manual</h1>
+        <p style="margin:0;">
+          <strong>BJ Studios — Manchester, England</strong> · Windows x64 · C# / .NET 8 Self-Contained · Hardware Target: Original Nintendo Game Boy DMG-01 (1989), Sharp SM83.
+        </p>
+      </div>
+
+      <section class="manual-block" id="quick-start">
+        <h2>1. Quick Start &amp; System Requirements</h2>
+        <p>Open <code>ReaBoy.exe</code>. No separate .NET installation and no administrator rights are required. The application starts directly on the no-cartridge logo screen using the bundled open-source Bootix firmware (unless <strong>File &gt; Skip Intro</strong> is checked).</p>
+        <ul>
+          <li><strong>Load a game:</strong> Drag and drop any <code>.gb</code> ROM onto the ReaBoy window, choose <strong>File &gt; Open ROM</strong> (<code>Ctrl+O</code>), or pass the file path on the command line.</li>
+          <li><strong>OS requirement:</strong> Windows 10 or Windows 11 (64-bit x64).</li>
+          <li><strong>Audio requirement:</strong> Standard Windows WinMM audio output device.</li>
+          <li><strong>Commercial games:</strong> Game ROMs are not supplied. Keep your legally owned dumps in the <code>rom/</code> folder or open them from any directory.</li>
+        </ul>
+      </section>
+
+      <section class="manual-block" id="package">
+        <h2>2. Production Package Contents</h2>
+        <p>The portable ZIP distribution (<code>ReaBoy-v1.0.1-win-x64.zip</code>) contains:</p>
+        <ul>
+          <li><code>ReaBoy.exe</code> — Standalone application with bundled .NET 8 runtime and embedded Bootix DMG v1.2 firmware.</li>
+          <li><code>README.md</code> — Bundled quick guide, controls reference, and version details.</li>
+          <li><code>LICENSES.txt</code> — Application copyright and complete Microsoft .NET runtime licence notices.</li>
+          <li><code>rom/</code> — Unmodified Bootix DMG v1.2 (<code>dmg_boot.bin</code>), <code>BOOTIX-LICENSE.txt</code> (CC0-1.0), <code>BOOTIX-SOURCE.txt</code>, and game-folder instructions.</li>
+        </ul>
+        <p>The runtime unpacks native components into the standard per-user .NET temporary cache when needed. Nothing needs to be written beside <code>ReaBoy.exe</code>.</p>
+      </section>
+
+      <section class="manual-block" id="menus">
+        <h2>3. Menus, Video &amp; Audio</h2>
+        <ul>
+          <li><strong>Emulation &gt; Remove Cartridge:</strong> Safely flushes battery-backed MBC1 RAM and returns to the empty-console boot logo.</li>
+          <li><strong>Emulation &gt; Reset:</strong> Restarts the inserted cartridge (or the empty-console logo).</li>
+          <li><strong>Speed &amp; Execution:</strong> Pause / Resume, Normal Speed (1×), and Fast Forward (targets 3× speed depending on host CPU; intentionally mutes audio).</li>
+          <li><strong>Video:</strong> Fixed integer <strong>1×, 2×, 3×, and 4×</strong> scales locked to the native <code>160 × 144</code> aspect ratio (capped automatically to fit your monitor), Fullscreen (<code>F11</code>), and <strong>Classic Green</strong> or <strong>Grayscale</strong> palettes. Stretched or maximized window states are rejected to keep pixels razor-sharp.</li>
+          <li><strong>Audio:</strong> Enable/Mute toggle and persistent volume control over native WinMM output.</li>
+          <li><strong>Recent Games:</strong> Remembers up to 10 recently opened ROM paths.</li>
+        </ul>
+      </section>
+
+      <section class="manual-block" id="controls">
+        <h2>4. Controls &amp; Custom Key Remapping</h2>
+        <div class="compat-table-wrap" style="margin-bottom:1.25rem;">
+          <table class="compat-table">
+            <thead>
+              <tr><th>Game Boy Input</th><th>Default Keys</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Up / Down / Left / Right</td><td><kbd>↑ ↓ ← →</kbd> or <kbd>W</kbd> <kbd>S</kbd> <kbd>A</kbd> <kbd>D</kbd></td></tr>
+              <tr><td>A Button</td><td><kbd>Z</kbd> or <kbd>J</kbd></td></tr>
+              <tr><td>B Button</td><td><kbd>X</kbd> or <kbd>K</kbd></td></tr>
+              <tr><td>Start</td><td><kbd>Enter</kbd></td></tr>
+              <tr><td>Select</td><td><kbd>Shift</kbd> or <kbd>Space</kbd></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="compat-table-wrap" style="margin-bottom:1rem;">
+          <table class="compat-table">
+            <thead>
+              <tr><th>Application Command</th><th>Shortcut</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Open ROM</td><td><kbd>Ctrl+O</kbd></td></tr>
+              <tr><td>Pause / Resume</td><td><kbd>P</kbd></td></tr>
+              <tr><td>Reset</td><td><kbd>R</kbd></td></tr>
+              <tr><td>Sound Enable / Mute</td><td><kbd>M</kbd></td></tr>
+              <tr><td>Fullscreen / Exit Fullscreen</td><td><kbd>F11</kbd> / <kbd>Esc</kbd></td></tr>
+              <tr><td>Exit Application</td><td><kbd>Alt+F4</kbd></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p><strong>Remapping rules:</strong> Configure up to two distinct keys per Game Boy button via the Controls menu (every button requires at least one key). Reassigned Game Boy keys automatically take precedence over <code>P</code>/<code>R</code>/<code>M</code> shortcuts. Losing window focus releases held buttons, and opening any dialog automatically pauses emulation.</p>
+      </section>
+
+      <section class="manual-block" id="boot-rom">
+        <h2>5. Boot Firmware &amp; Bootix DMG v1.2</h2>
+        <p>ReaBoy includes unmodified <strong>Bootix DMG v1.2</strong> (CC0-1.0 public domain replacement boot ROM) both embedded inside <code>ReaBoy.exe</code> and in the portable <code>rom/</code> directory. Original Nintendo boot firmware is not distributed.</p>
+        <h3>Firmware Resolution Priority</h3>
+        <ol>
+          <li>A valid 256-byte custom boot ROM selected via <strong>File &gt; Choose Boot ROM</strong> (your own original Nintendo DMG boot ROM is supported and retains its original scrolling logo).</li>
+          <li>An adjacent <code>rom/dmg_boot.bin</code> beside <code>ReaBoy.exe</code>.</li>
+          <li>The embedded Bootix DMG v1.2 fallback inside <code>ReaBoy.exe</code>.</li>
+        </ol>
+        <p>Check <strong>File &gt; Skip Intro</strong> to jump straight to cartridge entry point <code>$0100</code> with canonical post-boot registers on subsequent loads and resets.</p>
+      </section>
+
+      <section class="manual-block" id="saves">
+        <h2>6. Battery Saves &amp; Settings</h2>
+        <ul>
+          <li><strong>Settings file:</strong> <code>%APPDATA%\BJStudios\ReaBoy\settings.json</code></li>
+          <li><strong>Battery RAM folder:</strong> <code>%APPDATA%\BJStudios\ReaBoy\saves\</code></li>
+        </ul>
+        <p>Unreadable or corrupted settings files are automatically backed up and restored to safe defaults. MBC1 battery-backed RAM is saved automatically on game changes, resets, cartridge removal, and exit. Save filenames are keyed by a hash of the ROM contents to prevent filename collisions across regional revisions.</p>
+      </section>
+
+      <section class="manual-block" id="cli">
+        <h2>7. Command-Line Interface &amp; Headless Mode</h2>
+        <p>ReaBoy supports automated launching and headless frame benchmarking directly from Windows Terminal or PowerShell:</p>
+        <div class="terminal-box">
+          <div class="terminal-top">
+            <span>CLI USAGE EXAMPLES</span>
+            <button class="copy-btn" type="button" data-copy-target="cli-examples">Copy</button>
+          </div>
+          <pre><code id="cli-examples">ReaBoy.exe [game.gb] [--scale 1..8] [--bootrom path] [--boot | --skip-intro]
+ReaBoy.exe game.gb --headless --skip-intro --frames 600</code></pre>
+        </div>
+      </section>
+
+      <section class="manual-block" id="checksums">
+        <h2>8. Official v1.0.1 BETA SHA-256 Checksums</h2>
+        <p>Verify your downloads using PowerShell <code>Get-FileHash</code> against the published <code>SHA256SUMS.txt</code>:</p>
+        <div class="terminal-box">
+          <div class="terminal-top">
+            <span>SHA256SUMS.txt (v1.0.1)</span>
+            <button class="copy-btn" type="button" data-copy-target="sha-sums">Copy</button>
+          </div>
+          <pre><code id="sha-sums">047ec920a3c96fd3ed8c72b8ff6a84f92cc85b6cc4396beef7da151d7a2a1860  ReaBoy-v1.0.1-win-x64.zip
+790dd6733e9055896e4ad6ca624ccd2053608613fc8bdaf0345d80de575d028d  ReaBoy.exe
+6f156240898855061e647fed63ddc0ec0dae76a527f6d23d0423fd435e8b716c  install.ps1
+c313435280dda8ccfae0786c7159aab791a00930605101c647794f64bfa17b5e  dmg_boot.bin</code></pre>
+        </div>
+      </section>
+
+      <section class="manual-block" id="compatibility">
+        <h2>9. Compatibility &amp; Open BETA Roadmap</h2>
+        <h3>Supported in v1.0.1 BETA</h3>
+        <ul>
+          <li>Original monochrome Nintendo Game Boy (DMG-01): Sharp SM83 CPU, memory bus, scanline PPU, and 4-channel APU.</li>
+          <li>ROM-only and MBC1 cartridges up to 2 MiB ROM and 32 KiB battery-backed RAM.</li>
+          <li>Verified integration games: Tetris, Dr. Mario (v1.0.1 LCD-off STAT Mode 0 fix), Super Mario Land, The Legend of Zelda: Link's Awakening.</li>
+        </ul>
+        <h3>Planned / Not Yet Supported in BETA</h3>
+        <ul>
+          <li>MBC3 (Real-Time Clock titles such as Pokémon Red/Blue/Gold/Silver) &amp; MBC5 cartridges.</li>
+          <li>Game Boy Color (CGB)-only hardware features.</li>
+          <li>Link cable multiplayer, save states, rewind, and USB gamepad remapping.</li>
+        </ul>
+        <p>Exact hardware cycle-by-cycle timing across the entire Game Boy catalogue is actively being tested during the BETA period. Please report any game issues on <a href="https://github.com/ScientificBrad/ReaBoy/issues" target="_blank" rel="noopener">GitHub Issues ↗</a>.</p>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <a class="brand" href="index.html">
+          <span class="brand-mark" aria-hidden="true">R</span>
+          <span>ReaBoy</span>
+          <span class="version-tag">v1.0.1 BETA</span>
+        </a>
+        <p>BJ Studios — Manchester, England · © 2026 BJ Studios. All rights reserved.</p>
+      </div>
+      <div>
+        <ul class="footer-links">
+          <li><a href="index.html">← Back to Main Website</a></li>
+          <li><a href="https://github.com/ScientificBrad/ReaBoy/releases/latest">Latest Release Downloads ↗</a></li>
+        </ul>
+      </div>
+      <div>
+        <p>Independent software. Not affiliated with or endorsed by Nintendo.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="js/app.js" defer></script>
+</body>
+</html>
