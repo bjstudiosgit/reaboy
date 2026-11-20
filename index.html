@@ -1124,15 +1124,67 @@
 
         <!-- COMPATIBILITY LAB CALLOUT BANNER -->
         <div class="compat-cta-banner reveal">
-          <div class="compat-cta-content">
+          <div class="compat-cta-copy">
             <span class="badge badge-accent">1,529 GAME BOY ROMS TESTED</span>
             <h3 class="compat-cta-title">Explore the Complete ReaBoy Compatibility Database</h3>
             <p class="compat-cta-desc">
-              Every commercial Game Boy release dynamically executed and verified in ReaBoy's bit-exact CPU and scanline PPU core. Search 1,529+ games by title, filter by cartridge mapper (ROM-Only, MBC1), inspect runtime cycle telemetry, and log your own test results in our dedicated lab.
+              Every commercial Game Boy release dynamically executed and verified in ReaBoy's bit-exact CPU and scanline PPU core. Search 1,529+ titles, filter by cartridge mapper (ROM-Only, MBC1, MBC2, MBC3), inspect runtime cycle telemetry, and test your own ROM collection.
             </p>
+            <div class="compat-cta-meta-row">
+              <span class="compat-stat-tag">✓ 1,529 Commercial ROMs</span>
+              <span class="compat-stat-tag">✓ 254M+ Handover Cycles</span>
+              <span class="compat-stat-tag">✓ Battery SRAM Persistence</span>
+            </div>
+            <div class="compat-cta-actions">
+              <a class="btn btn-primary btn-compat-cta" href="compatibility.html">
+                Open Compatibility Lab (1,529+) →
+              </a>
+              <a class="btn btn-secondary btn-compat-sub" href="manual.html#compatibility">
+                Test Protocol ↗
+              </a>
+            </div>
           </div>
-          <div class="compat-cta-action">
-            <a class="btn btn-primary" href="compatibility.html" style="font-weight:700;">Open Compatibility Lab (1,529+) →</a>
+
+          <div class="compat-cta-visual">
+            <!-- 1529-in-1 Physical Cartridge & Screen -->
+            <div class="cart-unit" id="compat-cart" aria-label="ReaBoy 1,529-in-1 Verified Multi-Cartridge">
+              <div class="cart-ridges" aria-hidden="true">
+                <span></span><span></span><span></span><span></span><span></span>
+              </div>
+              <div class="cart-scoop" aria-hidden="true"></div>
+              <div class="cart-brand">
+                <span>BJ STUDIOS REABOY™</span>
+              </div>
+              <div class="cart-label">
+                <div class="cart-label-head">
+                  <span class="cart-serial">DMG-1529-TEST</span>
+                  <span class="cart-region">REABOY CERTIFIED</span>
+                </div>
+                <div class="cart-title-row">
+                  <span class="cart-title-main">1529 IN 1</span>
+                  <span class="cart-title-badge">MULTI-CART</span>
+                </div>
+                <div class="cart-screen-frame">
+                  <div class="cart-screen" id="cart-screen">
+                    <img id="cart-screen-img" src="assets/img/shots/tetris.png" alt="Verified Game Screen" loading="lazy">
+                    <div class="cart-screen-scanlines"></div>
+                    <div class="cart-screen-glitch" id="cart-glitch"></div>
+                  </div>
+                </div>
+                <div class="cart-screen-meta">
+                  <div class="cart-game-id" id="cart-game-id">ROM #0001 / 1529</div>
+                  <div class="cart-game-title" id="cart-game-title">Tetris (World)</div>
+                </div>
+                <div class="cart-label-foot">
+                  <div class="cart-seal">
+                    <span>OFFICIAL</span>
+                    <strong>BJ STUDIOS</strong>
+                    <span>QUALITY SEAL</span>
+                  </div>
+                  <div class="cart-made">MADE IN MANCHESTER</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1176,6 +1228,6 @@
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-  <script src="js/app.js?v=1.0.9" defer></script>
+  <script src="js/app.js?v=1.1.0" defer></script>
 </body>
 </html>

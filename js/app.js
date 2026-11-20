@@ -1014,4 +1014,46 @@
       });
     });
   }
+
+  // ------------------------------------------------------------
+  // 1529-in-1 Verified Multi-Cartridge Screen Cycler
+  // ------------------------------------------------------------
+  const cartImg = $('#cart-screen-img');
+  const cartId = $('#cart-game-id');
+  const cartTitle = $('#cart-game-title');
+  const cartGlitch = $('#cart-glitch');
+
+  if (cartImg && cartId && cartTitle) {
+    const verifiedHighlights = [
+      { id: '0001', title: 'Tetris (World)', shot: 'assets/img/shots/tetris.png' },
+      { id: '0002', title: 'Super Mario Land', shot: 'assets/img/shots/super-mario-land.png' },
+      { id: '0003', title: "Zelda: Link's Awakening", shot: 'assets/img/shots/legend-of-zelda-the-link-s-awakening.png' },
+      { id: '0151', title: 'Pokémon Red', shot: 'assets/img/shots/pokemon-red.png' },
+      { id: '0312', title: 'Metroid II: Return of Samus', shot: 'assets/img/shots/metroid-ii-return-of-samus.png' },
+      { id: '0456', title: 'DuckTales', shot: 'assets/img/shots/ducktales.png' },
+      { id: '0680', title: 'Castlevania: The Adventure', shot: 'assets/img/shots/castlevania-the-adventure.png' },
+      { id: '0924', title: "Kirby's Dream Land", shot: 'assets/img/shots/kirby-s-dream-land.png' },
+      { id: '1280', title: "Donkey Kong '94", shot: 'assets/img/shots/donkey-kong.png' },
+      { id: '1529', title: 'Dr. Mario', shot: 'assets/img/shots/dr-mario.png' }
+    ];
+
+    let currentCartIdx = 0;
+    setInterval(() => {
+      currentCartIdx = (currentCartIdx + 1) % verifiedHighlights.length;
+      const g = verifiedHighlights[currentCartIdx];
+
+      if (cartGlitch) cartGlitch.classList.add('active');
+      cartImg.style.opacity = '0.35';
+      cartImg.style.transform = 'scale(0.96)';
+
+      setTimeout(() => {
+        cartImg.src = g.shot;
+        cartId.textContent = `ROM #${g.id} / 1529`;
+        cartTitle.textContent = g.title;
+        cartImg.style.opacity = '1';
+        cartImg.style.transform = 'scale(1)';
+        if (cartGlitch) cartGlitch.classList.remove('active');
+      }, 160);
+    }, 2400);
+  }
 })();
