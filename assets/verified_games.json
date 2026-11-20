@@ -1528,6 +1528,14 @@
     "slug": "catrap"
   },
   {
+    "title": "Cave Noire",
+    "fileName": "Cave Noire (J).gb",
+    "mapper": "MBC2+BATT",
+    "sizeKb": 128,
+    "status": "PASS",
+    "slug": "cave-noire"
+  },
+  {
     "title": "Centipede",
     "fileName": "Centipede (E) [M][!].gb",
     "mapper": "ROM-Only",

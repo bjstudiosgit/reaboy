@@ -1067,9 +1067,13 @@ a:hover {
 
 .install-grid {
   display: grid;
-  grid-template-columns: 1fr 1.15fr;
-  gap: 2rem;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
+  gap: 2.25rem;
   align-items: start;
+}
+
+.install-grid > div {
+  min-width: 0;
 }
 
 .req-list {
@@ -1104,6 +1108,7 @@ a:hover {
   border-radius: var(--radius-md);
   overflow: hidden;
   box-shadow: var(--shadow-lg);
+  min-width: 0;
 }
 
 .terminal-top {
@@ -2117,10 +2122,11 @@ html[data-theme="classic"] .release-pill .tag {
 
 html[data-theme="classic"] .dmg-shell {
   box-shadow:
-    inset 2px 2px 4px rgba(255, 255, 255, 0.85),
-    inset -4px -6px 12px rgba(0, 0, 0, 0.12),
-    14px 18px 0 #dee5d2,
-    0 0 0 1px #a5b29e;
+    inset 2px 2px 4px rgba(255, 255, 255, 0.9),
+    inset -4px -6px 14px rgba(0, 0, 0, 0.14),
+    0 24px 48px rgba(21, 59, 42, 0.22),
+    0 6px 16px rgba(21, 59, 42, 0.12),
+    0 0 0 1px rgba(21, 59, 42, 0.15);
 }
 
 html[data-theme="classic"] .chip-btn {

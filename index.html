@@ -31,7 +31,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Press+Start+2P&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css?v=1.0.2">
 
   <!-- Structured Data (JSON-LD) for Game Boy Emulator SEO -->
   <script type="application/ld+json">
@@ -126,7 +126,7 @@
         <div class="hero-copy">
           <h1>100% REA-Reconstructed.<br><span class="highlight">Pure 1989 Game Boy.</span></h1>
           <p class="hero-lead">
-            Every instruction, scanline, and audio register reconstructed directly from original DMG-01 hardware evidence. Powered by a bit-exact Sharp SM83 CPU core executing 23.4M+ cycles to verified $0100 handover, cycle-accurate scanline PPU timing, and pinned four-channel APU audio — packaged into a single standalone executable.
+            Every instruction, scanline, and audio register reconstructed directly from original DMG-01 hardware. Powered by a bit-exact Sharp SM83 CPU core executing 23.4M+ cycles to verified $0100 handover, cycle-accurate scanline PPU timing, and pinned four-channel APU audio — in a nutshell, a perfect Game Boy.
           </p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="https://github.com/ScientificBrad/ReaBoy/releases/latest/download/ReaBoy.exe">Download ReaBoy.exe ↓</a>
@@ -215,12 +215,7 @@
             </div>
           </div>
 
-          <div class="dmg-mode-controls" role="group" aria-label="Preview screen controls">
-            <button class="chip-btn active" type="button" id="mode-video-btn">Real App Video</button>
-            <button class="chip-btn" type="button" id="mode-canvas-btn">Interactive Boot Sim</button>
-            <button class="chip-btn" type="button" id="palette-toggle-btn">Palette: Classic Green</button>
-            <button class="chip-btn" type="button" id="chime-btn">Play Boot Chime ♪</button>
-          </div>
+
         </div>
       </div>
     </section>
@@ -241,8 +236,8 @@
           <span class="telemetry-lbl">Fixed integer 1×–4× pixel scaling + fullscreen</span>
         </div>
         <div class="telemetry-card">
-          <span class="telemetry-val">1,528+ Games PASS</span>
-          <span class="telemetry-lbl">Verified ROM-only, MBC1 &amp; MBC3 titles across 3,529 test suite</span>
+          <span class="telemetry-val">1,529+ Games PASS</span>
+          <span class="telemetry-lbl">Verified ROM-only, MBC1, MBC2 &amp; MBC3 titles across 3,529 test suite</span>
         </div>
       </div>
     </section>
@@ -551,7 +546,7 @@
             <h2>Hall of Fame Classics.<br>Running bit-exact at 60 FPS in ReaBoy.</h2>
           </div>
           <p>
-            Watch real, uninterrupted 25-to-30-second gameplay captures of the twelve defining masterpieces of the Nintendo Game Boy (DMG-01). Recorded directly from ReaBoy's CPU and scanline-accurate PPU emulator loop with high-resolution original box art. Below, explore the full lab database of <strong>1,528 canonical games verified and running</strong>.
+            Watch real, uninterrupted 25-to-30-second gameplay captures of the twelve defining masterpieces of the Nintendo Game Boy (DMG-01). Recorded directly from ReaBoy's CPU and scanline-accurate PPU emulator loop with high-resolution original box art. Below, explore the full lab database of <strong>1,529 canonical games verified and running</strong>.
           </p>
         </div>
 
@@ -869,11 +864,310 @@
           </article>
         </div>
 
+        <!-- RETROPULSE CULT CLASSICS & BEST-SELLERS VIDEO SHOWCASE -->
+        <div class="section-head reveal" style="margin-top: 3.5rem; margin-bottom: 2rem;">
+          <div>
+            <p class="eyebrow">RETROPULSE SELECTION &amp; BEST-SELLERS · LIVE ACTION VIDEOS</p>
+            <h2>Cult Masterpieces &amp; Top Hits.<br>Running bit-exact at 60 FPS in ReaBoy.</h2>
+          </div>
+          <p>
+            The next ranked tier of defining Game Boy hardware showcases: surreal Sunsoft technical marvels, Konami masterpieces, procedural roguelikes, and multimillion-selling Rareware cartridge feats. Recorded uninterrupted at 60 FPS directly from ReaBoy's CPU/PPU loops. (Mole Mania and Gargoyle's Quest are featured in the Hall of Fame above).
+          </p>
+        </div>
+
+        <div class="top12-grid reveal">
+          <!-- 13. Trip World -->
+          <article class="top12-card">
+            <div class="top12-header">
+              <div class="top12-rank-title">
+                <span class="top12-rank">#13</span>
+                <h3 class="top12-title">Trip World</h3>
+              </div>
+              <span class="top12-year">1992</span>
+            </div>
+            <div class="top12-media">
+              <video autoplay loop muted playsinline poster="assets/img/shots/trip-world.png">
+                <source src="assets/video/trip-world.mp4" type="video/mp4">
+              </video>
+              <div class="top12-boxart-thumb" title="Original Box Art">
+                <img src="assets/img/boxart/trip-world.jpg" alt="Trip World Box Art" loading="lazy">
+              </div>
+            </div>
+            <p class="top12-desc">
+              A gorgeous, surreal platformer from Sunsoft. Incredible sprite animation and imaginative visuals. One of the best showcases for Game Boy graphics.
+            </p>
+            <div class="top12-meta">
+              <span class="top12-meta-tag">MBC1 · 128 KB</span>
+              <span class="top12-status">✓ 60 FPS PASS</span>
+            </div>
+          </article>
+
+          <!-- 14. Avenging Spirit -->
+          <article class="top12-card">
+            <div class="top12-header">
+              <div class="top12-rank-title">
+                <span class="top12-rank">#14</span>
+                <h3 class="top12-title">Avenging Spirit</h3>
+              </div>
+              <span class="top12-year">1992</span>
+            </div>
+            <div class="top12-media">
+              <video autoplay loop muted playsinline poster="assets/img/shots/avenging-spirit.png">
+                <source src="assets/video/avenging-spirit.mp4" type="video/mp4">
+              </video>
+              <div class="top12-boxart-thumb" title="Original Box Art">
+                <img src="assets/img/boxart/avenging-spirit.jpg" alt="Avenging Spirit Box Art" loading="lazy">
+              </div>
+            </div>
+            <p class="top12-desc">
+              You play a ghost that possesses enemy bodies, stealing their weapons and abilities. Brilliantly unusual mechanic.
+            </p>
+            <div class="top12-meta">
+              <span class="top12-meta-tag">MBC1 · 256 KB</span>
+              <span class="top12-status">✓ 60 FPS PASS</span>
+            </div>
+          </article>
+
+          <!-- 15. Kid Dracula -->
+          <article class="top12-card">
+            <div class="top12-header">
+              <div class="top12-rank-title">
+                <span class="top12-rank">#15</span>
+                <h3 class="top12-title">Kid Dracula</h3>
+              </div>
+              <span class="top12-year">1993</span>
+            </div>
+            <div class="top12-media">
+              <video autoplay loop muted playsinline poster="assets/img/shots/kid-dracula.png">
+                <source src="assets/video/kid-dracula.mp4" type="video/mp4">
+              </video>
+              <div class="top12-boxart-thumb" title="Original Box Art">
+                <img src="assets/img/boxart/kid-dracula.jpg" alt="Kid Dracula Box Art" loading="lazy">
+              </div>
+            </div>
+            <p class="top12-desc">
+              Konami's cartoonish Castlevania spin-off. Excellent animation, varied bosses and spectacular monochrome artwork.
+            </p>
+            <div class="top12-meta">
+              <span class="top12-meta-tag">MBC1 · 256 KB</span>
+              <span class="top12-status">✓ 60 FPS PASS</span>
+            </div>
+          </article>
+
+          <!-- 16. Mega Man V -->
+          <article class="top12-card">
+            <div class="top12-header">
+              <div class="top12-rank-title">
+                <span class="top12-rank">#16</span>
+                <h3 class="top12-title">Mega Man V</h3>
+              </div>
+              <span class="top12-year">1994</span>
+            </div>
+            <div class="top12-media">
+              <video autoplay loop muted playsinline poster="assets/img/shots/mega-man-v.png">
+                <source src="assets/video/mega-man-v.mp4" type="video/mp4">
+              </video>
+              <div class="top12-boxart-thumb" title="Original Box Art">
+                <img src="assets/img/boxart/mega-man-v.jpg" alt="Mega Man V Box Art" loading="lazy">
+              </div>
+            </div>
+            <p class="top12-desc">
+              Original bosses based on planets, intricate levels and exceptional technical polish. Not to be confused with NES Mega Man 5.
+            </p>
+            <div class="top12-meta">
+              <span class="top12-meta-tag">MBC1 · 512 KB</span>
+              <span class="top12-status">✓ 60 FPS PASS</span>
+            </div>
+          </article>
+
+          <!-- 17. Cave Noire -->
+          <article class="top12-card">
+            <div class="top12-header">
+              <div class="top12-rank-title">
+                <span class="top12-rank">#17</span>
+                <h3 class="top12-title">Cave Noire</h3>
+              </div>
+              <span class="top12-year">1991</span>
+            </div>
+            <div class="top12-media">
+              <video autoplay loop muted playsinline poster="assets/img/shots/cave-noire.png">
+                <source src="assets/video/cave-noire.mp4" type="video/mp4">
+              </video>
+              <div class="top12-boxart-thumb" title="Original Box Art">
+                <img src="assets/img/boxart/cave-noire.jpg" alt="Cave Noire Box Art" loading="lazy">
+              </div>
+            </div>
+            <p class="top12-desc">
+              A Japanese-exclusive dungeon crawler with procedurally generated levels. A miniature roguelike decades ahead of the genre's modern popularity.
+            </p>
+            <div class="top12-meta">
+              <span class="top12-meta-tag">MBC2+BATT · 128 KB</span>
+              <span class="top12-status">✓ 60 FPS PASS</span>
+            </div>
+          </article>
+
+          <!-- 18. Castlevania II: Belmont's Revenge -->
+          <article class="top12-card">
+            <div class="top12-header">
+              <div class="top12-rank-title">
+                <span class="top12-rank">#18</span>
+                <h3 class="top12-title">Castlevania II: Belmont's Revenge</h3>
+              </div>
+              <span class="top12-year">1991</span>
+            </div>
+            <div class="top12-media">
+              <video autoplay loop muted playsinline poster="assets/img/shots/castlevania-ii-belmont-s-revenge.png">
+                <source src="assets/video/castlevania-2.mp4" type="video/mp4">
+              </video>
+              <div class="top12-boxart-thumb" title="Original Box Art">
+                <img src="assets/img/boxart/castlevania-2.jpg" alt="Castlevania II: Belmont's Revenge Box Art" loading="lazy">
+              </div>
+            </div>
+            <p class="top12-desc">
+              Atmospheric castles, strong level design and some of the best music on the handheld.
+            </p>
+            <div class="top12-meta">
+              <span class="top12-meta-tag">MBC1 · 128 KB</span>
+              <span class="top12-status">✓ 60 FPS PASS</span>
+            </div>
+          </article>
+
+          <!-- 19. Catrap -->
+          <article class="top12-card">
+            <div class="top12-header">
+              <div class="top12-rank-title">
+                <span class="top12-rank">#19</span>
+                <h3 class="top12-title">Catrap</h3>
+              </div>
+              <span class="top12-year">1990</span>
+            </div>
+            <div class="top12-media">
+              <video autoplay loop muted playsinline poster="assets/img/shots/catrap.png">
+                <source src="assets/video/catrap.mp4" type="video/mp4">
+              </video>
+              <div class="top12-boxart-thumb" title="Original Box Art">
+                <img src="assets/img/boxart/catrap.jpg" alt="Catrap Box Art" loading="lazy">
+              </div>
+            </div>
+            <p class="top12-desc">
+              Clever puzzle-platformer featuring a rewind mechanic. A surprisingly modern idea for a Game Boy title.
+            </p>
+            <div class="top12-meta">
+              <span class="top12-meta-tag">ROM-Only · 32 KB</span>
+              <span class="top12-status">✓ 60 FPS PASS</span>
+            </div>
+          </article>
+
+          <!-- 20. Ninja Gaiden Shadow -->
+          <article class="top12-card">
+            <div class="top12-header">
+              <div class="top12-rank-title">
+                <span class="top12-rank">#20</span>
+                <h3 class="top12-title">Ninja Gaiden Shadow</h3>
+              </div>
+              <span class="top12-year">1991</span>
+            </div>
+            <div class="top12-media">
+              <video autoplay loop muted playsinline poster="assets/img/shots/ninja-gaiden-shadow.png">
+                <source src="assets/video/ninja-gaiden-shadow.mp4" type="video/mp4">
+              </video>
+              <div class="top12-boxart-thumb" title="Original Box Art">
+                <img src="assets/img/boxart/ninja-gaiden-shadow.jpg" alt="Ninja Gaiden Shadow Box Art" loading="lazy">
+              </div>
+            </div>
+            <p class="top12-desc">
+              Fast sword combat, responsive controls and impressive platforming. Released as Shadow Warriors in Europe.
+            </p>
+            <div class="top12-meta">
+              <span class="top12-meta-tag">MBC1 · 128 KB</span>
+              <span class="top12-status">✓ 60 FPS PASS</span>
+            </div>
+          </article>
+
+          <!-- 21. Kirby's Dream Land -->
+          <article class="top12-card">
+            <div class="top12-header">
+              <div class="top12-rank-title">
+                <span class="top12-rank">#21</span>
+                <h3 class="top12-title">Kirby's Dream Land</h3>
+              </div>
+              <span class="top12-year">1992</span>
+            </div>
+            <div class="top12-media">
+              <video autoplay loop muted playsinline poster="assets/img/shots/kirby-s-dream-land.png">
+                <source src="assets/video/kirbys-dream-land.mp4" type="video/mp4">
+              </video>
+              <div class="top12-boxart-thumb" title="Original Box Art">
+                <img src="assets/img/boxart/kirbys-dream-land.jpg" alt="Kirby's Dream Land Box Art" loading="lazy">
+              </div>
+            </div>
+            <p class="top12-desc">
+              Worldwide Rank #8 Best-Seller (5.13 million). Masahiro Sakurai's legendary debut that introduced Kirby to millions of players worldwide.
+            </p>
+            <div class="top12-meta">
+              <span class="top12-meta-tag">MBC1 · 256 KB</span>
+              <span class="top12-status">✓ 60 FPS PASS</span>
+            </div>
+          </article>
+
+          <!-- 22. Donkey Kong Land -->
+          <article class="top12-card">
+            <div class="top12-header">
+              <div class="top12-rank-title">
+                <span class="top12-rank">#22</span>
+                <h3 class="top12-title">Donkey Kong Land</h3>
+              </div>
+              <span class="top12-year">1995</span>
+            </div>
+            <div class="top12-media">
+              <video autoplay loop muted playsinline poster="assets/img/shots/donkey-kong-land.png">
+                <source src="assets/video/donkey-kong-land.mp4" type="video/mp4">
+              </video>
+              <div class="top12-boxart-thumb" title="Original Box Art">
+                <img src="assets/img/boxart/donkey-kong-land.jpg" alt="Donkey Kong Land Box Art" loading="lazy">
+              </div>
+            </div>
+            <p class="top12-desc">
+              Worldwide Rank #9 Best-Seller (3.91 million). Rare's technical tour-de-force bringing pre-rendered Silicon Graphics 3D sprites to the DMG screen.
+            </p>
+            <div class="top12-meta">
+              <span class="top12-meta-tag">MBC1+RAM+BATT · 512 KB</span>
+              <span class="top12-status">✓ 60 FPS PASS</span>
+            </div>
+          </article>
+
+          <!-- 23. Donkey Kong Land 2 -->
+          <article class="top12-card">
+            <div class="top12-header">
+              <div class="top12-rank-title">
+                <span class="top12-rank">#23</span>
+                <h3 class="top12-title">Donkey Kong Land 2</h3>
+              </div>
+              <span class="top12-year">1996</span>
+            </div>
+            <div class="top12-media">
+              <video autoplay loop muted playsinline poster="assets/img/shots/donkey-kong-land-2.png">
+                <source src="assets/video/donkey-kong-land-2.mp4" type="video/mp4">
+              </video>
+              <div class="top12-boxart-thumb" title="Original Box Art">
+                <img src="assets/img/boxart/donkey-kong-land-2.jpg" alt="Donkey Kong Land 2 Box Art" loading="lazy">
+              </div>
+            </div>
+            <p class="top12-desc">
+              Worldwide Rank #16 Best-Seller (2.35 million). Diddy and Dixie's pirate adventure pushing sound and graphical density to the limit.
+            </p>
+            <div class="top12-meta">
+              <span class="top12-meta-tag">MBC1+RAM+BATT · 512 KB</span>
+              <span class="top12-status">✓ 60 FPS PASS</span>
+            </div>
+          </article>
+        </div>
+
         <!-- Filterable Compatibility Table -->
         <div class="compat-toolbar reveal">
-          <input class="compat-search" id="compat-search" type="search" placeholder="Search 1,528+ verified games (e.g. Zelda, Pokémon, Metroid, MBC1)..." aria-label="Filter tested games">
+          <input class="compat-search" id="compat-search" type="search" placeholder="Search 1,529+ verified games (e.g. Zelda, Pokémon, Metroid, MBC1, MBC2)..." aria-label="Filter tested games">
           <div style="display:flex;gap:0.45rem;flex-wrap:wrap;">
-            <button class="chip-btn active" type="button" data-filter="ALL">All (1,528+)</button>
+            <button class="chip-btn active" type="button" data-filter="ALL">All (1,529+)</button>
             <button class="chip-btn" type="button" data-filter="PASS">Verified Pass</button>
             <button class="chip-btn" type="button" data-alpha="A-C">A–C</button>
             <button class="chip-btn" type="button" data-alpha="D-F">D–F</button>
@@ -902,10 +1196,10 @@
             </tbody>
           </table>
           <div class="compat-table-foot" id="compat-table-footer" style="display:flex;justify-content:space-between;align-items:center;padding:12px 18px;border-top:1px solid var(--border);flex-wrap:wrap;gap:10px;">
-            <span id="compat-count-label" style="font-family:var(--font-mono);font-size:0.82rem;color:var(--text-muted);">Showing 40 of 1,528+ verified games</span>
+            <span id="compat-count-label" style="font-family:var(--font-mono);font-size:0.82rem;color:var(--text-muted);">Showing 40 of 1,529+ verified games</span>
             <div style="display:flex;gap:8px;">
               <button class="chip-btn" id="load-more-btn" type="button">Load More (+50)</button>
-              <button class="chip-btn" id="show-all-btn" type="button">Show All 1,528+ Games</button>
+              <button class="chip-btn" id="show-all-btn" type="button">Show All 1,529+ Games</button>
             </div>
           </div>
         </div>
