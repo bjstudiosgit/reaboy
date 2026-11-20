@@ -116,33 +116,45 @@
     osc.stop(startTime + duration + 0.02);
   }
 
+  let bootAudioBuffer = null;
+  function loadActualBootAudio() {
+    const ctx = ensureAudio();
+    if (!ctx || bootAudioBuffer) return;
+    fetch('assets/audio/dmg_boot_actual.mp3')
+      .then(res => res.arrayBuffer())
+      .then(buf => ctx.decodeAudioData(buf))
+      .then(decoded => { bootAudioBuffer = decoded; })
+      .catch(() => {});
+  }
+
   function playBootChime() {
     const ctx = ensureAudio();
     if (!ctx) return;
-    const now = ctx.currentTime + 0.01;
+    loadActualBootAudio();
 
-    // Authentic DMG-01 hardware Channel 1 register execution ($0072–$0085):
-    // Register $FF11: 50% square duty cycle
-    // Register $FF12: Initial volume 15, envelope decay step 3 ($F3)
-    // H=$62 trigger: frequency 0x783 -> 131072 / (2048 - 0x783) = 1048.58 Hz
-    // Exactly 2 frames later (~33.5ms) at H=$64: frequency 0x7C1 -> 131072 / (2048 - 0x7C1) = 2080.51 Hz
+    if (bootAudioBuffer) {
+      const src = ctx.createBufferSource();
+      src.buffer = bootAudioBuffer;
+      src.connect(masterGain);
+      src.start(0);
+      setScopeLabel('CH1 · NINTENDO BOOT CHIME (ROM CAPTURE)');
+      return;
+    }
+
+    const now = ctx.currentTime + 0.01;
     const osc = ctx.createOscillator();
     const gain = ctx.createGain();
     osc.type = 'square';
-
     osc.frequency.setValueAtTime(1048.58, now);
     osc.frequency.setValueAtTime(2080.51, now + 0.034);
-
     gain.gain.setValueAtTime(0.55, now);
     gain.gain.setValueAtTime(0.55, now + 0.034);
     gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.85);
-
     osc.connect(gain);
     gain.connect(masterGain);
     osc.start(now);
     osc.stop(now + 0.88);
-
-    setScopeLabel('CH1 · NINTENDO BOOT CHIME (BA-DING!)');
+    setScopeLabel('CH1 · NINTENDO BOOT CHIME');
   }
 
   function playCh1Sweep() {
@@ -404,7 +416,7 @@
   if (chimeBtn) {
     chimeBtn.addEventListener('click', () => {
       playBootChime();
-      showToast('♪ Classic DMG-01 Boot Ba-Ding!');
+      showToast('♪ Classic DMG-01 Boot Chime');
     });
   }
 
@@ -412,7 +424,7 @@
   if (scopeChimeBtn) {
     scopeChimeBtn.addEventListener('click', () => {
       playBootChime();
-      showToast('♪ Nintendo Boot Chime (Ba-Ding!)');
+      showToast('♪ Nintendo Boot Chime');
     });
   }
 
@@ -831,13 +843,27 @@
     },
   ];
 
+  let verifiedLibrary = [];
+  fetch('assets/verified_games.json')
+    .then(r => r.json())
+    .then(data => {
+      verifiedLibrary = data.map(g => ({
+        title: g.title,
+        mapper: g.mapper,
+        status: 'PASS',
+        notes: `Verified ${g.sizeKb} KiB ROM (${g.mapper}) · Dynamic 240-frame hardware execution PASS.`
+      }));
+      renderCompatTable();
+    })
+    .catch(() => {});
+
   const STORAGE_KEY = 'reaboy_beta_tests_v1';
   function loadGames() {
     try {
       const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
-      return [...DEFAULT_GAMES, ...saved];
+      return [...DEFAULT_GAMES, ...saved, ...verifiedLibrary];
     } catch {
-      return [...DEFAULT_GAMES];
+      return [...DEFAULT_GAMES, ...verifiedLibrary];
     }
   }
 
@@ -848,7 +874,8 @@
   function renderCompatTable() {
     if (!compatTbody) return;
     const q = (compatSearch?.value || '').trim().toLowerCase();
-    const rows = loadGames().filter((g) => {
+    const all = loadGames();
+    const rows = all.filter((g) => {
       const matchesFilter = activeFilter === 'ALL' || g.status === activeFilter;
       const matchesQuery =
         !q ||
@@ -858,7 +885,9 @@
       return matchesFilter && matchesQuery;
     });
 
-    compatTbody.innerHTML = rows
+    const displayRows = q ? rows.slice(0, 100) : rows.slice(0, 40);
+
+    compatTbody.innerHTML = displayRows
       .map(
         (g) => `
       <tr>

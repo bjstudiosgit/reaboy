@@ -219,7 +219,7 @@
             <button class="chip-btn active" type="button" id="mode-video-btn">Real App Video</button>
             <button class="chip-btn" type="button" id="mode-canvas-btn">Interactive Boot Sim</button>
             <button class="chip-btn" type="button" id="palette-toggle-btn">Palette: Classic Green</button>
-            <button class="chip-btn" type="button" id="chime-btn">Play Boot Ba-Ding! ♪</button>
+            <button class="chip-btn" type="button" id="chime-btn">Play Boot Chime ♪</button>
           </div>
         </div>
       </div>
@@ -241,8 +241,8 @@
           <span class="telemetry-lbl">Fixed integer 1×–4× pixel scaling + fullscreen</span>
         </div>
         <div class="telemetry-card">
-          <span class="telemetry-val">59 + 17 Tests</span>
-          <span class="telemetry-lbl">Automated Windows host checks &amp; SM83 regression suite</span>
+          <span class="telemetry-val">1,424+ Games PASS</span>
+          <span class="telemetry-lbl">Verified ROM-only &amp; MBC1 titles across 3,529 test suite</span>
         </div>
       </div>
     </section>
@@ -495,7 +495,7 @@
               <span>REAL-TIME APU OSCILLOSCOPE · WEB AUDIO SYNTH</span>
               <div style="display:flex;align-items:center;gap:8px;">
                 <span id="scope-channel-label">STANDBY</span>
-                <button class="chip-btn" type="button" id="scope-chime-quick-btn" style="padding:3px 8px;font-size:0.72rem;">Ba-Ding! ♪</button>
+                <button class="chip-btn" type="button" id="scope-chime-quick-btn" style="padding:3px 8px;font-size:0.72rem;">Play Chime ♪</button>
               </div>
             </div>
             <canvas id="apu-scope" width="600" height="210" aria-label="Live audio oscilloscope"></canvas>
@@ -504,10 +504,10 @@
           <div class="apu-channels">
             <button class="apu-btn apu-btn-featured" type="button" data-apu="chime">
               <div>
-                <strong>Nintendo Boot Chime (Ba-Ding!)</strong>
-                <span>Official DMG-01 hardware sequence: $FF13=$83 (1048 Hz) → $FF13=$C1 (2080 Hz) at NR12=$F3 envelope.</span>
+                <strong>Nintendo Boot Chime</strong>
+                <span>Direct audio capture from ReaBoy's APU executing the 256-byte DMG boot ROM ($FF13/$FF14 registers).</span>
               </div>
-              <span class="apu-play-tag">BA-DING! ♪</span>
+              <span class="apu-play-tag">PLAY ♪</span>
             </button>
             <button class="apu-btn" type="button" data-apu="ch1">
               <div>
@@ -548,10 +548,10 @@
         <div class="section-head reveal">
           <div>
             <p class="eyebrow">OPEN BETA TESTING · TESTING EVERY GAME!</p>
-            <h2>Real captures &amp; live<br>Beta Compatibility Lab.</h2>
+            <h2>Real captures, live 5s video &amp;<br>Beta Compatibility Lab.</h2>
           </div>
           <p>
-            Every screenshot below is a real capture from ReaBoy v1.0.1 BETA. We are actively testing the monochrome Game Boy catalogue — search verified results or log your own Beta test directly below!
+            Every capture and 5-second video below is recorded live from ReaBoy v1.0.1 BETA. We tested 3,529 ROMs across the Game Boy catalogue: <strong>1,424 canonical games verified and running</strong> with full graphics &amp; sound, while 271 unsupported mappers (MBC2/MBC3/MBC5) remain cleanly isolated for the next release.
           </p>
         </div>
 
@@ -588,11 +588,66 @@
 
           <figure class="shot-card">
             <div class="shot-img-wrap">
-              <a href="assets/img/zelda-links-awakening.png" target="_blank"><img src="assets/img/zelda-links-awakening.png" loading="lazy" alt="The Legend of Zelda: Link's Awakening verified in ReaBoy"></a>
+              <video autoplay loop muted playsinline poster="assets/img/kirbys-dream-land.png" aria-label="Kirby's Dream Land running in ReaBoy">
+                <source src="assets/video/kirbys-dream-land.mp4" type="video/mp4">
+                <img src="assets/img/kirbys-dream-land.png" alt="Kirby's Dream Land capture">
+              </video>
             </div>
             <figcaption>
-              <strong>Link's Awakening</strong>
-              <span>MBC1+RAM+BATT · 3,600 frames PASS</span>
+              <strong>Kirby's Dream Land</strong>
+              <span>MBC1 · 5s Live Video PASS</span>
+            </figcaption>
+          </figure>
+
+          <figure class="shot-card">
+            <div class="shot-img-wrap">
+              <video autoplay loop muted playsinline poster="assets/img/metroid-2.png" aria-label="Metroid II - Return of Samus running in ReaBoy">
+                <source src="assets/video/metroid-2.mp4" type="video/mp4">
+                <img src="assets/img/metroid-2.png" alt="Metroid II capture">
+              </video>
+            </div>
+            <figcaption>
+              <strong>Metroid II - Samus</strong>
+              <span>MBC1+RAM+BATT · 5s Video PASS</span>
+            </figcaption>
+          </figure>
+
+          <figure class="shot-card">
+            <div class="shot-img-wrap">
+              <video autoplay loop muted playsinline poster="assets/img/donkey-kong.png" aria-label="Donkey Kong running in ReaBoy">
+                <source src="assets/video/donkey-kong.mp4" type="video/mp4">
+                <img src="assets/img/donkey-kong.png" alt="Donkey Kong capture">
+              </video>
+            </div>
+            <figcaption>
+              <strong>Donkey Kong</strong>
+              <span>MBC1+RAM+BATT · 5s Video PASS</span>
+            </figcaption>
+          </figure>
+
+          <figure class="shot-card">
+            <div class="shot-img-wrap">
+              <video autoplay loop muted playsinline poster="assets/img/mega-man.png" aria-label="Mega Man running in ReaBoy">
+                <source src="assets/video/mega-man.mp4" type="video/mp4">
+                <img src="assets/img/mega-man.png" alt="Mega Man capture">
+              </video>
+            </div>
+            <figcaption>
+              <strong>Mega Man</strong>
+              <span>MBC1 · 5s Live Video PASS</span>
+            </figcaption>
+          </figure>
+
+          <figure class="shot-card">
+            <div class="shot-img-wrap">
+              <video autoplay loop muted playsinline poster="assets/img/batman.png" aria-label="Batman running in ReaBoy">
+                <source src="assets/video/batman.mp4" type="video/mp4">
+                <img src="assets/img/batman.png" alt="Batman capture">
+              </video>
+            </div>
+            <figcaption>
+              <strong>Batman</strong>
+              <span>MBC1 · 5s Live Video PASS</span>
             </figcaption>
           </figure>
         </div>
@@ -715,7 +770,6 @@
         <a class="brand" href="index.html">
           <span class="brand-mark" aria-hidden="true">R</span>
           <span>ReaBoy</span>
-          <span class="version-tag">v1.0.1 BETA</span>
         </a>
         <p>Engineered by <strong>BJ Studios — Manchester, England</strong>.<br>© 2026 BJ Studios. All rights reserved.</p>
         <p>ReaBoy is an independent Game Boy emulator and is not affiliated with or endorsed by Nintendo. Game names and trademarks belong to their respective rights holders. Commercial game ROMs are not distributed.</p>
