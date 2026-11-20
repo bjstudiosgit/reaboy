@@ -31,7 +31,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Press+Start+2P&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/styles.css?v=1.0.7">
+  <link rel="stylesheet" href="css/styles.css?v=1.0.8">
 
   <!-- Structured Data (JSON-LD) for Game Boy Emulator SEO -->
   <script type="application/ld+json">
@@ -111,8 +111,8 @@
         <a href="#drop-lab">Drag &amp; Drop Lab</a>
         <a href="#how-we-made-it">How We Made It</a>
         <a href="#sound-lab">4-Ch Audio</a>
-        <a href="#beta-lab">Game Tests</a>
-        <a href="#mario-section">Mario Vault</a>
+        <a href="#beta-lab">Game Showcase</a>
+        <a href="#compat-search">1,529+ Tested</a>
         <a href="manual.html">User Manual</a>
         <a href="https://github.com/ScientificBrad/ReaBoy" target="_blank" rel="noopener">GitHub ↗</a>
         <a class="nav-cta" href="#install">Download BETA ↓</a>
@@ -542,17 +542,26 @@
       <div class="wrap">
         <div class="section-head reveal">
           <div>
-            <p class="eyebrow">OPEN BETA TESTING · THE 12 GREATEST GAME BOY GAMES</p>
-            <h2>Hall of Fame Classics.<br>Running bit-exact at 60 FPS in ReaBoy.</h2>
+            <p class="eyebrow">OPEN BETA TESTING · 26 VERIFIED CLASSICS</p>
+            <h2>Live Gameplay Showcase.<br>Running bit-exact at 60 FPS in ReaBoy.</h2>
           </div>
           <p>
-            Watch real, uninterrupted 25-to-30-second gameplay captures of the twelve defining masterpieces of the Nintendo Game Boy (DMG-01). Recorded directly from ReaBoy's CPU and scanline-accurate PPU emulator loop with high-resolution original box art. Below, explore the full lab database of <strong>1,529 canonical games verified and running</strong>.
+            Watch real, uninterrupted 25-to-30-second gameplay captures of original Game Boy classics recorded directly from ReaBoy's CPU and scanline-accurate PPU emulator loop with high-resolution original box art. Filter by category or explore the full database of <strong>1,529 canonical games</strong> below.
           </p>
+        </div>
+
+        <!-- Interactive Category Filter Tabs -->
+        <div class="showcase-filter-bar reveal" role="tablist" aria-label="Game showcase filters">
+          <button class="showcase-chip active" type="button" data-showcase="all">All Games (26)</button>
+          <button class="showcase-chip" type="button" data-showcase="hall-of-fame">★ Top 12 Hall of Fame</button>
+          <button class="showcase-chip" type="button" data-showcase="mario">🍄 Mario Series (8)</button>
+          <button class="showcase-chip" type="button" data-showcase="cult-classics">⚡ Cult Classics (10)</button>
+          <button class="showcase-chip" type="button" data-showcase="best-sellers">🏆 Multimillion Hits (10)</button>
         </div>
 
         <div class="top12-grid reveal">
           <!-- 1. The Legend of Zelda: Link's Awakening -->
-          <article class="top12-card">
+          <article class="top12-card" data-cat="hall-of-fame adventure">
             <div class="top12-header">
               <div class="top12-rank-title">
                 <span class="top12-rank">#01</span>
@@ -578,7 +587,7 @@
           </article>
 
           <!-- 2. Tetris -->
-          <article class="top12-card">
+          <article class="top12-card" data-cat="hall-of-fame best-sellers puzzle">
             <div class="top12-header">
               <div class="top12-rank-title">
                 <span class="top12-rank">#02</span>
@@ -604,7 +613,7 @@
           </article>
 
           <!-- 3. Pokémon Red and Blue -->
-          <article class="top12-card">
+          <article class="top12-card" data-cat="hall-of-fame best-sellers rpg">
             <div class="top12-header">
               <div class="top12-rank-title">
                 <span class="top12-rank">#03</span>
@@ -630,7 +639,7 @@
           </article>
 
           <!-- 4. Super Mario Land 2: 6 Golden Coins -->
-          <article class="top12-card">
+          <article class="top12-card" data-cat="hall-of-fame mario best-sellers platformer">
             <div class="top12-header">
               <div class="top12-rank-title">
                 <span class="top12-rank">#04</span>
@@ -656,7 +665,7 @@
           </article>
 
           <!-- 5. Donkey Kong -->
-          <article class="top12-card">
+          <article class="top12-card" data-cat="hall-of-fame mario platformer">
             <div class="top12-header">
               <div class="top12-rank-title">
                 <span class="top12-rank">#05</span>
@@ -682,7 +691,7 @@
           </article>
 
           <!-- 6. Wario Land: Super Mario Land 3 -->
-          <article class="top12-card">
+          <article class="top12-card" data-cat="hall-of-fame mario platformer">
             <div class="top12-header">
               <div class="top12-rank-title">
                 <span class="top12-rank">#06</span>
@@ -708,7 +717,7 @@
           </article>
 
           <!-- 7. Metroid II: Return of Samus -->
-          <article class="top12-card">
+          <article class="top12-card" data-cat="hall-of-fame adventure">
             <div class="top12-header">
               <div class="top12-rank-title">
                 <span class="top12-rank">#07</span>
@@ -734,7 +743,7 @@
           </article>
 
           <!-- 8. Kirby's Dream Land 2 -->
-          <article class="top12-card">
+          <article class="top12-card" data-cat="hall-of-fame best-sellers platformer">
             <div class="top12-header">
               <div class="top12-rank-title">
                 <span class="top12-rank">#08</span>
@@ -760,7 +769,7 @@
           </article>
 
           <!-- 9. Dr. Mario -->
-          <article class="top12-card">
+          <article class="top12-card" data-cat="hall-of-fame mario best-sellers puzzle">
             <div class="top12-header">
               <div class="top12-rank-title">
                 <span class="top12-rank">#09</span>
@@ -786,7 +795,7 @@
           </article>
 
           <!-- 10. Super Mario Land -->
-          <article class="top12-card">
+          <article class="top12-card" data-cat="hall-of-fame mario best-sellers platformer">
             <div class="top12-header">
               <div class="top12-rank-title">
                 <span class="top12-rank">#10</span>
@@ -812,7 +821,7 @@
           </article>
 
           <!-- 11. Mole Mania -->
-          <article class="top12-card">
+          <article class="top12-card" data-cat="hall-of-fame cult-classics puzzle">
             <div class="top12-header">
               <div class="top12-rank-title">
                 <span class="top12-rank">#11</span>
@@ -838,7 +847,7 @@
           </article>
 
           <!-- 12. Gargoyle's Quest -->
-          <article class="top12-card">
+          <article class="top12-card" data-cat="hall-of-fame cult-classics adventure">
             <div class="top12-header">
               <div class="top12-rank-title">
                 <span class="top12-rank">#12</span>
@@ -862,22 +871,9 @@
               <span class="top12-status">✓ 60 FPS PASS</span>
             </div>
           </article>
-        </div>
 
-        <!-- RETROPULSE CULT CLASSICS & BEST-SELLERS VIDEO SHOWCASE -->
-        <div class="section-head reveal" style="margin-top: 3.5rem; margin-bottom: 2rem;">
-          <div>
-            <p class="eyebrow">RETROPULSE SELECTION &amp; BEST-SELLERS · LIVE ACTION VIDEOS</p>
-            <h2>Cult Masterpieces &amp; Top Hits.<br>Running bit-exact at 60 FPS in ReaBoy.</h2>
-          </div>
-          <p>
-            The next ranked tier of defining Game Boy hardware showcases: surreal Sunsoft technical marvels, Konami masterpieces, procedural roguelikes, and multimillion-selling Rareware cartridge feats. Recorded uninterrupted at 60 FPS directly from ReaBoy's CPU/PPU loops. (Mole Mania and Gargoyle's Quest are featured in the Hall of Fame above).
-          </p>
-        </div>
-
-        <div class="top12-grid reveal">
           <!-- 13. Trip World -->
-          <article class="top12-card">
+          <article class="top12-card" data-cat="cult-classics platformer">
             <div class="top12-header">
               <div class="top12-rank-title">
                 <span class="top12-rank">#13</span>
@@ -903,7 +899,7 @@
           </article>
 
           <!-- 14. Avenging Spirit -->
-          <article class="top12-card">
+          <article class="top12-card" data-cat="cult-classics platformer">
             <div class="top12-header">
               <div class="top12-rank-title">
                 <span class="top12-rank">#14</span>
@@ -929,7 +925,7 @@
           </article>
 
           <!-- 15. Kid Dracula -->
-          <article class="top12-card">
+          <article class="top12-card" data-cat="cult-classics platformer">
             <div class="top12-header">
               <div class="top12-rank-title">
                 <span class="top12-rank">#15</span>
@@ -955,7 +951,7 @@
           </article>
 
           <!-- 16. Mega Man V -->
-          <article class="top12-card">
+          <article class="top12-card" data-cat="cult-classics platformer">
             <div class="top12-header">
               <div class="top12-rank-title">
                 <span class="top12-rank">#16</span>
@@ -981,7 +977,7 @@
           </article>
 
           <!-- 17. Cave Noire -->
-          <article class="top12-card">
+          <article class="top12-card" data-cat="cult-classics roguelike">
             <div class="top12-header">
               <div class="top12-rank-title">
                 <span class="top12-rank">#17</span>
@@ -1007,7 +1003,7 @@
           </article>
 
           <!-- 18. Castlevania II: Belmont's Revenge -->
-          <article class="top12-card">
+          <article class="top12-card" data-cat="cult-classics platformer">
             <div class="top12-header">
               <div class="top12-rank-title">
                 <span class="top12-rank">#18</span>
@@ -1033,7 +1029,7 @@
           </article>
 
           <!-- 19. Catrap -->
-          <article class="top12-card">
+          <article class="top12-card" data-cat="cult-classics platformer">
             <div class="top12-header">
               <div class="top12-rank-title">
                 <span class="top12-rank">#19</span>
@@ -1059,7 +1055,7 @@
           </article>
 
           <!-- 20. Ninja Gaiden Shadow -->
-          <article class="top12-card">
+          <article class="top12-card" data-cat="cult-classics platformer">
             <div class="top12-header">
               <div class="top12-rank-title">
                 <span class="top12-rank">#20</span>
@@ -1085,7 +1081,7 @@
           </article>
 
           <!-- 21. Kirby's Dream Land -->
-          <article class="top12-card">
+          <article class="top12-card" data-cat="best-sellers platformer">
             <div class="top12-header">
               <div class="top12-rank-title">
                 <span class="top12-rank">#21</span>
@@ -1111,7 +1107,7 @@
           </article>
 
           <!-- 22. Donkey Kong Land -->
-          <article class="top12-card">
+          <article class="top12-card" data-cat="best-sellers platformer">
             <div class="top12-header">
               <div class="top12-rank-title">
                 <span class="top12-rank">#22</span>
@@ -1137,7 +1133,7 @@
           </article>
 
           <!-- 23. Donkey Kong Land 2 -->
-          <article class="top12-card">
+          <article class="top12-card" data-cat="best-sellers arcade">
             <div class="top12-header">
               <div class="top12-rank-title">
                 <span class="top12-rank">#23</span>
@@ -1163,7 +1159,7 @@
           </article>
 
           <!-- 24. Mario & Yoshi -->
-          <article class="top12-card">
+          <article class="top12-card" data-cat="mario best-sellers puzzle">
             <div class="top12-header">
               <div class="top12-rank-title">
                 <span class="top12-rank">#24</span>
@@ -1187,181 +1183,12 @@
               <span class="top12-status">✓ 60 FPS PASS</span>
             </div>
           </article>
-        </div>
 
-        <!-- THE COMPLETE GAME BOY MARIO VAULT -->
-        <div class="section-head reveal" id="mario-section" style="margin-top: 4.5rem; margin-bottom: 2rem;">
-          <div>
-            <p class="eyebrow" style="color: #c2185b;">SUPER MARIO ON GAME BOY · 1989–1995</p>
-            <h2>The Complete Game Boy Mario Vault.<br>Every adventure, spin-off &amp; puzzle classic.</h2>
-          </div>
-          <p>
-            From Gunpei Yokoi's historic 1989 launch platformer to Hiroji Kiyotake's Wario debut, the 101-stage masterpiece of Donkey Kong '94, and archaeological Picross. All 8 original Game Boy Mario titles captured live running bit-exact at 60 FPS in ReaBoy.
-          </p>
-        </div>
-
-        <div class="top12-grid reveal">
-          <!-- M1. Super Mario Land -->
-          <article class="top12-card">
+          <!-- 25. Mario's Picross -->
+          <article class="top12-card" data-cat="mario puzzle">
             <div class="top12-header">
               <div class="top12-rank-title">
-                <span class="top12-rank" style="background:#c2185b;color:#fff;">M1</span>
-                <h3 class="top12-title">Super Mario Land</h3>
-              </div>
-              <span class="top12-year">1989</span>
-            </div>
-            <div class="top12-media">
-              <video autoplay loop muted playsinline poster="assets/img/shots/super-mario-land.png">
-                <source src="assets/video/super-mario-land.mp4" type="video/mp4">
-              </video>
-              <div class="top12-boxart-thumb" title="Original Box Art">
-                <img src="assets/img/boxart/super-mario-land.jpg" alt="Super Mario Land Box Art" loading="lazy">
-              </div>
-            </div>
-            <p class="top12-desc">
-              18.14 million copies sold. The historic launch-day platformer through Sarasaland with the Sky Pop plane and Marine Pop submarine.
-            </p>
-            <div class="top12-meta">
-              <span class="top12-meta-tag">MBC1 · 64 KB</span>
-              <span class="top12-status">✓ 60 FPS PASS</span>
-            </div>
-          </article>
-
-          <!-- M2. Super Mario Land 2: 6 Golden Coins -->
-          <article class="top12-card">
-            <div class="top12-header">
-              <div class="top12-rank-title">
-                <span class="top12-rank" style="background:#c2185b;color:#fff;">M2</span>
-                <h3 class="top12-title">Super Mario Land 2</h3>
-              </div>
-              <span class="top12-year">1992</span>
-            </div>
-            <div class="top12-media">
-              <video autoplay loop muted playsinline poster="assets/img/shots/super-mario-land-2-6-golden-coins.png">
-                <source src="assets/video/super-mario-land-2.mp4" type="video/mp4">
-              </video>
-              <div class="top12-boxart-thumb" title="Original Box Art">
-                <img src="assets/img/boxart/super-mario-land-2.jpg" alt="Super Mario Land 2 Box Art" loading="lazy">
-              </div>
-            </div>
-            <p class="top12-desc">
-              11.18 million copies sold. Vast nonlinear zones, huge expressive sprites, the Carrot bunny power-up, and the historic introduction of Wario.
-            </p>
-            <div class="top12-meta">
-              <span class="top12-meta-tag">MBC1+RAM+BATT · 512 KB</span>
-              <span class="top12-status">✓ 60 FPS PASS</span>
-            </div>
-          </article>
-
-          <!-- M3. Wario Land: Super Mario Land 3 -->
-          <article class="top12-card">
-            <div class="top12-header">
-              <div class="top12-rank-title">
-                <span class="top12-rank" style="background:#c2185b;color:#fff;">M3</span>
-                <h3 class="top12-title">Wario Land: SML3</h3>
-              </div>
-              <span class="top12-year">1994</span>
-            </div>
-            <div class="top12-media">
-              <video autoplay loop muted playsinline poster="assets/img/shots/wario-land-super-mario-land-3.png">
-                <source src="assets/video/wario-land.mp4" type="video/mp4">
-              </video>
-              <div class="top12-boxart-thumb" title="Original Box Art">
-                <img src="assets/img/boxart/wario-land.jpg" alt="Wario Land Box Art" loading="lazy">
-              </div>
-            </div>
-            <p class="top12-desc">
-              5.19 million copies sold. Wario's debut as protagonist on Kitchen Island with Bull, Jet, and Dragon hats hunting Captain Syrup's treasure.
-            </p>
-            <div class="top12-meta">
-              <span class="top12-meta-tag">MBC1+RAM+BATT · 512 KB</span>
-              <span class="top12-status">✓ 60 FPS PASS</span>
-            </div>
-          </article>
-
-          <!-- M4. Dr. Mario -->
-          <article class="top12-card">
-            <div class="top12-header">
-              <div class="top12-rank-title">
-                <span class="top12-rank" style="background:#c2185b;color:#fff;">M4</span>
-                <h3 class="top12-title">Dr. Mario</h3>
-              </div>
-              <span class="top12-year">1990</span>
-            </div>
-            <div class="top12-media">
-              <video autoplay loop muted playsinline poster="assets/img/shots/dr-mario.png">
-                <source src="assets/video/dr-mario.mp4" type="video/mp4">
-              </video>
-              <div class="top12-boxart-thumb" title="Original Box Art">
-                <img src="assets/img/boxart/dr-mario.jpg" alt="Dr. Mario Box Art" loading="lazy">
-              </div>
-            </div>
-            <p class="top12-desc">
-              5.34 million copies sold. Gunpei Yokoi and Takahiro Harada's puzzle legend. Verified STAT Mode 0 PPU timing fix active in ReaBoy v1.0.1.
-            </p>
-            <div class="top12-meta">
-              <span class="top12-meta-tag">ROM-Only · 32 KB</span>
-              <span class="top12-status">✓ 60 FPS PASS</span>
-            </div>
-          </article>
-
-          <!-- M5. Donkey Kong (1994) -->
-          <article class="top12-card">
-            <div class="top12-header">
-              <div class="top12-rank-title">
-                <span class="top12-rank" style="background:#c2185b;color:#fff;">M5</span>
-                <h3 class="top12-title">Donkey Kong '94</h3>
-              </div>
-              <span class="top12-year">1994</span>
-            </div>
-            <div class="top12-media">
-              <video autoplay loop muted playsinline poster="assets/img/shots/donkey-kong.png">
-                <source src="assets/video/donkey-kong.mp4" type="video/mp4">
-              </video>
-              <div class="top12-boxart-thumb" title="Original Box Art">
-                <img src="assets/img/boxart/donkey-kong.jpg" alt="Donkey Kong Box Art" loading="lazy">
-              </div>
-            </div>
-            <p class="top12-desc">
-              3.07 million copies sold. Mario's magnum opus: handstands, backflips, key tosses, and 101 puzzle-platforming stages spanning City to Tower.
-            </p>
-            <div class="top12-meta">
-              <span class="top12-meta-tag">MBC1 · 512 KB</span>
-              <span class="top12-status">✓ 60 FPS PASS</span>
-            </div>
-          </article>
-
-          <!-- M6. Mario & Yoshi -->
-          <article class="top12-card">
-            <div class="top12-header">
-              <div class="top12-rank-title">
-                <span class="top12-rank" style="background:#c2185b;color:#fff;">M6</span>
-                <h3 class="top12-title">Mario &amp; Yoshi</h3>
-              </div>
-              <span class="top12-year">1991</span>
-            </div>
-            <div class="top12-media">
-              <video autoplay loop muted playsinline poster="assets/img/shots/mario-and-yoshi.png">
-                <source src="assets/video/mario-and-yoshi.mp4" type="video/mp4">
-              </video>
-              <div class="top12-boxart-thumb" title="Original Box Art">
-                <img src="assets/img/boxart/mario-and-yoshi.jpg" alt="Mario &amp; Yoshi Box Art" loading="lazy">
-              </div>
-            </div>
-            <p class="top12-desc">
-              3.12 million copies sold. Game Freak and Satoshi Tajiri's high-speed tray swapper, sandwiching Goombas and Boos between Yoshi eggs.
-            </p>
-            <div class="top12-meta">
-              <span class="top12-meta-tag">MBC1 · 64 KB</span>
-              <span class="top12-status">✓ 60 FPS PASS</span>
-            </div>
-          </article>
-
-          <!-- M7. Mario's Picross -->
-          <article class="top12-card">
-            <div class="top12-header">
-              <div class="top12-rank-title">
-                <span class="top12-rank" style="background:#c2185b;color:#fff;">M7</span>
+                <span class="top12-rank">#25</span>
                 <h3 class="top12-title">Mario's Picross</h3>
               </div>
               <span class="top12-year">1995</span>
@@ -1383,11 +1210,11 @@
             </div>
           </article>
 
-          <!-- M8. Yoshi's Cookie -->
-          <article class="top12-card">
+          <!-- 26. Yoshi's Cookie -->
+          <article class="top12-card" data-cat="mario best-sellers puzzle">
             <div class="top12-header">
               <div class="top12-rank-title">
-                <span class="top12-rank" style="background:#c2185b;color:#fff;">M8</span>
+                <span class="top12-rank">#26</span>
                 <h3 class="top12-title">Yoshi's Cookie</h3>
               </div>
               <span class="top12-year">1992</span>
@@ -1401,7 +1228,7 @@
               </div>
             </div>
             <p class="top12-desc">
-              1.53 million copies sold. Alexey Pajitnov (Tetris creator) collaboration: Mario and Yoshi shift cookie grids in an intensely satisfying bakery rush.
+              Worldwide Rank #24 Best-Seller (1.53 million). Alexey Pajitnov (Tetris creator) collaboration: Mario and Yoshi shift cookie grids in an intensely satisfying bakery rush.
             </p>
             <div class="top12-meta">
               <span class="top12-meta-tag">MBC1 · 128 KB</span>
@@ -1572,6 +1399,6 @@
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-  <script src="js/app.js" defer></script>
+  <script src="js/app.js?v=1.0.8" defer></script>
 </body>
 </html>

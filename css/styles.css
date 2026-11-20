@@ -2556,6 +2556,47 @@ html[data-theme="classic"] .toast {
 /* ============================================================
    THE 12 GREATEST ORIGINAL GAME BOY GAMES — VIDEO SHOWCASE
    ============================================================ */
+.showcase-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 2rem;
+}
+
+.showcase-chip {
+  appearance: none;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--ink-secondary);
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 0.45rem 1rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  user-select: none;
+  box-shadow: 1px 1px 0 var(--border);
+}
+
+.showcase-chip:hover {
+  color: var(--ink);
+  border-color: var(--gb-0);
+  transform: translateY(-1px);
+}
+
+.showcase-chip.active {
+  background: #153b2a;
+  color: #d4f68c;
+  border-color: #153b2a;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.top12-card[hidden] {
+  display: none !important;
+}
+
 .top12-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

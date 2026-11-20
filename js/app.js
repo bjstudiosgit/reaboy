@@ -989,4 +989,27 @@
       showToast(`Added "${title}" to your Beta Test Log!`);
     });
   }
+
+  // ------------------------------------------------------------
+  // Interactive Gameplay Showcase Category Filter
+  // ------------------------------------------------------------
+  const showcaseChips = $$('.showcase-chip');
+  if (showcaseChips.length) {
+    showcaseChips.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        showcaseChips.forEach((b) => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.showcase || 'all';
+        const cards = $$('.top12-card[data-cat]');
+        cards.forEach((card) => {
+          if (filter === 'all') {
+            card.hidden = false;
+          } else {
+            const cats = (card.dataset.cat || '').split(' ');
+            card.hidden = !cats.includes(filter);
+          }
+        });
+      });
+    });
+  }
 })();
