@@ -1037,23 +1037,27 @@
       { id: '1529', title: 'Dr. Mario', shot: 'assets/img/shots/dr-mario.png' }
     ];
 
+    // Preload all 10 images into memory to eliminate image jumping or network latency
+    verifiedHighlights.forEach((g) => {
+      const preload = new Image();
+      preload.src = g.shot;
+    });
+
     let currentCartIdx = 0;
     setInterval(() => {
       currentCartIdx = (currentCartIdx + 1) % verifiedHighlights.length;
       const g = verifiedHighlights[currentCartIdx];
 
       if (cartGlitch) cartGlitch.classList.add('active');
-      cartImg.style.opacity = '0.35';
-      cartImg.style.transform = 'scale(0.96)';
+      cartImg.style.opacity = '0.4';
 
       setTimeout(() => {
         cartImg.src = g.shot;
         cartId.textContent = `ROM #${g.id} / 1529`;
         cartTitle.textContent = g.title;
         cartImg.style.opacity = '1';
-        cartImg.style.transform = 'scale(1)';
         if (cartGlitch) cartGlitch.classList.remove('active');
-      }, 160);
+      }, 140);
     }, 2400);
   }
 })();

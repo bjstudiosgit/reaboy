@@ -1939,12 +1939,15 @@ html[data-theme="classic"] .cart-unit::before {
   box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.4);
   position: relative;
   overflow: hidden;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .cart-screen {
   width: 100%;
   aspect-ratio: 160 / 144;
+  height: auto;
   background: #9bbc0f;
   position: relative;
   overflow: hidden;
@@ -1952,13 +1955,16 @@ html[data-theme="classic"] .cart-unit::before {
 }
 
 .cart-screen img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: fill;
   image-rendering: pixelated;
   image-rendering: crisp-edges;
   display: block;
-  transition: opacity 0.22s ease-in-out, transform 0.22s ease-in-out;
+  transition: opacity 0.15s ease-in-out;
 }
 
 .cart-screen-scanlines {
@@ -1989,16 +1995,18 @@ html[data-theme="classic"] .cart-unit::before {
 
 /* Screen metadata ticker */
 .cart-screen-meta {
-  background: rgba(0, 0, 0, 0.35);
+  background: rgba(0, 0, 0, 0.45);
   border-radius: 3px;
-  padding: 4px 6px;
-  margin-bottom: 6px;
+  padding: 0 8px;
+  height: 26px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 0.35rem;
+  gap: 0.5rem;
   font-family: var(--font-mono);
-  font-size: 0.62rem;
+  font-size: 0.65rem;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 .cart-game-id {
@@ -2015,36 +2023,7 @@ html[data-theme="classic"] .cart-unit::before {
   text-overflow: ellipsis;
   white-space: nowrap;
   text-align: right;
-}
-
-/* Cartridge label footer */
-.cart-label-foot {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 0.55rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: 4px;
-}
-
-.cart-seal {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  border: 1px solid #d4af37;
-  border-radius: 999px;
-  padding: 1px 6px;
-  background: radial-gradient(circle, #fff7c2 0%, #d4af37 100%);
-  color: #3d2b00;
-  font-size: 0.45rem;
-  line-height: 1.1;
-  font-weight: 700;
-}
-
-.cart-made {
-  font-family: var(--font-mono);
-  color: rgba(243, 245, 233, 0.65);
-  letter-spacing: 0.05em;
+  flex-grow: 1;
 }
 
 @media (max-width: 900px) {
