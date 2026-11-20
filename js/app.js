@@ -470,25 +470,27 @@
   };
 
   function updateInspectorUI({ title, mapper, romSize, ramSize, checksum, hw, verdict, note }) {
-    $('#rom-title').textContent = title;
-    $('#rom-mapper').textContent = mapper;
-    $('#rom-size').textContent = romSize;
-    $('#rom-ram').textContent = ramSize;
-    $('#rom-checksum').textContent = checksum;
-    $('#rom-hw').textContent = hw;
-    $('#rom-note').innerHTML = note;
+    if ($('#rom-title')) $('#rom-title').textContent = title;
+    if ($('#rom-mapper')) $('#rom-mapper').textContent = mapper;
+    if ($('#rom-size')) $('#rom-size').textContent = romSize;
+    if ($('#rom-ram')) $('#rom-ram').textContent = ramSize;
+    if ($('#rom-checksum')) $('#rom-checksum').textContent = checksum;
+    if ($('#rom-hw')) $('#rom-hw').textContent = hw;
+    if ($('#rom-note')) $('#rom-note').innerHTML = note;
 
     const badge = $('#rom-verdict');
-    badge.className = 'verdict-badge';
-    if (verdict === 'PASS') {
-      badge.classList.add('verdict-pass');
-      badge.textContent = 'SUPPORTED · BETA';
-    } else if (verdict === 'WARN') {
-      badge.classList.add('verdict-warn');
-      badge.textContent = 'CHECK HEADER';
-    } else {
-      badge.classList.add('verdict-roadmap');
-      badge.textContent = 'ROADMAP (POST-BETA)';
+    if (badge) {
+      badge.className = 'verdict-badge';
+      if (verdict === 'PASS') {
+        badge.classList.add('verdict-pass');
+        badge.textContent = 'SUPPORTED · BETA';
+      } else if (verdict === 'WARN') {
+        badge.classList.add('verdict-warn');
+        badge.textContent = 'CHECK HEADER';
+      } else {
+        badge.classList.add('verdict-roadmap');
+        badge.textContent = 'ROADMAP (POST-BETA)';
+      }
     }
   }
 

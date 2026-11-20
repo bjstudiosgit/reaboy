@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Game Boy Compatibility Lab (1,529+ Titles) — ReaBoy v1.0.1 BETA | BJ Studios</title>
-  <meta name="description" content="Search and browse verified compatibility test results for 1,529+ canonical Game Boy (DMG-01) games running bit-exact in ReaBoy v1.0.1 BETA emulator on Windows x64.">
+  <title>Game Boy Compatibility Lab &amp; ROM Inspector (1,529+ Titles) — ReaBoy v1.0.1 BETA | BJ Studios</title>
+  <meta name="description" content="Search and browse verified compatibility test results for 1,529+ canonical Game Boy (DMG-01) games, and inspect local cartridge header bytes ($0104–$014F) in ReaBoy v1.0.1 BETA emulator on Windows x64.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#0f380f">
   <link rel="canonical" href="https://scientificbrad.github.io/ReaBoy/compatibility.html">
@@ -49,9 +49,6 @@
       <button class="mobile-menu-btn" id="mobile-menu-btn" type="button" aria-expanded="false" aria-controls="nav-links">MENU</button>
       <nav class="nav-links" id="nav-links" aria-label="Primary Navigation">
         <a href="index.html">Home</a>
-        <a href="index.html#drop-lab">ROM Inspector</a>
-        <a href="index.html#how-we-made-it">How We Made It</a>
-        <a href="index.html#beta-lab">Game Showcase</a>
         <a class="active" href="compatibility.html">1,529+ Tested</a>
         <a href="manual.html">User Manual</a>
         <a href="https://github.com/ScientificBrad/ReaBoy" target="_blank" rel="noopener">GitHub ↗</a>
@@ -78,7 +75,69 @@
             <h1 style="margin:0 0 0.6rem;font-size:clamp(1.9rem,3.4vw,2.6rem);">Game Boy Compatibility Lab</h1>
           </div>
           <p>
-            Every canonical monochrome Nintendo Game Boy (DMG-01) release dynamically executed in ReaBoy's bit-exact SM83 CPU and scanline-accurate PPU emulator loop. Search in real-time, filter by cartridge mapper (ROM-Only, MBC1), inspect telemetry notes, or log local test reports.
+            Every canonical monochrome Nintendo Game Boy (DMG-01) release dynamically executed in ReaBoy's bit-exact SM83 CPU and scanline-accurate PPU emulator loop. Search in real-time, filter by cartridge mapper (ROM-Only, MBC1), inspect telemetry notes, or test your own ROMs locally.
+          </p>
+        </div>
+
+        <!-- DRAG & DROP INTERACTIVE ROM INSPECTOR -->
+        <div class="drop-lab-grid reveal" style="margin-bottom: 4rem;">
+          <div class="drop-zone" id="rom-drop-zone" tabindex="0" role="button" aria-label="Drop a Game Boy ROM file here or click to select">
+            <input type="file" id="rom-file-input" accept=".gb,.gbc,.bin" hidden>
+            <div class="drop-icon" aria-hidden="true">⬇</div>
+            <h3>Drag &amp; drop a <code>.gb</code> ROM here</h3>
+            <p>Reads bytes <code>$0104–$014F</code> locally in your browser to verify the Nintendo logo, MBC mapper, ROM/RAM banks, and DMG header checksum.</p>
+            <div class="sample-cart-row" aria-label="Simulate sample cartridges">
+              <button class="chip-btn" type="button" data-sample="tetris">Sample: Tetris</button>
+              <button class="chip-btn" type="button" data-sample="drmario">Sample: Dr. Mario</button>
+              <button class="chip-btn" type="button" data-sample="marioland">Sample: Super Mario Land</button>
+              <button class="chip-btn" type="button" data-sample="zelda">Sample: Link's Awakening</button>
+            </div>
+          </div>
+
+          <div class="inspector-panel" id="rom-inspector">
+            <div class="inspector-header">
+              <span class="inspector-title">CARTRIDGE HEADER TELEMETRY ($0104–$014F)</span>
+            </div>
+            <div class="header-grid">
+              <div class="header-cell">
+                <span>Cartridge Title ($0134)</span>
+                <strong id="rom-title">TETRIS (SAMPLE)</strong>
+              </div>
+              <div class="header-cell">
+                <span>Mapper / MBC ($0147)</span>
+                <strong id="rom-mapper">0x00 · ROM ONLY</strong>
+              </div>
+              <div class="header-cell">
+                <span>ROM Size ($0148)</span>
+                <strong id="rom-size">32 KiB (2 Banks)</strong>
+              </div>
+              <div class="header-cell">
+                <span>Battery RAM ($0149)</span>
+                <strong id="rom-ram">None (0 KiB)</strong>
+              </div>
+              <div class="header-cell">
+                <span>Header Checksum ($014D)</span>
+                <strong id="rom-checksum">0x0A · VALID (Z=1)</strong>
+              </div>
+              <div class="header-cell">
+                <span>Target Hardware</span>
+                <strong id="rom-hw">DMG-01 Monochrome</strong>
+              </div>
+            </div>
+            <p class="inspector-note" id="rom-note">
+              Fully compatible with ReaBoy v1.0.1 BETA! Drag this ROM onto <strong>ReaBoy.exe</strong> to boot immediately with Bootix DMG v1.2 or your own DMG boot ROM.
+            </p>
+          </div>
+        </div>
+
+        <!-- Subheading for Database Table -->
+        <div class="section-head reveal" style="margin-bottom: 1.5rem;">
+          <div>
+            <p class="eyebrow">CANONICAL VERIFICATION MATRIX</p>
+            <h2 style="font-size:clamp(1.5rem,2.5vw,1.9rem);">Search 1,529+ Tested Titles</h2>
+          </div>
+          <p>
+            Filter by cartridge mapper (ROM-Only, MBC1), jump by alphabetical index, inspect execution telemetry, or log new test runs directly in your local browser storage.
           </p>
         </div>
 

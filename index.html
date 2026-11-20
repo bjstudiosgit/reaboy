@@ -108,10 +108,7 @@
       </a>
       <button class="mobile-menu-btn" id="mobile-menu-btn" type="button" aria-expanded="false" aria-controls="nav-links">MENU</button>
       <nav class="nav-links" id="nav-links" aria-label="Primary Navigation">
-        <a href="#drop-lab">Drag &amp; Drop Lab</a>
-        <a href="#how-we-made-it">How We Made It</a>
-        <a href="#sound-lab">4-Ch Audio</a>
-        <a href="#beta-lab">Game Showcase</a>
+        <a class="active" href="index.html">Home</a>
         <a href="compatibility.html">1,529+ Tested</a>
         <a href="manual.html">User Manual</a>
         <a href="https://github.com/ScientificBrad/ReaBoy" target="_blank" rel="noopener">GitHub ↗</a>
@@ -216,94 +213,6 @@
           </div>
 
 
-        </div>
-      </div>
-    </section>
-
-    <!-- TELEMETRY STRIP -->
-    <section class="wrap" aria-label="Technical highlights">
-      <div class="telemetry-strip reveal">
-        <div class="telemetry-card">
-          <span class="telemetry-val">0 Mismatches</span>
-          <span class="telemetry-lbl">256-byte DMG-01 boot ROM reassembly via RGBDS v1.0.4</span>
-        </div>
-        <div class="telemetry-card">
-          <span class="telemetry-val">23,454,204</span>
-          <span class="telemetry-lbl">Exact T-cycles executed to bit-exact $0100 handover</span>
-        </div>
-        <div class="telemetry-card">
-          <span class="telemetry-val">160 × 144</span>
-          <span class="telemetry-lbl">Fixed integer 1×–4× pixel scaling + fullscreen</span>
-        </div>
-        <div class="telemetry-card">
-          <span class="telemetry-val">1,529+ Games PASS</span>
-          <span class="telemetry-lbl">Verified ROM-only, MBC1, MBC2 &amp; MBC3 titles across 3,529 test suite</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- ONE CLICK / ONE DRAG & DROP INTERACTIVE ROM INSPECTOR -->
-    <section class="section section-alt" id="drop-lab">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <div>
-            <p class="eyebrow">ONE CLICK · ONE DRAG &amp; DROP</p>
-            <h2>Drop any <code>.gb</code> cartridge.<br>Instant hardware inspection.</h2>
-          </div>
-          <p>
-            In ReaBoy, playing a game is literally dragging a <code>.gb</code> file onto the window. Try our live browser-side Cartridge Header Inspector below — drop one of your own ROMs (100% local, never uploaded) or click a sample cartridge to see how ReaBoy validates <code>$0104–$014F</code> before boot.
-          </p>
-        </div>
-
-        <div class="drop-lab-grid reveal">
-          <div class="drop-zone" id="rom-drop-zone" tabindex="0" role="button" aria-label="Drop a Game Boy ROM file here or click to select">
-            <input type="file" id="rom-file-input" accept=".gb,.gbc,.bin" hidden>
-            <div class="drop-icon" aria-hidden="true">⬇</div>
-            <h3>Drag &amp; drop a <code>.gb</code> ROM here</h3>
-            <p>Reads bytes <code>$0104–$014F</code> locally in your browser to verify the Nintendo logo, MBC mapper, ROM/RAM banks, and DMG header checksum.</p>
-            <div class="sample-cart-row" aria-label="Simulate sample cartridges">
-              <button class="chip-btn" type="button" data-sample="tetris">Sample: Tetris</button>
-              <button class="chip-btn" type="button" data-sample="drmario">Sample: Dr. Mario</button>
-              <button class="chip-btn" type="button" data-sample="marioland">Sample: Super Mario Land</button>
-              <button class="chip-btn" type="button" data-sample="zelda">Sample: Link's Awakening</button>
-            </div>
-          </div>
-
-          <div class="inspector-panel" id="rom-inspector">
-            <div class="inspector-header">
-              <span class="inspector-title">CARTRIDGE HEADER TELEMETRY ($0104–$014F)</span>
-              <span class="verdict-badge verdict-pass" id="rom-verdict">READY · BETA</span>
-            </div>
-            <div class="header-grid">
-              <div class="header-cell">
-                <span>Cartridge Title ($0134)</span>
-                <strong id="rom-title">TETRIS (SAMPLE)</strong>
-              </div>
-              <div class="header-cell">
-                <span>Mapper / MBC ($0147)</span>
-                <strong id="rom-mapper">0x00 · ROM ONLY</strong>
-              </div>
-              <div class="header-cell">
-                <span>ROM Size ($0148)</span>
-                <strong id="rom-size">32 KiB (2 Banks)</strong>
-              </div>
-              <div class="header-cell">
-                <span>Battery RAM ($0149)</span>
-                <strong id="rom-ram">None (0 KiB)</strong>
-              </div>
-              <div class="header-cell">
-                <span>Header Checksum ($014D)</span>
-                <strong id="rom-checksum">0x0A · VALID (Z=1)</strong>
-              </div>
-              <div class="header-cell">
-                <span>Target Hardware</span>
-                <strong id="rom-hw">DMG-01 Monochrome</strong>
-              </div>
-            </div>
-            <p class="inspector-note" id="rom-note">
-              Fully compatible with ReaBoy v1.0.1 BETA! Drag this ROM onto <strong>ReaBoy.exe</strong> to boot immediately with Bootix DMG v1.2 or your own DMG boot ROM.
-            </p>
-          </div>
         </div>
       </div>
     </section>
