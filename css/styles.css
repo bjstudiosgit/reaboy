@@ -1996,13 +1996,16 @@ html[data-theme="classic"] .cart-unit::before {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 0.35rem;
   font-family: var(--font-mono);
-  font-size: 0.65rem;
+  font-size: 0.62rem;
 }
 
 .cart-game-id {
   color: #c9db74;
   font-weight: 700;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .cart-game-title {
@@ -2011,7 +2014,7 @@ html[data-theme="classic"] .cart-unit::before {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  max-width: 140px;
+  text-align: right;
 }
 
 /* Cartridge label footer */
