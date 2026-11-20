@@ -112,7 +112,7 @@
         <a href="#how-we-made-it">How We Made It</a>
         <a href="#sound-lab">4-Ch Audio</a>
         <a href="#beta-lab">Game Showcase</a>
-        <a href="#compat-search">1,529+ Tested</a>
+        <a href="compatibility.html">1,529+ Tested</a>
         <a href="manual.html">User Manual</a>
         <a href="https://github.com/ScientificBrad/ReaBoy" target="_blank" rel="noopener">GitHub ↗</a>
         <a class="nav-cta" href="#install">Download BETA ↓</a>
@@ -546,7 +546,7 @@
             <h2>Live Gameplay Showcase.<br>Running bit-exact at 60 FPS in ReaBoy.</h2>
           </div>
           <p>
-            Watch real, uninterrupted 25-to-30-second gameplay captures of original Game Boy classics recorded directly from ReaBoy's CPU and scanline-accurate PPU emulator loop with high-resolution original box art. Filter by category or explore the full database of <strong>1,529 canonical games</strong> below.
+            Watch real, uninterrupted 25-to-30-second gameplay captures of original Game Boy classics recorded directly from ReaBoy's CPU and scanline-accurate PPU emulator loop with high-resolution original box art. Filter by category below, or explore the complete library of <strong>1,529 canonical games</strong> in our dedicated Compatibility Lab.
           </p>
         </div>
 
@@ -1237,67 +1237,19 @@
           </article>
         </div>
 
-        <!-- Filterable Compatibility Table -->
-        <div class="compat-toolbar reveal">
-          <input class="compat-search" id="compat-search" type="search" placeholder="Search 1,529+ verified games (e.g. Zelda, Pokémon, Metroid, MBC1, MBC2)..." aria-label="Filter tested games">
-          <div style="display:flex;gap:0.45rem;flex-wrap:wrap;">
-            <button class="chip-btn active" type="button" data-filter="ALL">All (1,529+)</button>
-            <button class="chip-btn" type="button" data-filter="PASS">Verified Pass</button>
-            <button class="chip-btn" type="button" data-alpha="A-C">A–C</button>
-            <button class="chip-btn" type="button" data-alpha="D-F">D–F</button>
-            <button class="chip-btn" type="button" data-alpha="G-I">G–I</button>
-            <button class="chip-btn" type="button" data-alpha="J-L">J–L</button>
-            <button class="chip-btn" type="button" data-alpha="M-O">M–O</button>
-            <button class="chip-btn" type="button" data-alpha="P-R">P–R</button>
-            <button class="chip-btn" type="button" data-alpha="S-U">S–U</button>
-            <button class="chip-btn" type="button" data-alpha="V-Z">V–Z</button>
+        <!-- COMPATIBILITY LAB CALLOUT BANNER -->
+        <div class="compat-cta-banner reveal">
+          <div class="compat-cta-content">
+            <span class="badge badge-accent">1,529 CANONICAL TITLES</span>
+            <h3 class="compat-cta-title">Explore the Complete ReaBoy Compatibility Database</h3>
+            <p class="compat-cta-desc">
+              Every commercial Game Boy release dynamically executed and verified in ReaBoy's bit-exact CPU and scanline PPU core. Search 1,529+ games by title, filter by cartridge mapper (ROM-Only, MBC1), inspect runtime cycle telemetry, and log your own test results in our dedicated lab.
+            </p>
+          </div>
+          <div class="compat-cta-action">
+            <a class="btn btn-primary" href="compatibility.html" style="font-weight:700;">Open Compatibility Lab (1,529+) →</a>
           </div>
         </div>
-
-        <div class="compat-table-wrap reveal">
-          <table class="compat-table">
-            <thead>
-              <tr>
-                <th style="width:58px;">Shot</th>
-                <th>Game Title</th>
-                <th>Cartridge</th>
-                <th>Status</th>
-                <th>Verified Telemetry / Notes</th>
-              </tr>
-            </thead>
-            <tbody id="compat-tbody">
-              <!-- Populated by app.js -->
-            </tbody>
-          </table>
-          <div class="compat-table-foot" id="compat-table-footer" style="display:flex;justify-content:space-between;align-items:center;padding:12px 18px;border-top:1px solid var(--border);flex-wrap:wrap;gap:10px;">
-            <span id="compat-count-label" style="font-family:var(--font-mono);font-size:0.82rem;color:var(--text-muted);">Showing 40 of 1,529+ verified games</span>
-            <div style="display:flex;gap:8px;">
-              <button class="chip-btn" id="load-more-btn" type="button">Load More (+50)</button>
-              <button class="chip-btn" id="show-all-btn" type="button">Show All 1,529+ Games</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Beta Tester Game Logger -->
-        <form class="beta-log-form reveal" id="beta-log-form">
-          <h4>Log a Game Test (Saved Locally + Optional GitHub Beta Report)</h4>
-          <div class="form-row">
-            <input class="form-input" id="log-title" type="text" required placeholder="Game name (e.g. Kirby's Dream Land)">
-            <select class="form-select" id="log-mapper" aria-label="Cartridge Mapper">
-              <option value="ROM-Only">ROM-Only</option>
-              <option value="MBC1">MBC1</option>
-              <option value="MBC1+RAM+BATT">MBC1+RAM+BATT</option>
-              <option value="MBC3 (Roadmap)">MBC3 (Roadmap)</option>
-              <option value="MBC5 (Roadmap)">MBC5 (Roadmap)</option>
-            </select>
-            <select class="form-select" id="log-status" aria-label="Test Status">
-              <option value="PASS">PASS</option>
-              <option value="ISSUES">ISSUES</option>
-            </select>
-            <input class="form-input" id="log-notes" type="text" placeholder="Notes (boot intro, sound, battery save...)">
-            <button class="btn btn-primary" type="submit" style="padding:0.6rem 1.1rem;font-size:0.84rem;">+ Add Test</button>
-          </div>
-        </form>
       </div>
     </section>
 
@@ -1388,6 +1340,7 @@
       <div>
         <strong style="font-family:var(--font-mono);font-size:0.8rem;color:var(--gb-0);">DOCUMENTATION</strong>
         <ul class="footer-links">
+          <li><a href="compatibility.html">Compatibility Lab (1,529+ Games)</a></li>
           <li><a href="manual.html">Complete User Manual</a></li>
           <li><a href="#how-we-made-it">Project 007 Architecture</a></li>
           <li><a href="https://github.com/ScientificBrad/ReaBoy" target="_blank" rel="noopener">GitHub Repository ↗</a></li>

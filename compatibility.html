@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en-GB" data-theme="classic">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Game Boy Compatibility Lab (1,529+ Titles) — ReaBoy v1.0.1 BETA | BJ Studios</title>
+  <meta name="description" content="Search and browse verified compatibility test results for 1,529+ canonical Game Boy (DMG-01) games running bit-exact in ReaBoy v1.0.1 BETA emulator on Windows x64.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0f380f">
+  <link rel="canonical" href="https://scientificbrad.github.io/ReaBoy/compatibility.html">
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Press+Start+2P&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=1.0.8">
+
+  <!-- OpenGraph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ReaBoy Compatibility Lab — 1,529+ Game Boy Games Verified">
+  <meta property="og:description" content="Live compatibility database for 1,529+ canonical Game Boy titles executed dynamically in ReaBoy DMG-01 emulator. Search by title, mapper, or telemetry status.">
+  <meta property="og:url" content="https://scientificbrad.github.io/ReaBoy/compatibility.html">
+  <meta property="og:image" content="https://scientificbrad.github.io/ReaBoy/assets/img/og-preview.png">
+
+  <!-- Schema.org Dataset -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    "name": "ReaBoy Game Boy Compatibility Matrix",
+    "description": "Benchmark verification telemetry for 1,529 canonical Nintendo Game Boy (DMG-01) titles running under ReaBoy v1.0.1 BETA.",
+    "creator": {
+      "@type": "Organization",
+      "name": "BJ Studios"
+    },
+    "variableMeasured": "Cycle accuracy, PPU scanline sync, audio DMA, cartridge MBC execution"
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- SITE HEADER / NAVIGATION -->
+  <header class="site-header">
+    <div class="wrap nav-bar">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">R</span>
+        <span>ReaBoy</span>
+      </a>
+      <button class="mobile-menu-btn" id="mobile-menu-btn" type="button" aria-expanded="false" aria-controls="nav-links">MENU</button>
+      <nav class="nav-links" id="nav-links" aria-label="Primary Navigation">
+        <a href="index.html">Home</a>
+        <a href="index.html#drop-lab">ROM Inspector</a>
+        <a href="index.html#how-we-made-it">How We Made It</a>
+        <a href="index.html#beta-lab">Game Showcase</a>
+        <a class="active" href="compatibility.html">1,529+ Tested</a>
+        <a href="manual.html">User Manual</a>
+        <a href="https://github.com/ScientificBrad/ReaBoy" target="_blank" rel="noopener">GitHub ↗</a>
+        <a class="nav-cta" href="index.html#install">Download BETA ↓</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section" style="padding-top: 2.5rem; padding-bottom: 4.5rem;">
+      <div class="wrap">
+        
+        <!-- Breadcrumb / Return Navigation -->
+        <div style="margin-bottom: 1.5rem;">
+          <a href="index.html" style="display:inline-flex;align-items:center;gap:0.4rem;font-family:var(--font-mono);font-size:0.85rem;font-weight:600;color:var(--gb-0);text-decoration:none;">
+            ← Back to ReaBoy Home
+          </a>
+        </div>
+
+        <!-- Section Heading -->
+        <div class="section-head reveal" style="margin-bottom: 2.2rem;">
+          <div>
+            <p class="eyebrow">LABORATORY BENCHMARK ARCHIVE · 1,529 CANONICAL TITLES</p>
+            <h1 style="margin:0 0 0.6rem;font-size:clamp(1.9rem,3.4vw,2.6rem);">Game Boy Compatibility Lab</h1>
+          </div>
+          <p>
+            Every canonical monochrome Nintendo Game Boy (DMG-01) release dynamically executed in ReaBoy's bit-exact SM83 CPU and scanline-accurate PPU emulator loop. Search in real-time, filter by cartridge mapper (ROM-Only, MBC1), inspect telemetry notes, or log local test reports.
+          </p>
+        </div>
+
+        <!-- Filterable Compatibility Table Toolbar -->
+        <div class="compat-toolbar reveal">
+          <input class="compat-search" id="compat-search" type="search" placeholder="Search 1,529+ verified games (e.g. Zelda, Pokémon, Metroid, MBC1, MBC2)..." aria-label="Filter tested games">
+          <div style="display:flex;gap:0.45rem;flex-wrap:wrap;">
+            <button class="chip-btn active" type="button" data-filter="ALL">All (1,529+)</button>
+            <button class="chip-btn" type="button" data-filter="PASS">Verified Pass</button>
+            <button class="chip-btn" type="button" data-alpha="A-C">A–C</button>
+            <button class="chip-btn" type="button" data-alpha="D-F">D–F</button>
+            <button class="chip-btn" type="button" data-alpha="G-I">G–I</button>
+            <button class="chip-btn" type="button" data-alpha="J-L">J–L</button>
+            <button class="chip-btn" type="button" data-alpha="M-O">M–O</button>
+            <button class="chip-btn" type="button" data-alpha="P-R">P–R</button>
+            <button class="chip-btn" type="button" data-alpha="S-U">S–U</button>
+            <button class="chip-btn" type="button" data-alpha="V-Z">V–Z</button>
+          </div>
+        </div>
+
+        <!-- Compatibility Table -->
+        <div class="compat-table-wrap reveal">
+          <table class="compat-table">
+            <thead>
+              <tr>
+                <th style="width:58px;">Shot</th>
+                <th>Game Title</th>
+                <th>Cartridge</th>
+                <th>Status</th>
+                <th>Verified Telemetry / Notes</th>
+              </tr>
+            </thead>
+            <tbody id="compat-tbody">
+              <!-- Populated by app.js -->
+            </tbody>
+          </table>
+          <div class="compat-table-foot" id="compat-table-footer" style="display:flex;justify-content:space-between;align-items:center;padding:12px 18px;border-top:1px solid var(--border);flex-wrap:wrap;gap:10px;">
+            <span id="compat-count-label" style="font-family:var(--font-mono);font-size:0.82rem;color:var(--text-muted);">Showing 40 of 1,529+ verified games</span>
+            <div style="display:flex;gap:8px;">
+              <button class="chip-btn" id="load-more-btn" type="button">Load More (+50)</button>
+              <button class="chip-btn" id="show-all-btn" type="button">Show All 1,529+ Games</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Beta Tester Game Logger -->
+        <form class="beta-log-form reveal" id="beta-log-form" style="margin-top: 2.5rem;">
+          <h4>Log a Game Test (Saved Locally + Optional GitHub Beta Report)</h4>
+          <div class="form-row">
+            <input class="form-input" id="log-title" type="text" required placeholder="Game name (e.g. Kirby's Dream Land)">
+            <select class="form-select" id="log-mapper" aria-label="Cartridge Mapper">
+              <option value="ROM-Only">ROM-Only</option>
+              <option value="MBC1">MBC1</option>
+              <option value="MBC1+RAM+BATT">MBC1+RAM+BATT</option>
+              <option value="MBC3 (Roadmap)">MBC3 (Roadmap)</option>
+              <option value="MBC5 (Roadmap)">MBC5 (Roadmap)</option>
+            </select>
+            <select class="form-select" id="log-status" aria-label="Test Status">
+              <option value="PASS">PASS</option>
+              <option value="ISSUES">ISSUES</option>
+            </select>
+            <input class="form-input" id="log-notes" type="text" placeholder="Notes (boot intro, sound, battery save...)">
+            <button class="btn btn-primary" type="submit" style="padding:0.6rem 1.1rem;font-size:0.84rem;">+ Add Test</button>
+          </div>
+        </form>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <a class="brand" href="index.html">
+          <span class="brand-mark" aria-hidden="true">R</span>
+          <span>ReaBoy</span>
+        </a>
+        <p>BJ Studios — Manchester, England · © 2026 BJ Studios. All rights reserved.</p>
+      </div>
+      <div>
+        <ul class="footer-links">
+          <li><a href="index.html">← Back to Main Website</a></li>
+          <li><a href="manual.html">Official User Manual</a></li>
+          <li><a href="https://github.com/ScientificBrad/ReaBoy/releases/latest" target="_blank" rel="noopener">Latest Release Downloads ↗</a></li>
+          <li><a href="https://github.com/ScientificBrad/ReaBoy/issues" target="_blank" rel="noopener">Report Game Bug on GitHub ↗</a></li>
+        </ul>
+      </div>
+      <div>
+        <p>Independent software. Not affiliated with or endorsed by Nintendo.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="js/app.js?v=1.0.8" defer></script>
+</body>
+</html>
