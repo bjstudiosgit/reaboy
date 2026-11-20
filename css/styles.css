@@ -482,6 +482,40 @@ a:hover {
   transform: translateY(-2px);
 }
 
+.hero-meta-block {
+  margin-top: 1.25rem;
+  padding: 0.85rem 1.1rem;
+  background: rgba(21, 59, 42, 0.05);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.hero-meta-block p {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 0.79rem;
+  color: var(--ink-secondary);
+  line-height: 1.45;
+}
+
+.hero-meta-block .hero-update-text {
+  font-family: var(--font-sans);
+  font-size: 0.84rem;
+  color: var(--ink);
+  border-top: 1px dashed rgba(21, 59, 42, 0.15);
+  padding-top: 0.4rem;
+}
+
+.hero-meta-block a {
+  color: var(--gb-0);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 .hero-micro {
   font-family: var(--font-mono);
   font-size: 0.78rem;

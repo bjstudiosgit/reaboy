@@ -31,7 +31,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Press+Start+2P&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/styles.css?v=1.0.9">
+  <link rel="stylesheet" href="css/styles.css?v=1.1.0">
 
   <!-- Structured Data (JSON-LD) for Game Boy Emulator SEO -->
   <script type="application/ld+json">
@@ -122,7 +122,7 @@
     <section class="wrap hero">
       <div class="hero-grid">
         <div class="hero-copy">
-          <h1>100% REA-Reconstructed.<br><span class="highlight">Pure 1989 Game Boy.</span></h1>
+          <h1>100% Bit-Exact Accuracy.<br><span class="highlight">Pure 1989 Game Boy.</span></h1>
           <p class="hero-lead">
             Every instruction, scanline, and audio register reconstructed directly from original DMG-01 hardware. Powered by a bit-exact Sharp SM83 CPU core executing 23.4M+ cycles to verified $0100 handover, cycle-accurate scanline PPU timing, and pinned four-channel APU audio — in a nutshell, a perfect Game Boy.
           </p>
@@ -130,12 +130,14 @@
             <a class="btn btn-primary" href="https://github.com/ScientificBrad/ReaBoy/releases/latest/download/ReaBoy.exe">Download ReaBoy.exe ↓</a>
             <a class="btn btn-secondary" href="manual.html">User Manual →</a>
           </div>
-          <p class="hero-micro">
-            Zero .NET setup · Zero admin rights · CC0 Bootix DMG v1.2 firmware embedded · Bring your own .gb ROMs
-          </p>
-          <p class="hero-normal-note">
-            Latest update (v1.0.1 BETA): Dr. Mario STAT Mode 0 freeze fixed + pinned WinMM audio buffers. <a href="https://github.com/ScientificBrad/ReaBoy/releases/tag/v1.0.1" target="_blank" rel="noopener">Read release notes ↗</a>
-          </p>
+          <div class="hero-meta-block">
+            <p>
+              Zero .NET setup · Zero admin rights · CC0 Bootix DMG v1.2 embedded · Bring your own .gb ROMs
+            </p>
+            <p class="hero-update-text">
+              <strong>v1.0.1 BETA:</strong> Dr. Mario STAT Mode 0 freeze fixed + pinned WinMM audio buffers. <a href="https://github.com/ScientificBrad/ReaBoy/releases/tag/v1.0.1" target="_blank" rel="noopener">Release notes ↗</a>
+            </p>
+          </div>
         </div>
 
         <!-- Interactive 1989 Game Boy DMG-01 Hardware Unit -->
@@ -222,7 +224,6 @@
       <div class="wrap">
         <div class="section-head reveal">
           <div>
-            <p class="eyebrow">ZERO FRICTION SETUP</p>
             <h2>Simple requirements.<br> One-command install.</h2>
           </div>
           <p>
@@ -455,17 +456,8 @@
             <h2>Live Gameplay Showcase.<br>Running bit-exact at 60 FPS in ReaBoy.</h2>
           </div>
           <p>
-            Watch real, uninterrupted 25-to-30-second gameplay captures of original Game Boy classics recorded directly from ReaBoy's CPU and scanline-accurate PPU emulator loop with high-resolution original box art. Filter by category below, or explore the complete library of <strong>1,529 canonical games</strong> in our dedicated Compatibility Lab.
+            Watch real, uninterrupted 25-to-40-second gameplay captures of original Game Boy classics recorded directly from ReaBoy's CPU and scanline-accurate PPU emulator loop with high-resolution original box art. Below, explore all 24 verified masterpieces or visit our dedicated Compatibility Lab for the complete library of <strong>1,529 canonical games</strong>.
           </p>
-        </div>
-
-        <!-- Interactive Category Filter Tabs -->
-        <div class="showcase-filter-bar reveal" role="tablist" aria-label="Game showcase filters">
-          <button class="showcase-chip active" type="button" data-showcase="all">All Games (24)</button>
-          <button class="showcase-chip" type="button" data-showcase="hall-of-fame">★ Top 12 Hall of Fame</button>
-          <button class="showcase-chip" type="button" data-showcase="mario">🍄 Mario Series (8)</button>
-          <button class="showcase-chip" type="button" data-showcase="cult-classics">⚡ Cult Classics (8)</button>
-          <button class="showcase-chip" type="button" data-showcase="best-sellers">🏆 Multimillion Hits (11)</button>
         </div>
 
         <div class="top12-grid reveal">
