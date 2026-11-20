@@ -501,6 +501,20 @@ a:hover {
   color: var(--text);
 }
 
+.hero-normal-note {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin: 0.65rem 0 0;
+}
+
+.hero-normal-note a {
+  color: var(--gb-0);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 600;
+}
+
 .release-pill .tag {
   background: var(--gb-0);
   color: var(--gb-3);
@@ -1203,6 +1217,120 @@ a:hover {
   word-break: break-all;
 }
 
+/* --- Improved Download & Specs Grid --- */
+.download-grid-improved {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  align-items: stretch;
+}
+
+.dl-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+  position: relative;
+}
+
+.dl-box:hover {
+  transform: translateY(-2px);
+  border-color: var(--gb-0);
+}
+
+.dl-box.featured {
+  border-color: #5d8c36;
+  background: rgba(155, 188, 15, 0.05);
+}
+
+.dl-badge {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.dl-badge.primary {
+  color: #153b2a;
+  background: #d4f68c;
+  display: inline-block;
+  align-self: flex-start;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+}
+
+.dl-box h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: var(--text);
+}
+
+.dl-box p {
+  margin: 0;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--text-muted);
+  flex: 1;
+}
+
+.dl-action-btn {
+  text-align: center;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.dl-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-dim);
+  border-top: 1px solid var(--border);
+  padding-top: 0.65rem;
+  margin-top: 0.25rem;
+}
+
+.dl-meta code {
+  color: var(--text-muted);
+}
+
+.req-specs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.spec-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.spec-label {
+  font-size: 0.74rem;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+}
+
+.spec-value {
+  font-size: 0.92rem;
+  color: var(--text);
+  font-weight: 700;
+}
+
 /* ==========================================================================
    How We Made It: Project 007 Scientific Boot Pipeline & SM83 Inspector
    ========================================================================== */
@@ -1895,6 +2023,8 @@ kbd {
   .science-phases,
   .feature-grid,
   .download-cards,
+  .download-grid-improved,
+  .req-specs-grid,
   .footer-grid {
     grid-template-columns: 1fr;
   }
@@ -2114,6 +2244,14 @@ html[data-theme="classic"] .release-pill {
   color: #153b2a;
 }
 
+html[data-theme="classic"] .hero-normal-note {
+  color: #3b5c49;
+}
+
+html[data-theme="classic"] .hero-normal-note a {
+  color: #153b2a;
+}
+
 html[data-theme="classic"] .release-pill .tag {
   background: #d4f68c;
   color: #153b2a;
@@ -2162,6 +2300,8 @@ html[data-theme="classic"] .shot-card,
 html[data-theme="classic"] .feature-card,
 html[data-theme="classic"] .kbd-card,
 html[data-theme="classic"] .dl-card,
+html[data-theme="classic"] .dl-box,
+html[data-theme="classic"] .spec-card,
 html[data-theme="classic"] .manual-toc,
 html[data-theme="classic"] .manual-block,
 html[data-theme="classic"] .compat-table-wrap,
@@ -2170,6 +2310,31 @@ html[data-theme="classic"] .apu-btn {
   background: #f3f5e9;
   border-color: #c2ccb8;
   box-shadow: 0 2px 0 rgba(21, 59, 42, 0.06);
+}
+
+html[data-theme="classic"] .dl-box.featured {
+  background: #ebf0e0;
+  border-color: #153b2a;
+}
+
+html[data-theme="classic"] .dl-box h3 {
+  color: #153b2a;
+}
+
+html[data-theme="classic"] .dl-box p {
+  color: #3b5c49;
+}
+
+html[data-theme="classic"] .dl-meta {
+  border-top-color: #d8e0ce;
+}
+
+html[data-theme="classic"] .spec-label {
+  color: #4a6b57;
+}
+
+html[data-theme="classic"] .spec-value {
+  color: #153b2a;
 }
 
 html[data-theme="classic"] .drop-zone {

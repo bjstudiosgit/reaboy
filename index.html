@@ -31,7 +31,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Press+Start+2P&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/styles.css?v=1.0.2">
+  <link rel="stylesheet" href="css/styles.css?v=1.0.3">
 
   <!-- Structured Data (JSON-LD) for Game Boy Emulator SEO -->
   <script type="application/ld+json">
@@ -135,10 +135,9 @@
           <p class="hero-micro">
             Zero .NET setup · Zero admin rights · CC0 Bootix DMG v1.2 firmware embedded · Bring your own .gb ROMs
           </p>
-          <a class="release-pill" href="https://github.com/ScientificBrad/ReaBoy/releases/tag/v1.0.1" target="_blank" rel="noopener">
-            <span class="tag">v1.0.1 BETA</span>
-            <span>Dr. Mario STAT Mode 0 freeze fixed + pinned WinMM audio buffers ↗</span>
-          </a>
+          <p class="hero-normal-note">
+            Latest update (v1.0.1 BETA): Dr. Mario STAT Mode 0 freeze fixed + pinned WinMM audio buffers. <a href="https://github.com/ScientificBrad/ReaBoy/releases/tag/v1.0.1" target="_blank" rel="noopener">Read release notes ↗</a>
+          </p>
         </div>
 
         <!-- Interactive 1989 Game Boy DMG-01 Hardware Unit -->
@@ -321,49 +320,88 @@
           </p>
         </div>
 
-        <div class="install-grid reveal">
-          <div>
-            <h3 style="margin-top:0;">System Requirements</h3>
-            <ul class="req-list">
-              <li><span>Operating System</span><strong>Windows 10 / 11 (64-bit x64)</strong></li>
-              <li><span>.NET Runtime</span><strong>Bundled inside ReaBoy.exe</strong></li>
-              <li><span>Admin Privileges</span><strong>Not required (Per-User)</strong></li>
-              <li><span>Boot Firmware</span><strong>Bootix DMG v1.2 (CC0) Included</strong></li>
-              <li><span>Audio Output</span><strong>Standard Windows WinMM Audio</strong></li>
-              <li><span>Cartridge Support</span><strong>ROM-Only &amp; MBC1 (up to 2 MiB)</strong></li>
-            </ul>
+        <!-- 1. Direct Download Options -->
+        <div class="download-grid-improved reveal">
+          <div class="dl-box featured">
+            <div class="dl-badge primary">RECOMMENDED · STANDALONE</div>
+            <h3>ReaBoy.exe</h3>
+            <p>Single standalone executable with .NET 8 and CC0 Bootix DMG v1.2 firmware pre-embedded. Ready to run instantly.</p>
+            <a class="btn btn-primary dl-action-btn" href="https://github.com/ScientificBrad/ReaBoy/releases/latest/download/ReaBoy.exe">
+              Download ReaBoy.exe ↓
+            </a>
+            <div class="dl-meta">
+              <span>SHA-256</span>
+              <code>790dd673...028d</code>
+            </div>
           </div>
 
-          <div>
-            <div class="terminal-box">
-              <div class="terminal-top">
-                <span>WINDOWS POWERSHELL · ONE-COMMAND INSTALLER</span>
-                <button class="copy-btn" type="button" data-copy-target="ps-install-cmd">Copy command</button>
-              </div>
-              <pre><code id="ps-install-cmd">curl.exe -fsSL https://raw.githubusercontent.com/ScientificBrad/ReaBoy/main/install.ps1 -o "$env:TEMP\ReaBoy-install.ps1"; if ($LASTEXITCODE -eq 0) { powershell.exe -NoProfile -ExecutionPolicy Bypass -File "$env:TEMP\ReaBoy-install.ps1" }</code></pre>
-              <div class="terminal-foot">
-                <span>Verifies SHA-256 · Adds Start Menu shortcut</span>
-                <span>Installs to %LOCALAPPDATA%\Programs\ReaBoy</span>
-              </div>
+          <div class="dl-box">
+            <div class="dl-badge">PORTABLE ARCHIVE</div>
+            <h3>Portable ZIP</h3>
+            <p>Extract anywhere without installation. Includes ReaBoy.exe, comprehensive README, open-source licenses, and a clean rom/ folder.</p>
+            <a class="btn btn-secondary dl-action-btn" href="https://github.com/ScientificBrad/ReaBoy/releases/latest/download/ReaBoy-v1.0.1-win-x64.zip">
+              Download ZIP ↓
+            </a>
+            <div class="dl-meta">
+              <span>SHA-256</span>
+              <code>047ec920...1860</code>
             </div>
+          </div>
 
-            <div class="download-cards">
-              <a class="dl-card" href="https://github.com/ScientificBrad/ReaBoy/releases/latest/download/ReaBoy.exe">
-                <h4>ReaBoy.exe ↓</h4>
-                <p>Single standalone executable with .NET 8 + Bootix embedded.</p>
-                <code>SHA-256: 790dd673...028d</code>
-              </a>
-              <a class="dl-card" href="https://github.com/ScientificBrad/ReaBoy/releases/latest/download/ReaBoy-v1.0.1-win-x64.zip">
-                <h4>Portable ZIP ↓</h4>
-                <p>Extract anywhere. Includes README, LICENSES &amp; rom/ folder.</p>
-                <code>SHA-256: 047ec920...1860</code>
-              </a>
-              <a class="dl-card" href="https://github.com/ScientificBrad/ReaBoy/releases/latest/download/dmg_boot.bin">
-                <h4>Bootix DMG v1.2 ↓</h4>
-                <p>Unmodified CC0-1.0 open-source replacement boot ROM (256 B).</p>
-                <code>SHA-256: c3134352...7b5e</code>
-              </a>
+          <div class="dl-box">
+            <div class="dl-badge">OPEN FIRMWARE</div>
+            <h3>Bootix DMG v1.2</h3>
+            <p>Unmodified CC0-1.0 open-source 256-byte boot ROM reassembly. Pre-embedded in ReaBoy, or download standalone for flashcarts.</p>
+            <a class="btn btn-secondary dl-action-btn" href="https://github.com/ScientificBrad/ReaBoy/releases/latest/download/dmg_boot.bin">
+              Download 256 B ↓
+            </a>
+            <div class="dl-meta">
+              <span>SHA-256</span>
+              <code>c3134352...7b5e</code>
             </div>
+          </div>
+        </div>
+
+        <!-- 2. PowerShell Automated Installer -->
+        <div class="terminal-box reveal" style="margin-top: 1.75rem;">
+          <div class="terminal-top">
+            <span>WINDOWS POWERSHELL · ONE-COMMAND AUTOMATED INSTALL</span>
+            <button class="copy-btn" type="button" data-copy-target="ps-install-cmd">Copy command</button>
+          </div>
+          <pre><code id="ps-install-cmd">curl.exe -fsSL https://raw.githubusercontent.com/ScientificBrad/ReaBoy/main/install.ps1 -o "$env:TEMP\ReaBoy-install.ps1"; if ($LASTEXITCODE -eq 0) { powershell.exe -NoProfile -ExecutionPolicy Bypass -File "$env:TEMP\ReaBoy-install.ps1" }</code></pre>
+          <div class="terminal-foot">
+            <span>✓ Verifies SHA-256 checksum</span>
+            <span>✓ Adds Start Menu shortcut</span>
+            <span>✓ Installs to %LOCALAPPDATA%\Programs\ReaBoy</span>
+            <span>✓ Zero admin rights needed</span>
+          </div>
+        </div>
+
+        <!-- 3. System Requirements & Cartridge Compatibility -->
+        <div class="req-specs-grid reveal" style="margin-top: 1.75rem;">
+          <div class="spec-card">
+            <span class="spec-label">Operating System</span>
+            <strong class="spec-value">Windows 10 / 11 (64-bit x64)</strong>
+          </div>
+          <div class="spec-card">
+            <span class="spec-label">.NET Runtime</span>
+            <strong class="spec-value">Self-Contained (.NET 8 Bundled)</strong>
+          </div>
+          <div class="spec-card">
+            <span class="spec-label">User Privileges</span>
+            <strong class="spec-value">Standard User (Zero Admin Rights)</strong>
+          </div>
+          <div class="spec-card">
+            <span class="spec-label">Boot Firmware</span>
+            <strong class="spec-value">Bootix DMG v1.2 (CC0) Embedded</strong>
+          </div>
+          <div class="spec-card">
+            <span class="spec-label">Audio System</span>
+            <strong class="spec-value">4-Channel APU (WinMM Real-Time)</strong>
+          </div>
+          <div class="spec-card">
+            <span class="spec-label">Cartridge Mappers</span>
+            <strong class="spec-value">ROM-Only, MBC1, MBC2, MBC3 (Up to 2 MiB)</strong>
           </div>
         </div>
       </div>
