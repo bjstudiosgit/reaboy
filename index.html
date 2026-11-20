@@ -31,7 +31,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Press+Start+2P&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/styles.css?v=1.0.3">
+  <link rel="stylesheet" href="css/styles.css?v=1.0.4">
 
   <!-- Structured Data (JSON-LD) for Game Boy Emulator SEO -->
   <script type="application/ld+json">
@@ -320,89 +320,50 @@
           </p>
         </div>
 
-        <!-- 1. Direct Download Options -->
-        <div class="download-grid-improved reveal">
-          <div class="dl-box featured">
-            <div class="dl-badge primary">RECOMMENDED · STANDALONE</div>
-            <h3>ReaBoy.exe</h3>
-            <p>Single standalone executable with .NET 8 and CC0 Bootix DMG v1.2 firmware pre-embedded. Ready to run instantly.</p>
-            <a class="btn btn-primary dl-action-btn" href="https://github.com/ScientificBrad/ReaBoy/releases/latest/download/ReaBoy.exe">
+        <!-- Streamlined 2-Option Install Grid -->
+        <div class="install-dual-grid reveal">
+          <!-- Option 1: Direct Download -->
+          <div class="install-card primary-download">
+            <span class="card-kicker">STANDALONE · RECOMMENDED</span>
+            <h3>Direct Download</h3>
+            <p>Single executable with embedded .NET 8 runtime and CC0 Bootix firmware. No setup wizard or admin rights required.</p>
+            <a class="btn btn-primary btn-install-cta" href="https://github.com/ScientificBrad/ReaBoy/releases/latest/download/ReaBoy.exe">
               Download ReaBoy.exe ↓
             </a>
-            <div class="dl-meta">
-              <span>SHA-256</span>
-              <code>790dd673...028d</code>
+            <div class="install-alt-links">
+              <span>Alternative:</span>
+              <a href="https://github.com/ScientificBrad/ReaBoy/releases/latest/download/ReaBoy-v1.0.1-win-x64.zip">Portable ZIP</a>
+              <span>·</span>
+              <a href="https://github.com/ScientificBrad/ReaBoy/releases/latest/download/dmg_boot.bin">Bootix ROM (256 B)</a>
+              <span>·</span>
+              <a href="https://github.com/ScientificBrad/ReaBoy/releases/tag/v1.0.1" target="_blank" rel="noopener">SHA-256 Hashes ↗</a>
             </div>
           </div>
 
-          <div class="dl-box">
-            <div class="dl-badge">PORTABLE ARCHIVE</div>
-            <h3>Portable ZIP</h3>
-            <p>Extract anywhere without installation. Includes ReaBoy.exe, comprehensive README, open-source licenses, and a clean rom/ folder.</p>
-            <a class="btn btn-secondary dl-action-btn" href="https://github.com/ScientificBrad/ReaBoy/releases/latest/download/ReaBoy-v1.0.1-win-x64.zip">
-              Download ZIP ↓
-            </a>
-            <div class="dl-meta">
-              <span>SHA-256</span>
-              <code>047ec920...1860</code>
+          <!-- Option 2: PowerShell One-Liner -->
+          <div class="install-card terminal-install">
+            <div class="term-header">
+              <span class="card-kicker">AUTOMATED · POWERSHELL</span>
+              <button class="copy-btn" type="button" data-copy-target="ps-install-cmd">Copy command</button>
             </div>
-          </div>
-
-          <div class="dl-box">
-            <div class="dl-badge">OPEN FIRMWARE</div>
-            <h3>Bootix DMG v1.2</h3>
-            <p>Unmodified CC0-1.0 open-source 256-byte boot ROM reassembly. Pre-embedded in ReaBoy, or download standalone for flashcarts.</p>
-            <a class="btn btn-secondary dl-action-btn" href="https://github.com/ScientificBrad/ReaBoy/releases/latest/download/dmg_boot.bin">
-              Download 256 B ↓
-            </a>
-            <div class="dl-meta">
-              <span>SHA-256</span>
-              <code>c3134352...7b5e</code>
+            <h3>One-Command Install</h3>
+            <p>Paste into Windows PowerShell to download, verify SHA-256, and add a Start Menu shortcut automatically.</p>
+            <div class="term-command">
+              <code id="ps-install-cmd">irm https://raw.githubusercontent.com/ScientificBrad/ReaBoy/main/install.ps1 | iex</code>
             </div>
+            <p class="term-hint">
+              Installs to <code>%LOCALAPPDATA%\Programs\ReaBoy</code> · Zero admin needed
+            </p>
           </div>
         </div>
 
-        <!-- 2. PowerShell Automated Installer -->
-        <div class="terminal-box reveal" style="margin-top: 1.75rem;">
-          <div class="terminal-top">
-            <span>WINDOWS POWERSHELL · ONE-COMMAND AUTOMATED INSTALL</span>
-            <button class="copy-btn" type="button" data-copy-target="ps-install-cmd">Copy command</button>
-          </div>
-          <pre><code id="ps-install-cmd">curl.exe -fsSL https://raw.githubusercontent.com/ScientificBrad/ReaBoy/main/install.ps1 -o "$env:TEMP\ReaBoy-install.ps1"; if ($LASTEXITCODE -eq 0) { powershell.exe -NoProfile -ExecutionPolicy Bypass -File "$env:TEMP\ReaBoy-install.ps1" }</code></pre>
-          <div class="terminal-foot">
-            <span>✓ Verifies SHA-256 checksum</span>
-            <span>✓ Adds Start Menu shortcut</span>
-            <span>✓ Installs to %LOCALAPPDATA%\Programs\ReaBoy</span>
-            <span>✓ Zero admin rights needed</span>
-          </div>
-        </div>
-
-        <!-- 3. System Requirements & Cartridge Compatibility -->
-        <div class="req-specs-grid reveal" style="margin-top: 1.75rem;">
-          <div class="spec-card">
-            <span class="spec-label">Operating System</span>
-            <strong class="spec-value">Windows 10 / 11 (64-bit x64)</strong>
-          </div>
-          <div class="spec-card">
-            <span class="spec-label">.NET Runtime</span>
-            <strong class="spec-value">Self-Contained (.NET 8 Bundled)</strong>
-          </div>
-          <div class="spec-card">
-            <span class="spec-label">User Privileges</span>
-            <strong class="spec-value">Standard User (Zero Admin Rights)</strong>
-          </div>
-          <div class="spec-card">
-            <span class="spec-label">Boot Firmware</span>
-            <strong class="spec-value">Bootix DMG v1.2 (CC0) Embedded</strong>
-          </div>
-          <div class="spec-card">
-            <span class="spec-label">Audio System</span>
-            <strong class="spec-value">4-Channel APU (WinMM Real-Time)</strong>
-          </div>
-          <div class="spec-card">
-            <span class="spec-label">Cartridge Mappers</span>
-            <strong class="spec-value">ROM-Only, MBC1, MBC2, MBC3 (Up to 2 MiB)</strong>
-          </div>
+        <!-- Minimalist System Specs Bar -->
+        <div class="install-specs-bar reveal">
+          <div class="spec-pill"><strong>OS:</strong> Windows 10 / 11 (64-bit)</div>
+          <div class="spec-pill"><strong>Runtime:</strong> Embedded .NET 8 (0 install)</div>
+          <div class="spec-pill"><strong>Firmware:</strong> CC0 Bootix v1.2 Built-in</div>
+          <div class="spec-pill"><strong>Audio:</strong> WinMM 4-Channel APU</div>
+          <div class="spec-pill"><strong>Cartridges:</strong> ROM-Only, MBC1, MBC2, MBC3</div>
         </div>
       </div>
     </section>
@@ -424,7 +385,7 @@
           <article class="phase-card">
             <span class="phase-num">PHASE 01 · STATIC REVERSE ENGINEERING</span>
             <h3>Byte-Identical Boot Reconstruction</h3>
-            <p>We wrote a custom Sharp SM83 disassembler and control-flow graph builder to account for every single byte of the 256-byte DMG-01 boot ROM — then reassembled it with RGBDS v1.0.4 and proved 0 byte mismatches.</p>
+            <p>We wrote a custom Sharp SM83 disassembler and control-flow graph builder to account for every single byte of the 256-byte DMG-01 boot ROM — then reassembled it with RGBDS v1.0.4 and proved 0 byte mismatches. Embedded in ReaBoy; also available standalone as <a href="https://github.com/ScientificBrad/ReaBoy/releases/latest/download/dmg_boot.bin" style="text-decoration:underline; font-weight:600; color:inherit;">Bootix DMG v1.2 (256 B) ↓</a>.</p>
             <div class="stat-pills">
               <span>256 / 256 bytes</span>
               <span>121 SM83 opcodes</span>

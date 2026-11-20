@@ -1217,118 +1217,123 @@ a:hover {
   word-break: break-all;
 }
 
-/* --- Improved Download & Specs Grid --- */
-.download-grid-improved {
+/* --- Streamlined 2-Card Install Section --- */
+.install-dual-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.25rem;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 1.5rem;
   align-items: stretch;
 }
 
-.dl-box {
+.install-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
-  padding: 1.5rem;
+  padding: 1.75rem;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
-  transition: transform 0.2s ease, border-color 0.2s ease;
-  position: relative;
+  gap: 0.85rem;
 }
 
-.dl-box:hover {
-  transform: translateY(-2px);
-  border-color: var(--gb-0);
-}
-
-.dl-box.featured {
-  border-color: #5d8c36;
-  background: rgba(155, 188, 15, 0.05);
-}
-
-.dl-badge {
-  font-family: var(--font-mono);
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  color: var(--text-muted);
-  text-transform: uppercase;
-}
-
-.dl-badge.primary {
-  color: #153b2a;
-  background: #d4f68c;
-  display: inline-block;
-  align-self: flex-start;
-  padding: 0.2rem 0.6rem;
-  border-radius: 4px;
-}
-
-.dl-box h3 {
+.install-card h3 {
   margin: 0;
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   color: var(--text);
 }
 
-.dl-box p {
+.install-card p {
   margin: 0;
-  font-size: 0.88rem;
+  font-size: 0.92rem;
   line-height: 1.55;
   color: var(--text-muted);
   flex: 1;
 }
 
-.dl-action-btn {
-  text-align: center;
-  justify-content: center;
-  margin-top: 0.5rem;
+.card-kicker {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #5d8c36;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
-.dl-meta {
+.btn-install-cta {
+  text-align: center;
+  justify-content: center;
+  padding: 0.85rem 1.25rem;
+  font-size: 1rem;
+}
+
+.install-alt-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  color: var(--text-dim);
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.install-alt-links a {
+  color: var(--gb-0);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* Terminal Install Card */
+.term-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  color: var(--text-dim);
-  border-top: 1px solid var(--border);
-  padding-top: 0.65rem;
-  margin-top: 0.25rem;
 }
 
-.dl-meta code {
+.term-command {
+  background: #060907;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1rem;
+  overflow-x: auto;
+}
+
+.term-command code {
+  font-family: var(--font-mono);
+  font-size: 0.86rem;
+  color: #d4f68c;
+  white-space: nowrap;
+}
+
+.term-hint {
+  font-size: 0.8rem !important;
+  color: var(--text-dim) !important;
+  margin: 0;
+}
+
+.term-hint code {
+  font-family: var(--font-mono);
   color: var(--text-muted);
 }
 
-.req-specs-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
-}
-
-.spec-card {
-  background: var(--bg-card);
+/* Minimalist Specs Bar */
+.install-specs-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem 1.5rem;
+  margin-top: 1.75rem;
+  padding: 0.85rem 1.25rem;
+  background: rgba(155, 188, 15, 0.04);
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
-  padding: 1rem 1.15rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
-}
-
-.spec-label {
-  font-size: 0.74rem;
-  font-family: var(--font-mono);
-  text-transform: uppercase;
+  font-size: 0.84rem;
   color: var(--text-muted);
-  letter-spacing: 0.04em;
 }
 
-.spec-value {
-  font-size: 0.92rem;
+.spec-pill strong {
   color: var(--text);
-  font-weight: 700;
+  margin-right: 0.25rem;
 }
 
 /* ==========================================================================
@@ -2312,28 +2317,54 @@ html[data-theme="classic"] .apu-btn {
   box-shadow: 0 2px 0 rgba(21, 59, 42, 0.06);
 }
 
-html[data-theme="classic"] .dl-box.featured {
-  background: #ebf0e0;
+html[data-theme="classic"] .install-card {
+  background: #f3f5e9;
+  border-color: #c2ccb8;
+  box-shadow: 0 2px 0 rgba(21, 59, 42, 0.06);
+}
+
+html[data-theme="classic"] .primary-download {
+  background: #ebf0df;
   border-color: #153b2a;
 }
 
-html[data-theme="classic"] .dl-box h3 {
+html[data-theme="classic"] .install-card h3 {
   color: #153b2a;
 }
 
-html[data-theme="classic"] .dl-box p {
+html[data-theme="classic"] .install-card p {
   color: #3b5c49;
 }
 
-html[data-theme="classic"] .dl-meta {
-  border-top-color: #d8e0ce;
+html[data-theme="classic"] .card-kicker {
+  color: #276241;
 }
 
-html[data-theme="classic"] .spec-label {
-  color: #4a6b57;
+html[data-theme="classic"] .install-alt-links {
+  border-top-color: #d5ded0;
+  color: #637e6d;
 }
 
-html[data-theme="classic"] .spec-value {
+html[data-theme="classic"] .install-alt-links a {
+  color: #153b2a;
+}
+
+html[data-theme="classic"] .term-command {
+  background: #102c22;
+  border-color: #284936;
+}
+
+html[data-theme="classic"] .term-command code {
+  color: #d4f68c;
+}
+
+html[data-theme="classic"] .install-specs-bar {
+  background: #eaeee1;
+  border-color: #c5d0bc;
+  color: #3b5c49;
+}
+
+html[data-theme="classic"] .spec-pill strong {
   color: #153b2a;
 }
 
