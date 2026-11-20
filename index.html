@@ -241,8 +241,8 @@
           <span class="telemetry-lbl">Fixed integer 1×–4× pixel scaling + fullscreen</span>
         </div>
         <div class="telemetry-card">
-          <span class="telemetry-val">1,424+ Games PASS</span>
-          <span class="telemetry-lbl">Verified ROM-only &amp; MBC1 titles across 3,529 test suite</span>
+          <span class="telemetry-val">1,528+ Games PASS</span>
+          <span class="telemetry-lbl">Verified ROM-only, MBC1 &amp; MBC3 titles across 3,529 test suite</span>
         </div>
       </div>
     </section>
@@ -547,116 +547,333 @@
       <div class="wrap">
         <div class="section-head reveal">
           <div>
-            <p class="eyebrow">OPEN BETA TESTING · TESTING EVERY GAME!</p>
-            <h2>Real captures, live 5s video &amp;<br>Beta Compatibility Lab.</h2>
+            <p class="eyebrow">OPEN BETA TESTING · THE 12 GREATEST GAME BOY GAMES</p>
+            <h2>Hall of Fame Classics.<br>Running bit-exact at 60 FPS in ReaBoy.</h2>
           </div>
           <p>
-            Every capture and 5-second video below is recorded live from ReaBoy v1.0.1 BETA. We tested 3,529 ROMs across the Game Boy catalogue: <strong>1,424 canonical games verified and running</strong> with full graphics &amp; sound, while 271 unsupported mappers (MBC2/MBC3/MBC5) remain cleanly isolated for the next release.
+            Watch real, uninterrupted 25-to-30-second gameplay captures of the twelve defining masterpieces of the Nintendo Game Boy (DMG-01). Recorded directly from ReaBoy's CPU and scanline-accurate PPU emulator loop with high-resolution original box art. Below, explore the full lab database of <strong>1,528 canonical games verified and running</strong>.
           </p>
         </div>
 
-        <div class="gallery-grid reveal">
-          <figure class="shot-card">
-            <div class="shot-img-wrap">
-              <a href="assets/img/tetris.png" target="_blank"><img src="assets/img/tetris.png" loading="lazy" alt="Tetris running in ReaBoy v1.0.1 BETA with classic green palette"></a>
+        <div class="top12-grid reveal">
+          <!-- 1. The Legend of Zelda: Link's Awakening -->
+          <article class="top12-card">
+            <div class="top12-header">
+              <div class="top12-rank-title">
+                <span class="top12-rank">#01</span>
+                <h3 class="top12-title">The Legend of Zelda: Link's Awakening</h3>
+              </div>
+              <span class="top12-year">1993</span>
             </div>
-            <figcaption>
-              <strong>Tetris</strong>
-              <span>ROM-Only · 3,600 frames PASS</span>
-            </figcaption>
-          </figure>
-
-          <figure class="shot-card">
-            <div class="shot-img-wrap">
-              <a href="assets/img/dr-mario.png" target="_blank"><img src="assets/img/dr-mario.png" loading="lazy" alt="Dr. Mario gameplay in ReaBoy after LCD-off STAT Mode 0 fix"></a>
-            </div>
-            <figcaption>
-              <strong>Dr. Mario</strong>
-              <span>ROM-Only · v1.0.1 STAT fix PASS</span>
-            </figcaption>
-          </figure>
-
-          <figure class="shot-card">
-            <div class="shot-img-wrap">
-              <a href="assets/img/mario-land.png" target="_blank"><img src="assets/img/mario-land.png" loading="lazy" alt="Super Mario Land World 1-1 running in ReaBoy"></a>
-            </div>
-            <figcaption>
-              <strong>Super Mario Land</strong>
-              <span>MBC1 · World 1-1 PASS</span>
-            </figcaption>
-          </figure>
-
-          <figure class="shot-card">
-            <div class="shot-img-wrap">
-              <video autoplay loop muted playsinline poster="assets/img/kirbys-dream-land.png" aria-label="Kirby's Dream Land running in ReaBoy">
-                <source src="assets/video/kirbys-dream-land.mp4" type="video/mp4">
-                <img src="assets/img/kirbys-dream-land.png" alt="Kirby's Dream Land capture">
+            <div class="top12-media">
+              <video autoplay loop muted playsinline poster="assets/img/shots/legend-of-zelda-the-link-s-awakening.png">
+                <source src="assets/video/zelda-links-awakening.mp4" type="video/mp4">
               </video>
+              <div class="top12-boxart-thumb" title="Original Box Art">
+                <img src="assets/img/boxart/zelda-links-awakening.jpg" alt="The Legend of Zelda: Link's Awakening Box Art" loading="lazy">
+              </div>
             </div>
-            <figcaption>
-              <strong>Kirby's Dream Land</strong>
-              <span>MBC1 · 5s Live Video PASS</span>
-            </figcaption>
-          </figure>
+            <p class="top12-desc">
+              Arguably the greatest adventure ever made for the original Game Boy. Huge world, dungeons, puzzles and an unforgettable story.
+            </p>
+            <div class="top12-meta">
+              <span class="top12-meta-tag">MBC1+RAM+BATT · 1,024 KB</span>
+              <span class="top12-status">✓ 60 FPS PASS</span>
+            </div>
+          </article>
 
-          <figure class="shot-card">
-            <div class="shot-img-wrap">
-              <video autoplay loop muted playsinline poster="assets/img/metroid-2.png" aria-label="Metroid II - Return of Samus running in ReaBoy">
-                <source src="assets/video/metroid-2.mp4" type="video/mp4">
-                <img src="assets/img/metroid-2.png" alt="Metroid II capture">
+          <!-- 2. Tetris -->
+          <article class="top12-card">
+            <div class="top12-header">
+              <div class="top12-rank-title">
+                <span class="top12-rank">#02</span>
+                <h3 class="top12-title">Tetris</h3>
+              </div>
+              <span class="top12-year">1989</span>
+            </div>
+            <div class="top12-media">
+              <video autoplay loop muted playsinline poster="assets/img/shots/tetris.png">
+                <source src="assets/video/tetris.mp4" type="video/mp4">
               </video>
+              <div class="top12-boxart-thumb" title="Original Box Art">
+                <img src="assets/img/boxart/tetris.jpg" alt="Tetris Box Art" loading="lazy">
+              </div>
             </div>
-            <figcaption>
-              <strong>Metroid II - Samus</strong>
-              <span>MBC1+RAM+BATT · 5s Video PASS</span>
-            </figcaption>
-          </figure>
+            <p class="top12-desc">
+              The definitive handheld puzzle game. Helped turn the Game Boy into a worldwide phenomenon.
+            </p>
+            <div class="top12-meta">
+              <span class="top12-meta-tag">ROM-Only · 32 KB</span>
+              <span class="top12-status">✓ 60 FPS PASS</span>
+            </div>
+          </article>
 
-          <figure class="shot-card">
-            <div class="shot-img-wrap">
-              <video autoplay loop muted playsinline poster="assets/img/donkey-kong.png" aria-label="Donkey Kong running in ReaBoy">
+          <!-- 3. Pokémon Red and Blue -->
+          <article class="top12-card">
+            <div class="top12-header">
+              <div class="top12-rank-title">
+                <span class="top12-rank">#03</span>
+                <h3 class="top12-title">Pokémon Red and Blue</h3>
+              </div>
+              <span class="top12-year">1996/1998</span>
+            </div>
+            <div class="top12-media">
+              <video autoplay loop muted playsinline poster="assets/img/shots/pokemon-red.png">
+                <source src="assets/video/pokemon-red.mp4" type="video/mp4">
+              </video>
+              <div class="top12-boxart-thumb" title="Original Box Art">
+                <img src="assets/img/boxart/pokemon-red.jpg" alt="Pokémon Red Box Art" loading="lazy">
+              </div>
+            </div>
+            <p class="top12-desc">
+              The beginning of the Pokémon phenomenon. Collecting, trading and battling 151 Pokémon.
+            </p>
+            <div class="top12-meta">
+              <span class="top12-meta-tag">MBC3+RAM+BATT · 1,024 KB</span>
+              <span class="top12-status">✓ 60 FPS PASS</span>
+            </div>
+          </article>
+
+          <!-- 4. Super Mario Land 2: 6 Golden Coins -->
+          <article class="top12-card">
+            <div class="top12-header">
+              <div class="top12-rank-title">
+                <span class="top12-rank">#04</span>
+                <h3 class="top12-title">Super Mario Land 2: 6 Golden Coins</h3>
+              </div>
+              <span class="top12-year">1992</span>
+            </div>
+            <div class="top12-media">
+              <video autoplay loop muted playsinline poster="assets/img/shots/super-mario-land-2-6-golden-coins.png">
+                <source src="assets/video/super-mario-land-2.mp4" type="video/mp4">
+              </video>
+              <div class="top12-boxart-thumb" title="Original Box Art">
+                <img src="assets/img/boxart/super-mario-land-2.jpg" alt="Super Mario Land 2 Box Art" loading="lazy">
+              </div>
+            </div>
+            <p class="top12-desc">
+              Beautifully designed platformer with larger sprites, creative levels and Wario's debut.
+            </p>
+            <div class="top12-meta">
+              <span class="top12-meta-tag">MBC1+RAM+BATT · 512 KB</span>
+              <span class="top12-status">✓ 60 FPS PASS</span>
+            </div>
+          </article>
+
+          <!-- 5. Donkey Kong -->
+          <article class="top12-card">
+            <div class="top12-header">
+              <div class="top12-rank-title">
+                <span class="top12-rank">#05</span>
+                <h3 class="top12-title">Donkey Kong</h3>
+              </div>
+              <span class="top12-year">1994</span>
+            </div>
+            <div class="top12-media">
+              <video autoplay loop muted playsinline poster="assets/img/shots/donkey-kong.png">
                 <source src="assets/video/donkey-kong.mp4" type="video/mp4">
-                <img src="assets/img/donkey-kong.png" alt="Donkey Kong capture">
               </video>
+              <div class="top12-boxart-thumb" title="Original Box Art">
+                <img src="assets/img/boxart/donkey-kong.jpg" alt="Donkey Kong Box Art" loading="lazy">
+              </div>
             </div>
-            <figcaption>
-              <strong>Donkey Kong</strong>
-              <span>MBC1+RAM+BATT · 5s Video PASS</span>
-            </figcaption>
-          </figure>
+            <p class="top12-desc">
+              Starts like the arcade original before revealing an enormous puzzle-platform adventure.
+            </p>
+            <div class="top12-meta">
+              <span class="top12-meta-tag">MBC1+RAM+BATT · 512 KB</span>
+              <span class="top12-status">✓ 60 FPS PASS</span>
+            </div>
+          </article>
 
-          <figure class="shot-card">
-            <div class="shot-img-wrap">
-              <video autoplay loop muted playsinline poster="assets/img/mega-man.png" aria-label="Mega Man running in ReaBoy">
-                <source src="assets/video/mega-man.mp4" type="video/mp4">
-                <img src="assets/img/mega-man.png" alt="Mega Man capture">
-              </video>
+          <!-- 6. Wario Land: Super Mario Land 3 -->
+          <article class="top12-card">
+            <div class="top12-header">
+              <div class="top12-rank-title">
+                <span class="top12-rank">#06</span>
+                <h3 class="top12-title">Wario Land: Super Mario Land 3</h3>
+              </div>
+              <span class="top12-year">1994</span>
             </div>
-            <figcaption>
-              <strong>Mega Man</strong>
-              <span>MBC1 · 5s Live Video PASS</span>
-            </figcaption>
-          </figure>
+            <div class="top12-media">
+              <video autoplay loop muted playsinline poster="assets/img/shots/wario-land-super-mario-land-3.png">
+                <source src="assets/video/wario-land.mp4" type="video/mp4">
+              </video>
+              <div class="top12-boxart-thumb" title="Original Box Art">
+                <img src="assets/img/boxart/wario-land.jpg" alt="Wario Land: Super Mario Land 3 Box Art" loading="lazy">
+              </div>
+            </div>
+            <p class="top12-desc">
+              Brilliant exploration-based platformer with treasure hunting and Wario's distinctive gameplay.
+            </p>
+            <div class="top12-meta">
+              <span class="top12-meta-tag">MBC1+RAM+BATT · 512 KB</span>
+              <span class="top12-status">✓ 60 FPS PASS</span>
+            </div>
+          </article>
 
-          <figure class="shot-card">
-            <div class="shot-img-wrap">
-              <video autoplay loop muted playsinline poster="assets/img/batman.png" aria-label="Batman running in ReaBoy">
-                <source src="assets/video/batman.mp4" type="video/mp4">
-                <img src="assets/img/batman.png" alt="Batman capture">
-              </video>
+          <!-- 7. Metroid II: Return of Samus -->
+          <article class="top12-card">
+            <div class="top12-header">
+              <div class="top12-rank-title">
+                <span class="top12-rank">#07</span>
+                <h3 class="top12-title">Metroid II: Return of Samus</h3>
+              </div>
+              <span class="top12-year">1991</span>
             </div>
-            <figcaption>
-              <strong>Batman</strong>
-              <span>MBC1 · 5s Live Video PASS</span>
-            </figcaption>
-          </figure>
+            <div class="top12-media">
+              <video autoplay loop muted playsinline poster="assets/img/shots/metroid-ii-return-of-samus.png">
+                <source src="assets/video/metroid-2.mp4" type="video/mp4">
+              </video>
+              <div class="top12-boxart-thumb" title="Original Box Art">
+                <img src="assets/img/boxart/metroid-2.jpg" alt="Metroid II: Return of Samus Box Art" loading="lazy">
+              </div>
+            </div>
+            <p class="top12-desc">
+              Dark, atmospheric exploration that pushed the handheld well beyond simple arcade games.
+            </p>
+            <div class="top12-meta">
+              <span class="top12-meta-tag">MBC1+RAM+BATT · 256 KB</span>
+              <span class="top12-status">✓ 60 FPS PASS</span>
+            </div>
+          </article>
+
+          <!-- 8. Kirby's Dream Land 2 -->
+          <article class="top12-card">
+            <div class="top12-header">
+              <div class="top12-rank-title">
+                <span class="top12-rank">#08</span>
+                <h3 class="top12-title">Kirby's Dream Land 2</h3>
+              </div>
+              <span class="top12-year">1995</span>
+            </div>
+            <div class="top12-media">
+              <video autoplay loop muted playsinline poster="assets/img/shots/kirby-s-dream-land-2.png">
+                <source src="assets/video/kirbys-dream-land-2.mp4" type="video/mp4">
+              </video>
+              <div class="top12-boxart-thumb" title="Original Box Art">
+                <img src="assets/img/boxart/kirbys-dream-land-2.jpg" alt="Kirby's Dream Land 2 Box Art" loading="lazy">
+              </div>
+            </div>
+            <p class="top12-desc">
+              A polished platformer with copy abilities, animal companions and inventive levels.
+            </p>
+            <div class="top12-meta">
+              <span class="top12-meta-tag">MBC1+RAM+BATT · 1,024 KB</span>
+              <span class="top12-status">✓ 60 FPS PASS</span>
+            </div>
+          </article>
+
+          <!-- 9. Dr. Mario -->
+          <article class="top12-card">
+            <div class="top12-header">
+              <div class="top12-rank-title">
+                <span class="top12-rank">#09</span>
+                <h3 class="top12-title">Dr. Mario</h3>
+              </div>
+              <span class="top12-year">1990</span>
+            </div>
+            <div class="top12-media">
+              <video autoplay loop muted playsinline poster="assets/img/shots/dr-mario.png">
+                <source src="assets/video/dr-mario.mp4" type="video/mp4">
+              </video>
+              <div class="top12-boxart-thumb" title="Original Box Art">
+                <img src="assets/img/boxart/dr-mario.jpg" alt="Dr. Mario Box Art" loading="lazy">
+              </div>
+            </div>
+            <p class="top12-desc">
+              One of Nintendo's most addictive puzzle games. Simple mechanics, demanding difficulty.
+            </p>
+            <div class="top12-meta">
+              <span class="top12-meta-tag">ROM-Only · 32 KB</span>
+              <span class="top12-status">✓ 60 FPS PASS</span>
+            </div>
+          </article>
+
+          <!-- 10. Super Mario Land -->
+          <article class="top12-card">
+            <div class="top12-header">
+              <div class="top12-rank-title">
+                <span class="top12-rank">#10</span>
+                <h3 class="top12-title">Super Mario Land</h3>
+              </div>
+              <span class="top12-year">1989</span>
+            </div>
+            <div class="top12-media">
+              <video autoplay loop muted playsinline poster="assets/img/shots/super-mario-land.png">
+                <source src="assets/video/super-mario-land.mp4" type="video/mp4">
+              </video>
+              <div class="top12-boxart-thumb" title="Original Box Art">
+                <img src="assets/img/boxart/super-mario-land.jpg" alt="Super Mario Land Box Art" loading="lazy">
+              </div>
+            </div>
+            <p class="top12-desc">
+              A launch-era classic that proved Mario could work on a tiny monochrome screen.
+            </p>
+            <div class="top12-meta">
+              <span class="top12-meta-tag">MBC1 · 64 KB</span>
+              <span class="top12-status">✓ 60 FPS PASS</span>
+            </div>
+          </article>
+
+          <!-- 11. Mole Mania -->
+          <article class="top12-card">
+            <div class="top12-header">
+              <div class="top12-rank-title">
+                <span class="top12-rank">#11</span>
+                <h3 class="top12-title">Mole Mania</h3>
+              </div>
+              <span class="top12-year">1996</span>
+            </div>
+            <div class="top12-media">
+              <video autoplay loop muted playsinline poster="assets/img/shots/mole-mania.png">
+                <source src="assets/video/mole-mania.mp4" type="video/mp4">
+              </video>
+              <div class="top12-boxart-thumb" title="Original Box Art">
+                <img src="assets/img/boxart/mole-mania.jpg" alt="Mole Mania Box Art" loading="lazy">
+              </div>
+            </div>
+            <p class="top12-desc">
+              An underrated Nintendo puzzle adventure with clever underground mechanics.
+            </p>
+            <div class="top12-meta">
+              <span class="top12-meta-tag">MBC1+RAM+BATT · 512 KB</span>
+              <span class="top12-status">✓ 60 FPS PASS</span>
+            </div>
+          </article>
+
+          <!-- 12. Gargoyle's Quest -->
+          <article class="top12-card">
+            <div class="top12-header">
+              <div class="top12-rank-title">
+                <span class="top12-rank">#12</span>
+                <h3 class="top12-title">Gargoyle's Quest</h3>
+              </div>
+              <span class="top12-year">1990</span>
+            </div>
+            <div class="top12-media">
+              <video autoplay loop muted playsinline poster="assets/img/shots/gargoyle-s-quest-ghosts-n-goblins.png">
+                <source src="assets/video/gargoyles-quest.mp4" type="video/mp4">
+              </video>
+              <div class="top12-boxart-thumb" title="Original Box Art">
+                <img src="assets/img/boxart/gargoyles-quest.jpg" alt="Gargoyle's Quest Box Art" loading="lazy">
+              </div>
+            </div>
+            <p class="top12-desc">
+              A superb mixture of platforming, exploration and role-playing elements.
+            </p>
+            <div class="top12-meta">
+              <span class="top12-meta-tag">MBC1 · 256 KB</span>
+              <span class="top12-status">✓ 60 FPS PASS</span>
+            </div>
+          </article>
         </div>
 
         <!-- Filterable Compatibility Table -->
         <div class="compat-toolbar reveal">
-          <input class="compat-search" id="compat-search" type="search" placeholder="Search 1,424+ verified games (e.g. Zelda, Kirby, Metroid, MBC1)..." aria-label="Filter tested games">
+          <input class="compat-search" id="compat-search" type="search" placeholder="Search 1,528+ verified games (e.g. Zelda, Pokémon, Metroid, MBC1)..." aria-label="Filter tested games">
           <div style="display:flex;gap:0.45rem;flex-wrap:wrap;">
-            <button class="chip-btn active" type="button" data-filter="ALL">All (1,424+)</button>
+            <button class="chip-btn active" type="button" data-filter="ALL">All (1,528+)</button>
             <button class="chip-btn" type="button" data-filter="PASS">Verified Pass</button>
             <button class="chip-btn" type="button" data-alpha="A-C">A–C</button>
             <button class="chip-btn" type="button" data-alpha="D-F">D–F</button>
@@ -685,10 +902,10 @@
             </tbody>
           </table>
           <div class="compat-table-foot" id="compat-table-footer" style="display:flex;justify-content:space-between;align-items:center;padding:12px 18px;border-top:1px solid var(--border);flex-wrap:wrap;gap:10px;">
-            <span id="compat-count-label" style="font-family:var(--font-mono);font-size:0.82rem;color:var(--text-muted);">Showing 40 of 1,424+ verified games</span>
+            <span id="compat-count-label" style="font-family:var(--font-mono);font-size:0.82rem;color:var(--text-muted);">Showing 40 of 1,528+ verified games</span>
             <div style="display:flex;gap:8px;">
               <button class="chip-btn" id="load-more-btn" type="button">Load More (+50)</button>
-              <button class="chip-btn" id="show-all-btn" type="button">Show All 1,424+ Games</button>
+              <button class="chip-btn" id="show-all-btn" type="button">Show All 1,528+ Games</button>
             </div>
           </div>
         </div>

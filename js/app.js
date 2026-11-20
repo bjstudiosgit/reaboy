@@ -969,7 +969,7 @@
     $('#show-all-btn')?.addEventListener('click', () => {
       currentLimit = 9999;
       renderCompatTable();
-      showToast('Showing all 1,424+ verified games');
+      showToast('Showing all ' + verifiedGamesData.length + ' verified games');
     });
 
     $('#beta-log-form')?.addEventListener('submit', (e) => {

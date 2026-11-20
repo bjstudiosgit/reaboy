@@ -40,6 +40,14 @@
     "slug": "a-force"
   },
   {
+    "title": "ASCII Wars V1.1",
+    "fileName": "ASCII Wars V1.1 (PD).gb",
+    "mapper": "ROM-Only",
+    "sizeKb": 32,
+    "status": "PASS",
+    "slug": "ascii-wars-v1-1"
+  },
+  {
     "title": "Ace Striker",
     "fileName": "Ace Striker (J).gb",
     "mapper": "MBC1",
@@ -456,14 +464,6 @@
     "slug": "artic-zone"
   },
   {
-    "title": "ASCII Wars V1.1",
-    "fileName": "ASCII Wars V1.1 (PD).gb",
-    "mapper": "ROM-Only",
-    "sizeKb": 32,
-    "status": "PASS",
-    "slug": "ascii-wars-v1-1"
-  },
-  {
     "title": "Ash Demo",
     "fileName": "Ash Demo (PD).gb",
     "mapper": "ROM-Only",
@@ -558,6 +558,30 @@
     "sizeKb": 256,
     "status": "PASS",
     "slug": "b-c-kid-2"
+  },
+  {
+    "title": "BBS Demo",
+    "fileName": "BBS Demo (PD).gb",
+    "mapper": "ROM-Only",
+    "sizeKb": 32,
+    "status": "PASS",
+    "slug": "bbs-demo"
+  },
+  {
+    "title": "BG Put0 Demo",
+    "fileName": "BG Put0 Demo (PD).gb",
+    "mapper": "ROM-Only",
+    "sizeKb": 32,
+    "status": "PASS",
+    "slug": "bg-put0-demo"
+  },
+  {
+    "title": "BLEM!",
+    "fileName": "BLEM! (PD).gb",
+    "mapper": "ROM-Only",
+    "sizeKb": 32,
+    "status": "PASS",
+    "slug": "blem"
   },
   {
     "title": "Baby T-Rex",
@@ -712,22 +736,6 @@
     "slug": "battle-dodge-ball"
   },
   {
-    "title": "Battle of Kingdom",
-    "fileName": "Battle of Kingdom (J).gb",
-    "mapper": "MBC1",
-    "sizeKb": 128,
-    "status": "PASS",
-    "slug": "battle-of-kingdom"
-  },
-  {
-    "title": "Battle of Olympus, The",
-    "fileName": "Battle of Olympus, The (UE) (M5).gb",
-    "mapper": "MBC1",
-    "sizeKb": 256,
-    "status": "PASS",
-    "slug": "battle-of-olympus-the"
-  },
-  {
     "title": "Battle Pingpong",
     "fileName": "Battle Pingpong (J).gb",
     "mapper": "MBC1",
@@ -758,6 +766,22 @@
     "sizeKb": 256,
     "status": "PASS",
     "slug": "battle-zone-super-breakout"
+  },
+  {
+    "title": "Battle of Kingdom",
+    "fileName": "Battle of Kingdom (J).gb",
+    "mapper": "MBC1",
+    "sizeKb": 128,
+    "status": "PASS",
+    "slug": "battle-of-kingdom"
+  },
+  {
+    "title": "Battle of Olympus, The",
+    "fileName": "Battle of Olympus, The (UE) (M5).gb",
+    "mapper": "MBC1",
+    "sizeKb": 256,
+    "status": "PASS",
+    "slug": "battle-of-olympus-the"
   },
   {
     "title": "BattleCity",
@@ -798,14 +822,6 @@
     "sizeKb": 128,
     "status": "PASS",
     "slug": "battletoads-in-ragnarok-s-world"
-  },
-  {
-    "title": "BBS Demo",
-    "fileName": "BBS Demo (PD).gb",
-    "mapper": "ROM-Only",
-    "sizeKb": 32,
-    "status": "PASS",
-    "slug": "bbs-demo"
   },
   {
     "title": "Beach Volleyball",
@@ -862,14 +878,6 @@
     "sizeKb": 256,
     "status": "PASS",
     "slug": "best-of-the-best-championship-karate"
-  },
-  {
-    "title": "BG Put0 Demo",
-    "fileName": "BG Put0 Demo (PD).gb",
-    "mapper": "ROM-Only",
-    "sizeKb": 32,
-    "status": "PASS",
-    "slug": "bg-put0-demo"
   },
   {
     "title": "Big Scroller Demo",
@@ -982,14 +990,6 @@
     "sizeKb": 32,
     "status": "PASS",
     "slug": "blastroids"
-  },
-  {
-    "title": "BLEM!",
-    "fileName": "BLEM! (PD).gb",
-    "mapper": "ROM-Only",
-    "sizeKb": 32,
-    "status": "PASS",
-    "slug": "blem"
   },
   {
     "title": "Block Kuzushi GB",
@@ -1968,6 +1968,30 @@
     "slug": "cyraid"
   },
   {
+    "title": "DMG Gariba Boui",
+    "fileName": "DMG Gariba Boui (J) [S].gb",
+    "mapper": "MBC1",
+    "sizeKb": 256,
+    "status": "PASS",
+    "slug": "dmg-gariba-boui"
+  },
+  {
+    "title": "DX Bakenou",
+    "fileName": "DX Bakenou (J) [!].gb",
+    "mapper": "MBC1+RAM+BATT",
+    "sizeKb": 64,
+    "status": "PASS",
+    "slug": "dx-bakenou"
+  },
+  {
+    "title": "DX Bakenou Z",
+    "fileName": "DX Bakenou Z (J) (V1.0).gb",
+    "mapper": "MBC1+RAM+BATT",
+    "sizeKb": 128,
+    "status": "PASS",
+    "slug": "dx-bakenou-z"
+  },
+  {
     "title": "Daedalean Opus",
     "fileName": "Daedalean Opus (U).gb",
     "mapper": "ROM-Only",
@@ -2158,14 +2182,6 @@
     "sizeKb": 32,
     "status": "PASS",
     "slug": "distortion-demo-by-anders-granlund"
-  },
-  {
-    "title": "DMG Gariba Boui",
-    "fileName": "DMG Gariba Boui (J) [S].gb",
-    "mapper": "MBC1",
-    "sizeKb": 256,
-    "status": "PASS",
-    "slug": "dmg-gariba-boui"
   },
   {
     "title": "Dodge Ball",
@@ -2480,28 +2496,20 @@
     "slug": "dungeonland"
   },
   {
-    "title": "DX Bakenou",
-    "fileName": "DX Bakenou (J) [!].gb",
-    "mapper": "MBC1+RAM+BATT",
-    "sizeKb": 64,
-    "status": "PASS",
-    "slug": "dx-bakenou"
-  },
-  {
-    "title": "DX Bakenou Z",
-    "fileName": "DX Bakenou Z (J) (V1.0).gb",
-    "mapper": "MBC1+RAM+BATT",
-    "sizeKb": 128,
-    "status": "PASS",
-    "slug": "dx-bakenou-z"
-  },
-  {
     "title": "Dynablaster",
     "fileName": "Dynablaster (E) [!].gb",
     "mapper": "MBC1",
     "sizeKb": 128,
     "status": "PASS",
     "slug": "dynablaster"
+  },
+  {
+    "title": "EVA Pong",
+    "fileName": "EVA Pong (PD).gb",
+    "mapper": "ROM-Only",
+    "sizeKb": 32,
+    "status": "PASS",
+    "slug": "eva-pong"
   },
   {
     "title": "Earthworm Jim",
@@ -2592,14 +2600,6 @@
     "slug": "enchanter-2-sorcerer"
   },
   {
-    "title": "EVA Pong",
-    "fileName": "EVA Pong (PD).gb",
-    "mapper": "ROM-Only",
-    "sizeKb": 32,
-    "status": "PASS",
-    "slug": "eva-pong"
-  },
-  {
     "title": "Exchanger",
     "fileName": "Exchanger (J) [S].gb",
     "mapper": "MBC1",
@@ -2654,6 +2654,30 @@
     "sizeKb": 128,
     "status": "PASS",
     "slug": "f-15-strike-eagle"
+  },
+  {
+    "title": "FIFA International Soccer",
+    "fileName": "FIFA International Soccer (U) (M4) [S].gb",
+    "mapper": "MBC1",
+    "sizeKb": 512,
+    "status": "PASS",
+    "slug": "fifa-international-soccer"
+  },
+  {
+    "title": "FIFA Soccer '96",
+    "fileName": "FIFA Soccer '96 (UE) (M4) [S][!].gb",
+    "mapper": "MBC1",
+    "sizeKb": 512,
+    "status": "PASS",
+    "slug": "fifa-soccer-96"
+  },
+  {
+    "title": "FIFA Soccer '98 - Road to the World Cup",
+    "fileName": "FIFA Soccer '98 - Road to the World Cup (U) [S].gb",
+    "mapper": "MBC1",
+    "sizeKb": 512,
+    "status": "PASS",
+    "slug": "fifa-soccer-98-road-to-the-world-cup"
   },
   {
     "title": "Faceball 2000",
@@ -2734,30 +2758,6 @@
     "sizeKb": 256,
     "status": "PASS",
     "slug": "fidgetts-the"
-  },
-  {
-    "title": "FIFA International Soccer",
-    "fileName": "FIFA International Soccer (U) (M4) [S].gb",
-    "mapper": "MBC1",
-    "sizeKb": 512,
-    "status": "PASS",
-    "slug": "fifa-international-soccer"
-  },
-  {
-    "title": "FIFA Soccer '96",
-    "fileName": "FIFA Soccer '96 (UE) (M4) [S][!].gb",
-    "mapper": "MBC1",
-    "sizeKb": 512,
-    "status": "PASS",
-    "slug": "fifa-soccer-96"
-  },
-  {
-    "title": "FIFA Soccer '98 - Road to the World Cup",
-    "fileName": "FIFA Soccer '98 - Road to the World Cup (U) [S].gb",
-    "mapper": "MBC1",
-    "sizeKb": 512,
-    "status": "PASS",
-    "slug": "fifa-soccer-98-road-to-the-world-cup"
   },
   {
     "title": "Fighting Simulator 2in1 - Flying Warriors",
@@ -3024,182 +3024,6 @@
     "slug": "g1-king-3-biki-no-yosouya"
   },
   {
-    "title": "Gabe Edit V0.1",
-    "fileName": "Gabe Edit V0.1 (PD).gb",
-    "mapper": "ROM-Only",
-    "sizeKb": 32,
-    "status": "PASS",
-    "slug": "gabe-edit-v0-1"
-  },
-  {
-    "title": "Galaga & Galaxian",
-    "fileName": "Galaga & Galaxian (E) [S][!].gb",
-    "mapper": "MBC1",
-    "sizeKb": 128,
-    "status": "PASS",
-    "slug": "galaga-galaxian"
-  },
-  {
-    "title": "Galaga Demo",
-    "fileName": "Galaga Demo (PD).gb",
-    "mapper": "ROM-Only",
-    "sizeKb": 32,
-    "status": "PASS",
-    "slug": "galaga-demo"
-  },
-  {
-    "title": "Galaxy Demo",
-    "fileName": "Galaxy Demo (PD).gb",
-    "mapper": "ROM-Only",
-    "sizeKb": 32,
-    "status": "PASS",
-    "slug": "galaxy-demo"
-  },
-  {
-    "title": "Game & Watch Gallery",
-    "fileName": "Game & Watch Gallery (E) [S][!].gb",
-    "mapper": "MBC1+RAM+BATT",
-    "sizeKb": 256,
-    "status": "PASS",
-    "slug": "game-watch-gallery"
-  },
-  {
-    "title": "Game & Watch Gallery 2",
-    "fileName": "Game & Watch Gallery 2 (J) [S].gb",
-    "mapper": "MBC1+RAM+BATT",
-    "sizeKb": 512,
-    "status": "PASS",
-    "slug": "game-watch-gallery-2"
-  },
-  {
-    "title": "Game of Harmony, The",
-    "fileName": "Game of Harmony, The (U).gb",
-    "mapper": "ROM-Only",
-    "sizeKb": 32,
-    "status": "PASS",
-    "slug": "game-of-harmony-the"
-  },
-  {
-    "title": "Gameboy Gallery",
-    "fileName": "Gameboy Gallery (U) [S].gb",
-    "mapper": "MBC1",
-    "sizeKb": 128,
-    "status": "PASS",
-    "slug": "gameboy-gallery"
-  },
-  {
-    "title": "Gameboy Gallery 2",
-    "fileName": "Gameboy Gallery 2 (A) [S][!].gb",
-    "mapper": "MBC1+RAM+BATT",
-    "sizeKb": 256,
-    "status": "PASS",
-    "slug": "gameboy-gallery-2"
-  },
-  {
-    "title": "Gameboy Interrupt Demo V0.1 by Matt Currie",
-    "fileName": "Gameboy Interrupt Demo V0.1 by Matt Currie (PD).gb",
-    "mapper": "ROM-Only",
-    "sizeKb": 32,
-    "status": "PASS",
-    "slug": "gameboy-interrupt-demo-v0-1-by-matt-currie"
-  },
-  {
-    "title": "Gameboy Printer Emulator V1.0 by Jeff Frohwein",
-    "fileName": "Gameboy Printer Emulator V1.0 by Jeff Frohwein (PD).gb",
-    "mapper": "MBC1+RAM+BATT",
-    "sizeKb": 32,
-    "status": "PASS",
-    "slug": "gameboy-printer-emulator-v1-0-by-jeff-frohwein"
-  },
-  {
-    "title": "Gameboy Stop Watch",
-    "fileName": "Gameboy Stop Watch (PD).gb",
-    "mapper": "ROM-Only",
-    "sizeKb": 32,
-    "status": "PASS",
-    "slug": "gameboy-stop-watch"
-  },
-  {
-    "title": "Gameboy Wars",
-    "fileName": "Gameboy Wars (J).gb",
-    "mapper": "MBC1+RAM+BATT",
-    "sizeKb": 256,
-    "status": "PASS",
-    "slug": "gameboy-wars"
-  },
-  {
-    "title": "Gameboy Wars Turbo",
-    "fileName": "Gameboy Wars Turbo (J) [S].gb",
-    "mapper": "MBC1+RAM+BATT",
-    "sizeKb": 512,
-    "status": "PASS",
-    "slug": "gameboy-wars-turbo"
-  },
-  {
-    "title": "GameDepot.com Credits Scroll",
-    "fileName": "GameDepot.com Credits Scroll (PD).gb",
-    "mapper": "MBC1+RAM",
-    "sizeKb": 32,
-    "status": "PASS",
-    "slug": "gamedepot-com-credits-scroll"
-  },
-  {
-    "title": "Gamera - Daikai Jukuchuu Kessen",
-    "fileName": "Gamera - Daikai Jukuchuu Kessen (J) [S].gb",
-    "mapper": "MBC1",
-    "sizeKb": 256,
-    "status": "PASS",
-    "slug": "gamera-daikai-jukuchuu-kessen"
-  },
-  {
-    "title": "Ganbare Goemon",
-    "fileName": "Ganbare Goemon (J).gb",
-    "mapper": "MBC1",
-    "sizeKb": 256,
-    "status": "PASS",
-    "slug": "ganbare-goemon"
-  },
-  {
-    "title": "Ganbare Goemon 2",
-    "fileName": "Ganbare Goemon 2 (J) [S].gb",
-    "mapper": "MBC1+RAM+BATT",
-    "sizeKb": 256,
-    "status": "PASS",
-    "slug": "ganbare-goemon-2"
-  },
-  {
-    "title": "Ganbaruga",
-    "fileName": "Ganbaruga (J).gb",
-    "mapper": "MBC1",
-    "sizeKb": 128,
-    "status": "PASS",
-    "slug": "ganbaruga"
-  },
-  {
-    "title": "Garfield Labyrinth",
-    "fileName": "Garfield Labyrinth (U).gb",
-    "mapper": "MBC1",
-    "sizeKb": 128,
-    "status": "PASS",
-    "slug": "garfield-labyrinth"
-  },
-  {
-    "title": "Gargoyle's Quest - Ghosts'n Goblins",
-    "fileName": "Gargoyle's Quest - Ghosts'n Goblins (UE) [!].gb",
-    "mapper": "MBC1",
-    "sizeKb": 128,
-    "status": "PASS",
-    "slug": "gargoyle-s-quest-ghosts-n-goblins"
-  },
-  {
-    "title": "Gauntlet II",
-    "fileName": "Gauntlet II (U).gb",
-    "mapper": "MBC1",
-    "sizeKb": 256,
-    "status": "PASS",
-    "slug": "gauntlet-ii"
-  },
-  {
     "title": "GAY",
     "fileName": "GAY (Tennis) (PD).gb",
     "mapper": "ROM-Only",
@@ -3328,6 +3152,14 @@
     "slug": "gb-comm"
   },
   {
+    "title": "GB DTMF Generator",
+    "fileName": "GB DTMF Generator (PD).gb",
+    "mapper": "ROM-Only",
+    "sizeKb": 32,
+    "status": "PASS",
+    "slug": "gb-dtmf-generator"
+  },
+  {
     "title": "GB Demo V1.1",
     "fileName": "GB Demo V1.1 (PD).gb",
     "mapper": "ROM-Only",
@@ -3342,14 +3174,6 @@
     "sizeKb": 32,
     "status": "PASS",
     "slug": "gb-demo-v1-2"
-  },
-  {
-    "title": "GB DTMF Generator",
-    "fileName": "GB DTMF Generator (PD).gb",
-    "mapper": "ROM-Only",
-    "sizeKb": 32,
-    "status": "PASS",
-    "slug": "gb-dtmf-generator"
   },
   {
     "title": "GB Electric Drum",
@@ -3510,14 +3334,6 @@
     "sizeKb": 64,
     "status": "PASS",
     "slug": "gb-tracker-v990220"
-  },
-  {
-    "title": "GBallz by Fabrizio Zavagli",
-    "fileName": "GBallz by Fabrizio Zavagli (PD).gb",
-    "mapper": "ROM-Only",
-    "sizeKb": 32,
-    "status": "PASS",
-    "slug": "gballz-by-fabrizio-zavagli"
   },
   {
     "title": "GBS Player V1.00 - Adventures of Lolo",
@@ -3960,6 +3776,14 @@
     "slug": "gbs-player-v1-00-twinbee"
   },
   {
+    "title": "GBS Player V1.00 - WWF Superstars",
+    "fileName": "GBS Player V1.00 - WWF Superstars (PD).gb",
+    "mapper": "MBC1",
+    "sizeKb": 32,
+    "status": "PASS",
+    "slug": "gbs-player-v1-00-wwf-superstars"
+  },
+  {
     "title": "GBS Player V1.00 - Wario Land - Super Mario Land 3",
     "fileName": "GBS Player V1.00 - Wario Land - Super Mario Land 3 (PD).gb",
     "mapper": "ROM-Only",
@@ -3974,14 +3798,6 @@
     "sizeKb": 128,
     "status": "PASS",
     "slug": "gbs-player-v1-00-wario-land-ii"
-  },
-  {
-    "title": "GBS Player V1.00 - WWF Superstars",
-    "fileName": "GBS Player V1.00 - WWF Superstars (PD).gb",
-    "mapper": "MBC1",
-    "sizeKb": 32,
-    "status": "PASS",
-    "slug": "gbs-player-v1-00-wwf-superstars"
   },
   {
     "title": "GBS Player V1.01 - Aladdin",
@@ -4152,6 +3968,198 @@
     "slug": "gbs-player-v1-01-trip-world"
   },
   {
+    "title": "GBallz by Fabrizio Zavagli",
+    "fileName": "GBallz by Fabrizio Zavagli (PD).gb",
+    "mapper": "ROM-Only",
+    "sizeKb": 32,
+    "status": "PASS",
+    "slug": "gballz-by-fabrizio-zavagli"
+  },
+  {
+    "title": "GHunter V0.5",
+    "fileName": "GHunter V0.5 (PD).gb",
+    "mapper": "ROM-Only",
+    "sizeKb": 32,
+    "status": "PASS",
+    "slug": "ghunter-v0-5"
+  },
+  {
+    "title": "Gabe Edit V0.1",
+    "fileName": "Gabe Edit V0.1 (PD).gb",
+    "mapper": "ROM-Only",
+    "sizeKb": 32,
+    "status": "PASS",
+    "slug": "gabe-edit-v0-1"
+  },
+  {
+    "title": "Galaga & Galaxian",
+    "fileName": "Galaga & Galaxian (E) [S][!].gb",
+    "mapper": "MBC1",
+    "sizeKb": 128,
+    "status": "PASS",
+    "slug": "galaga-galaxian"
+  },
+  {
+    "title": "Galaga Demo",
+    "fileName": "Galaga Demo (PD).gb",
+    "mapper": "ROM-Only",
+    "sizeKb": 32,
+    "status": "PASS",
+    "slug": "galaga-demo"
+  },
+  {
+    "title": "Galaxy Demo",
+    "fileName": "Galaxy Demo (PD).gb",
+    "mapper": "ROM-Only",
+    "sizeKb": 32,
+    "status": "PASS",
+    "slug": "galaxy-demo"
+  },
+  {
+    "title": "Game & Watch Gallery",
+    "fileName": "Game & Watch Gallery (E) [S][!].gb",
+    "mapper": "MBC1+RAM+BATT",
+    "sizeKb": 256,
+    "status": "PASS",
+    "slug": "game-watch-gallery"
+  },
+  {
+    "title": "Game & Watch Gallery 2",
+    "fileName": "Game & Watch Gallery 2 (J) [S].gb",
+    "mapper": "MBC1+RAM+BATT",
+    "sizeKb": 512,
+    "status": "PASS",
+    "slug": "game-watch-gallery-2"
+  },
+  {
+    "title": "Game of Harmony, The",
+    "fileName": "Game of Harmony, The (U).gb",
+    "mapper": "ROM-Only",
+    "sizeKb": 32,
+    "status": "PASS",
+    "slug": "game-of-harmony-the"
+  },
+  {
+    "title": "GameDepot.com Credits Scroll",
+    "fileName": "GameDepot.com Credits Scroll (PD).gb",
+    "mapper": "MBC1+RAM",
+    "sizeKb": 32,
+    "status": "PASS",
+    "slug": "gamedepot-com-credits-scroll"
+  },
+  {
+    "title": "Gameboy Gallery",
+    "fileName": "Gameboy Gallery (U) [S].gb",
+    "mapper": "MBC1",
+    "sizeKb": 128,
+    "status": "PASS",
+    "slug": "gameboy-gallery"
+  },
+  {
+    "title": "Gameboy Gallery 2",
+    "fileName": "Gameboy Gallery 2 (A) [S][!].gb",
+    "mapper": "MBC1+RAM+BATT",
+    "sizeKb": 256,
+    "status": "PASS",
+    "slug": "gameboy-gallery-2"
+  },
+  {
+    "title": "Gameboy Interrupt Demo V0.1 by Matt Currie",
+    "fileName": "Gameboy Interrupt Demo V0.1 by Matt Currie (PD).gb",
+    "mapper": "ROM-Only",
+    "sizeKb": 32,
+    "status": "PASS",
+    "slug": "gameboy-interrupt-demo-v0-1-by-matt-currie"
+  },
+  {
+    "title": "Gameboy Printer Emulator V1.0 by Jeff Frohwein",
+    "fileName": "Gameboy Printer Emulator V1.0 by Jeff Frohwein (PD).gb",
+    "mapper": "MBC1+RAM+BATT",
+    "sizeKb": 32,
+    "status": "PASS",
+    "slug": "gameboy-printer-emulator-v1-0-by-jeff-frohwein"
+  },
+  {
+    "title": "Gameboy Stop Watch",
+    "fileName": "Gameboy Stop Watch (PD).gb",
+    "mapper": "ROM-Only",
+    "sizeKb": 32,
+    "status": "PASS",
+    "slug": "gameboy-stop-watch"
+  },
+  {
+    "title": "Gameboy Wars",
+    "fileName": "Gameboy Wars (J).gb",
+    "mapper": "MBC1+RAM+BATT",
+    "sizeKb": 256,
+    "status": "PASS",
+    "slug": "gameboy-wars"
+  },
+  {
+    "title": "Gameboy Wars Turbo",
+    "fileName": "Gameboy Wars Turbo (J) [S].gb",
+    "mapper": "MBC1+RAM+BATT",
+    "sizeKb": 512,
+    "status": "PASS",
+    "slug": "gameboy-wars-turbo"
+  },
+  {
+    "title": "Gamera - Daikai Jukuchuu Kessen",
+    "fileName": "Gamera - Daikai Jukuchuu Kessen (J) [S].gb",
+    "mapper": "MBC1",
+    "sizeKb": 256,
+    "status": "PASS",
+    "slug": "gamera-daikai-jukuchuu-kessen"
+  },
+  {
+    "title": "Ganbare Goemon",
+    "fileName": "Ganbare Goemon (J).gb",
+    "mapper": "MBC1",
+    "sizeKb": 256,
+    "status": "PASS",
+    "slug": "ganbare-goemon"
+  },
+  {
+    "title": "Ganbare Goemon 2",
+    "fileName": "Ganbare Goemon 2 (J) [S].gb",
+    "mapper": "MBC1+RAM+BATT",
+    "sizeKb": 256,
+    "status": "PASS",
+    "slug": "ganbare-goemon-2"
+  },
+  {
+    "title": "Ganbaruga",
+    "fileName": "Ganbaruga (J).gb",
+    "mapper": "MBC1",
+    "sizeKb": 128,
+    "status": "PASS",
+    "slug": "ganbaruga"
+  },
+  {
+    "title": "Garfield Labyrinth",
+    "fileName": "Garfield Labyrinth (U).gb",
+    "mapper": "MBC1",
+    "sizeKb": 128,
+    "status": "PASS",
+    "slug": "garfield-labyrinth"
+  },
+  {
+    "title": "Gargoyle's Quest - Ghosts'n Goblins",
+    "fileName": "Gargoyle's Quest - Ghosts'n Goblins (UE) [!].gb",
+    "mapper": "MBC1",
+    "sizeKb": 128,
+    "status": "PASS",
+    "slug": "gargoyle-s-quest-ghosts-n-goblins"
+  },
+  {
+    "title": "Gauntlet II",
+    "fileName": "Gauntlet II (U).gb",
+    "mapper": "MBC1",
+    "sizeKb": 256,
+    "status": "PASS",
+    "slug": "gauntlet-ii"
+  },
+  {
     "title": "Gear Works",
     "fileName": "Gear Works (U) [!].gb",
     "mapper": "MBC1",
@@ -4238,14 +4246,6 @@
     "sizeKb": 32,
     "status": "PASS",
     "slug": "ghostbusters-logo-demo"
-  },
-  {
-    "title": "GHunter V0.5",
-    "fileName": "GHunter V0.5 (PD).gb",
-    "mapper": "ROM-Only",
-    "sizeKb": 32,
-    "status": "PASS",
-    "slug": "ghunter-v0-5"
   },
   {
     "title": "Ginga",
@@ -4832,6 +4832,14 @@
     "slug": "idsa-invaders"
   },
   {
+    "title": "IRQ Demo",
+    "fileName": "IRQ Demo (PD).gb",
+    "mapper": "ROM-Only",
+    "sizeKb": 32,
+    "status": "PASS",
+    "slug": "irq-demo"
+  },
+  {
     "title": "Ikari no Yousai",
     "fileName": "Ikari no Yousai (J).gb",
     "mapper": "MBC1",
@@ -4910,14 +4918,6 @@
     "sizeKb": 512,
     "status": "PASS",
     "slug": "ironman-x-o-manowar-in-heavy-metal"
-  },
-  {
-    "title": "IRQ Demo",
-    "fileName": "IRQ Demo (PD).gb",
-    "mapper": "ROM-Only",
-    "sizeKb": 32,
-    "status": "PASS",
-    "slug": "irq-demo"
   },
   {
     "title": "Ishido",
@@ -5464,20 +5464,20 @@
     "slug": "kirby-2-hoshinoka-2"
   },
   {
-    "title": "Kirby no Block Ball",
-    "fileName": "Kirby no Block Ball (J) [S].gb",
-    "mapper": "MBC1+RAM+BATT",
-    "sizeKb": 512,
-    "status": "PASS",
-    "slug": "kirby-no-block-ball"
-  },
-  {
     "title": "Kirby XXL Demo",
     "fileName": "Kirby XXL Demo (PD).gb",
     "mapper": "MBC1",
     "sizeKb": 32,
     "status": "PASS",
     "slug": "kirby-xxl-demo"
+  },
+  {
+    "title": "Kirby no Block Ball",
+    "fileName": "Kirby no Block Ball (J) [S].gb",
+    "mapper": "MBC1+RAM+BATT",
+    "sizeKb": 512,
+    "status": "PASS",
+    "slug": "kirby-no-block-ball"
   },
   {
     "title": "Kirby's Block Ball",
@@ -5760,20 +5760,20 @@
     "slug": "legend-of-prince-valiant-the"
   },
   {
-    "title": "Legend of the River King GB",
-    "fileName": "Legend of the River King GB (U) [S][!].gb",
-    "mapper": "MBC1+RAM+BATT",
-    "sizeKb": 512,
-    "status": "PASS",
-    "slug": "legend-of-the-river-king-gb"
-  },
-  {
     "title": "Legend of Zelda, The - Link's Awakening",
     "fileName": "Legend of Zelda, The - Link's Awakening (USA, Europe) (Rev 2).gb",
     "mapper": "MBC1+RAM+BATT",
     "sizeKb": 512,
     "status": "PASS",
     "slug": "legend-of-zelda-the-link-s-awakening"
+  },
+  {
+    "title": "Legend of the River King GB",
+    "fileName": "Legend of the River King GB (U) [S][!].gb",
+    "mapper": "MBC1+RAM+BATT",
+    "sizeKb": 512,
+    "status": "PASS",
+    "slug": "legend-of-the-river-king-gb"
   },
   {
     "title": "Lemmings",
@@ -6264,6 +6264,14 @@
     "slug": "medarot-kuwagata"
   },
   {
+    "title": "MegAnime by Megaman_X",
+    "fileName": "MegAnime by Megaman_X (PD).gb",
+    "mapper": "ROM-Only",
+    "sizeKb": 32,
+    "status": "PASS",
+    "slug": "meganime-by-megaman-x"
+  },
+  {
     "title": "Mega Man - Dr. Wily's Revenge",
     "fileName": "Mega Man - Dr. Wily's Revenge (E) [!].gb",
     "mapper": "MBC1",
@@ -6334,14 +6342,6 @@
     "sizeKb": 256,
     "status": "PASS",
     "slug": "megami-tensei-gaiden-last-bible-ii"
-  },
-  {
-    "title": "MegAnime by Megaman_X",
-    "fileName": "MegAnime by Megaman_X (PD).gb",
-    "mapper": "ROM-Only",
-    "sizeKb": 32,
-    "status": "PASS",
-    "slug": "meganime-by-megaman-x"
   },
   {
     "title": "Meitantei Conan",
@@ -6928,6 +6928,94 @@
     "slug": "n64-controller"
   },
   {
+    "title": "NBA All Star Challenge",
+    "fileName": "NBA All Star Challenge (U) [!].gb",
+    "mapper": "MBC1",
+    "sizeKb": 64,
+    "status": "PASS",
+    "slug": "nba-all-star-challenge"
+  },
+  {
+    "title": "NBA All Star Challenge 2",
+    "fileName": "NBA All Star Challenge 2 (U) [!].gb",
+    "mapper": "MBC1",
+    "sizeKb": 128,
+    "status": "PASS",
+    "slug": "nba-all-star-challenge-2"
+  },
+  {
+    "title": "NBA Jam",
+    "fileName": "NBA Jam (U).gb",
+    "mapper": "MBC1",
+    "sizeKb": 256,
+    "status": "PASS",
+    "slug": "nba-jam"
+  },
+  {
+    "title": "NBA Jam - Tournament Edition",
+    "fileName": "NBA Jam - Tournament Edition (UE) [!].gb",
+    "mapper": "MBC1",
+    "sizeKb": 512,
+    "status": "PASS",
+    "slug": "nba-jam-tournament-edition"
+  },
+  {
+    "title": "NBA Live 96",
+    "fileName": "NBA Live 96 (U) [S].gb",
+    "mapper": "MBC1",
+    "sizeKb": 512,
+    "status": "PASS",
+    "slug": "nba-live-96"
+  },
+  {
+    "title": "NFL Football",
+    "fileName": "NFL Football (U) [!].gb",
+    "mapper": "ROM-Only",
+    "sizeKb": 32,
+    "status": "PASS",
+    "slug": "nfl-football"
+  },
+  {
+    "title": "NFL Quarterback Club",
+    "fileName": "NFL Quarterback Club (U) [!].gb",
+    "mapper": "MBC1",
+    "sizeKb": 128,
+    "status": "PASS",
+    "slug": "nfl-quarterback-club"
+  },
+  {
+    "title": "NFL Quarterback Club 2",
+    "fileName": "NFL Quarterback Club 2 (U) [!].gb",
+    "mapper": "MBC1",
+    "sizeKb": 256,
+    "status": "PASS",
+    "slug": "nfl-quarterback-club-2"
+  },
+  {
+    "title": "NFL Quarterback Club 96",
+    "fileName": "NFL Quarterback Club 96 (U).gb",
+    "mapper": "MBC1",
+    "sizeKb": 256,
+    "status": "PASS",
+    "slug": "nfl-quarterback-club-96"
+  },
+  {
+    "title": "NHL Hockey '95",
+    "fileName": "NHL Hockey '95 (U) [S][!].gb",
+    "mapper": "MBC1",
+    "sizeKb": 512,
+    "status": "PASS",
+    "slug": "nhl-hockey-95"
+  },
+  {
+    "title": "NHL Hockey '96",
+    "fileName": "NHL Hockey '96 (U) [S][!].gb",
+    "mapper": "MBC1",
+    "sizeKb": 512,
+    "status": "PASS",
+    "slug": "nhl-hockey-96"
+  },
+  {
     "title": "Nada Asatarou no Powerful Mahjong - Tsugi no Itte 100 Dai",
     "fileName": "Nada Asatarou no Powerful Mahjong - Tsugi no Itte 100 Dai (J).gb",
     "mapper": "MBC1",
@@ -6992,14 +7080,6 @@
     "slug": "nanoloop-music-generator"
   },
   {
-    "title": "Nanonote",
-    "fileName": "Nanonote (J).gb",
-    "mapper": "MBC1+RAM+BATT",
-    "sizeKb": 128,
-    "status": "PASS",
-    "slug": "nanonote"
-  },
-  {
     "title": "NanoSynth",
     "fileName": "NanoSynth (PD).gb",
     "mapper": "ROM-Only",
@@ -7014,6 +7094,14 @@
     "sizeKb": 32,
     "status": "PASS",
     "slug": "nanovoice-demo"
+  },
+  {
+    "title": "Nanonote",
+    "fileName": "Nanonote (J).gb",
+    "mapper": "MBC1+RAM+BATT",
+    "sizeKb": 128,
+    "status": "PASS",
+    "slug": "nanonote"
   },
   {
     "title": "Navy Blue",
@@ -7046,46 +7134,6 @@
     "sizeKb": 128,
     "status": "PASS",
     "slug": "navy-seals"
-  },
-  {
-    "title": "NBA All Star Challenge",
-    "fileName": "NBA All Star Challenge (U) [!].gb",
-    "mapper": "MBC1",
-    "sizeKb": 64,
-    "status": "PASS",
-    "slug": "nba-all-star-challenge"
-  },
-  {
-    "title": "NBA All Star Challenge 2",
-    "fileName": "NBA All Star Challenge 2 (U) [!].gb",
-    "mapper": "MBC1",
-    "sizeKb": 128,
-    "status": "PASS",
-    "slug": "nba-all-star-challenge-2"
-  },
-  {
-    "title": "NBA Jam",
-    "fileName": "NBA Jam (U).gb",
-    "mapper": "MBC1",
-    "sizeKb": 256,
-    "status": "PASS",
-    "slug": "nba-jam"
-  },
-  {
-    "title": "NBA Jam - Tournament Edition",
-    "fileName": "NBA Jam - Tournament Edition (UE) [!].gb",
-    "mapper": "MBC1",
-    "sizeKb": 512,
-    "status": "PASS",
-    "slug": "nba-jam-tournament-edition"
-  },
-  {
-    "title": "NBA Live 96",
-    "fileName": "NBA Live 96 (U) [S].gb",
-    "mapper": "MBC1",
-    "sizeKb": 512,
-    "status": "PASS",
-    "slug": "nba-live-96"
   },
   {
     "title": "Nekketsu Kouha Kunio-Kun - Bangai Rantou-Hen",
@@ -7182,54 +7230,6 @@
     "sizeKb": 256,
     "status": "PASS",
     "slug": "new-sd-gundam"
-  },
-  {
-    "title": "NFL Football",
-    "fileName": "NFL Football (U) [!].gb",
-    "mapper": "ROM-Only",
-    "sizeKb": 32,
-    "status": "PASS",
-    "slug": "nfl-football"
-  },
-  {
-    "title": "NFL Quarterback Club",
-    "fileName": "NFL Quarterback Club (U) [!].gb",
-    "mapper": "MBC1",
-    "sizeKb": 128,
-    "status": "PASS",
-    "slug": "nfl-quarterback-club"
-  },
-  {
-    "title": "NFL Quarterback Club 2",
-    "fileName": "NFL Quarterback Club 2 (U) [!].gb",
-    "mapper": "MBC1",
-    "sizeKb": 256,
-    "status": "PASS",
-    "slug": "nfl-quarterback-club-2"
-  },
-  {
-    "title": "NFL Quarterback Club 96",
-    "fileName": "NFL Quarterback Club 96 (U).gb",
-    "mapper": "MBC1",
-    "sizeKb": 256,
-    "status": "PASS",
-    "slug": "nfl-quarterback-club-96"
-  },
-  {
-    "title": "NHL Hockey '95",
-    "fileName": "NHL Hockey '95 (U) [S][!].gb",
-    "mapper": "MBC1",
-    "sizeKb": 512,
-    "status": "PASS",
-    "slug": "nhl-hockey-95"
-  },
-  {
-    "title": "NHL Hockey '96",
-    "fileName": "NHL Hockey '96 (U) [S][!].gb",
-    "mapper": "MBC1",
-    "sizeKb": 512,
-    "status": "PASS",
-    "slug": "nhl-hockey-96"
   },
   {
     "title": "Nichibutsu Mahjong - Yoshimoto Gekijou",
@@ -7600,12 +7600,36 @@
     "slug": "p9-demo"
   },
   {
-    "title": "Pac-in-Time",
-    "fileName": "Pac-in-Time (UE) [S][!].gb",
-    "mapper": "MBC1",
-    "sizeKb": 256,
+    "title": "PCX-to-GB Demo by Megaman_X",
+    "fileName": "PCX-to-GB Demo by Megaman_X (PD).gb",
+    "mapper": "ROM-Only",
+    "sizeKb": 32,
     "status": "PASS",
-    "slug": "pac-in-time"
+    "slug": "pcx-to-gb-demo-by-megaman-x"
+  },
+  {
+    "title": "PGA European Tour",
+    "fileName": "PGA European Tour (U) [S][!].gb",
+    "mapper": "MBC1",
+    "sizeKb": 512,
+    "status": "PASS",
+    "slug": "pga-european-tour"
+  },
+  {
+    "title": "PGA Tour '96",
+    "fileName": "PGA Tour '96 (U) [S].gb",
+    "mapper": "MBC1",
+    "sizeKb": 512,
+    "status": "PASS",
+    "slug": "pga-tour-96"
+  },
+  {
+    "title": "PI Speak Demo",
+    "fileName": "PI Speak Demo (PD).gb",
+    "mapper": "ROM-Only",
+    "sizeKb": 32,
+    "status": "PASS",
+    "slug": "pi-speak-demo"
   },
   {
     "title": "Pac-Man",
@@ -7622,6 +7646,14 @@
     "sizeKb": 128,
     "status": "PASS",
     "slug": "pac-panic"
+  },
+  {
+    "title": "Pac-in-Time",
+    "fileName": "Pac-in-Time (UE) [S][!].gb",
+    "mapper": "MBC1",
+    "sizeKb": 256,
+    "status": "PASS",
+    "slug": "pac-in-time"
   },
   {
     "title": "Pachi-Slot Kids",
@@ -7848,14 +7880,6 @@
     "slug": "parts-collection-2"
   },
   {
-    "title": "PCX-to-GB Demo by Megaman_X",
-    "fileName": "PCX-to-GB Demo by Megaman_X (PD).gb",
-    "mapper": "ROM-Only",
-    "sizeKb": 32,
-    "status": "PASS",
-    "slug": "pcx-to-gb-demo-by-megaman-x"
-  },
-  {
     "title": "Peetan",
     "fileName": "Peetan (J).gb",
     "mapper": "MBC1",
@@ -7904,22 +7928,6 @@
     "slug": "penta-dragon"
   },
   {
-    "title": "PGA European Tour",
-    "fileName": "PGA European Tour (U) [S][!].gb",
-    "mapper": "MBC1",
-    "sizeKb": 512,
-    "status": "PASS",
-    "slug": "pga-european-tour"
-  },
-  {
-    "title": "PGA Tour '96",
-    "fileName": "PGA Tour '96 (U) [S].gb",
-    "mapper": "MBC1",
-    "sizeKb": 512,
-    "status": "PASS",
-    "slug": "pga-tour-96"
-  },
-  {
     "title": "Phantasm",
     "fileName": "Phantasm (J).gb",
     "mapper": "MBC1",
@@ -7934,14 +7942,6 @@
     "sizeKb": 32,
     "status": "PASS",
     "slug": "phreak-boy"
-  },
-  {
-    "title": "PI Speak Demo",
-    "fileName": "PI Speak Demo (PD).gb",
-    "mapper": "ROM-Only",
-    "sizeKb": 32,
-    "status": "PASS",
-    "slug": "pi-speak-demo"
   },
   {
     "title": "Pika Killa",
@@ -8280,12 +8280,28 @@
     "slug": "poke-mission-97-v1-01"
   },
   {
+    "title": "Pokemon - Blue Version",
+    "fileName": "Pokemon - Blue Version (UE) [S][!].gb",
+    "mapper": "MBC3+RAM+BATT",
+    "sizeKb": 1024,
+    "status": "PASS",
+    "slug": "pokemon-blue-version"
+  },
+  {
     "title": "Pokemon Land V0.3",
     "fileName": "Pokemon Land V0.3 (Super Mario Land Hack).gb",
     "mapper": "MBC1",
     "sizeKb": 64,
     "status": "PASS",
     "slug": "pokemon-land-v0-3"
+  },
+  {
+    "title": "Pokemon Red",
+    "fileName": "Pokemon Red (UE) [S][!].gb",
+    "mapper": "MBC3+RAM+BATT",
+    "sizeKb": 1024,
+    "status": "PASS",
+    "slug": "pokemon-red"
   },
   {
     "title": "Pokemon of the Past V0.1 by PR",
@@ -8416,20 +8432,20 @@
     "slug": "primal-rage"
   },
   {
-    "title": "Prince of Persia",
-    "fileName": "Prince of Persia (U).gb",
-    "mapper": "MBC1",
-    "sizeKb": 128,
-    "status": "PASS",
-    "slug": "prince-of-persia"
-  },
-  {
     "title": "Prince YehRude",
     "fileName": "Prince YehRude (Unl).gb",
     "mapper": "MBC1",
     "sizeKb": 128,
     "status": "PASS",
     "slug": "prince-yehrude"
+  },
+  {
+    "title": "Prince of Persia",
+    "fileName": "Prince of Persia (U).gb",
+    "mapper": "MBC1",
+    "sizeKb": 128,
+    "status": "PASS",
+    "slug": "prince-of-persia"
   },
   {
     "title": "Pro Action Replay",
@@ -8664,6 +8680,22 @@
     "slug": "r-type-ii"
   },
   {
+    "title": "RAM Function Test",
+    "fileName": "RAM Function Test (PD).gb",
+    "mapper": "ROM-Only",
+    "sizeKb": 32,
+    "status": "PASS",
+    "slug": "ram-function-test"
+  },
+  {
+    "title": "RPN Calculator",
+    "fileName": "RPN Calculator (PD).gb",
+    "mapper": "ROM-Only",
+    "sizeKb": 32,
+    "status": "PASS",
+    "slug": "rpn-calculator"
+  },
+  {
     "title": "Race Days",
     "fileName": "Race Days (Dirty Racing & 4 Wheel Drive) (E).gb",
     "mapper": "MBC1",
@@ -8726,14 +8758,6 @@
     "sizeKb": 128,
     "status": "PASS",
     "slug": "rainbow-prince"
-  },
-  {
-    "title": "RAM Function Test",
-    "fileName": "RAM Function Test (PD).gb",
-    "mapper": "ROM-Only",
-    "sizeKb": 32,
-    "status": "PASS",
-    "slug": "ram-function-test"
   },
   {
     "title": "Rampart",
@@ -9056,14 +9080,6 @@
     "slug": "rotation"
   },
   {
-    "title": "RPN Calculator",
-    "fileName": "RPN Calculator (PD).gb",
-    "mapper": "ROM-Only",
-    "sizeKb": 32,
-    "status": "PASS",
-    "slug": "rpn-calculator"
-  },
-  {
     "title": "Rubble Saver",
     "fileName": "Rubble Saver (J).gb",
     "mapper": "MBC1",
@@ -9086,6 +9102,54 @@
     "sizeKb": 512,
     "status": "PASS",
     "slug": "rugrats-movie-the"
+  },
+  {
+    "title": "SD Command Gundam - G-Arms",
+    "fileName": "SD Command Gundam - G-Arms (J) [!].gb",
+    "mapper": "MBC1",
+    "sizeKb": 128,
+    "status": "PASS",
+    "slug": "sd-command-gundam-g-arms"
+  },
+  {
+    "title": "SD Hiryuu no Ken Gaiden",
+    "fileName": "SD Hiryuu no Ken Gaiden (J) [S][!].gb",
+    "mapper": "MBC1",
+    "sizeKb": 512,
+    "status": "PASS",
+    "slug": "sd-hiryuu-no-ken-gaiden"
+  },
+  {
+    "title": "SD Hiryuu no Ken Gaiden 2",
+    "fileName": "SD Hiryuu no Ken Gaiden 2 (J) [S][!].gb",
+    "mapper": "MBC1",
+    "sizeKb": 1024,
+    "status": "PASS",
+    "slug": "sd-hiryuu-no-ken-gaiden-2"
+  },
+  {
+    "title": "SD Lupin III - Kinko Yaburi Daisakusen",
+    "fileName": "SD Lupin III - Kinko Yaburi Daisakusen (J) [!].gb",
+    "mapper": "MBC1",
+    "sizeKb": 64,
+    "status": "PASS",
+    "slug": "sd-lupin-iii-kinko-yaburi-daisakusen"
+  },
+  {
+    "title": "SD Sengokuden - Kunitori Monogatari",
+    "fileName": "SD Sengokuden - Kunitori Monogatari (J) [!].gb",
+    "mapper": "MBC1",
+    "sizeKb": 128,
+    "status": "PASS",
+    "slug": "sd-sengokuden-kunitori-monogatari"
+  },
+  {
+    "title": "SQRXZ V1.1",
+    "fileName": "SQRXZ V1.1 (PD).gb",
+    "mapper": "MBC1+RAM",
+    "sizeKb": 32,
+    "status": "PASS",
+    "slug": "sqrxz-v1-1"
   },
   {
     "title": "SaGa 2 - Hihou Densetsu",
@@ -9214,46 +9278,6 @@
     "sizeKb": 32,
     "status": "PASS",
     "slug": "scrolling-demo-2"
-  },
-  {
-    "title": "SD Command Gundam - G-Arms",
-    "fileName": "SD Command Gundam - G-Arms (J) [!].gb",
-    "mapper": "MBC1",
-    "sizeKb": 128,
-    "status": "PASS",
-    "slug": "sd-command-gundam-g-arms"
-  },
-  {
-    "title": "SD Hiryuu no Ken Gaiden",
-    "fileName": "SD Hiryuu no Ken Gaiden (J) [S][!].gb",
-    "mapper": "MBC1",
-    "sizeKb": 512,
-    "status": "PASS",
-    "slug": "sd-hiryuu-no-ken-gaiden"
-  },
-  {
-    "title": "SD Hiryuu no Ken Gaiden 2",
-    "fileName": "SD Hiryuu no Ken Gaiden 2 (J) [S][!].gb",
-    "mapper": "MBC1",
-    "sizeKb": 1024,
-    "status": "PASS",
-    "slug": "sd-hiryuu-no-ken-gaiden-2"
-  },
-  {
-    "title": "SD Lupin III - Kinko Yaburi Daisakusen",
-    "fileName": "SD Lupin III - Kinko Yaburi Daisakusen (J) [!].gb",
-    "mapper": "MBC1",
-    "sizeKb": 64,
-    "status": "PASS",
-    "slug": "sd-lupin-iii-kinko-yaburi-daisakusen"
-  },
-  {
-    "title": "SD Sengokuden - Kunitori Monogatari",
-    "fileName": "SD Sengokuden - Kunitori Monogatari (J) [!].gb",
-    "mapper": "MBC1",
-    "sizeKb": 128,
-    "status": "PASS",
-    "slug": "sd-sengokuden-kunitori-monogatari"
   },
   {
     "title": "Sea Battle",
@@ -9936,14 +9960,6 @@
     "slug": "spy-vs-spy-operation-boobytrap"
   },
   {
-    "title": "SQRXZ V1.1",
-    "fileName": "SQRXZ V1.1 (PD).gb",
-    "mapper": "MBC1+RAM",
-    "sizeKb": 32,
-    "status": "PASS",
-    "slug": "sqrxz-v1-1"
-  },
-  {
     "title": "Square Deal - The Game of Two Dimensional Poker",
     "fileName": "Square Deal - The Game of Two Dimensional Poker (U) [!].gb",
     "mapper": "MBC1",
@@ -10016,20 +10032,20 @@
     "slug": "star-wars-the-empire-strikes-back"
   },
   {
-    "title": "Starcross",
-    "fileName": "Starcross (PD).gb",
-    "mapper": "MBC1+RAM+BATT",
-    "sizeKb": 128,
-    "status": "PASS",
-    "slug": "starcross"
-  },
-  {
     "title": "StarFisher",
     "fileName": "StarFisher (PD).gb",
     "mapper": "ROM-Only",
     "sizeKb": 32,
     "status": "PASS",
     "slug": "starfisher"
+  },
+  {
+    "title": "Starcross",
+    "fileName": "Starcross (PD).gb",
+    "mapper": "MBC1+RAM+BATT",
+    "sizeKb": 128,
+    "status": "PASS",
+    "slug": "starcross"
   },
   {
     "title": "Stargate",
@@ -10472,6 +10488,22 @@
     "slug": "t2-demo-by-megaman-x"
   },
   {
+    "title": "TDL Fantasy Tour",
+    "fileName": "TDL Fantasy Tour (J) [S].gb",
+    "mapper": "MBC1",
+    "sizeKb": 512,
+    "status": "PASS",
+    "slug": "tdl-fantasy-tour"
+  },
+  {
+    "title": "TV Champion",
+    "fileName": "TV Champion (J) [S].gb",
+    "mapper": "MBC1",
+    "sizeKb": 256,
+    "status": "PASS",
+    "slug": "tv-champion"
+  },
+  {
     "title": "Taachiyan",
     "fileName": "Taachiyan (J) [S].gb",
     "mapper": "MBC1",
@@ -10606,14 +10638,6 @@
     "sizeKb": 128,
     "status": "PASS",
     "slug": "taz-mania-2"
-  },
-  {
-    "title": "TDL Fantasy Tour",
-    "fileName": "TDL Fantasy Tour (J) [S].gb",
-    "mapper": "MBC1",
-    "sizeKb": 512,
-    "status": "PASS",
-    "slug": "tdl-fantasy-tour"
   },
   {
     "title": "Tecmo Bowl",
@@ -10814,14 +10838,6 @@
     "sizeKb": 256,
     "status": "PASS",
     "slug": "tetris-plus"
-  },
-  {
-    "title": "tetris",
-    "fileName": "tetris.gb",
-    "mapper": "ROM-Only",
-    "sizeKb": 32,
-    "status": "PASS",
-    "slug": "tetris"
   },
   {
     "title": "They Came from Outer Space",
@@ -11224,14 +11240,6 @@
     "slug": "turrican"
   },
   {
-    "title": "TV Champion",
-    "fileName": "TV Champion (J) [S].gb",
-    "mapper": "MBC1",
-    "sizeKb": 256,
-    "status": "PASS",
-    "slug": "tv-champion"
-  },
-  {
     "title": "Twin",
     "fileName": "Twin (J).gb",
     "mapper": "MBC1",
@@ -11256,20 +11264,20 @@
     "slug": "two-hearts"
   },
   {
-    "title": "Uchuu no Kishi Tekkaman Blade",
-    "fileName": "Uchuu no Kishi Tekkaman Blade (J) [!].gb",
-    "mapper": "MBC1",
-    "sizeKb": 128,
-    "status": "PASS",
-    "slug": "uchuu-no-kishi-tekkaman-blade"
-  },
-  {
     "title": "Uchuu Senkan Yamato",
     "fileName": "Uchuu Senkan Yamato (J) [!].gb",
     "mapper": "MBC1",
     "sizeKb": 256,
     "status": "PASS",
     "slug": "uchuu-senkan-yamato"
+  },
+  {
+    "title": "Uchuu no Kishi Tekkaman Blade",
+    "fileName": "Uchuu no Kishi Tekkaman Blade (J) [!].gb",
+    "mapper": "MBC1",
+    "sizeKb": 128,
+    "status": "PASS",
+    "slug": "uchuu-no-kishi-tekkaman-blade"
   },
   {
     "title": "Ultraman",
@@ -11384,6 +11392,22 @@
     "slug": "v-rally-championship-edition"
   },
   {
+    "title": "VGB Lord Demo",
+    "fileName": "VGB Lord Demo (PD).gb",
+    "mapper": "ROM-Only",
+    "sizeKb": 32,
+    "status": "PASS",
+    "slug": "vgb-lord-demo"
+  },
+  {
+    "title": "VS Battler",
+    "fileName": "VS Battler (J).gb",
+    "mapper": "MBC1",
+    "sizeKb": 64,
+    "status": "PASS",
+    "slug": "vs-battler"
+  },
+  {
     "title": "Vattle Giuce",
     "fileName": "Vattle Giuce (J) [!].gb",
     "mapper": "MBC1",
@@ -11432,14 +11456,6 @@
     "slug": "vex-block"
   },
   {
-    "title": "VGB Lord Demo",
-    "fileName": "VGB Lord Demo (PD).gb",
-    "mapper": "ROM-Only",
-    "sizeKb": 32,
-    "status": "PASS",
-    "slug": "vgb-lord-demo"
-  },
-  {
     "title": "Vila Caldan V0.1",
     "fileName": "Vila Caldan V0.1 (PD).gb",
     "mapper": "ROM-Only",
@@ -11480,12 +11496,76 @@
     "slug": "volley-fire"
   },
   {
-    "title": "VS Battler",
-    "fileName": "VS Battler (J).gb",
+    "title": "WCW Main Event",
+    "fileName": "WCW Main Event (U) [!].gb",
     "mapper": "MBC1",
-    "sizeKb": 64,
+    "sizeKb": 128,
     "status": "PASS",
-    "slug": "vs-battler"
+    "slug": "wcw-main-event"
+  },
+  {
+    "title": "WD 3D Demo",
+    "fileName": "WD 3D Demo (PD).gb",
+    "mapper": "ROM-Only",
+    "sizeKb": 32,
+    "status": "PASS",
+    "slug": "wd-3d-demo"
+  },
+  {
+    "title": "WD Checkercube Demo V0.1",
+    "fileName": "WD Checkercube Demo V0.1 (PD).gb",
+    "mapper": "ROM-Only",
+    "sizeKb": 32,
+    "status": "PASS",
+    "slug": "wd-checkercube-demo-v0-1"
+  },
+  {
+    "title": "WOW Super Gameboy Peep-Show",
+    "fileName": "WOW Super Gameboy Peep-Show (PD).gb",
+    "mapper": "ROM-Only",
+    "sizeKb": 32,
+    "status": "PASS",
+    "slug": "wow-super-gameboy-peep-show"
+  },
+  {
+    "title": "WWF King of the Ring",
+    "fileName": "WWF King of the Ring (U) [!].gb",
+    "mapper": "MBC1",
+    "sizeKb": 128,
+    "status": "PASS",
+    "slug": "wwf-king-of-the-ring"
+  },
+  {
+    "title": "WWF Raw",
+    "fileName": "WWF Raw (U).gb",
+    "mapper": "MBC1",
+    "sizeKb": 256,
+    "status": "PASS",
+    "slug": "wwf-raw"
+  },
+  {
+    "title": "WWF Superstars",
+    "fileName": "WWF Superstars (UE) [!].gb",
+    "mapper": "MBC1",
+    "sizeKb": 128,
+    "status": "PASS",
+    "slug": "wwf-superstars"
+  },
+  {
+    "title": "WWF Superstars 2",
+    "fileName": "WWF Superstars 2 (UE) [!].gb",
+    "mapper": "MBC1",
+    "sizeKb": 128,
+    "status": "PASS",
+    "slug": "wwf-superstars-2"
+  },
+  {
+    "title": "WWF Warzone",
+    "fileName": "WWF Warzone (U).gb",
+    "mapper": "MBC1",
+    "sizeKb": 256,
+    "status": "PASS",
+    "slug": "wwf-warzone"
   },
   {
     "title": "WanWan",
@@ -11550,30 +11630,6 @@
     "sizeKb": 256,
     "status": "PASS",
     "slug": "wayne-s-world"
-  },
-  {
-    "title": "WCW Main Event",
-    "fileName": "WCW Main Event (U) [!].gb",
-    "mapper": "MBC1",
-    "sizeKb": 128,
-    "status": "PASS",
-    "slug": "wcw-main-event"
-  },
-  {
-    "title": "WD 3D Demo",
-    "fileName": "WD 3D Demo (PD).gb",
-    "mapper": "ROM-Only",
-    "sizeKb": 32,
-    "status": "PASS",
-    "slug": "wd-3d-demo"
-  },
-  {
-    "title": "WD Checkercube Demo V0.1",
-    "fileName": "WD Checkercube Demo V0.1 (PD).gb",
-    "mapper": "ROM-Only",
-    "sizeKb": 32,
-    "status": "PASS",
-    "slug": "wd-checkercube-demo-v0-1"
   },
   {
     "title": "We're Back! - A Dinosaur's Story",
@@ -11672,20 +11728,20 @@
     "slug": "wizards-warriors-chapter-x-the-fortress-of-fear"
   },
   {
-    "title": "Wordtris",
-    "fileName": "Wordtris (U) [!].gb",
-    "mapper": "MBC1",
-    "sizeKb": 128,
-    "status": "PASS",
-    "slug": "wordtris"
-  },
-  {
     "title": "WordZap",
     "fileName": "WordZap (U).gb",
     "mapper": "MBC1",
     "sizeKb": 64,
     "status": "PASS",
     "slug": "wordzap"
+  },
+  {
+    "title": "Wordtris",
+    "fileName": "Wordtris (U) [!].gb",
+    "mapper": "MBC1",
+    "sizeKb": 128,
+    "status": "PASS",
+    "slug": "wordtris"
   },
   {
     "title": "Work Master V1.00 - Multitask OS for Gameboy",
@@ -11790,54 +11846,6 @@
     "sizeKb": 256,
     "status": "PASS",
     "slug": "worms"
-  },
-  {
-    "title": "WOW Super Gameboy Peep-Show",
-    "fileName": "WOW Super Gameboy Peep-Show (PD).gb",
-    "mapper": "ROM-Only",
-    "sizeKb": 32,
-    "status": "PASS",
-    "slug": "wow-super-gameboy-peep-show"
-  },
-  {
-    "title": "WWF King of the Ring",
-    "fileName": "WWF King of the Ring (U) [!].gb",
-    "mapper": "MBC1",
-    "sizeKb": 128,
-    "status": "PASS",
-    "slug": "wwf-king-of-the-ring"
-  },
-  {
-    "title": "WWF Raw",
-    "fileName": "WWF Raw (U).gb",
-    "mapper": "MBC1",
-    "sizeKb": 256,
-    "status": "PASS",
-    "slug": "wwf-raw"
-  },
-  {
-    "title": "WWF Superstars",
-    "fileName": "WWF Superstars (UE) [!].gb",
-    "mapper": "MBC1",
-    "sizeKb": 128,
-    "status": "PASS",
-    "slug": "wwf-superstars"
-  },
-  {
-    "title": "WWF Superstars 2",
-    "fileName": "WWF Superstars 2 (UE) [!].gb",
-    "mapper": "MBC1",
-    "sizeKb": 128,
-    "status": "PASS",
-    "slug": "wwf-superstars-2"
-  },
-  {
-    "title": "WWF Warzone",
-    "fileName": "WWF Warzone (U).gb",
-    "mapper": "MBC1",
-    "sizeKb": 256,
-    "status": "PASS",
-    "slug": "wwf-warzone"
   },
   {
     "title": "Xenon 2 - Megablast",
@@ -12000,20 +12008,20 @@
     "slug": "yuu-yuu-hakusho-ankoku-bujutsu-kai"
   },
   {
-    "title": "Yuu Yuu Hakusho - Makai no Tobira",
-    "fileName": "Yuu Yuu Hakusho - Makai no Tobira (J).gb",
-    "mapper": "MBC1",
-    "sizeKb": 256,
-    "status": "PASS",
-    "slug": "yuu-yuu-hakusho-makai-no-tobira"
-  },
-  {
     "title": "Yuu Yuu Hakusho - Makai Touitsu",
     "fileName": "Yuu Yuu Hakusho - Makai Touitsu (J) [S].gb",
     "mapper": "MBC1",
     "sizeKb": 256,
     "status": "PASS",
     "slug": "yuu-yuu-hakusho-makai-touitsu"
+  },
+  {
+    "title": "Yuu Yuu Hakusho - Makai no Tobira",
+    "fileName": "Yuu Yuu Hakusho - Makai no Tobira (J).gb",
+    "mapper": "MBC1",
+    "sizeKb": 256,
+    "status": "PASS",
+    "slug": "yuu-yuu-hakusho-makai-no-tobira"
   },
   {
     "title": "Z Kai - Chuga Kueitango 1132 Translator",
@@ -12056,20 +12064,20 @@
     "slug": "z-kai-kyukyoku-no-kobun-tango"
   },
   {
-    "title": "Zankurou Musouken",
-    "fileName": "Zankurou Musouken (J) [S][!].gb",
-    "mapper": "MBC1",
-    "sizeKb": 1024,
-    "status": "PASS",
-    "slug": "zankurou-musouken"
-  },
-  {
     "title": "ZAS",
     "fileName": "ZAS (J).gb",
     "mapper": "MBC1",
     "sizeKb": 128,
     "status": "PASS",
     "slug": "zas"
+  },
+  {
+    "title": "Zankurou Musouken",
+    "fileName": "Zankurou Musouken (J) [S][!].gb",
+    "mapper": "MBC1",
+    "sizeKb": 1024,
+    "status": "PASS",
+    "slug": "zankurou-musouken"
   },
   {
     "title": "Zelda no Densetsu - Yume no Miru Shima",
@@ -12120,20 +12128,20 @@
     "slug": "zettai-muteki-raijinou"
   },
   {
-    "title": "Zipball",
-    "fileName": "Zipball (Sachen 4-in-1 Vol. 9) (Unl) [!].gb",
-    "mapper": "MBC1",
-    "sizeKb": 64,
-    "status": "PASS",
-    "slug": "zipball"
-  },
-  {
     "title": "ZipGB V0.001 ALPHA",
     "fileName": "ZipGB V0.001 ALPHA (PD).gb",
     "mapper": "MBC1",
     "sizeKb": 64,
     "status": "PASS",
     "slug": "zipgb-v0-001-alpha"
+  },
+  {
+    "title": "Zipball",
+    "fileName": "Zipball (Sachen 4-in-1 Vol. 9) (Unl) [!].gb",
+    "mapper": "MBC1",
+    "sizeKb": 64,
+    "status": "PASS",
+    "slug": "zipball"
   },
   {
     "title": "Zoids Densetsu",
@@ -12206,5 +12214,13 @@
     "sizeKb": 128,
     "status": "PASS",
     "slug": "zork-iii-the-dungeon-master"
+  },
+  {
+    "title": "tetris",
+    "fileName": "tetris.gb",
+    "mapper": "ROM-Only",
+    "sizeKb": 32,
+    "status": "PASS",
+    "slug": "tetris"
   }
 ]
