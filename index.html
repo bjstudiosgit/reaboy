@@ -654,11 +654,18 @@
 
         <!-- Filterable Compatibility Table -->
         <div class="compat-toolbar reveal">
-          <input class="compat-search" id="compat-search" type="search" placeholder="Search tested games (e.g. Tetris, MBC1)..." aria-label="Filter tested games">
-          <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">
-            <button class="chip-btn active" type="button" data-filter="ALL">All</button>
+          <input class="compat-search" id="compat-search" type="search" placeholder="Search 1,424+ verified games (e.g. Zelda, Kirby, Metroid, MBC1)..." aria-label="Filter tested games">
+          <div style="display:flex;gap:0.45rem;flex-wrap:wrap;">
+            <button class="chip-btn active" type="button" data-filter="ALL">All (1,424+)</button>
             <button class="chip-btn" type="button" data-filter="PASS">Verified Pass</button>
-            <button class="chip-btn" type="button" data-filter="ISSUES">Beta Issues</button>
+            <button class="chip-btn" type="button" data-alpha="A-C">A–C</button>
+            <button class="chip-btn" type="button" data-alpha="D-F">D–F</button>
+            <button class="chip-btn" type="button" data-alpha="G-I">G–I</button>
+            <button class="chip-btn" type="button" data-alpha="J-L">J–L</button>
+            <button class="chip-btn" type="button" data-alpha="M-O">M–O</button>
+            <button class="chip-btn" type="button" data-alpha="P-R">P–R</button>
+            <button class="chip-btn" type="button" data-alpha="S-U">S–U</button>
+            <button class="chip-btn" type="button" data-alpha="V-Z">V–Z</button>
           </div>
         </div>
 
@@ -666,6 +673,7 @@
           <table class="compat-table">
             <thead>
               <tr>
+                <th style="width:58px;">Shot</th>
                 <th>Game Title</th>
                 <th>Cartridge</th>
                 <th>Status</th>
@@ -676,6 +684,13 @@
               <!-- Populated by app.js -->
             </tbody>
           </table>
+          <div class="compat-table-foot" id="compat-table-footer" style="display:flex;justify-content:space-between;align-items:center;padding:12px 18px;border-top:1px solid var(--border);flex-wrap:wrap;gap:10px;">
+            <span id="compat-count-label" style="font-family:var(--font-mono);font-size:0.82rem;color:var(--text-muted);">Showing 40 of 1,424+ verified games</span>
+            <div style="display:flex;gap:8px;">
+              <button class="chip-btn" id="load-more-btn" type="button">Load More (+50)</button>
+              <button class="chip-btn" id="show-all-btn" type="button">Show All 1,424+ Games</button>
+            </div>
+          </div>
         </div>
 
         <!-- Beta Tester Game Logger -->

@@ -844,6 +844,9 @@
   ];
 
   let verifiedLibrary = [];
+  let currentLimit = 40;
+  let activeAlpha = null;
+
   fetch('assets/verified_games.json')
     .then(r => r.json())
     .then(data => {
@@ -851,6 +854,7 @@
         title: g.title,
         mapper: g.mapper,
         status: 'PASS',
+        slug: g.slug || g.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''),
         notes: `Verified ${g.sizeKb} KiB ROM (${g.mapper}) · Dynamic 240-frame hardware execution PASS.`
       }));
       renderCompatTable();
@@ -869,6 +873,7 @@
 
   const compatTbody = $('#compat-tbody');
   const compatSearch = $('#compat-search');
+  const compatCountLabel = $('#compat-count-label');
   let activeFilter = 'ALL';
 
   function renderCompatTable() {
@@ -882,20 +887,43 @@
         g.title.toLowerCase().includes(q) ||
         g.mapper.toLowerCase().includes(q) ||
         g.notes.toLowerCase().includes(q);
-      return matchesFilter && matchesQuery;
+
+      let matchesAlpha = true;
+      if (activeAlpha) {
+        const firstLetter = (g.title || '').trim().toUpperCase()[0];
+        const parts = activeAlpha.split('-');
+        if (parts.length === 2) {
+          matchesAlpha = firstLetter >= parts[0] && firstLetter <= parts[1];
+        }
+      }
+
+      return matchesFilter && matchesQuery && matchesAlpha;
     });
 
-    const displayRows = q ? rows.slice(0, 100) : rows.slice(0, 40);
+    const limit = q ? Math.max(currentLimit, 100) : currentLimit;
+    const displayRows = rows.slice(0, limit);
+
+    if (compatCountLabel) {
+      compatCountLabel.textContent = `Showing ${displayRows.length.toLocaleString()} of ${rows.length.toLocaleString()} verified games`;
+    }
 
     compatTbody.innerHTML = displayRows
       .map(
-        (g) => `
+        (g) => {
+          const slug = g.slug || g.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+          return `
       <tr>
+        <td>
+          <a href="assets/img/shots/${escapeHtml(slug)}.png" target="_blank" title="View full screenshot for ${escapeHtml(g.title)}">
+            <img src="assets/img/shots/${escapeHtml(slug)}.png" onerror="this.onerror=null;this.src='assets/img/tetris.png';" loading="lazy" alt="${escapeHtml(g.title)}" style="width:48px;height:43px;object-fit:cover;border-radius:3px;image-rendering:pixelated;border:1px solid rgba(0,0,0,0.18);display:block;">
+          </a>
+        </td>
         <td><strong>${escapeHtml(g.title)}</strong></td>
         <td><code>${escapeHtml(g.mapper)}</code></td>
         <td><span class="verdict-badge ${g.status === 'PASS' ? 'verdict-pass' : 'verdict-warn'}">${escapeHtml(g.status)}</span></td>
         <td>${escapeHtml(g.notes)}</td>
-      </tr>`
+      </tr>`;
+        }
       )
       .join('');
   }
@@ -915,6 +943,33 @@
         activeFilter = btn.dataset.filter;
         renderCompatTable();
       });
+    });
+
+    $$('[data-alpha]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const isCurrent = btn.classList.contains('active');
+        $$('[data-alpha]').forEach((b) => b.classList.remove('active'));
+        if (isCurrent) {
+          activeAlpha = null;
+        } else {
+          btn.classList.add('active');
+          activeAlpha = btn.dataset.alpha;
+        }
+        currentLimit = 50;
+        renderCompatTable();
+      });
+    });
+
+    $('#load-more-btn')?.addEventListener('click', () => {
+      currentLimit += 50;
+      renderCompatTable();
+      showToast('Loaded 50 more verified games');
+    });
+
+    $('#show-all-btn')?.addEventListener('click', () => {
+      currentLimit = 9999;
+      renderCompatTable();
+      showToast('Showing all 1,424+ verified games');
     });
 
     $('#beta-log-form')?.addEventListener('submit', (e) => {
