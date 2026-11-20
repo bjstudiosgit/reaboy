@@ -2320,3 +2320,28 @@ html[data-theme="classic"] .toast {
   border-color: var(--gb-0);
   transform: translateY(-1px);
 }
+
+.apu-btn-featured {
+  border: 2px solid #5d8c36 !important;
+  background: #d4f68c !important;
+  color: #153b2a !important;
+  box-shadow: 4px 4px 0 #b8c6ab !important;
+}
+
+.apu-btn-featured:hover {
+  background: #c3eb75 !important;
+  transform: translateX(3px) !important;
+}
+
+.apu-btn-featured strong {
+  color: #153b2a !important;
+}
+
+.apu-btn-featured span {
+  color: #2c593b !important;
+}
+
+.apu-btn-featured .apu-play-tag {
+  background: #153b2a !important;
+  color: #d4f68c !important;
+}

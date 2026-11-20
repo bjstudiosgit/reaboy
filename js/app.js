@@ -119,11 +119,53 @@
   function playBootChime() {
     const ctx = ensureAudio();
     if (!ctx) return;
-    const t = ctx.currentTime + 0.02;
-    // Authentic DMG-01 boot chime: C6 (~1046.5 Hz) -> C7 (~2093 Hz)
-    playSquareNote(1046.5, t, 0.13, 0.5);
-    playSquareNote(2093.0, t + 0.12, 0.55, 0.5);
-    setScopeLabel('CH1 · PULSE + SWEEP (BOOT BA-DING!)');
+    const now = ctx.currentTime + 0.01;
+
+    // Authentic DMG-01 hardware Channel 1 register execution ($0072–$0085):
+    // Register $FF11: 50% square duty cycle
+    // Register $FF12: Initial volume 15, envelope decay step 3 ($F3)
+    // H=$62 trigger: frequency 0x783 -> 131072 / (2048 - 0x783) = 1048.58 Hz
+    // Exactly 2 frames later (~33.5ms) at H=$64: frequency 0x7C1 -> 131072 / (2048 - 0x7C1) = 2080.51 Hz
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+    osc.type = 'square';
+
+    osc.frequency.setValueAtTime(1048.58, now);
+    osc.frequency.setValueAtTime(2080.51, now + 0.034);
+
+    gain.gain.setValueAtTime(0.55, now);
+    gain.gain.setValueAtTime(0.55, now + 0.034);
+    gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.85);
+
+    osc.connect(gain);
+    gain.connect(masterGain);
+    osc.start(now);
+    osc.stop(now + 0.88);
+
+    setScopeLabel('CH1 · NINTENDO BOOT CHIME (BA-DING!)');
+  }
+
+  function playCh1Sweep() {
+    const ctx = ensureAudio();
+    if (!ctx) return;
+    const now = ctx.currentTime + 0.01;
+
+    // Channel 1 hardware frequency sweep (NR10 register demonstration)
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+    osc.type = 'square';
+    osc.frequency.setValueAtTime(220, now);
+    osc.frequency.exponentialRampToValueAtTime(880, now + 0.35);
+
+    gain.gain.setValueAtTime(0.45, now);
+    gain.gain.exponentialRampToValueAtTime(0.001, now + 0.36);
+
+    osc.connect(gain);
+    gain.connect(masterGain);
+    osc.start(now);
+    osc.stop(now + 0.38);
+
+    setScopeLabel('CH1 · HARDWARE FREQUENCY SWEEP');
   }
 
   function playButtonTone(btnName) {
@@ -153,8 +195,10 @@
     if (!ctx) return;
     const now = ctx.currentTime + 0.02;
 
-    if (ch === 'ch1') {
+    if (ch === 'chime') {
       playBootChime();
+    } else if (ch === 'ch1') {
+      playCh1Sweep();
     } else if (ch === 'ch2') {
       setScopeLabel('CH2 · PULSE LEAD HARMONY');
       const notes = [659.25, 493.88, 523.25, 587.33, 523.25, 493.88, 440.0, 523.25, 659.25];
@@ -361,6 +405,14 @@
     chimeBtn.addEventListener('click', () => {
       playBootChime();
       showToast('♪ Classic DMG-01 Boot Ba-Ding!');
+    });
+  }
+
+  const scopeChimeBtn = $('#scope-chime-quick-btn');
+  if (scopeChimeBtn) {
+    scopeChimeBtn.addEventListener('click', () => {
+      playBootChime();
+      showToast('♪ Nintendo Boot Chime (Ba-Ding!)');
     });
   }
 

@@ -491,18 +491,28 @@
 
         <div class="apu-grid reveal">
           <div class="scope-card">
-            <div class="scope-head">
+            <div class="scope-head" style="align-items:center;">
               <span>REAL-TIME APU OSCILLOSCOPE · WEB AUDIO SYNTH</span>
-              <span id="scope-channel-label">STANDBY</span>
+              <div style="display:flex;align-items:center;gap:8px;">
+                <span id="scope-channel-label">STANDBY</span>
+                <button class="chip-btn" type="button" id="scope-chime-quick-btn" style="padding:3px 8px;font-size:0.72rem;">Ba-Ding! ♪</button>
+              </div>
             </div>
             <canvas id="apu-scope" width="600" height="210" aria-label="Live audio oscilloscope"></canvas>
           </div>
 
           <div class="apu-channels">
+            <button class="apu-btn apu-btn-featured" type="button" data-apu="chime">
+              <div>
+                <strong>Nintendo Boot Chime (Ba-Ding!)</strong>
+                <span>Official DMG-01 hardware sequence: $FF13=$83 (1048 Hz) → $FF13=$C1 (2080 Hz) at NR12=$F3 envelope.</span>
+              </div>
+              <span class="apu-play-tag">BA-DING! ♪</span>
+            </button>
             <button class="apu-btn" type="button" data-apu="ch1">
               <div>
                 <strong>CH1 · Pulse + Frequency Sweep</strong>
-                <span>Square wave with duty cycle &amp; pitch sweep — the iconic boot Ba-Ding!</span>
+                <span>Square wave with duty cycle &amp; hardware pitch sweep register (NR10).</span>
               </div>
               <span class="apu-play-tag">PLAY ♪</span>
             </button>
