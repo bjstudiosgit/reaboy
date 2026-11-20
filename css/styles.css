@@ -1294,14 +1294,15 @@ a:hover {
   border: 1px solid var(--border-strong);
   border-radius: var(--radius-sm);
   padding: 0.85rem 1rem;
-  overflow-x: auto;
 }
 
 .term-command code {
   font-family: var(--font-mono);
-  font-size: 0.86rem;
+  font-size: 0.78rem;
+  line-height: 1.5;
   color: #d4f68c;
-  white-space: nowrap;
+  word-break: break-all;
+  display: block;
 }
 
 .term-hint {
