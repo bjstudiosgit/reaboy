@@ -887,9 +887,11 @@ a:hover {
    Generic Section Rhythm & Headings
    ========================================================================== */
 
-.section {
+.section,
+#mario-section {
   padding: 4.5rem 0;
   border-top: 1px solid rgba(155, 188, 15, 0.08);
+  scroll-margin-top: 5.5rem;
 }
 
 .section-alt {
