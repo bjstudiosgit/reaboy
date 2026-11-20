@@ -402,10 +402,10 @@ a:hover {
 }
 
 .hero h1 {
-  font-size: clamp(2.5rem, 5.2vw, 4.1rem);
-  line-height: 1.05;
-  letter-spacing: -0.03em;
-  margin: 0 0 1.25rem;
+  font-size: clamp(1.85rem, 3.4vw, 2.7rem);
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  margin: 0 0 1.15rem;
 }
 
 .hero h1 .highlight {
@@ -483,30 +483,24 @@ a:hover {
 }
 
 .hero-meta-block {
-  margin-top: 1.25rem;
-  padding: 0.85rem 1.1rem;
-  background: rgba(21, 59, 42, 0.05);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
+  margin-top: 1.1rem;
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
+  gap: 0.35rem;
 }
 
 .hero-meta-block p {
   margin: 0;
-  font-family: var(--font-mono);
-  font-size: 0.79rem;
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
   color: var(--ink-secondary);
-  line-height: 1.45;
+  line-height: 1.5;
 }
 
 .hero-meta-block .hero-update-text {
   font-family: var(--font-sans);
-  font-size: 0.84rem;
+  font-size: 0.88rem;
   color: var(--ink);
-  border-top: 1px dashed rgba(21, 59, 42, 0.15);
-  padding-top: 0.4rem;
 }
 
 .hero-meta-block a {
