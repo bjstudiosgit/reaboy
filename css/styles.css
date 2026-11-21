@@ -2010,24 +2010,11 @@ html[data-theme="classic"] .compat-cta-banner {
 /* Scoop at top */
 .cart-scoop {
   width: 80%;
-  height: 18px;
+  height: 14px;
   margin: 0 auto 10px;
   background: linear-gradient(180deg, #b0aca0 0%, #c5c1b4 100%);
   border-radius: 4px 4px 10px 10px;
   box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.28), 0 1px 0 rgba(255, 255, 255, 0.6);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.cart-scoop-text {
-  font-family: var(--font-display, "Space Grotesk", sans-serif);
-  font-size: 0.62rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  color: #726f64;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6), 0 -1px 0 rgba(0, 0, 0, 0.2);
-  text-transform: uppercase;
 }
 
 /* Embossed downward insertion arrow */
