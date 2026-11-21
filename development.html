@@ -1,57 +1,70 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en-GB" data-theme="classic">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Architecture &amp; Development (Project 007) — ReaBoy v1.0.1 BETA | BJ Studios</title>
   <meta name="description" content="Technical architecture, byte-level reverse engineering, and cycle-accurate hardware pipeline of ReaBoy: a bit-exact Nintendo Game Boy (DMG-01) emulator reconstructed from original 1989 silicon.">
+  <meta name="keywords" content="Game Boy architecture, reverse engineering Game Boy, Sharp SM83, DMG-01 boot ROM, ReaBoy development, cycle-accurate Game Boy, 4-channel APU, WinMM audio, Bootix DMG">
+  <meta name="author" content="BJ Studios — Manchester, England">
   <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0f380f">
   <link rel="canonical" href="https://scientificbrad.github.io/ReaBoy/development.html">
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/icon-32.png">
-  <link rel="apple-touch-icon" href="assets/img/icon-192.png">
-  <meta name="theme-color" content="#0d1117">
-
+  <!-- Open Graph / Social SEO -->
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ReaBoy by BJ Studios">
   <meta property="og:title" content="ReaBoy Architecture &amp; Development — Project 007">
   <meta property="og:description" content="Deep-dive reverse engineering from byte $0000: 121 Sharp SM83 opcodes, 38 basic blocks, scanline PPU timing, and bit-exact $0100 execution handover.">
   <meta property="og:url" content="https://scientificbrad.github.io/ReaBoy/development.html">
+  <meta property="og:image" content="https://scientificbrad.github.io/ReaBoy/assets/img/boot-poster.png">
 
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ReaBoy Architecture &amp; Development — Project 007">
+  <meta name="twitter:description" content="Deep-dive reverse engineering from byte $0000: 121 Sharp SM83 opcodes, 38 basic blocks, scanline PPU timing, and bit-exact $0100 execution handover.">
+  <meta name="twitter:image" content="https://scientificbrad.github.io/ReaBoy/assets/img/boot-poster.png">
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=1.2.0">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Press+Start+2P&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=1.2.8">
 </head>
 <body>
-  <!-- HEADER & NAVIGATION -->
-  <header class="header">
-    <div class="wrap header-inner">
-      <a class="brand" href="index.html" aria-label="ReaBoy Home">
-        <span class="brand-badge">DMG-01</span>
-        <span class="brand-title">ReaBoy</span>
-        <span class="brand-ver">v1.0.1 BETA</span>
-      </a>
+  <a class="skip-link" href="#main">Skip to main content</a>
 
-      <nav class="nav-links">
+  <!-- SITE HEADER / NAVIGATION -->
+  <header class="site-header">
+    <div class="wrap nav-bar">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">R</span>
+        <span>ReaBoy</span>
+      </a>
+      <button class="mobile-menu-btn" id="mobile-menu-btn" type="button" aria-expanded="false" aria-controls="nav-links">MENU</button>
+      <nav class="nav-links" id="nav-links" aria-label="Primary Navigation">
         <a href="index.html">Home</a>
         <a class="active" href="development.html">Development</a>
         <a href="compatibility.html" title="Compatibility Lab: 1,592+ Game Boy games verified in ReaBoy">1,592+ Games Tested</a>
         <a href="manual.html">User Manual</a>
         <a href="https://github.com/ScientificBrad/ReaBoy/issues" target="_blank" rel="noopener">Report Bug ↗</a>
+        <a href="https://github.com/ScientificBrad/ReaBoy" target="_blank" rel="noopener">GitHub ↗</a>
       </nav>
-
-      <div class="header-actions">
-        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark/light theme" title="Toggle theme">
-          <span class="theme-icon" aria-hidden="true">☀️</span>
-        </button>
-      </div>
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <!-- PAGE HERO -->
     <section class="section" style="padding-top: 3.5rem; padding-bottom: 2rem;">
       <div class="wrap">
+        <!-- Breadcrumb / Return Navigation -->
+        <div style="margin-bottom: 1.5rem;">
+          <a href="index.html" style="display:inline-flex;align-items:center;gap:0.4rem;font-family:var(--font-mono);font-size:0.85rem;font-weight:600;color:var(--gb-0);text-decoration:none;">
+            ← Back to ReaBoy Home
+          </a>
+        </div>
+
         <div class="section-head reveal" style="margin-bottom: 2rem;">
           <div>
             <p class="eyebrow">SCIENTIFIC ENGINEERING · PROJECT 007</p>
@@ -332,50 +345,31 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="footer">
+  <footer class="site-footer">
     <div class="wrap footer-grid">
-      <div class="footer-col footer-col-brand">
+      <div>
         <a class="brand" href="index.html">
-          <span class="brand-badge">DMG-01</span>
-          <span class="brand-title">ReaBoy</span>
+          <span class="brand-mark" aria-hidden="true">R</span>
+          <span>ReaBoy</span>
         </a>
-        <p class="footer-tagline">
-          Pure 1989 silicon fidelity. The scientific, bit-exact Game Boy emulator for Windows x64.
-        </p>
-        <p class="footer-copy">
-          &copy; 2026 BJ Studios. Built with precision for emulation purists.
-        </p>
+        <p>Engineered by <strong>BJ Studios — Manchester, England</strong> · © 2026 BJ Studios. Pure 1989 silicon fidelity.</p>
       </div>
-
-      <div class="footer-col">
-        <h4>Downloads</h4>
+      <div>
         <ul class="footer-links">
-          <li><a href="https://github.com/bjstudiosgit/reaboy/releases/download/v1.0.1-beta/ReaBoy-v1.0.1-win-x64.zip">ReaBoy v1.0.1 (64-Bit ZIP)</a></li>
-          <li><a href="https://raw.githubusercontent.com/bjstudiosgit/reaboy/main/install.ps1">install.ps1 (CLI Installer)</a></li>
-          <li><a href="https://github.com/ScientificBrad/ReaBoy/releases" target="_blank" rel="noopener">Release Notes (v1.0.1)</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4>Technical</h4>
-        <ul class="footer-links">
+          <li><a href="index.html">← Back to Home</a></li>
           <li><a href="development.html">Architecture &amp; Development</a></li>
-          <li><a href="compatibility.html">Compatibility Lab (1,592+ Games)</a></li>
-          <li><a href="manual.html">Complete User Manual</a></li>
+          <li><a href="compatibility.html">1,592+ Games Tested</a></li>
+          <li><a href="manual.html">Official User Manual</a></li>
+          <li><a href="https://github.com/ScientificBrad/ReaBoy/releases/latest" target="_blank" rel="noopener">Download ReaBoy v1.0.1 ↗</a></li>
+          <li><a href="https://github.com/ScientificBrad/ReaBoy/issues" target="_blank" rel="noopener">Report Bug on GitHub ↗</a></li>
         </ul>
       </div>
-
-      <div class="footer-col">
-        <h4>Open Source</h4>
-        <ul class="footer-links">
-          <li><a href="https://github.com/ScientificBrad/ReaBoy" target="_blank" rel="noopener">GitHub Repository</a></li>
-          <li><a href="https://github.com/ScientificBrad/ReaBoy/issues" target="_blank" rel="noopener">Issue Tracker</a></li>
-          <li><a href="https://github.com/ScientificBrad/ReaBoy/blob/main/LICENSE" target="_blank" rel="noopener">MIT License</a></li>
-        </ul>
+      <div>
+        <p>ReaBoy is an independent open-source emulator. Not affiliated with or endorsed by Nintendo.</p>
       </div>
     </div>
   </footer>
 
-  <script src="js/app.js"></script>
+  <script src="js/app.js?v=1.2.2" defer></script>
 </body>
 </html>
