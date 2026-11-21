@@ -338,8 +338,74 @@
       </div>
     </section>
 
+    <!-- 4-CHANNEL APU SOUND LAB -->
+    <section class="section" id="sound-lab">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div>
+            <p class="eyebrow">FOUR-CHANNEL SYNTHESIS · LIVE OSCILLOSCOPE</p>
+            <h2>Hear the Game Boy APU<br>in real time.</h2>
+          </div>
+          <p>
+            ReaBoy implements all four channels of the DMG-01 Audio Processing Unit (<code>Channel1.cs</code>–<code>Channel4.cs</code>) with pinned native WinMM audio buffers. Trigger each hardware channel below to see and hear how 1989 chiptune magic works.
+          </p>
+        </div>
+
+        <div class="apu-grid reveal">
+          <div class="scope-card">
+            <div class="scope-head" style="align-items:center;">
+              <span>REAL-TIME APU OSCILLOSCOPE · WEB AUDIO SYNTH</span>
+              <div style="display:flex;align-items:center;gap:8px;">
+                <span id="scope-channel-label">STANDBY</span>
+                <button class="chip-btn" type="button" id="scope-chime-quick-btn" style="padding:3px 8px;font-size:0.72rem;">Play Chime ♪</button>
+              </div>
+            </div>
+            <canvas id="apu-scope" width="600" height="210" aria-label="Live audio oscilloscope"></canvas>
+          </div>
+
+          <div class="apu-channels">
+            <button class="apu-btn apu-btn-featured" type="button" data-apu="chime">
+              <div>
+                <strong>Nintendo Boot Chime</strong>
+                <span>Direct audio capture from ReaBoy's APU executing the 256-byte DMG boot ROM ($FF13/$FF14 registers).</span>
+              </div>
+              <span class="apu-play-tag">PLAY ♪</span>
+            </button>
+            <button class="apu-btn" type="button" data-apu="ch1">
+              <div>
+                <strong>CH1 · Pulse + Frequency Sweep</strong>
+                <span>Square wave with duty cycle &amp; hardware pitch sweep register (NR10).</span>
+              </div>
+              <span class="apu-play-tag">PLAY ♪</span>
+            </button>
+            <button class="apu-btn" type="button" data-apu="ch2">
+              <div>
+                <strong>CH2 · Pulse Lead Harmony</strong>
+                <span>Crisp 50%/25% duty square lead for classic Game Boy melodies.</span>
+              </div>
+              <span class="apu-play-tag">PLAY ♪</span>
+            </button>
+            <button class="apu-btn" type="button" data-apu="ch3">
+              <div>
+                <strong>CH3 · 4-Bit Programmable Wave RAM</strong>
+                <span>32-sample custom waveform table powering deep 8-bit basslines.</span>
+              </div>
+              <span class="apu-play-tag">PLAY ♪</span>
+            </button>
+            <button class="apu-btn" type="button" data-apu="ch4">
+              <div>
+                <strong>CH4 · Polynomial LFSR Noise</strong>
+                <span>Pseudo-random shift-register noise for snares, hi-hats, and explosions.</span>
+              </div>
+              <span class="apu-play-tag">PLAY ♪</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- HOW WE MADE IT — SCIENTIFIC & TECHNICAL (PROJECT 007) -->
-    <section class="section" id="how-we-made-it">
+    <section class="section section-alt" id="how-we-made-it">
       <div class="wrap">
         <div class="section-head reveal">
           <div>
@@ -435,72 +501,6 @@
                 </p>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 4-CHANNEL APU SOUND LAB -->
-    <section class="section" id="sound-lab">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <div>
-            <p class="eyebrow">FOUR-CHANNEL SYNTHESIS · LIVE OSCILLOSCOPE</p>
-            <h2>Hear the Game Boy APU<br>in real time.</h2>
-          </div>
-          <p>
-            ReaBoy implements all four channels of the DMG-01 Audio Processing Unit (<code>Channel1.cs</code>–<code>Channel4.cs</code>) with pinned native WinMM audio buffers. Trigger each hardware channel below to see and hear how 1989 chiptune magic works.
-          </p>
-        </div>
-
-        <div class="apu-grid reveal">
-          <div class="scope-card">
-            <div class="scope-head" style="align-items:center;">
-              <span>REAL-TIME APU OSCILLOSCOPE · WEB AUDIO SYNTH</span>
-              <div style="display:flex;align-items:center;gap:8px;">
-                <span id="scope-channel-label">STANDBY</span>
-                <button class="chip-btn" type="button" id="scope-chime-quick-btn" style="padding:3px 8px;font-size:0.72rem;">Play Chime ♪</button>
-              </div>
-            </div>
-            <canvas id="apu-scope" width="600" height="210" aria-label="Live audio oscilloscope"></canvas>
-          </div>
-
-          <div class="apu-channels">
-            <button class="apu-btn apu-btn-featured" type="button" data-apu="chime">
-              <div>
-                <strong>Nintendo Boot Chime</strong>
-                <span>Direct audio capture from ReaBoy's APU executing the 256-byte DMG boot ROM ($FF13/$FF14 registers).</span>
-              </div>
-              <span class="apu-play-tag">PLAY ♪</span>
-            </button>
-            <button class="apu-btn" type="button" data-apu="ch1">
-              <div>
-                <strong>CH1 · Pulse + Frequency Sweep</strong>
-                <span>Square wave with duty cycle &amp; hardware pitch sweep register (NR10).</span>
-              </div>
-              <span class="apu-play-tag">PLAY ♪</span>
-            </button>
-            <button class="apu-btn" type="button" data-apu="ch2">
-              <div>
-                <strong>CH2 · Pulse Lead Harmony</strong>
-                <span>Crisp 50%/25% duty square lead for classic Game Boy melodies.</span>
-              </div>
-              <span class="apu-play-tag">PLAY ♪</span>
-            </button>
-            <button class="apu-btn" type="button" data-apu="ch3">
-              <div>
-                <strong>CH3 · 4-Bit Programmable Wave RAM</strong>
-                <span>32-sample custom waveform table powering deep 8-bit basslines.</span>
-              </div>
-              <span class="apu-play-tag">PLAY ♪</span>
-            </button>
-            <button class="apu-btn" type="button" data-apu="ch4">
-              <div>
-                <strong>CH4 · Polynomial LFSR Noise</strong>
-                <span>Pseudo-random shift-register noise for snares, hi-hats, and explosions.</span>
-              </div>
-              <span class="apu-play-tag">PLAY ♪</span>
-            </button>
           </div>
         </div>
       </div>
