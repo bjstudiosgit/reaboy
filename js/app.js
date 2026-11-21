@@ -1098,7 +1098,7 @@
 
       setTimeout(() => {
         cartImg.src = g.shot;
-        cartId.textContent = `ROM #${g.id} / ${gamesList.length}`;
+        cartId.textContent = `ROM #${g.id} / 1592`;
         cartTitle.textContent = g.title;
         cartImg.style.opacity = '1';
         if (cartGlitch) cartGlitch.classList.remove('active');
