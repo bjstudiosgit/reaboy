@@ -1017,14 +1017,17 @@
 
   // ------------------------------------------------------------
   // 1529-in-1 Verified Multi-Cartridge Screen Cycler
+  // Plays dynamically from the complete 1,529-title compatibility list!
   // ------------------------------------------------------------
   const cartImg = $('#cart-screen-img');
   const cartId = $('#cart-game-id');
   const cartTitle = $('#cart-game-title');
   const cartGlitch = $('#cart-glitch');
+  const compatCart = $('#compat-cart');
 
   if (cartImg && cartId && cartTitle) {
-    const verifiedHighlights = [
+    // Initial high-profile classics while JSON loads
+    let gamesList = [
       { id: '0001', title: 'Tetris (World)', shot: 'assets/img/shots/tetris.png' },
       { id: '0002', title: 'Super Mario Land', shot: 'assets/img/shots/super-mario-land.png' },
       { id: '0003', title: "Zelda: Link's Awakening", shot: 'assets/img/shots/legend-of-zelda-the-link-s-awakening.png' },
@@ -1037,27 +1040,80 @@
       { id: '1529', title: 'Dr. Mario', shot: 'assets/img/shots/dr-mario.png' }
     ];
 
-    // Preload all 10 images into memory to eliminate image jumping or network latency
-    verifiedHighlights.forEach((g) => {
-      const preload = new Image();
-      preload.src = g.shot;
+    let currentCartIdx = 0;
+    let cycleTimer = null;
+
+    function preload(url) {
+      if (!url) return;
+      const img = new Image();
+      img.src = url;
+    }
+
+    cartImg.addEventListener('error', () => {
+      cartImg.src = 'assets/img/shots/tetris.png';
     });
 
-    let currentCartIdx = 0;
-    setInterval(() => {
-      currentCartIdx = (currentCartIdx + 1) % verifiedHighlights.length;
-      const g = verifiedHighlights[currentCartIdx];
+    function advanceTo(idx) {
+      if (!gamesList.length) return;
+      currentCartIdx = (idx + gamesList.length) % gamesList.length;
+      const g = gamesList[currentCartIdx];
 
       if (cartGlitch) cartGlitch.classList.add('active');
-      cartImg.style.opacity = '0.4';
+      cartImg.style.opacity = '0.35';
 
       setTimeout(() => {
         cartImg.src = g.shot;
-        cartId.textContent = `ROM #${g.id} / 1529`;
+        cartId.textContent = `ROM #${g.id} / ${gamesList.length}`;
         cartTitle.textContent = g.title;
         cartImg.style.opacity = '1';
         if (cartGlitch) cartGlitch.classList.remove('active');
-      }, 140);
-    }, 2400);
+      }, 120);
+
+      // Preload next 3 screenshots in sequence
+      for (let i = 1; i <= 3; i++) {
+        const nextG = gamesList[(currentCartIdx + i) % gamesList.length];
+        if (nextG) preload(nextG.shot);
+      }
+    }
+
+    function startTimer() {
+      if (cycleTimer) clearInterval(cycleTimer);
+      cycleTimer = setInterval(() => {
+        advanceTo(currentCartIdx + 1);
+      }, 2400);
+    }
+
+    // Allow user to click the cartridge to advance immediately
+    if (compatCart) {
+      compatCart.style.cursor = 'pointer';
+      compatCart.setAttribute('title', 'Click to advance to next verified game');
+      compatCart.addEventListener('click', () => {
+        advanceTo(currentCartIdx + 1);
+        startTimer();
+      });
+    }
+
+    // Load full verified compatibility database (1,430 vivid gameplay screens)
+    fetch('assets/vivid_games.json')
+      .then(res => res.json())
+      .then(data => {
+        if (Array.isArray(data) && data.length > 0) {
+          gamesList = data.map(g => ({
+            id: g.id,
+            title: g.title,
+            shot: `assets/img/shots/${g.slug}.png`
+          }));
+          for (let i = 1; i <= 4; i++) {
+            preload(gamesList[(currentCartIdx + i) % gamesList.length].shot);
+          }
+        }
+      })
+      .catch(err => {
+        console.warn('Could not load vivid_games.json for cartridge cycler:', err);
+      });
+
+    // Initial preloads & start
+    gamesList.slice(0, 5).forEach(g => preload(g.shot));
+    startTimer();
   }
 })();

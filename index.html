@@ -60,7 +60,7 @@
             "addressCountry": "GB"
           }
         },
-        "downloadUrl": "https://github.com/ScientificBrad/ReaBoy/releases/latest/download/ReaBoy.exe",
+        "downloadUrl": "https://github.com/ScientificBrad/ReaBoy/releases/latest/download/ReaBoy-v1.0.1-win-x64.zip",
         "url": "https://scientificbrad.github.io/ReaBoy/"
       },
       {
@@ -112,7 +112,6 @@
         <a href="compatibility.html">1,529+ Tested</a>
         <a href="manual.html">User Manual</a>
         <a href="https://github.com/ScientificBrad/ReaBoy" target="_blank" rel="noopener">GitHub ↗</a>
-        <a class="nav-cta" href="#install">Download BETA ↓</a>
       </nav>
     </div>
   </header>
@@ -127,12 +126,12 @@
             Every instruction, scanline, and audio register reconstructed directly from original DMG-01 hardware. Powered by a bit-exact Sharp SM83 CPU core executing 23.4M+ cycles to verified $0100 handover, cycle-accurate scanline PPU timing, and pinned four-channel APU audio — in a nutshell, a perfect Game Boy.
           </p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="https://github.com/ScientificBrad/ReaBoy/releases/latest/download/ReaBoy.exe">Download ReaBoy.exe ↓</a>
+            <a class="btn btn-primary" href="https://github.com/ScientificBrad/ReaBoy/releases/latest/download/ReaBoy-v1.0.1-win-x64.zip">Download Package (.zip) ↓</a>
             <a class="btn btn-secondary" href="manual.html">User Manual →</a>
           </div>
           <div class="hero-meta-block">
             <p>
-              Zero .NET setup · Zero admin rights · CC0 Bootix DMG v1.2 embedded · Bring your own .gb ROMs
+              Complete package with <code>rom/</code> directory &amp; Bootix DMG firmware · Windows 10/11 x64 · Zero admin needed
             </p>
             <p class="hero-update-text">
               <strong>v1.0.1 BETA:</strong> Dr. Mario STAT Mode 0 freeze fixed + pinned WinMM audio buffers. <a href="https://github.com/ScientificBrad/ReaBoy/releases/tag/v1.0.1" target="_blank" rel="noopener">Release notes ↗</a>
@@ -219,52 +218,59 @@
       </div>
     </section>
 
-    <!-- INSTALL & REQUIREMENTS -->
+    <!-- INSTALL & SETUP -->
     <section class="section" id="install">
       <div class="wrap">
         <div class="section-head reveal">
           <div>
-            <h2>Simple requirements.<br> One-command install.</h2>
+            <h2>One complete package.<br> Instant setup.</h2>
           </div>
           <p>
-            We engineered ReaBoy so you never fight runtime installers, DLL errors, or missing BIOS files. Everything needed to boot is self-contained inside a single Windows x64 package.
+            We engineered ReaBoy so you never fight runtime installers, missing DLLs, or firmware dumps. The release package contains everything you need: <code>ReaBoy.exe</code>, the <code>rom/</code> directory with CC0 Bootix DMG firmware, and documentation.
           </p>
         </div>
 
-        <!-- Streamlined 2-Option Install Grid -->
-        <div class="install-dual-grid reveal">
-          <!-- Option 1: Direct Download -->
-          <div class="install-card primary-download">
-            <span class="card-kicker">STANDALONE · RECOMMENDED</span>
-            <h3>Direct Download</h3>
-            <p>Single executable with embedded .NET 8 runtime and CC0 Bootix firmware. No setup wizard or admin rights required.</p>
-            <a class="btn btn-primary btn-install-cta" href="https://github.com/ScientificBrad/ReaBoy/releases/latest/download/ReaBoy.exe">
-              Download ReaBoy.exe ↓
-            </a>
-            <div class="install-alt-links">
-              <span>Alternative:</span>
-              <a href="https://github.com/ScientificBrad/ReaBoy/releases/latest/download/ReaBoy-v1.0.1-win-x64.zip">Portable ZIP</a>
-              <span>·</span>
-              <a href="https://github.com/ScientificBrad/ReaBoy/releases/latest/download/dmg_boot.bin">Bootix ROM (256 B)</a>
-              <span>·</span>
-              <a href="https://github.com/ScientificBrad/ReaBoy/releases/tag/v1.0.1" target="_blank" rel="noopener">SHA-256 Hashes ↗</a>
+        <!-- Unified Setup Box -->
+        <div class="install-unified-box reveal">
+          <div class="install-box-header">
+            <span class="card-kicker">OFFICIAL RELEASE · WINDOWS X64</span>
+            <h3>ReaBoy v1.0.1 BETA Package</h3>
+            <p>
+              Includes the self-contained emulator executable, embedded .NET 8 runtime, user manual, and the essential <code>rom/</code> directory with open-source Bootix DMG v1.2 firmware pre-installed.
+            </p>
+          </div>
+
+          <div class="install-box-methods">
+            <!-- Method A: Direct ZIP -->
+            <div class="install-method-panel primary-method">
+              <div class="method-badge">DIRECT DOWNLOAD</div>
+              <h4>Portable Archive (.zip)</h4>
+              <p>Download, unzip anywhere on your PC, and launch <code>ReaBoy.exe</code> immediately. Zero installation wizard and zero administrator rights required.</p>
+              <a class="btn btn-primary btn-install-cta" href="https://github.com/ScientificBrad/ReaBoy/releases/latest/download/ReaBoy-v1.0.1-win-x64.zip">
+                Download Complete Package (.zip) ↓
+              </a>
+              <span class="method-meta">23.4 MB · SHA-256 Verified · All Files Included</span>
+            </div>
+
+            <!-- Method B: PowerShell One-Liner -->
+            <div class="install-method-panel terminal-method">
+              <div class="method-badge">AUTOMATED SETUP</div>
+              <div class="term-header">
+                <h4>PowerShell One-Liner</h4>
+                <button class="copy-btn" type="button" data-copy-target="ps-install-cmd">Copy command</button>
+              </div>
+              <p>Paste into Windows PowerShell to download the package, verify SHA-256 checksums, extract the <code>rom/</code> folder, and add a Start Menu shortcut.</p>
+              <div class="term-command">
+                <code id="ps-install-cmd">irm https://raw.githubusercontent.com/ScientificBrad/ReaBoy/main/install.ps1 | iex</code>
+              </div>
+              <span class="method-meta">Installs to <code>%LOCALAPPDATA%\Programs\ReaBoy</code></span>
             </div>
           </div>
 
-          <!-- Option 2: PowerShell One-Liner -->
-          <div class="install-card terminal-install">
-            <div class="term-header">
-              <span class="card-kicker">AUTOMATED · POWERSHELL</span>
-              <button class="copy-btn" type="button" data-copy-target="ps-install-cmd">Copy command</button>
-            </div>
-            <h3>One-Command Install</h3>
-            <p>Paste into Windows PowerShell to download, verify SHA-256, and add a Start Menu shortcut automatically.</p>
-            <div class="term-command">
-              <code id="ps-install-cmd">irm https://raw.githubusercontent.com/ScientificBrad/ReaBoy/main/install.ps1 | iex</code>
-            </div>
-            <p class="term-hint">
-              Installs to <code>%LOCALAPPDATA%\Programs\ReaBoy</code> · Zero admin needed
-            </p>
+          <div class="install-box-footer">
+            <a href="https://github.com/ScientificBrad/ReaBoy/releases/tag/v1.0.1" target="_blank" rel="noopener">
+              View Release Notes, SHA256SUMS &amp; Source on GitHub ↗
+            </a>
           </div>
         </div>
 
@@ -272,7 +278,7 @@
         <div class="install-specs-bar reveal">
           <div class="spec-pill"><strong>OS:</strong> Windows 10/11 x64</div>
           <div class="spec-pill"><strong>Runtime:</strong> Embedded .NET 8 (0 install)</div>
-          <div class="spec-pill"><strong>Firmware:</strong> Bootix DMG (CC0)</div>
+          <div class="spec-pill"><strong>Firmware:</strong> Bootix DMG (CC0) Included</div>
           <div class="spec-pill"><strong>Audio:</strong> 4-Channel WinMM APU</div>
           <div class="spec-pill"><strong>Cartridges:</strong> ROM, MBC1, MBC2, MBC3</div>
         </div>
@@ -1186,8 +1192,8 @@
       <div>
         <strong style="font-family:var(--font-mono);font-size:0.8rem;color:var(--gb-0);">DOWNLOADS</strong>
         <ul class="footer-links">
-          <li><a href="https://github.com/ScientificBrad/ReaBoy/releases/latest/download/ReaBoy.exe">ReaBoy.exe (Windows x64)</a></li>
-          <li><a href="https://github.com/ScientificBrad/ReaBoy/releases/latest/download/ReaBoy-v1.0.1-win-x64.zip">Portable ZIP (v1.0.1)</a></li>
+          <li><a href="https://github.com/ScientificBrad/ReaBoy/releases/latest/download/ReaBoy-v1.0.1-win-x64.zip">ReaBoy Package (.zip)</a></li>
+          <li><a href="https://raw.githubusercontent.com/ScientificBrad/ReaBoy/main/install.ps1">PowerShell Installer</a></li>
           <li><a href="https://github.com/ScientificBrad/ReaBoy/releases/latest/download/dmg_boot.bin">Bootix DMG v1.2 (CC0)</a></li>
           <li><a href="https://github.com/ScientificBrad/ReaBoy/releases/latest/download/SHA256SUMS.txt">SHA256SUMS.txt</a></li>
         </ul>
