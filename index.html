@@ -31,7 +31,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Press+Start+2P&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/styles.css?v=1.2.5">
+  <link rel="stylesheet" href="css/styles.css?v=1.2.6">
 
   <!-- Structured Data (JSON-LD) for Game Boy Emulator SEO -->
   <script type="application/ld+json">
@@ -221,56 +221,7 @@
       </div>
     </section>
 
-    <!-- SECTION 02: 1,592 TESTED ROMS COMPATIBILITY LAB (SECOND SECTION) -->
-    <section class="section compat-section-huge" id="compat-lab-hero">
-      <div class="wrap">
-        <div class="compat-hero-grid reveal">
-          <div class="compat-cta-copy">
-            <h2 class="compat-cta-title">1,592 Game Boy ROMs Tested.<br>Explore the Complete Database.</h2>
-            <p class="compat-cta-desc">
-              Every commercial Game Boy release—1,592 of 1,592 titles (100%)—dynamically executed and verified across ROM-Only, MBC1, MBC2, and MBC3 mappers with cycle-accurate Sharp SM83 timing and scanline PPU telemetry. Search the complete database, inspect runtime cycles, and test your own ROM collection.
-            </p>
-            <div class="compat-cta-actions">
-              <a class="btn btn-primary btn-compat-cta" href="compatibility.html">
-                Open Compatibility Lab (1,592+) →
-              </a>
-              <a class="btn btn-secondary btn-compat-sub" href="compatibility.html#browse">
-                Browse Verified Games ↓
-              </a>
-            </div>
-          </div>
-
-          <div class="compat-cta-visual">
-            <!-- 1592-in-1 Physical Cartridge & Screen -->
-            <div class="cart-unit" id="compat-cart" aria-label="1,592-in-1 Verified Multi-Cartridge">
-              <div class="cart-ridges" aria-hidden="true">
-                <span></span><span></span><span></span><span></span><span></span>
-              </div>
-              <div class="cart-scoop" aria-hidden="true"></div>
-              <div class="cart-label">
-                <div class="cart-label-head" style="margin-bottom: 8px;">
-                  <span class="cart-serial">DMG-1592-TEST</span>
-                  <span class="cart-region">VERIFIED LAB</span>
-                </div>
-                <div class="cart-screen-frame">
-                  <div class="cart-screen" id="cart-screen">
-                    <img id="cart-screen-img" src="assets/img/shots/tetris.png" alt="Verified Game Screen" width="320" height="288" loading="lazy">
-                    <div class="cart-screen-scanlines"></div>
-                    <div class="cart-screen-glitch" id="cart-glitch"></div>
-                  </div>
-                </div>
-                <div class="cart-screen-meta">
-                  <div class="cart-game-id" id="cart-game-id">ROM #0001 / 1592</div>
-                  <div class="cart-game-title" id="cart-game-title">Tetris (World)</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- INSTALL & SETUP -->
+    <!-- SECTION 02: INSTALL & SETUP -->
     <section class="section" id="install">
       <div class="wrap">
         <div class="section-head reveal" style="margin-bottom: 1.5rem;">
@@ -325,6 +276,55 @@
             <a href="https://github.com/ScientificBrad/ReaBoy/releases/tag/v1.0.1" target="_blank" rel="noopener">
               View Release Notes, SHA256SUMS &amp; Source on GitHub ↗
             </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 03: 1,592 TESTED ROMS COMPATIBILITY LAB -->
+    <section class="section compat-section-huge" id="compat-lab-hero">
+      <div class="wrap">
+        <div class="compat-hero-grid reveal">
+          <div class="compat-cta-copy">
+            <h2 class="compat-cta-title">1,592 Game Boy ROMs Tested.<br>Explore the Complete Database.</h2>
+            <p class="compat-cta-desc">
+              Every commercial Game Boy release—1,592 of 1,592 titles (100%)—dynamically executed and verified across ROM-Only, MBC1, MBC2, and MBC3 mappers with cycle-accurate Sharp SM83 timing and scanline PPU telemetry. Search the complete database, inspect runtime cycles, and test your own ROM collection.
+            </p>
+            <div class="compat-cta-actions">
+              <a class="btn btn-primary btn-compat-cta" href="compatibility.html">
+                Open Compatibility Lab (1,592+) →
+              </a>
+              <a class="btn btn-secondary btn-compat-sub" href="compatibility.html#browse">
+                Browse Verified Games ↓
+              </a>
+            </div>
+          </div>
+
+          <div class="compat-cta-visual">
+            <!-- 1592-in-1 Physical Cartridge & Screen -->
+            <div class="cart-unit" id="compat-cart" aria-label="1,592-in-1 Verified Multi-Cartridge">
+              <div class="cart-ridges" aria-hidden="true">
+                <span></span><span></span><span></span><span></span><span></span>
+              </div>
+              <div class="cart-scoop" aria-hidden="true"></div>
+              <div class="cart-label">
+                <div class="cart-label-head" style="margin-bottom: 8px;">
+                  <span class="cart-serial">DMG-1592-TEST</span>
+                  <span class="cart-region">VERIFIED LAB</span>
+                </div>
+                <div class="cart-screen-frame">
+                  <div class="cart-screen" id="cart-screen">
+                    <img id="cart-screen-img" src="assets/img/shots/tetris.png" alt="Verified Game Screen" width="320" height="288" loading="lazy">
+                    <div class="cart-screen-scanlines"></div>
+                    <div class="cart-screen-glitch" id="cart-glitch"></div>
+                  </div>
+                </div>
+                <div class="cart-screen-meta">
+                  <div class="cart-game-id" id="cart-game-id">ROM #0001 / 1592</div>
+                  <div class="cart-game-title" id="cart-game-title">Tetris (World)</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
