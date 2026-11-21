@@ -1917,8 +1917,8 @@ html[data-theme="classic"] .compat-cta-banner {
 }
 
 .compat-hero-grid .cart-unit {
-  max-width: 360px;
-  padding: 16px 18px 22px;
+  max-width: 275px;
+  padding: 12px 14px 18px;
 }
 
 .compat-hero-grid .cart-title-main {
@@ -2176,7 +2176,7 @@ html[data-theme="classic"] .cart-unit::before {
     gap: 2rem;
   }
   .compat-hero-grid .cart-unit {
-    max-width: 300px;
+    max-width: 260px;
   }
   .compat-cta-visual {
     order: -1;
