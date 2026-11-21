@@ -3316,36 +3316,12 @@ html[data-theme="classic"] .toast {
   color: var(--ink-secondary);
 }
 
-.top12-cart-spec {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
+.top12-rom-spec {
   font-family: var(--font-mono, monospace);
-  font-size: 0.72rem;
+  font-size: 0.8rem;
   color: var(--ink-secondary);
-}
-
-.top12-cart-pill {
-  background: rgba(139, 172, 15, 0.18);
-  color: #153b2a;
-  padding: 0.1rem 0.4rem;
-  border-radius: 3px;
-  font-weight: 600;
-  border: 1px solid rgba(139, 172, 15, 0.3);
-}
-
-[data-theme="dark"] .top12-cart-pill {
-  background: rgba(139, 172, 15, 0.25);
-  color: #c4f03a;
-  border-color: rgba(139, 172, 15, 0.4);
-}
-
-.top12-cart-dot {
-  color: var(--ink-muted, #888);
-}
-
-.top12-cart-size {
-  color: var(--ink-muted, #888);
+  font-weight: 500;
+  opacity: 0.9;
 }
 
 /* Showcase Inline Hyperlink (No Box, Left-Aligned) */
