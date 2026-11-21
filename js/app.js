@@ -428,12 +428,47 @@
     });
   }
 
+  // Interactive Tactile Game Boy Console Click -> Play Boot Chime
+  const dmgConsole = $('#dmg-console');
+  if (dmgConsole) {
+    dmgConsole.setAttribute('title', 'Click to play the 1989 Nintendo DMG boot chime!');
+    dmgConsole.addEventListener('click', (e) => {
+      // If user clicked one of the directional/action buttons, let button handler run
+      const isControl = e.target.closest('[data-gb-btn]');
+      if (!isControl) {
+        playBootChime();
+        showToast('♪ Nintendo DMG Boot Chime ($FF13/$FF14)');
+
+        // Replay boot animation on screen in sync with chime
+        if (dmgVideo && !canvasMode) {
+          try {
+            dmgVideo.currentTime = 0;
+            dmgVideo.play().catch(() => {});
+          } catch (_) {}
+        } else if (canvasMode) {
+          bootY = -14;
+        }
+      }
+
+      // Haptic tactile press animation
+      dmgConsole.classList.add('dmg-active');
+      setTimeout(() => dmgConsole.classList.remove('dmg-active'), 160);
+    });
+  }
+
   // Tactile Hardware Buttons
   $$('[data-gb-btn]').forEach((btn) => {
     btn.addEventListener('click', () => {
       const name = btn.dataset.gbBtn;
       playButtonTone(name);
       lastBtnText = `INPUT: ${name} PRESSED`;
+
+      // Start button also replays boot chime
+      if (name === 'START') {
+        playBootChime();
+        showToast('♪ Nintendo Boot Chime');
+      }
+
       if (!canvasMode && modeCanvasBtn) {
         modeCanvasBtn.click();
         bootY = 58;
