@@ -2598,15 +2598,31 @@ kbd {
     top: 100%;
     left: 0;
     right: 0;
-    background: rgba(9, 13, 11, 0.97);
-    border-bottom: 1px solid var(--border-strong);
+    background: var(--bg-card, #e0e6d5);
+    border-bottom: 2px solid var(--border-strong);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
     flex-direction: column;
     padding: 1.25rem;
     gap: 1rem;
   }
 
+  [data-theme="dark"] .nav-links {
+    background: rgba(9, 13, 11, 0.97);
+  }
+
   .nav-links.open {
     display: flex;
+  }
+
+  .nav-links a {
+    color: var(--ink-primary, #0f380f);
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.25rem 0;
+  }
+
+  [data-theme="dark"] .nav-links a {
+    color: #e2f0d9;
   }
 
   .mobile-menu-btn {

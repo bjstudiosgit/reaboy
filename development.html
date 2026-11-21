@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Architecture &amp; Development (Project 007) — ReaBoy v1.0.1 BETA | BJ Studios</title>
+  <title>Architecture &amp; Development — ReaBoy v1.0.1 BETA | BJ Studios</title>
   <meta name="description" content="Technical architecture, byte-level reverse engineering, and cycle-accurate hardware pipeline of ReaBoy: a bit-exact Nintendo Game Boy (DMG-01) emulator reconstructed from original 1989 silicon.">
   <meta name="keywords" content="Game Boy architecture, reverse engineering Game Boy, Sharp SM83, DMG-01 boot ROM, ReaBoy development, cycle-accurate Game Boy, 4-channel APU, WinMM audio, Bootix DMG">
   <meta name="author" content="BJ Studios — Manchester, England">
@@ -15,14 +15,14 @@
   <!-- Open Graph / Social SEO -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="ReaBoy by BJ Studios">
-  <meta property="og:title" content="ReaBoy Architecture &amp; Development — Project 007">
+  <meta property="og:title" content="ReaBoy Architecture &amp; Development — Sharp SM83 &amp; PPU Pipeline">
   <meta property="og:description" content="Deep-dive reverse engineering from byte $0000: 121 Sharp SM83 opcodes, 38 basic blocks, scanline PPU timing, and bit-exact $0100 execution handover.">
   <meta property="og:url" content="https://scientificbrad.github.io/ReaBoy/development.html">
   <meta property="og:image" content="https://scientificbrad.github.io/ReaBoy/assets/img/boot-poster.png">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="ReaBoy Architecture &amp; Development — Project 007">
+  <meta name="twitter:title" content="ReaBoy Architecture &amp; Development — Sharp SM83 &amp; PPU Pipeline">
   <meta name="twitter:description" content="Deep-dive reverse engineering from byte $0000: 121 Sharp SM83 opcodes, 38 basic blocks, scanline PPU timing, and bit-exact $0100 execution handover.">
   <meta name="twitter:image" content="https://scientificbrad.github.io/ReaBoy/assets/img/boot-poster.png">
 
@@ -30,7 +30,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Press+Start+2P&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=1.2.8">
+  <link rel="stylesheet" href="css/styles.css?v=1.2.9">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -67,7 +67,6 @@
 
         <div class="section-head reveal" style="margin-bottom: 2rem;">
           <div>
-            <p class="eyebrow">SCIENTIFIC ENGINEERING · PROJECT 007</p>
             <h1 style="font-size: clamp(2rem, 3.8vw, 3rem); line-height: 1.15; margin: 0 0 1rem;">
               Built from 256 bytes<br>
               <span class="highlight">of original 1989 silicon.</span>
@@ -162,7 +161,7 @@
                 <div class="cycle-bar-track">
                   <div class="cycle-bar-fill" id="cycle-bar-fill"></div>
                 </div>
-                <p id="milestone-detail" style="margin:0.75rem 0 0;color:var(--text-muted);font-family:var(--font-display);font-size:0.84rem;">
+                <p id="milestone-detail" style="margin:0.75rem 0 0;color:#e2f0d9;font-family:var(--font-display);font-size:0.86rem;font-weight:500;line-height:1.5;">
                   Boot ROM writes $01 to $FF50, unmaps itself, and hands execution cleanly to cartridge entry point $0100.
                 </p>
               </div>
@@ -370,6 +369,6 @@
     </div>
   </footer>
 
-  <script src="js/app.js?v=1.2.2" defer></script>
+  <script src="js/app.js?v=1.2.3" defer></script>
 </body>
 </html>

@@ -258,7 +258,11 @@
   }
 
   $$('[data-apu]').forEach((btn) => {
-    btn.addEventListener('click', () => playApuChannel(btn.dataset.apu));
+    btn.addEventListener('click', () => {
+      $$('[data-apu]').forEach((b) => b.classList.remove('apu-btn-featured', 'active'));
+      btn.classList.add('apu-btn-featured', 'active');
+      playApuChannel(btn.dataset.apu);
+    });
   });
 
   // Live Oscilloscope Canvas Loop
