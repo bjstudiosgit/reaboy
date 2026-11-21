@@ -109,6 +109,7 @@
       <button class="mobile-menu-btn" id="mobile-menu-btn" type="button" aria-expanded="false" aria-controls="nav-links">MENU</button>
       <nav class="nav-links" id="nav-links" aria-label="Primary Navigation">
         <a class="active" href="index.html">Home</a>
+        <a href="development.html">Development</a>
         <a href="compatibility.html">1,592+ Tested</a>
         <a href="manual.html">User Manual</a>
         <a href="https://github.com/ScientificBrad/ReaBoy" target="_blank" rel="noopener">GitHub ↗</a>
@@ -404,102 +405,20 @@
       </div>
     </section>
 
-    <!-- HOW WE MADE IT — SCIENTIFIC & TECHNICAL (PROJECT 007) -->
-    <section class="section section-alt" id="how-we-made-it">
+    <!-- ENGINEERING ARCHITECTURE TEASER (PROJECT 007) -->
+    <section class="section section-alt" id="engineering-teaser" style="padding: 2.75rem 0;">
       <div class="wrap">
-        <div class="section-head reveal">
-          <div>
-            <p class="eyebrow">SCIENTIFIC ENGINEERING · PROJECT 007</p>
-            <h2>Built from 256 bytes<br>of original 1989 silicon.</h2>
-          </div>
-          <p>
-            Developed through byte-level reverse engineering: starting at byte <code>$0000</code> of the canonical DMG-01 boot ROM, decoding all 121 Sharp SM83 instructions across 38 basic blocks, and auditing every memory-mapped I/O register to prove 0 byte mismatches before executing a single instruction.
-          </p>
-        </div>
-
-        <div class="science-phases reveal">
-          <article class="phase-card">
-            <span class="phase-num">PHASE 01 · STATIC REVERSE ENGINEERING</span>
-            <h3>Byte-Identical Boot Reconstruction</h3>
-            <p>A custom Sharp SM83 disassembler and control-flow graph builder accounted for every single byte of the 256-byte DMG-01 boot ROM — then reassembled it with RGBDS v1.0.4 and proved 0 byte mismatches. Bundled directly inside the ReaBoy package as open-source Bootix DMG v1.2.</p>
-            <div class="stat-pills">
-              <span>256 / 256 bytes</span>
-              <span>121 SM83 opcodes</span>
-              <span>38 basic blocks</span>
-              <span>57 CFG edges</span>
-              <span>12 MMIO regs</span>
-            </div>
-          </article>
-
-          <article class="phase-card">
-            <span class="phase-num">PHASE 02 · DYNAMIC CPU VERIFICATION</span>
-            <h3>Bit-Exact Handover at $0100</h3>
-            <p>The C# Sharp SM83 core and memory bus execute the full boot sequence from <code>$0000</code> to <code>$FF50</code> unmapping — matching every single canonical DMG register and trapping corrupted logos/checksums in their hardware lockouts.</p>
-            <div class="stat-pills">
-              <span>2,206,435 instr</span>
-              <span>23,454,204 T-cycles</span>
-              <span>PC=$0100</span>
-              <span>F=$B0 (Z=1 H=1 C=1)</span>
-            </div>
-          </article>
-
-          <article class="phase-card">
-            <span class="phase-num">PHASE 03 · PPU, APU &amp; WINDOWS HOST</span>
-            <h3>Rock-Solid Desktop Architecture</h3>
-            <p>Paired with a scanline-timed 160×144 PPU (including the v1.0.1 LCD-off STAT Mode 0 fix for Dr. Mario), a 4-channel APU with pinned WinMM audio buffers, and 59 automated Windows UI integration checks.</p>
-            <div class="stat-pills">
-              <span>4-Ch APU</span>
-              <span>STAT Mode 0 fix</span>
-              <span>Pinned WinMM</span>
-              <span>59 UI Checks</span>
-            </div>
-          </article>
-        </div>
-
-        <!-- Interactive 10-Step Boot Pipeline & Register Inspector -->
-        <div class="pipeline-box reveal">
-          <div class="pipeline-top">
-            <div>
-              <span class="eyebrow" style="margin-bottom:0.25rem;">INTERACTIVE HARDWARE TRACE</span>
-              <h3 style="margin:0;">DMG-01 Boot Execution Pipeline ($0000 → $0100)</h3>
-            </div>
-            <div style="display:flex;gap:0.6rem;flex-wrap:wrap;">
-              <button class="btn btn-primary" type="button" id="pipeline-play-btn" style="padding:0.55rem 1rem;font-size:0.84rem;">▶ Auto-Step Trace</button>
-              <button class="btn btn-secondary" type="button" id="pipeline-reset-btn" style="padding:0.55rem 1rem;font-size:0.84rem;">↺ Reset to $0000</button>
-            </div>
-          </div>
-
-          <div class="pipeline-grid">
-            <div class="milestone-list" id="milestone-list" role="listbox" aria-label="DMG-01 boot milestones">
-              <!-- Populated by app.js -->
-            </div>
-
-            <div class="register-panel">
-              <h4>Sharp SM83 Register State</h4>
-              <div class="reg-grid" id="reg-grid">
-                <div class="reg-cell"><span>A</span><strong id="reg-A">$01</strong></div>
-                <div class="reg-cell"><span>F (ZNHC)</span><strong id="reg-F">$B0</strong></div>
-                <div class="reg-cell"><span>B</span><strong id="reg-B">$00</strong></div>
-                <div class="reg-cell"><span>C</span><strong id="reg-C">$13</strong></div>
-                <div class="reg-cell"><span>D</span><strong id="reg-D">$00</strong></div>
-                <div class="reg-cell"><span>E</span><strong id="reg-E">$D8</strong></div>
-                <div class="reg-cell"><span>H</span><strong id="reg-H">$01</strong></div>
-                <div class="reg-cell"><span>L</span><strong id="reg-L">$4D</strong></div>
-                <div class="reg-cell"><span>SP</span><strong id="reg-SP">$FFFE</strong></div>
-                <div class="reg-cell"><span>PC</span><strong id="reg-PC">$0100</strong></div>
-              </div>
-              <div class="cycle-meter">
-                <div style="display:flex;justify-content:space-between;">
-                  <span id="cycle-label">T-Cycles: 23,454,204</span>
-                  <span id="bootrom-state" style="color:#ccff2e;">$FF50 UNMAPPED</span>
-                </div>
-                <div class="cycle-bar-track">
-                  <div class="cycle-bar-fill" id="cycle-bar-fill"></div>
-                </div>
-                <p id="milestone-detail" style="margin:0.75rem 0 0;color:var(--text-muted);font-family:var(--font-display);font-size:0.84rem;">
-                  Boot ROM writes $01 to $FF50, unmaps itself, and hands execution cleanly to cartridge entry point $0100.
-                </p>
-              </div>
+        <div class="compat-cta-banner reveal" style="background: linear-gradient(135deg, rgba(8,24,32,0.95), rgba(15,35,45,0.95)); border: 1px solid var(--border-color);">
+          <div class="compat-cta-copy">
+            <p class="eyebrow" style="color: var(--gb-1);">SCIENTIFIC REVERSE ENGINEERING · PROJECT 007</p>
+            <h3 class="compat-cta-title" style="margin-top: 0.35rem;">Built from 256 bytes of original 1989 silicon.</h3>
+            <p class="compat-cta-desc">
+              Starting at byte $0000 of the DMG-01 boot ROM, decoding all 121 Sharp SM83 opcodes across 38 basic blocks, scanline PPU timing, and bit-exact $0100 handover. Explore the interactive step-by-step trace and register inspector on our dedicated architecture page.
+            </p>
+            <div class="compat-cta-actions">
+              <a class="btn btn-secondary" href="development.html" style="display: inline-flex; align-items: center; gap: 0.5rem;">
+                Explore Architecture &amp; Development →
+              </a>
             </div>
           </div>
         </div>
@@ -511,611 +430,663 @@
       <div class="wrap">
         <div class="section-head reveal">
           <div>
-            <h2>24 Handheld Masterpieces.<br>Captured live in ReaBoy.</h2>
+            <p class="eyebrow">BIT-EXACT GAMEPLAY SHOWCASE</p>
+            <h2 style="font-size: clamp(1.6rem, 2.6vw, 2.2rem); line-height: 1.15;">
+              Handheld Masterpieces.<br>
+              <span class="highlight">Recorded Live in Hardware-Exact 60 FPS.</span>
+            </h2>
           </div>
           <p>
-            Real gameplay recordings captured straight from ReaBoy. Watch 24 legendary titles in action below, or visit the Compatibility Lab for the complete library of <strong>1,592 tested Game Boy ROMs</strong>.
+            Real gameplay recordings captured directly from ReaBoy's cycle-accurate SM83 CPU and scanline PPU core. Watch 24 landmark Game Boy titles in action below, or visit the Compatibility Lab to browse the full library of <strong>1,592 verified games</strong>.
           </p>
         </div>
 
         <div class="top12-grid reveal">
           <!-- 1. The Legend of Zelda: Link's Awakening -->
+                    <!-- The Legend of Zelda: Link's Awakening -->
           <article class="top12-card" data-cat="hall-of-fame adventure">
             <div class="top12-header">
-              <div class="top12-rank-title">
-                <span class="top12-rank">#01</span>
-                <h3 class="top12-title">The Legend of Zelda: Link's Awakening</h3>
-              </div>
+              <h3 class="top12-title">The Legend of Zelda: Link's Awakening</h3>
               <span class="top12-year">1993</span>
             </div>
             <div class="top12-media">
               <video autoplay loop muted playsinline poster="assets/img/shots/legend-of-zelda-the-link-s-awakening.png">
                 <source src="assets/video/zelda-links-awakening.mp4?v=1.1.0" type="video/mp4">
               </video>
-              <div class="top12-boxart-thumb" title="Original Box Art">
-                <img src="assets/img/boxart/zelda-links-awakening.jpg" alt="The Legend of Zelda: Link's Awakening Box Art" loading="lazy">
-              </div>
             </div>
-            <p class="top12-desc">
-              Arguably the greatest adventure ever made for the original Game Boy. Huge world, dungeons, puzzles and an unforgettable story.
-            </p>
-            <div class="top12-meta">
-              <span class="top12-meta-tag">MBC1+RAM+BATT · 1,024 KB</span>
+            <div class="top12-body">
+              <img class="top12-boxart-img" src="assets/img/boxart/zelda-links-awakening.jpg" alt="The Legend of Zelda: Link's Awakening Box Art" loading="lazy" title="Original Box Art">
+              <div class="top12-info">
+                <p class="top12-desc">
+                  Arguably the greatest adventure ever made for the original Game Boy. Huge world, dungeons, puzzles and an unforgettable story.
+                </p>
+                <div class="top12-cart-spec">
+                  <span class="top12-cart-pill">MBC1+RAM+BATT</span>
+                  <span class="top12-cart-dot">·</span>
+                  <span class="top12-cart-size">1,024 KB</span>
+                </div>
+              </div>
             </div>
           </article>
 
           <!-- 2. Tetris -->
+                    <!-- Tetris -->
           <article class="top12-card" data-cat="hall-of-fame best-sellers puzzle">
             <div class="top12-header">
-              <div class="top12-rank-title">
-                <span class="top12-rank">#02</span>
-                <h3 class="top12-title">Tetris</h3>
-              </div>
+              <h3 class="top12-title">Tetris</h3>
               <span class="top12-year">1989</span>
             </div>
             <div class="top12-media">
               <video autoplay loop muted playsinline poster="assets/img/shots/tetris.png">
                 <source src="assets/video/tetris.mp4?v=1.1.0" type="video/mp4">
               </video>
-              <div class="top12-boxart-thumb" title="Original Box Art">
-                <img src="assets/img/boxart/tetris.jpg" alt="Tetris Box Art" loading="lazy">
-              </div>
             </div>
-            <p class="top12-desc">
-              The definitive handheld puzzle game. Helped turn the Game Boy into a worldwide phenomenon.
-            </p>
-            <div class="top12-meta">
-              <span class="top12-meta-tag">ROM-Only · 32 KB</span>
+            <div class="top12-body">
+              <img class="top12-boxart-img" src="assets/img/boxart/tetris.jpg" alt="Tetris Box Art" loading="lazy" title="Original Box Art">
+              <div class="top12-info">
+                <p class="top12-desc">
+                  The definitive handheld puzzle game. Helped turn the Game Boy into a worldwide phenomenon.
+                </p>
+                <div class="top12-cart-spec">
+                  <span class="top12-cart-pill">ROM-Only</span>
+                  <span class="top12-cart-dot">·</span>
+                  <span class="top12-cart-size">32 KB</span>
+                </div>
+              </div>
             </div>
           </article>
 
           <!-- 3. Pokémon Red and Blue -->
+                    <!-- Pokémon Red and Blue -->
           <article class="top12-card" data-cat="hall-of-fame best-sellers rpg">
             <div class="top12-header">
-              <div class="top12-rank-title">
-                <span class="top12-rank">#03</span>
-                <h3 class="top12-title">Pokémon Red and Blue</h3>
-              </div>
+              <h3 class="top12-title">Pokémon Red and Blue</h3>
               <span class="top12-year">1996/1998</span>
             </div>
             <div class="top12-media">
               <video autoplay loop muted playsinline poster="assets/img/shots/pokemon-red.png">
                 <source src="assets/video/pokemon-red.mp4" type="video/mp4">
               </video>
-              <div class="top12-boxart-thumb" title="Original Box Art">
-                <img src="assets/img/boxart/pokemon-red.jpg" alt="Pokémon Red Box Art" loading="lazy">
-              </div>
             </div>
-            <p class="top12-desc">
-              The beginning of the Pokémon phenomenon. Collecting, trading and battling 151 Pokémon.
-            </p>
-            <div class="top12-meta">
-              <span class="top12-meta-tag">MBC3+RAM+BATT · 1,024 KB</span>
+            <div class="top12-body">
+              <img class="top12-boxart-img" src="assets/img/boxart/pokemon-red.jpg" alt="Pokémon Red Box Art" loading="lazy" title="Original Box Art">
+              <div class="top12-info">
+                <p class="top12-desc">
+                  The beginning of the Pokémon phenomenon. Collecting, trading and battling 151 Pokémon.
+                </p>
+                <div class="top12-cart-spec">
+                  <span class="top12-cart-pill">MBC3+RAM+BATT</span>
+                  <span class="top12-cart-dot">·</span>
+                  <span class="top12-cart-size">1,024 KB</span>
+                </div>
+              </div>
             </div>
           </article>
 
           <!-- 4. Super Mario Land 2: 6 Golden Coins -->
+                    <!-- Super Mario Land 2: 6 Golden Coins -->
           <article class="top12-card" data-cat="hall-of-fame mario best-sellers platformer">
             <div class="top12-header">
-              <div class="top12-rank-title">
-                <span class="top12-rank">#04</span>
-                <h3 class="top12-title">Super Mario Land 2: 6 Golden Coins</h3>
-              </div>
+              <h3 class="top12-title">Super Mario Land 2: 6 Golden Coins</h3>
               <span class="top12-year">1992</span>
             </div>
             <div class="top12-media">
               <video autoplay loop muted playsinline poster="assets/img/shots/super-mario-land-2-6-golden-coins.png">
                 <source src="assets/video/super-mario-land-2.mp4" type="video/mp4">
               </video>
-              <div class="top12-boxart-thumb" title="Original Box Art">
-                <img src="assets/img/boxart/super-mario-land-2.jpg" alt="Super Mario Land 2 Box Art" loading="lazy">
-              </div>
             </div>
-            <p class="top12-desc">
-              Beautifully designed platformer with larger sprites, creative levels and Wario's debut.
-            </p>
-            <div class="top12-meta">
-              <span class="top12-meta-tag">MBC1+RAM+BATT · 512 KB</span>
+            <div class="top12-body">
+              <img class="top12-boxart-img" src="assets/img/boxart/super-mario-land-2.jpg" alt="Super Mario Land 2 Box Art" loading="lazy" title="Original Box Art">
+              <div class="top12-info">
+                <p class="top12-desc">
+                  Beautifully designed platformer with larger sprites, creative levels and Wario's debut.
+                </p>
+                <div class="top12-cart-spec">
+                  <span class="top12-cart-pill">MBC1+RAM+BATT</span>
+                  <span class="top12-cart-dot">·</span>
+                  <span class="top12-cart-size">512 KB</span>
+                </div>
+              </div>
             </div>
           </article>
 
           <!-- 5. Donkey Kong -->
+                    <!-- Donkey Kong -->
           <article class="top12-card" data-cat="hall-of-fame mario platformer">
             <div class="top12-header">
-              <div class="top12-rank-title">
-                <span class="top12-rank">#05</span>
-                <h3 class="top12-title">Donkey Kong</h3>
-              </div>
+              <h3 class="top12-title">Donkey Kong</h3>
               <span class="top12-year">1994</span>
             </div>
             <div class="top12-media">
               <video autoplay loop muted playsinline poster="assets/img/shots/donkey-kong.png">
                 <source src="assets/video/donkey-kong.mp4" type="video/mp4">
               </video>
-              <div class="top12-boxart-thumb" title="Original Box Art">
-                <img src="assets/img/boxart/donkey-kong.jpg" alt="Donkey Kong Box Art" loading="lazy">
-              </div>
             </div>
-            <p class="top12-desc">
-              Starts like the arcade original before revealing an enormous puzzle-platform adventure.
-            </p>
-            <div class="top12-meta">
-              <span class="top12-meta-tag">MBC1+RAM+BATT · 512 KB</span>
+            <div class="top12-body">
+              <img class="top12-boxart-img" src="assets/img/boxart/donkey-kong.jpg" alt="Donkey Kong Box Art" loading="lazy" title="Original Box Art">
+              <div class="top12-info">
+                <p class="top12-desc">
+                  Starts like the arcade original before revealing an enormous puzzle-platform adventure.
+                </p>
+                <div class="top12-cart-spec">
+                  <span class="top12-cart-pill">MBC1+RAM+BATT</span>
+                  <span class="top12-cart-dot">·</span>
+                  <span class="top12-cart-size">512 KB</span>
+                </div>
+              </div>
             </div>
           </article>
 
           <!-- 6. Wario Land: Super Mario Land 3 -->
+                    <!-- Wario Land: Super Mario Land 3 -->
           <article class="top12-card" data-cat="hall-of-fame mario platformer">
             <div class="top12-header">
-              <div class="top12-rank-title">
-                <span class="top12-rank">#06</span>
-                <h3 class="top12-title">Wario Land: Super Mario Land 3</h3>
-              </div>
+              <h3 class="top12-title">Wario Land: Super Mario Land 3</h3>
               <span class="top12-year">1994</span>
             </div>
             <div class="top12-media">
               <video autoplay loop muted playsinline poster="assets/img/shots/wario-land-super-mario-land-3.png">
                 <source src="assets/video/wario-land.mp4" type="video/mp4">
               </video>
-              <div class="top12-boxart-thumb" title="Original Box Art">
-                <img src="assets/img/boxart/wario-land.jpg" alt="Wario Land: Super Mario Land 3 Box Art" loading="lazy">
-              </div>
             </div>
-            <p class="top12-desc">
-              Brilliant exploration-based platformer with treasure hunting and Wario's distinctive gameplay.
-            </p>
-            <div class="top12-meta">
-              <span class="top12-meta-tag">MBC1+RAM+BATT · 512 KB</span>
+            <div class="top12-body">
+              <img class="top12-boxart-img" src="assets/img/boxart/wario-land.jpg" alt="Wario Land: Super Mario Land 3 Box Art" loading="lazy" title="Original Box Art">
+              <div class="top12-info">
+                <p class="top12-desc">
+                  Brilliant exploration-based platformer with treasure hunting and Wario's distinctive gameplay.
+                </p>
+                <div class="top12-cart-spec">
+                  <span class="top12-cart-pill">MBC1+RAM+BATT</span>
+                  <span class="top12-cart-dot">·</span>
+                  <span class="top12-cart-size">512 KB</span>
+                </div>
+              </div>
             </div>
           </article>
 
           <!-- 7. Metroid II: Return of Samus -->
+                    <!-- Metroid II: Return of Samus -->
           <article class="top12-card" data-cat="hall-of-fame adventure">
             <div class="top12-header">
-              <div class="top12-rank-title">
-                <span class="top12-rank">#07</span>
-                <h3 class="top12-title">Metroid II: Return of Samus</h3>
-              </div>
+              <h3 class="top12-title">Metroid II: Return of Samus</h3>
               <span class="top12-year">1991</span>
             </div>
             <div class="top12-media">
               <video autoplay loop muted playsinline poster="assets/img/shots/metroid-ii-return-of-samus.png">
                 <source src="assets/video/metroid-2.mp4" type="video/mp4">
               </video>
-              <div class="top12-boxart-thumb" title="Original Box Art">
-                <img src="assets/img/boxart/metroid-2.jpg" alt="Metroid II: Return of Samus Box Art" loading="lazy">
-              </div>
             </div>
-            <p class="top12-desc">
-              Dark, atmospheric exploration that pushed the handheld well beyond simple arcade games.
-            </p>
-            <div class="top12-meta">
-              <span class="top12-meta-tag">MBC1+RAM+BATT · 256 KB</span>
+            <div class="top12-body">
+              <img class="top12-boxart-img" src="assets/img/boxart/metroid-2.jpg" alt="Metroid II: Return of Samus Box Art" loading="lazy" title="Original Box Art">
+              <div class="top12-info">
+                <p class="top12-desc">
+                  Dark, atmospheric exploration that pushed the handheld well beyond simple arcade games.
+                </p>
+                <div class="top12-cart-spec">
+                  <span class="top12-cart-pill">MBC1+RAM+BATT</span>
+                  <span class="top12-cart-dot">·</span>
+                  <span class="top12-cart-size">256 KB</span>
+                </div>
+              </div>
             </div>
           </article>
 
           <!-- 8. Kirby's Dream Land 2 -->
+                    <!-- Kirby's Dream Land 2 -->
           <article class="top12-card" data-cat="hall-of-fame best-sellers platformer">
             <div class="top12-header">
-              <div class="top12-rank-title">
-                <span class="top12-rank">#08</span>
-                <h3 class="top12-title">Kirby's Dream Land 2</h3>
-              </div>
+              <h3 class="top12-title">Kirby's Dream Land 2</h3>
               <span class="top12-year">1995</span>
             </div>
             <div class="top12-media">
               <video autoplay loop muted playsinline poster="assets/img/shots/kirby-s-dream-land-2.png">
                 <source src="assets/video/kirbys-dream-land-2.mp4" type="video/mp4">
               </video>
-              <div class="top12-boxart-thumb" title="Original Box Art">
-                <img src="assets/img/boxart/kirbys-dream-land-2.jpg" alt="Kirby's Dream Land 2 Box Art" loading="lazy">
-              </div>
             </div>
-            <p class="top12-desc">
-              A polished platformer with copy abilities, animal companions and inventive levels.
-            </p>
-            <div class="top12-meta">
-              <span class="top12-meta-tag">MBC1+RAM+BATT · 1,024 KB</span>
+            <div class="top12-body">
+              <img class="top12-boxart-img" src="assets/img/boxart/kirbys-dream-land-2.jpg" alt="Kirby's Dream Land 2 Box Art" loading="lazy" title="Original Box Art">
+              <div class="top12-info">
+                <p class="top12-desc">
+                  A polished platformer with copy abilities, animal companions and inventive levels.
+                </p>
+                <div class="top12-cart-spec">
+                  <span class="top12-cart-pill">MBC1+RAM+BATT</span>
+                  <span class="top12-cart-dot">·</span>
+                  <span class="top12-cart-size">1,024 KB</span>
+                </div>
+              </div>
             </div>
           </article>
 
           <!-- 9. Dr. Mario -->
+                    <!-- Dr. Mario -->
           <article class="top12-card" data-cat="hall-of-fame mario best-sellers puzzle">
             <div class="top12-header">
-              <div class="top12-rank-title">
-                <span class="top12-rank">#09</span>
-                <h3 class="top12-title">Dr. Mario</h3>
-              </div>
+              <h3 class="top12-title">Dr. Mario</h3>
               <span class="top12-year">1990</span>
             </div>
             <div class="top12-media">
               <video autoplay loop muted playsinline poster="assets/img/shots/dr-mario.png">
                 <source src="assets/video/dr-mario.mp4" type="video/mp4">
               </video>
-              <div class="top12-boxart-thumb" title="Original Box Art">
-                <img src="assets/img/boxart/dr-mario.jpg" alt="Dr. Mario Box Art" loading="lazy">
-              </div>
             </div>
-            <p class="top12-desc">
-              One of Nintendo's most addictive puzzle games. Simple mechanics, demanding difficulty.
-            </p>
-            <div class="top12-meta">
-              <span class="top12-meta-tag">ROM-Only · 32 KB</span>
+            <div class="top12-body">
+              <img class="top12-boxart-img" src="assets/img/boxart/dr-mario.jpg" alt="Dr. Mario Box Art" loading="lazy" title="Original Box Art">
+              <div class="top12-info">
+                <p class="top12-desc">
+                  One of Nintendo's most addictive puzzle games. Simple mechanics, demanding difficulty.
+                </p>
+                <div class="top12-cart-spec">
+                  <span class="top12-cart-pill">ROM-Only</span>
+                  <span class="top12-cart-dot">·</span>
+                  <span class="top12-cart-size">32 KB</span>
+                </div>
+              </div>
             </div>
           </article>
 
           <!-- 10. Super Mario Land -->
+                    <!-- Super Mario Land -->
           <article class="top12-card" data-cat="hall-of-fame mario best-sellers platformer">
             <div class="top12-header">
-              <div class="top12-rank-title">
-                <span class="top12-rank">#10</span>
-                <h3 class="top12-title">Super Mario Land</h3>
-              </div>
+              <h3 class="top12-title">Super Mario Land</h3>
               <span class="top12-year">1989</span>
             </div>
             <div class="top12-media">
               <video autoplay loop muted playsinline poster="assets/img/shots/super-mario-land.png">
                 <source src="assets/video/super-mario-land.mp4" type="video/mp4">
               </video>
-              <div class="top12-boxart-thumb" title="Original Box Art">
-                <img src="assets/img/boxart/super-mario-land.jpg" alt="Super Mario Land Box Art" loading="lazy">
-              </div>
             </div>
-            <p class="top12-desc">
-              A launch-era classic that proved Mario could work on a tiny monochrome screen.
-            </p>
-            <div class="top12-meta">
-              <span class="top12-meta-tag">MBC1 · 64 KB</span>
+            <div class="top12-body">
+              <img class="top12-boxart-img" src="assets/img/boxart/super-mario-land.jpg" alt="Super Mario Land Box Art" loading="lazy" title="Original Box Art">
+              <div class="top12-info">
+                <p class="top12-desc">
+                  A launch-era classic that proved Mario could work on a tiny monochrome screen.
+                </p>
+                <div class="top12-cart-spec">
+                  <span class="top12-cart-pill">MBC1</span>
+                  <span class="top12-cart-dot">·</span>
+                  <span class="top12-cart-size">64 KB</span>
+                </div>
+              </div>
             </div>
           </article>
 
           <!-- 11. DuckTales -->
+                    <!-- DuckTales -->
           <article class="top12-card" data-cat="hall-of-fame best-sellers platformer">
             <div class="top12-header">
-              <div class="top12-rank-title">
-                <span class="top12-rank">#11</span>
-                <h3 class="top12-title">DuckTales</h3>
-              </div>
+              <h3 class="top12-title">DuckTales</h3>
               <span class="top12-year">1989/1990</span>
             </div>
             <div class="top12-media">
               <video autoplay loop muted playsinline poster="assets/img/shots/ducktales.png">
                 <source src="assets/video/ducktales.mp4?v=1.1.0" type="video/mp4">
               </video>
-              <div class="top12-boxart-thumb" title="Original Box Art">
-                <img src="assets/img/boxart/ducktales.jpg" alt="DuckTales Box Art" loading="lazy">
-              </div>
             </div>
-            <p class="top12-desc">
-              Capcom and Disney's legendary 8-bit platformer. Guide Scrooge McDuck across the Amazon, Transylvania, and the African Mines with his iconic pogo cane.
-            </p>
-            <div class="top12-meta">
-              <span class="top12-meta-tag">MBC1 · 64 KB</span>
+            <div class="top12-body">
+              <img class="top12-boxart-img" src="assets/img/boxart/ducktales.jpg" alt="DuckTales Box Art" loading="lazy" title="Original Box Art">
+              <div class="top12-info">
+                <p class="top12-desc">
+                  Capcom and Disney's legendary 8-bit platformer. Guide Scrooge McDuck across the Amazon, Transylvania, and the African Mines with his iconic pogo cane.
+                </p>
+                <div class="top12-cart-spec">
+                  <span class="top12-cart-pill">MBC1</span>
+                  <span class="top12-cart-dot">·</span>
+                  <span class="top12-cart-size">64 KB</span>
+                </div>
+              </div>
             </div>
           </article>
 
           <!-- 12. Gargoyle's Quest -->
+                    <!-- Gargoyle's Quest -->
           <article class="top12-card" data-cat="hall-of-fame cult-classics adventure">
             <div class="top12-header">
-              <div class="top12-rank-title">
-                <span class="top12-rank">#12</span>
-                <h3 class="top12-title">Gargoyle's Quest</h3>
-              </div>
+              <h3 class="top12-title">Gargoyle's Quest</h3>
               <span class="top12-year">1990</span>
             </div>
             <div class="top12-media">
               <video autoplay loop muted playsinline poster="assets/img/shots/gargoyle-s-quest-ghosts-n-goblins.png">
                 <source src="assets/video/gargoyles-quest.mp4" type="video/mp4">
               </video>
-              <div class="top12-boxart-thumb" title="Original Box Art">
-                <img src="assets/img/boxart/gargoyles-quest.jpg" alt="Gargoyle's Quest Box Art" loading="lazy">
-              </div>
             </div>
-            <p class="top12-desc">
-              A superb mixture of platforming, exploration and role-playing elements.
-            </p>
-            <div class="top12-meta">
-              <span class="top12-meta-tag">MBC1 · 256 KB</span>
+            <div class="top12-body">
+              <img class="top12-boxart-img" src="assets/img/boxart/gargoyles-quest.jpg" alt="Gargoyle's Quest Box Art" loading="lazy" title="Original Box Art">
+              <div class="top12-info">
+                <p class="top12-desc">
+                  A superb mixture of platforming, exploration and role-playing elements.
+                </p>
+                <div class="top12-cart-spec">
+                  <span class="top12-cart-pill">MBC1</span>
+                  <span class="top12-cart-dot">·</span>
+                  <span class="top12-cart-size">256 KB</span>
+                </div>
+              </div>
             </div>
           </article>
 
           <!-- 13. Trip World -->
+                    <!-- Trip World -->
           <article class="top12-card" data-cat="cult-classics platformer">
             <div class="top12-header">
-              <div class="top12-rank-title">
-                <span class="top12-rank">#13</span>
-                <h3 class="top12-title">Trip World</h3>
-              </div>
+              <h3 class="top12-title">Trip World</h3>
               <span class="top12-year">1992</span>
             </div>
             <div class="top12-media">
               <video autoplay loop muted playsinline poster="assets/img/shots/trip-world.png">
                 <source src="assets/video/trip-world.mp4" type="video/mp4">
               </video>
-              <div class="top12-boxart-thumb" title="Original Box Art">
-                <img src="assets/img/boxart/trip-world.jpg" alt="Trip World Box Art" loading="lazy">
-              </div>
             </div>
-            <p class="top12-desc">
-              A gorgeous, surreal platformer from Sunsoft. Incredible sprite animation and imaginative visuals. One of the best showcases for Game Boy graphics.
-            </p>
-            <div class="top12-meta">
-              <span class="top12-meta-tag">MBC1 · 128 KB</span>
+            <div class="top12-body">
+              <img class="top12-boxart-img" src="assets/img/boxart/trip-world.jpg" alt="Trip World Box Art" loading="lazy" title="Original Box Art">
+              <div class="top12-info">
+                <p class="top12-desc">
+                  A gorgeous, surreal platformer from Sunsoft. Incredible sprite animation and imaginative visuals. One of the best showcases for Game Boy graphics.
+                </p>
+                <div class="top12-cart-spec">
+                  <span class="top12-cart-pill">MBC1</span>
+                  <span class="top12-cart-dot">·</span>
+                  <span class="top12-cart-size">128 KB</span>
+                </div>
+              </div>
             </div>
           </article>
 
           <!-- 14. Avenging Spirit -->
+                    <!-- Avenging Spirit -->
           <article class="top12-card" data-cat="cult-classics platformer">
             <div class="top12-header">
-              <div class="top12-rank-title">
-                <span class="top12-rank">#14</span>
-                <h3 class="top12-title">Avenging Spirit</h3>
-              </div>
+              <h3 class="top12-title">Avenging Spirit</h3>
               <span class="top12-year">1992</span>
             </div>
             <div class="top12-media">
               <video autoplay loop muted playsinline poster="assets/img/shots/avenging-spirit.png">
                 <source src="assets/video/avenging-spirit.mp4" type="video/mp4">
               </video>
-              <div class="top12-boxart-thumb" title="Original Box Art">
-                <img src="assets/img/boxart/avenging-spirit.jpg" alt="Avenging Spirit Box Art" loading="lazy">
-              </div>
             </div>
-            <p class="top12-desc">
-              You play a ghost that possesses enemy bodies, stealing their weapons and abilities. Brilliantly unusual mechanic.
-            </p>
-            <div class="top12-meta">
-              <span class="top12-meta-tag">MBC1 · 256 KB</span>
+            <div class="top12-body">
+              <img class="top12-boxart-img" src="assets/img/boxart/avenging-spirit.jpg" alt="Avenging Spirit Box Art" loading="lazy" title="Original Box Art">
+              <div class="top12-info">
+                <p class="top12-desc">
+                  You play a ghost that possesses enemy bodies, stealing their weapons and abilities. Brilliantly unusual mechanic.
+                </p>
+                <div class="top12-cart-spec">
+                  <span class="top12-cart-pill">MBC1</span>
+                  <span class="top12-cart-dot">·</span>
+                  <span class="top12-cart-size">256 KB</span>
+                </div>
+              </div>
             </div>
           </article>
 
           <!-- 15. Kid Dracula -->
+                    <!-- Kid Dracula -->
           <article class="top12-card" data-cat="cult-classics platformer">
             <div class="top12-header">
-              <div class="top12-rank-title">
-                <span class="top12-rank">#15</span>
-                <h3 class="top12-title">Kid Dracula</h3>
-              </div>
+              <h3 class="top12-title">Kid Dracula</h3>
               <span class="top12-year">1993</span>
             </div>
             <div class="top12-media">
               <video autoplay loop muted playsinline poster="assets/img/shots/kid-dracula.png">
                 <source src="assets/video/kid-dracula.mp4" type="video/mp4">
               </video>
-              <div class="top12-boxart-thumb" title="Original Box Art">
-                <img src="assets/img/boxart/kid-dracula.jpg" alt="Kid Dracula Box Art" loading="lazy">
-              </div>
             </div>
-            <p class="top12-desc">
-              Konami's cartoonish Castlevania spin-off. Excellent animation, varied bosses and spectacular monochrome artwork.
-            </p>
-            <div class="top12-meta">
-              <span class="top12-meta-tag">MBC1 · 256 KB</span>
+            <div class="top12-body">
+              <img class="top12-boxart-img" src="assets/img/boxart/kid-dracula.jpg" alt="Kid Dracula Box Art" loading="lazy" title="Original Box Art">
+              <div class="top12-info">
+                <p class="top12-desc">
+                  Konami's cartoonish Castlevania spin-off. Excellent animation, varied bosses and spectacular monochrome artwork.
+                </p>
+                <div class="top12-cart-spec">
+                  <span class="top12-cart-pill">MBC1</span>
+                  <span class="top12-cart-dot">·</span>
+                  <span class="top12-cart-size">256 KB</span>
+                </div>
+              </div>
             </div>
           </article>
 
           <!-- 16. Mega Man V -->
+                    <!-- Mega Man V -->
           <article class="top12-card" data-cat="cult-classics platformer">
             <div class="top12-header">
-              <div class="top12-rank-title">
-                <span class="top12-rank">#16</span>
-                <h3 class="top12-title">Mega Man V</h3>
-              </div>
+              <h3 class="top12-title">Mega Man V</h3>
               <span class="top12-year">1994</span>
             </div>
             <div class="top12-media">
               <video autoplay loop muted playsinline poster="assets/img/shots/mega-man-v.png">
                 <source src="assets/video/mega-man-v.mp4" type="video/mp4">
               </video>
-              <div class="top12-boxart-thumb" title="Original Box Art">
-                <img src="assets/img/boxart/mega-man-v.jpg" alt="Mega Man V Box Art" loading="lazy">
-              </div>
             </div>
-            <p class="top12-desc">
-              Original bosses based on planets, intricate levels and exceptional technical polish. Not to be confused with NES Mega Man 5.
-            </p>
-            <div class="top12-meta">
-              <span class="top12-meta-tag">MBC1 · 512 KB</span>
+            <div class="top12-body">
+              <img class="top12-boxart-img" src="assets/img/boxart/mega-man-v.jpg" alt="Mega Man V Box Art" loading="lazy" title="Original Box Art">
+              <div class="top12-info">
+                <p class="top12-desc">
+                  Original bosses based on planets, intricate levels and exceptional technical polish. Not to be confused with NES Mega Man 5.
+                </p>
+                <div class="top12-cart-spec">
+                  <span class="top12-cart-pill">MBC1</span>
+                  <span class="top12-cart-dot">·</span>
+                  <span class="top12-cart-size">512 KB</span>
+                </div>
+              </div>
             </div>
           </article>
 
           <!-- 17. Castlevania: The Adventure -->
+                    <!-- Castlevania: The Adventure -->
           <article class="top12-card" data-cat="cult-classics platformer">
             <div class="top12-header">
-              <div class="top12-rank-title">
-                <span class="top12-rank">#17</span>
-                <h3 class="top12-title">Castlevania: The Adventure</h3>
-              </div>
+              <h3 class="top12-title">Castlevania: The Adventure</h3>
               <span class="top12-year">1989</span>
             </div>
             <div class="top12-media">
               <video autoplay loop muted playsinline poster="assets/img/shots/castlevania-the-adventure.png">
                 <source src="assets/video/castlevania-adventure.mp4?v=1.1.0" type="video/mp4">
               </video>
-              <div class="top12-boxart-thumb" title="Original Box Art">
-                <img src="assets/img/boxart/castlevania-adventure.jpg" alt="Castlevania: The Adventure Box Art" loading="lazy">
-              </div>
             </div>
-            <p class="top12-desc">
-              The original 1989 portable Gothic vampire hunt. Christopher Belmont braves Count Dracula's haunted castle armed with the legendary whip.
-            </p>
-            <div class="top12-meta">
-              <span class="top12-meta-tag">MBC1 · 64 KB</span>
+            <div class="top12-body">
+              <img class="top12-boxart-img" src="assets/img/boxart/castlevania-adventure.jpg" alt="Castlevania: The Adventure Box Art" loading="lazy" title="Original Box Art">
+              <div class="top12-info">
+                <p class="top12-desc">
+                  The original 1989 portable Gothic vampire hunt. Christopher Belmont braves Count Dracula's haunted castle armed with the legendary whip.
+                </p>
+                <div class="top12-cart-spec">
+                  <span class="top12-cart-pill">MBC1</span>
+                  <span class="top12-cart-dot">·</span>
+                  <span class="top12-cart-size">64 KB</span>
+                </div>
+              </div>
             </div>
           </article>
 
           <!-- 18. Castlevania II: Belmont's Revenge -->
+                    <!-- Castlevania II: Belmont's Revenge -->
           <article class="top12-card" data-cat="cult-classics platformer">
             <div class="top12-header">
-              <div class="top12-rank-title">
-                <span class="top12-rank">#18</span>
-                <h3 class="top12-title">Castlevania II: Belmont's Revenge</h3>
-              </div>
+              <h3 class="top12-title">Castlevania II: Belmont's Revenge</h3>
               <span class="top12-year">1991</span>
             </div>
             <div class="top12-media">
               <video autoplay loop muted playsinline poster="assets/img/shots/castlevania-ii-belmont-s-revenge.png">
                 <source src="assets/video/castlevania-2.mp4" type="video/mp4">
               </video>
-              <div class="top12-boxart-thumb" title="Original Box Art">
-                <img src="assets/img/boxart/castlevania-2.jpg" alt="Castlevania II: Belmont's Revenge Box Art" loading="lazy">
-              </div>
             </div>
-            <p class="top12-desc">
-              Atmospheric castles, strong level design and some of the best music on the handheld.
-            </p>
-            <div class="top12-meta">
-              <span class="top12-meta-tag">MBC1 · 128 KB</span>
+            <div class="top12-body">
+              <img class="top12-boxart-img" src="assets/img/boxart/castlevania-2.jpg" alt="Castlevania II: Belmont's Revenge Box Art" loading="lazy" title="Original Box Art">
+              <div class="top12-info">
+                <p class="top12-desc">
+                  Atmospheric castles, strong level design and some of the best music on the handheld.
+                </p>
+                <div class="top12-cart-spec">
+                  <span class="top12-cart-pill">MBC1</span>
+                  <span class="top12-cart-dot">·</span>
+                  <span class="top12-cart-size">128 KB</span>
+                </div>
+              </div>
             </div>
           </article>
 
           <!-- 19. Kirby's Dream Land -->
+                    <!-- Kirby's Dream Land -->
           <article class="top12-card" data-cat="best-sellers platformer">
             <div class="top12-header">
-              <div class="top12-rank-title">
-                <span class="top12-rank">#19</span>
-                <h3 class="top12-title">Kirby's Dream Land</h3>
-              </div>
+              <h3 class="top12-title">Kirby's Dream Land</h3>
               <span class="top12-year">1992</span>
             </div>
             <div class="top12-media">
               <video autoplay loop muted playsinline poster="assets/img/shots/kirby-s-dream-land.png">
                 <source src="assets/video/kirbys-dream-land.mp4" type="video/mp4">
               </video>
-              <div class="top12-boxart-thumb" title="Original Box Art">
-                <img src="assets/img/boxart/kirbys-dream-land.jpg" alt="Kirby's Dream Land Box Art" loading="lazy">
-              </div>
             </div>
-            <p class="top12-desc">
-              Worldwide Rank #8 Best-Seller (5.13 million). Masahiro Sakurai's legendary debut that introduced Kirby to millions of players worldwide.
-            </p>
-            <div class="top12-meta">
-              <span class="top12-meta-tag">MBC1 · 256 KB</span>
+            <div class="top12-body">
+              <img class="top12-boxart-img" src="assets/img/boxart/kirbys-dream-land.jpg" alt="Kirby's Dream Land Box Art" loading="lazy" title="Original Box Art">
+              <div class="top12-info">
+                <p class="top12-desc">
+                  Hal Laboratory's breezy classic introducing the iconic pink hero. Features tight floating mechanics and lively 8-bit sprites.
+                </p>
+                <div class="top12-cart-spec">
+                  <span class="top12-cart-pill">MBC1</span>
+                  <span class="top12-cart-dot">·</span>
+                  <span class="top12-cart-size">256 KB</span>
+                </div>
+              </div>
             </div>
           </article>
 
           <!-- 20. Donkey Kong Land -->
+                    <!-- Donkey Kong Land -->
           <article class="top12-card" data-cat="best-sellers platformer">
             <div class="top12-header">
-              <div class="top12-rank-title">
-                <span class="top12-rank">#20</span>
-                <h3 class="top12-title">Donkey Kong Land</h3>
-              </div>
+              <h3 class="top12-title">Donkey Kong Land</h3>
               <span class="top12-year">1995</span>
             </div>
             <div class="top12-media">
               <video autoplay loop muted playsinline poster="assets/img/shots/donkey-kong-land.png">
                 <source src="assets/video/donkey-kong-land.mp4" type="video/mp4">
               </video>
-              <div class="top12-boxart-thumb" title="Original Box Art">
-                <img src="assets/img/boxart/donkey-kong-land.jpg" alt="Donkey Kong Land Box Art" loading="lazy">
-              </div>
             </div>
-            <p class="top12-desc">
-              Worldwide Rank #9 Best-Seller (3.91 million). Rare's technical tour-de-force bringing pre-rendered Silicon Graphics 3D sprites to the DMG screen.
-            </p>
-            <div class="top12-meta">
-              <span class="top12-meta-tag">MBC1+RAM+BATT · 512 KB</span>
+            <div class="top12-body">
+              <img class="top12-boxart-img" src="assets/img/boxart/donkey-kong-land.jpg" alt="Donkey Kong Land Box Art" loading="lazy" title="Original Box Art">
+              <div class="top12-info">
+                <p class="top12-desc">
+                  Rare's groundbreaking technical marvel translating pre-rendered ACM graphics to the 4-shade DMG screen.
+                </p>
+                <div class="top12-cart-spec">
+                  <span class="top12-cart-pill">MBC1+RAM+BATT</span>
+                  <span class="top12-cart-dot">·</span>
+                  <span class="top12-cart-size">512 KB</span>
+                </div>
+              </div>
             </div>
           </article>
 
           <!-- 21. Donkey Kong Land 2 -->
+                    <!-- Donkey Kong Land 2 -->
           <article class="top12-card" data-cat="best-sellers arcade">
             <div class="top12-header">
-              <div class="top12-rank-title">
-                <span class="top12-rank">#21</span>
-                <h3 class="top12-title">Donkey Kong Land 2</h3>
-              </div>
+              <h3 class="top12-title">Donkey Kong Land 2</h3>
               <span class="top12-year">1996</span>
             </div>
             <div class="top12-media">
               <video autoplay loop muted playsinline poster="assets/img/shots/donkey-kong-land-2.png">
                 <source src="assets/video/donkey-kong-land-2.mp4" type="video/mp4">
               </video>
-              <div class="top12-boxart-thumb" title="Original Box Art">
-                <img src="assets/img/boxart/donkey-kong-land-2.jpg" alt="Donkey Kong Land 2 Box Art" loading="lazy">
-              </div>
             </div>
-            <p class="top12-desc">
-              Worldwide Rank #16 Best-Seller (2.35 million). Diddy and Dixie's pirate adventure pushing sound and graphical density to the limit.
-            </p>
-            <div class="top12-meta">
-              <span class="top12-meta-tag">MBC1+RAM+BATT · 512 KB</span>
+            <div class="top12-body">
+              <img class="top12-boxart-img" src="assets/img/boxart/donkey-kong-land-2.jpg" alt="Donkey Kong Land 2 Box Art" loading="lazy" title="Original Box Art">
+              <div class="top12-info">
+                <p class="top12-desc">
+                  Diddy and Dixie Kong take on Kaptain K. Rool across treacherous pirate islands with custom chiptune David Wise tracks.
+                </p>
+                <div class="top12-cart-spec">
+                  <span class="top12-cart-pill">MBC1+RAM+BATT</span>
+                  <span class="top12-cart-dot">·</span>
+                  <span class="top12-cart-size">512 KB</span>
+                </div>
+              </div>
             </div>
           </article>
 
           <!-- 22. Mario & Yoshi -->
+                    <!-- Mario &amp; Yoshi -->
           <article class="top12-card" data-cat="mario best-sellers puzzle">
             <div class="top12-header">
-              <div class="top12-rank-title">
-                <span class="top12-rank">#22</span>
-                <h3 class="top12-title">Mario &amp; Yoshi</h3>
-              </div>
+              <h3 class="top12-title">Mario &amp; Yoshi</h3>
               <span class="top12-year">1991</span>
             </div>
             <div class="top12-media">
               <video autoplay loop muted playsinline poster="assets/img/shots/mario-and-yoshi.png">
                 <source src="assets/video/mario-and-yoshi.mp4" type="video/mp4">
               </video>
-              <div class="top12-boxart-thumb" title="Original Box Art">
-                <img src="assets/img/boxart/mario-and-yoshi.jpg" alt="Mario &amp; Yoshi Box Art" loading="lazy">
-              </div>
             </div>
-            <p class="top12-desc">
-              Worldwide Rank #12 Best-Seller (3.12 million). Game Freak's addictive action-puzzler where Mario swaps trays to hatch falling Yoshi eggshells.
-            </p>
-            <div class="top12-meta">
-              <span class="top12-meta-tag">MBC1 · 64 KB</span>
+            <div class="top12-body">
+              <img class="top12-boxart-img" src="assets/img/boxart/mario-and-yoshi.jpg" alt="Mario &amp; Yoshi Box Art" loading="lazy" title="Original Box Art">
+              <div class="top12-info">
+                <p class="top12-desc">
+                  Addictive rapid-fire tile puzzle game by Game Freak. Match falling Goombas, Boos, and Piranha Plants inside Yoshi egg shells.
+                </p>
+                <div class="top12-cart-spec">
+                  <span class="top12-cart-pill">MBC1</span>
+                  <span class="top12-cart-dot">·</span>
+                  <span class="top12-cart-size">64 KB</span>
+                </div>
+              </div>
             </div>
           </article>
 
           <!-- 23. Mario's Picross -->
+                    <!-- Mario's Picross -->
           <article class="top12-card" data-cat="mario puzzle">
             <div class="top12-header">
-              <div class="top12-rank-title">
-                <span class="top12-rank">#23</span>
-                <h3 class="top12-title">Mario's Picross</h3>
-              </div>
+              <h3 class="top12-title">Mario's Picross</h3>
               <span class="top12-year">1995</span>
             </div>
             <div class="top12-media">
               <video autoplay loop muted playsinline poster="assets/img/shots/marios-picross.png">
                 <source src="assets/video/marios-picross.mp4" type="video/mp4">
               </video>
-              <div class="top12-boxart-thumb" title="Original Box Art">
-                <img src="assets/img/boxart/marios-picross.jpg" alt="Mario's Picross Box Art" loading="lazy">
-              </div>
             </div>
-            <p class="top12-desc">
-              Jupiter and Nintendo's brilliant nonogram logic puzzler. Mario chisels stone tiles across Kinoko, Star, and Time Trial riddle boards.
-            </p>
-            <div class="top12-meta">
-              <span class="top12-meta-tag">MBC1+RAM+BATT · 512 KB</span>
+            <div class="top12-body">
+              <img class="top12-boxart-img" src="assets/img/boxart/marios-picross.jpg" alt="Mario's Picross Box Art" loading="lazy" title="Original Box Art">
+              <div class="top12-info">
+                <p class="top12-desc">
+                  Jupiter and Nintendo's brilliant nonogram logic puzzler. Mario chisels stone tiles across Kinoko, Star, and Time Trial riddle boards.
+                </p>
+                <div class="top12-cart-spec">
+                  <span class="top12-cart-pill">MBC1+RAM+BATT</span>
+                  <span class="top12-cart-dot">·</span>
+                  <span class="top12-cart-size">512 KB</span>
+                </div>
+              </div>
             </div>
           </article>
 
           <!-- 24. Yoshi's Cookie -->
+                    <!-- Yoshi's Cookie -->
           <article class="top12-card" data-cat="mario best-sellers puzzle">
             <div class="top12-header">
-              <div class="top12-rank-title">
-                <span class="top12-rank">#24</span>
-                <h3 class="top12-title">Yoshi's Cookie</h3>
-              </div>
+              <h3 class="top12-title">Yoshi's Cookie</h3>
               <span class="top12-year">1992</span>
             </div>
             <div class="top12-media">
               <video autoplay loop muted playsinline poster="assets/img/shots/yoshis-cookie.png">
                 <source src="assets/video/yoshis-cookie.mp4" type="video/mp4">
               </video>
-              <div class="top12-boxart-thumb" title="Original Box Art">
-                <img src="assets/img/boxart/yoshis-cookie.jpg" alt="Yoshi's Cookie Box Art" loading="lazy">
-              </div>
             </div>
-            <p class="top12-desc">
-              Worldwide Rank #24 Best-Seller (1.53 million). Alexey Pajitnov (Tetris creator) collaboration: Mario and Yoshi shift cookie grids in an intensely satisfying bakery rush.
-            </p>
-            <div class="top12-meta">
-              <span class="top12-meta-tag">MBC1 · 128 KB</span>
+            <div class="top12-body">
+              <img class="top12-boxart-img" src="assets/img/boxart/yoshis-cookie.jpg" alt="Yoshi's Cookie Box Art" loading="lazy" title="Original Box Art">
+              <div class="top12-info">
+                <p class="top12-desc">
+                  Fast-paced culinary puzzle classic designed by Alexey Pajitnov. Shift rows and columns to clear matching cookies.
+                </p>
+                <div class="top12-cart-spec">
+                  <span class="top12-cart-pill">MBC1</span>
+                  <span class="top12-cart-dot">·</span>
+                  <span class="top12-cart-size">128 KB</span>
+                </div>
+              </div>
             </div>
           </article>
         </div>
@@ -1193,6 +1164,7 @@
       <div>
         <strong style="font-family:var(--font-mono);font-size:0.8rem;color:var(--gb-0);">DOCUMENTATION</strong>
         <ul class="footer-links">
+          <li><a href="development.html">Architecture &amp; Development</a></li>
           <li><a href="compatibility.html">Compatibility Lab (1,592+ Games)</a></li>
           <li><a href="manual.html">Complete User Manual</a></li>
           <li><a href="https://github.com/ScientificBrad/ReaBoy" target="_blank" rel="noopener">GitHub Repository ↗</a></li>

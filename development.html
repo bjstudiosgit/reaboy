@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Architecture &amp; Development (Project 007) — ReaBoy v1.0.1 BETA | BJ Studios</title>
+  <meta name="description" content="Technical architecture, byte-level reverse engineering, and cycle-accurate hardware pipeline of ReaBoy: a bit-exact Nintendo Game Boy (DMG-01) emulator reconstructed from original 1989 silicon.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://scientificbrad.github.io/ReaBoy/development.html">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/icon-32.png">
+  <link rel="apple-touch-icon" href="assets/img/icon-192.png">
+  <meta name="theme-color" content="#0d1117">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ReaBoy Architecture &amp; Development — Project 007">
+  <meta property="og:description" content="Deep-dive reverse engineering from byte $0000: 121 Sharp SM83 opcodes, 38 basic blocks, scanline PPU timing, and bit-exact $0100 execution handover.">
+  <meta property="og:url" content="https://scientificbrad.github.io/ReaBoy/development.html">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- HEADER & NAVIGATION -->
+  <header class="header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="ReaBoy Home">
+        <span class="brand-badge">DMG-01</span>
+        <span class="brand-title">ReaBoy</span>
+        <span class="brand-ver">v1.0.1 BETA</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a class="active" href="development.html">Development</a>
+        <a href="compatibility.html">1,592+ Tested</a>
+        <a href="manual.html">User Manual</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark/light theme" title="Toggle theme">
+          <span class="theme-icon" aria-hidden="true">☀️</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- PAGE HERO -->
+    <section class="section" style="padding-top: 3.5rem; padding-bottom: 2rem;">
+      <div class="wrap">
+        <div class="section-head reveal" style="margin-bottom: 2rem;">
+          <div>
+            <p class="eyebrow">SCIENTIFIC ENGINEERING · PROJECT 007</p>
+            <h1 style="font-size: clamp(2rem, 3.8vw, 3rem); line-height: 1.15; margin: 0 0 1rem;">
+              Built from 256 bytes<br>
+              <span class="highlight">of original 1989 silicon.</span>
+            </h1>
+          </div>
+          <p style="font-size: 1.05rem; line-height: 1.6; color: var(--text-secondary); max-width: 820px;">
+            ReaBoy was engineered through byte-level reverse engineering starting at byte <code>$0000</code> of the canonical 1989 Nintendo DMG-01 boot ROM. We disassembled and proved all 121 Sharp SM83 instructions across 38 basic blocks with zero byte mismatches, creating a cycle-accurate SM83 CPU, scanline PPU, 4-channel APU, and native WinMM desktop architecture.
+          </p>
+        </div>
+
+        <!-- 3 ENGINEERING PHASES -->
+        <div class="science-phases reveal">
+          <article class="phase-card">
+            <span class="phase-num">PHASE 01 · STATIC REVERSE ENGINEERING</span>
+            <h3>Byte-Identical Boot Reconstruction</h3>
+            <p>A custom Sharp SM83 disassembler and control-flow graph builder accounted for every single byte of the 256-byte DMG-01 boot ROM — then reassembled it with RGBDS v1.0.4 and proved 0 byte mismatches. Bundled directly inside the ReaBoy package as open-source Bootix DMG v1.2.</p>
+            <div class="stat-pills">
+              <span>256 / 256 bytes</span>
+              <span>121 SM83 opcodes</span>
+              <span>38 basic blocks</span>
+              <span>57 CFG edges</span>
+              <span>12 MMIO regs</span>
+            </div>
+          </article>
+
+          <article class="phase-card">
+            <span class="phase-num">PHASE 02 · DYNAMIC CPU VERIFICATION</span>
+            <h3>Bit-Exact Handover at $0100</h3>
+            <p>The C# Sharp SM83 core and memory bus execute the full boot sequence from <code>$0000</code> to <code>$FF50</code> unmapping — matching every single canonical DMG register and trapping corrupted logos/checksums in their hardware lockouts.</p>
+            <div class="stat-pills">
+              <span>2,206,435 instr</span>
+              <span>23,454,204 T-cycles</span>
+              <span>PC=$0100</span>
+              <span>F=$B0 (Z=1 H=1 C=1)</span>
+            </div>
+          </article>
+
+          <article class="phase-card">
+            <span class="phase-num">PHASE 03 · PPU, APU &amp; WINDOWS HOST</span>
+            <h3>Rock-Solid Desktop Architecture</h3>
+            <p>Paired with a scanline-timed 160×144 PPU (including the v1.0.1 LCD-off STAT Mode 0 fix for Dr. Mario), a 4-channel APU with pinned WinMM audio buffers, and 59 automated Windows UI integration checks.</p>
+            <div class="stat-pills">
+              <span>4-Ch APU</span>
+              <span>STAT Mode 0 fix</span>
+              <span>Pinned WinMM</span>
+              <span>59 UI Checks</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE HARDWARE TRACE & REGISTER INSPECTOR -->
+    <section class="section section-alt" id="interactive-trace" style="padding-top: 2.5rem;">
+      <div class="wrap">
+        <div class="pipeline-box reveal">
+          <div class="pipeline-top">
+            <div>
+              <span class="eyebrow" style="margin-bottom:0.25rem;">INTERACTIVE HARDWARE TRACE</span>
+              <h3 style="margin:0;">DMG-01 Boot Execution Pipeline ($0000 → $0100)</h3>
+            </div>
+            <div style="display:flex;gap:0.6rem;flex-wrap:wrap;">
+              <button class="btn btn-primary" type="button" id="pipeline-play-btn" style="padding:0.55rem 1rem;font-size:0.84rem;">▶ Auto-Step Trace</button>
+              <button class="btn btn-secondary" type="button" id="pipeline-reset-btn" style="padding:0.55rem 1rem;font-size:0.84rem;">↺ Reset to $0000</button>
+            </div>
+          </div>
+
+          <div class="pipeline-grid">
+            <div class="milestone-list" id="milestone-list" role="listbox" aria-label="DMG-01 boot milestones">
+              <!-- Populated by app.js -->
+            </div>
+
+            <div class="register-panel">
+              <h4>Sharp SM83 Register State</h4>
+              <div class="reg-grid" id="reg-grid">
+                <div class="reg-cell"><span>A</span><strong id="reg-A">$01</strong></div>
+                <div class="reg-cell"><span>F (ZNHC)</span><strong id="reg-F">$B0</strong></div>
+                <div class="reg-cell"><span>B</span><strong id="reg-B">$00</strong></div>
+                <div class="reg-cell"><span>C</span><strong id="reg-C">$13</strong></div>
+                <div class="reg-cell"><span>D</span><strong id="reg-D">$00</strong></div>
+                <div class="reg-cell"><span>E</span><strong id="reg-E">$D8</strong></div>
+                <div class="reg-cell"><span>H</span><strong id="reg-H">$01</strong></div>
+                <div class="reg-cell"><span>L</span><strong id="reg-L">$4D</strong></div>
+                <div class="reg-cell"><span>SP</span><strong id="reg-SP">$FFFE</strong></div>
+                <div class="reg-cell"><span>PC</span><strong id="reg-PC">$0100</strong></div>
+              </div>
+              <div class="cycle-meter">
+                <div style="display:flex;justify-content:space-between;">
+                  <span id="cycle-label">T-Cycles: 23,454,204</span>
+                  <span id="bootrom-state" style="color:#ccff2e;">$FF50 UNMAPPED</span>
+                </div>
+                <div class="cycle-bar-track">
+                  <div class="cycle-bar-fill" id="cycle-bar-fill"></div>
+                </div>
+                <p id="milestone-detail" style="margin:0.75rem 0 0;color:var(--text-muted);font-family:var(--font-display);font-size:0.84rem;">
+                  Boot ROM writes $01 to $FF50, unmaps itself, and hands execution cleanly to cartridge entry point $0100.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ARCHITECTURAL DEEP DIVE -->
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head reveal" style="margin-bottom: 2rem;">
+          <div>
+            <p class="eyebrow">HARDWARE SPECIFICATIONS</p>
+            <h2>DMG-01 Memory Map &amp; Silicon Architecture</h2>
+          </div>
+          <p>
+            Bit-exact memory map and hardware register allocation implemented inside ReaBoy's <code>MemoryBus.cs</code> and <code>Sm83Cpu.cs</code>.
+          </p>
+        </div>
+
+        <div class="compat-table-wrap reveal" style="margin-bottom: 3rem;">
+          <table class="compat-table">
+            <thead>
+              <tr>
+                <th style="width:140px;">Memory Range</th>
+                <th style="width:120px;">Size</th>
+                <th>Bus Destination</th>
+                <th>Hardware Role &amp; Emulation Handling</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>$0000–$00FF</code></td>
+                <td>256 B</td>
+                <td><span class="pill pill-sm">Boot ROM / Cart ROM</span></td>
+                <td>Overlayed during boot execution. Unmapped permanently when <code>$01</code> is written to register <code>$FF50</code>.</td>
+              </tr>
+              <tr>
+                <td><code>$0000–$3FFF</code></td>
+                <td>16 KiB</td>
+                <td><span class="pill pill-sm">Cartridge ROM Bank 00</span></td>
+                <td>Fixed ROM bank from cartridge. Contains interrupt vectors ($0040–$0060) and game entry point ($0100).</td>
+              </tr>
+              <tr>
+                <td><code>$4000–$7FFF</code></td>
+                <td>16 KiB</td>
+                <td><span class="pill pill-sm">Switchable ROM Bank</span></td>
+                <td>Bank-switched via cartridge mapper (MBC1, MBC2, MBC3). Controls up to 2 MiB of commercial Game Boy ROM data.</td>
+              </tr>
+              <tr>
+                <td><code>$8000–$9FFF</code></td>
+                <td>8 KiB</td>
+                <td><span class="pill pill-sm">Video RAM (VRAM)</span></td>
+                <td>Character tile patterns ($8000–$97FF) and Background Tile Maps ($9800–$9BFF and $9C00–$9FFF).</td>
+              </tr>
+              <tr>
+                <td><code>$A000–$BFFF</code></td>
+                <td>8 KiB</td>
+                <td><span class="pill pill-sm">External Cartridge RAM</span></td>
+                <td>Battery-backed game save state and scratch RAM. Gated by RAM Enable register ($0A).</td>
+              </tr>
+              <tr>
+                <td><code>$C000–$DFFF</code></td>
+                <td>8 KiB</td>
+                <td><span class="pill pill-sm">Work RAM (WRAM)</span></td>
+                <td>Internal 8 KiB onboard static RAM for game variables, call stacks, and dynamic buffers.</td>
+              </tr>
+              <tr>
+                <td><code>$FE00–$FE9F</code></td>
+                <td>160 B</td>
+                <td><span class="pill pill-sm">Sprite Attribute Table (OAM)</span></td>
+                <td>40 hardware sprite definitions (Y, X, Tile Index, Flags). Evaluated during PPU Mode 2 OAM search.</td>
+              </tr>
+              <tr>
+                <td><code>$FF00–$FF7F</code></td>
+                <td>128 B</td>
+                <td><span class="pill pill-sm">I/O Registers (MMIO)</span></td>
+                <td>Hardware controls for Joypad, Serial, Timers, 4-Channel APU audio, PPU LCDC/STAT, and Boot unmap.</td>
+              </tr>
+              <tr>
+                <td><code>$FF80–$FFFE</code></td>
+                <td>127 B</td>
+                <td><span class="pill pill-sm">High RAM (HRAM)</span></td>
+                <td>Zero-page ultra-fast internal CPU RAM used for OAM DMA transfer routines and high-frequency state.</td>
+              </tr>
+              <tr>
+                <td><code>$FFFF</code></td>
+                <td>1 B</td>
+                <td><span class="pill pill-sm">Interrupt Enable (IE)</span></td>
+                <td>Bitmask enabling VBlank (bit 0), LCD STAT (bit 1), Timer (bit 2), Serial (bit 3), and Joypad (bit 4).</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- COMPATIBILITY CTA BANNER -->
+        <div class="compat-cta-banner reveal">
+          <div class="compat-cta-copy">
+            <h3 class="compat-cta-title">1,592 Game Boy ROMs Tested.<br>Explore the Complete Database.</h3>
+            <p class="compat-cta-desc">
+              Every commercial Game Boy release dynamically executed and verified in ReaBoy's bit-exact CPU and scanline PPU core. Search 1,592+ titles, filter by cartridge mapper, and inspect runtime cycle telemetry.
+            </p>
+            <div class="compat-cta-actions">
+              <a class="btn btn-primary btn-compat-cta" href="compatibility.html">
+                Open Compatibility Lab (1,592+) →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="wrap footer-grid">
+      <div class="footer-col footer-col-brand">
+        <a class="brand" href="index.html">
+          <span class="brand-badge">DMG-01</span>
+          <span class="brand-title">ReaBoy</span>
+        </a>
+        <p class="footer-tagline">
+          Pure 1989 silicon fidelity. The scientific, bit-exact Game Boy emulator for Windows x64.
+        </p>
+        <p class="footer-copy">
+          &copy; 2026 BJ Studios. Built with precision for emulation purists.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Downloads</h4>
+        <ul class="footer-links">
+          <li><a href="https://github.com/bjstudiosgit/reaboy/releases/download/v1.0.1-beta/ReaBoy-v1.0.1-win-x64.zip">ReaBoy v1.0.1 (64-Bit ZIP)</a></li>
+          <li><a href="https://raw.githubusercontent.com/bjstudiosgit/reaboy/main/install.ps1">install.ps1 (CLI Installer)</a></li>
+          <li><a href="https://github.com/ScientificBrad/ReaBoy/releases" target="_blank" rel="noopener">Release Notes (v1.0.1)</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Technical</h4>
+        <ul class="footer-links">
+          <li><a href="development.html">Architecture &amp; Development</a></li>
+          <li><a href="compatibility.html">Compatibility Lab (1,592+ Games)</a></li>
+          <li><a href="manual.html">Complete User Manual</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Open Source</h4>
+        <ul class="footer-links">
+          <li><a href="https://github.com/ScientificBrad/ReaBoy" target="_blank" rel="noopener">GitHub Repository</a></li>
+          <li><a href="https://github.com/ScientificBrad/ReaBoy/issues" target="_blank" rel="noopener">Issue Tracker</a></li>
+          <li><a href="https://github.com/ScientificBrad/ReaBoy/blob/main/LICENSE" target="_blank" rel="noopener">MIT License</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
