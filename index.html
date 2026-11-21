@@ -31,7 +31,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Press+Start+2P&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/styles.css?v=1.2.0">
+  <link rel="stylesheet" href="css/styles.css?v=1.2.1">
 
   <!-- Structured Data (JSON-LD) for Game Boy Emulator SEO -->
   <script type="application/ld+json">
@@ -125,13 +125,16 @@
         <div class="hero-copy">
           <h1>The Perfect Game Boy.<br><span class="highlight">Reverse-Engineered Byte-for-Byte.</span></h1>
           <p class="hero-lead">
-            ReaBoy delivers what other emulators miss: bit-exact hardware fidelity without bloated frontends, missing BIOS errors, or input lag. Reconstructed directly from original 1989 DMG-01 silicon using REA (Reverse Engineer Anything) powered by frontier OpenAI and Astra AI models — featuring a cycle-accurate Sharp SM83 core, scanline PPU timing, pinned 4-channel APU audio, and locked integer scaling. Just drop a ROM and play.
+            ReaBoy delivers what other emulators miss: bit-exact hardware fidelity without bloated frontends, missing BIOS errors, or input lag. Reconstructed directly from original 1989 DMG-01 silicon using REA (Reverse Engineer Anything) powered by frontier OpenAI and Astra AI models.
           </p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="https://github.com/ScientificBrad/ReaBoy/releases/latest/download/ReaBoy-v1.0.1-win-x64.zip">Download Package (.zip) ↓</a>
             <a class="btn btn-secondary" href="manual.html">User Manual →</a>
           </div>
           <div class="hero-meta-block">
+            <p class="hero-hardware-features">
+              Featuring a cycle-accurate Sharp SM83 core, scanline PPU timing, pinned 4-channel APU audio, and locked integer scaling. Just drop a ROM and play.
+            </p>
             <p>
               Complete package with <code>rom/</code> folder &amp; Bootix DMG firmware · Windows 10/11 x64 · Zero admin needed · <strong>v1.0.1 BETA:</strong> Dr. Mario freeze fixed + pinned WinMM audio. <a href="https://github.com/ScientificBrad/ReaBoy/releases/tag/v1.0.1" target="_blank" rel="noopener">Release notes ↗</a>
             </p>
@@ -214,6 +217,66 @@
           </div>
 
 
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 02: 1,592 TESTED ROMS COMPATIBILITY LAB (SECOND SECTION) -->
+    <section class="section compat-section-huge" id="compat-lab-hero">
+      <div class="wrap">
+        <div class="compat-hero-card reveal">
+          <div class="compat-cta-copy">
+            <p class="eyebrow" style="margin-bottom: 0.6rem; letter-spacing: 0.12em;">COMPATIBILITY LAB · 100% COMMERCIAL ROM COVERAGE</p>
+            <h2 class="compat-cta-title">1,592 Game Boy ROMs Tested.<br>Explore the Complete Database.</h2>
+            <p class="compat-cta-desc">
+              Every commercial Game Boy release dynamically executed and verified in ReaBoy's bit-exact CPU and scanline PPU core. Search 1,592+ titles, filter by cartridge mapper (ROM-Only, MBC1, MBC2, MBC3), inspect live cycle telemetry, and test your own ROM collection.
+            </p>
+            <div class="compat-cta-meta-row">
+              <span class="compat-stat-tag"><strong>1,592 / 1,592</strong> Verified (100%)</span>
+              <span class="compat-stat-tag">ROM-Only · MBC1 · MBC2 · MBC3</span>
+              <span class="compat-stat-tag">Cycle-Accurate Sharp SM83</span>
+              <span class="compat-stat-tag">Scanline PPU Telemetry</span>
+            </div>
+            <div class="compat-cta-actions">
+              <a class="btn btn-primary btn-compat-cta" href="compatibility.html">
+                Open Compatibility Lab (1,592+) →
+              </a>
+              <a class="btn btn-secondary btn-compat-sub" href="compatibility.html#browse">
+                Browse Verified Games ↓
+              </a>
+            </div>
+          </div>
+
+          <div class="compat-cta-visual">
+            <!-- 1592-in-1 Physical Cartridge & Screen -->
+            <div class="cart-unit" id="compat-cart" aria-label="1,592-in-1 Verified Multi-Cartridge">
+              <div class="cart-ridges" aria-hidden="true">
+                <span></span><span></span><span></span><span></span><span></span>
+              </div>
+              <div class="cart-scoop" aria-hidden="true"></div>
+              <div class="cart-label">
+                <div class="cart-label-head">
+                  <span class="cart-serial">DMG-1592-TEST</span>
+                  <span class="cart-region">VERIFIED LAB</span>
+                </div>
+                <div class="cart-title-row">
+                  <span class="cart-title-main">1592 IN 1</span>
+                  <span class="cart-title-badge">MULTI-CART</span>
+                </div>
+                <div class="cart-screen-frame">
+                  <div class="cart-screen" id="cart-screen">
+                    <img id="cart-screen-img" src="assets/img/shots/tetris.png" alt="Verified Game Screen" width="320" height="288" loading="lazy">
+                    <div class="cart-screen-scanlines"></div>
+                    <div class="cart-screen-glitch" id="cart-glitch"></div>
+                  </div>
+                </div>
+                <div class="cart-screen-meta">
+                  <div class="cart-game-id" id="cart-game-id">ROM #0001 / 1592</div>
+                  <div class="cart-game-title" id="cart-game-title">Tetris (World)</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -1006,50 +1069,10 @@
           </article>
         </div>
 
-        <!-- COMPATIBILITY LAB CALLOUT BANNER -->
-        <div class="compat-cta-banner reveal">
-          <div class="compat-cta-copy">
-            <h3 class="compat-cta-title">1,592 Game Boy ROMs Tested.<br> Explore the Complete Database.</h3>
-            <p class="compat-cta-desc">
-              Every commercial Game Boy release dynamically executed and verified in ReaBoy's bit-exact CPU and scanline PPU core. Search 1,592+ titles, filter by cartridge mapper (ROM-Only, MBC1, MBC2, MBC3), inspect runtime cycle telemetry, and test your own ROM collection.
-            </p>
-            <div class="compat-cta-actions">
-              <a class="btn btn-primary btn-compat-cta" href="compatibility.html">
-                Open Compatibility Lab (1,592+) →
-              </a>
-            </div>
-          </div>
-
-          <div class="compat-cta-visual">
-            <!-- 1592-in-1 Physical Cartridge & Screen -->
-            <div class="cart-unit" id="compat-cart" aria-label="1,592-in-1 Verified Multi-Cartridge">
-              <div class="cart-ridges" aria-hidden="true">
-                <span></span><span></span><span></span><span></span><span></span>
-              </div>
-              <div class="cart-scoop" aria-hidden="true"></div>
-              <div class="cart-label">
-                <div class="cart-label-head">
-                  <span class="cart-serial">DMG-1592-TEST</span>
-                  <span class="cart-region">VERIFIED LAB</span>
-                </div>
-                <div class="cart-title-row">
-                  <span class="cart-title-main">1592 IN 1</span>
-                  <span class="cart-title-badge">MULTI-CART</span>
-                </div>
-                <div class="cart-screen-frame">
-                  <div class="cart-screen" id="cart-screen">
-                    <img id="cart-screen-img" src="assets/img/shots/tetris.png" alt="Verified Game Screen" width="320" height="288" loading="lazy">
-                    <div class="cart-screen-scanlines"></div>
-                    <div class="cart-screen-glitch" id="cart-glitch"></div>
-                  </div>
-                </div>
-                <div class="cart-screen-meta">
-                  <div class="cart-game-id" id="cart-game-id">ROM #0001 / 1592</div>
-                  <div class="cart-game-title" id="cart-game-title">Tetris (World)</div>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="showcase-more-cta reveal" style="text-align: center; margin-top: 3rem; margin-bottom: 1.5rem;">
+          <a class="btn btn-primary" href="compatibility.html">
+            Explore All 1,592+ Verified Games in the Compatibility Lab →
+          </a>
         </div>
       </div>
     </section>
