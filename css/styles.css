@@ -1248,6 +1248,16 @@ a:hover {
 }
 
 /* --- Unified Single Setup Card --- */
+.install-head-title {
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .install-head-title {
+    white-space: normal;
+  }
+}
+
 .install-unified-box {
   background: var(--bg-card);
   border: 1px solid var(--border);
