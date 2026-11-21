@@ -123,7 +123,7 @@
         <div class="hero-copy">
           <h1>100% Bit-Exact Accuracy.<br><span class="highlight">Pure 1989 Game Boy.</span></h1>
           <p class="hero-lead">
-            Every instruction, scanline, and audio register reconstructed directly from original DMG-01 hardware. Powered by a bit-exact Sharp SM83 CPU core executing 23.4M+ cycles to verified $0100 handover, cycle-accurate scanline PPU timing, and pinned four-channel APU audio — in a nutshell, a perfect Game Boy.
+            Every instruction, scanline, and audio register reconstructed directly from original 1989 silicon using REA (Reverse Engineer Anything) methodology. Driven by a bit-exact Sharp SM83 CPU core statically decoded from byte $0000 through 23.4M+ cycles to verified $0100 handover, cycle-accurate scanline PPU timing, and pinned four-channel APU audio — pure, uncompromised Game Boy precision.
           </p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="https://github.com/ScientificBrad/ReaBoy/releases/latest/download/ReaBoy-v1.0.1-win-x64.zip">Download Package (.zip) ↓</a>
@@ -223,7 +223,7 @@
             <h2>One complete package.<br> Instant setup.</h2>
           </div>
           <p>
-            We engineered ReaBoy so you never fight runtime installers, missing DLLs, or firmware dumps. The release package contains everything you need: <code>ReaBoy.exe</code>, the <code>rom/</code> directory with CC0 Bootix DMG firmware, and documentation.
+            No runtime installers, missing DLLs, or firmware dumps. The release package contains everything needed to play immediately: <code>ReaBoy.exe</code>, the <code>rom/</code> directory with CC0 Bootix DMG firmware, and documentation.
           </p>
         </div>
 
@@ -330,7 +330,7 @@
               <p class="eyebrow" style="margin-bottom:0.4rem;">COMPLETE USER MANUAL &amp; CLI</p>
               <h3 style="margin:0 0 0.75rem;">Need the full technical guide?</h3>
               <p style="color:var(--text-muted);margin:0 0 1rem;">
-                Our complete User Manual covers custom 2-key button remapping, Bootix vs original Nintendo boot ROM override priority, headless benchmarking flags (<code>--headless --frames 600</code>), battery save locations, and our honest BETA compatibility roadmap.
+                The complete User Manual covers custom 2-key button remapping, Bootix vs original Nintendo boot ROM override priority, headless benchmarking flags (<code>--headless --frames 600</code>), battery save locations, and the honest BETA compatibility roadmap.
               </p>
             </div>
             <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
@@ -348,10 +348,10 @@
         <div class="section-head reveal">
           <div>
             <p class="eyebrow">SCIENTIFIC ENGINEERING · PROJECT 007</p>
-            <h2>How we built ReaBoy from<br>256 bytes of 1989 silicon.</h2>
+            <h2>Built from 256 bytes<br>of original 1989 silicon.</h2>
           </div>
           <p>
-            Built with our <strong>REA (Reverse Engineer Anything)</strong> methodology: we started at byte <code>$0000</code> of the canonical 256-byte DMG-01 boot ROM, statically decoded all <strong>200 executable code bytes</strong> (121 Sharp SM83 instructions across 38 basic blocks and 57 CFG edges) and <strong>56 embedded data bytes</strong>, audited all 12 memory-mapped I/O registers (<code>$FF11–$FF50</code>), and reassembled the entire image with <strong>RGBDS v1.0.4</strong> to prove <strong>0 byte mismatches</strong> and an identical SHA-256 hash before executing a single instruction in our C# SM83 core.
+            Developed through byte-level reverse engineering: starting at byte <code>$0000</code> of the canonical DMG-01 boot ROM, decoding all 121 Sharp SM83 instructions across 38 basic blocks, and auditing every memory-mapped I/O register to prove 0 byte mismatches before executing a single instruction.
           </p>
         </div>
 
@@ -359,7 +359,7 @@
           <article class="phase-card">
             <span class="phase-num">PHASE 01 · STATIC REVERSE ENGINEERING</span>
             <h3>Byte-Identical Boot Reconstruction</h3>
-            <p>We wrote a custom Sharp SM83 disassembler and control-flow graph builder to account for every single byte of the 256-byte DMG-01 boot ROM — then reassembled it with RGBDS v1.0.4 and proved 0 byte mismatches. Embedded in ReaBoy; also available standalone as <a href="https://github.com/ScientificBrad/ReaBoy/releases/latest/download/dmg_boot.bin" style="text-decoration:underline; font-weight:600; color:inherit;">Bootix DMG v1.2 (256 B) ↓</a>.</p>
+            <p>A custom Sharp SM83 disassembler and control-flow graph builder accounted for every single byte of the 256-byte DMG-01 boot ROM — then reassembled it with RGBDS v1.0.4 and proved 0 byte mismatches. Embedded in ReaBoy; also available standalone as <a href="https://github.com/ScientificBrad/ReaBoy/releases/latest/download/dmg_boot.bin" style="text-decoration:underline; font-weight:600; color:inherit;">Bootix DMG v1.2 (256 B) ↓</a>.</p>
             <div class="stat-pills">
               <span>256 / 256 bytes</span>
               <span>121 SM83 opcodes</span>
@@ -372,7 +372,7 @@
           <article class="phase-card">
             <span class="phase-num">PHASE 02 · DYNAMIC CPU VERIFICATION</span>
             <h3>Bit-Exact Handover at $0100</h3>
-            <p>Our C# Sharp SM83 core and memory bus execute the full boot sequence from <code>$0000</code> to <code>$FF50</code> unmapping — matching every single canonical DMG register and trapping corrupted logos/checksums in their hardware lockouts.</p>
+            <p>The C# Sharp SM83 core and memory bus execute the full boot sequence from <code>$0000</code> to <code>$FF50</code> unmapping — matching every single canonical DMG register and trapping corrupted logos/checksums in their hardware lockouts.</p>
             <div class="stat-pills">
               <span>2,206,435 instr</span>
               <span>23,454,204 T-cycles</span>
@@ -384,7 +384,7 @@
           <article class="phase-card">
             <span class="phase-num">PHASE 03 · PPU, APU &amp; WINDOWS HOST</span>
             <h3>Rock-Solid Desktop Architecture</h3>
-            <p>We paired the core with a scanline-timed 160×144 PPU (including the v1.0.1 LCD-off STAT Mode 0 fix for Dr. Mario), a 4-channel APU with pinned WinMM audio buffers, and 59 automated Windows UI integration checks.</p>
+            <p>Paired with a scanline-timed 160×144 PPU (including the v1.0.1 LCD-off STAT Mode 0 fix for Dr. Mario), a 4-channel APU with pinned WinMM audio buffers, and 59 automated Windows UI integration checks.</p>
             <div class="stat-pills">
               <span>4-Ch APU</span>
               <span>STAT Mode 0 fix</span>
@@ -518,7 +518,7 @@
             <h2>24 Handheld Masterpieces.<br>Captured live in ReaBoy.</h2>
           </div>
           <p>
-            Real gameplay recordings captured straight from ReaBoy. Watch 24 legendary titles in action below, or visit our Compatibility Lab for the complete library of <strong>1,529 tested Game Boy ROMs</strong>.
+            Real gameplay recordings captured straight from ReaBoy. Watch 24 legendary titles in action below, or visit the Compatibility Lab for the complete library of <strong>1,529 tested Game Boy ROMs</strong>.
           </p>
         </div>
 
