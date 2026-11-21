@@ -1939,57 +1939,105 @@ html[data-theme="classic"] .compat-cta-banner {
   margin-bottom: 0.2rem;
 }
 
-/* 1529-in-1 Game Boy Cartridge Graphic */
+/* 1592-in-1 Game Boy Cartridge Graphic */
 .compat-cta-visual {
   display: flex;
   justify-content: center;
   align-items: center;
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.22));
 }
 
 .cart-unit {
   width: 100%;
-  max-width: 290px;
+  max-width: 275px;
   background: linear-gradient(170deg, #dfddd3 0%, #cfcdc3 40%, #bfbcb0 100%);
-  border-radius: 6px 6px 14px 14px;
-  border: 2px solid #9f9c90;
-  padding: 12px 14px 16px;
-  box-shadow:
-    inset 1px 1px 0 rgba(255, 255, 255, 0.8),
-    inset -2px -2px 0 rgba(0, 0, 0, 0.18),
-    6px 8px 24px rgba(0, 0, 0, 0.22);
+  padding: 12px 14px 14px;
   position: relative;
   font-family: var(--font-sans);
   color: #1a1a1a;
   user-select: none;
+  cursor: pointer;
+  /* Authentic DMG top-right locking notch step & bottom rounded chamfers */
+  clip-path: polygon(
+    0% 4px,
+    4px 0%,
+    calc(100% - 22px) 0%,
+    calc(100% - 22px) 14px,
+    100% 14px,
+    100% calc(100% - 12px),
+    calc(100% - 12px) 100%,
+    12px 100%,
+    0% calc(100% - 12px)
+  );
 }
 
-/* Symmetrical rounded top */
-
-/* 5 Top ridges */
-.cart-ridges {
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-  margin: 0 auto 8px;
-  width: 80%;
+/* Left side grip ribs (matching physical cartridge) */
+.cart-unit::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 36px;
+  width: 5px;
+  height: 44px;
+  background: repeating-linear-gradient(
+    180deg,
+    #9f9c90 0,
+    #9f9c90 2px,
+    transparent 2px,
+    transparent 9px
+  );
+  border-right: 1px solid rgba(255, 255, 255, 0.4);
 }
 
-.cart-ridges span {
-  display: block;
-  height: 2px;
-  background: #9f9c90;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-  border-radius: 1px;
+/* Right side grip ribs (below the top-right notch) */
+.cart-unit::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 36px;
+  width: 5px;
+  height: 44px;
+  background: repeating-linear-gradient(
+    180deg,
+    #9f9c90 0,
+    #9f9c90 2px,
+    transparent 2px,
+    transparent 9px
+  );
+  border-left: 1px solid rgba(0, 0, 0, 0.15);
 }
 
-/* Scoop */
+/* Scoop at top */
 .cart-scoop {
-  width: 70px;
-  height: 10px;
+  width: 80%;
+  height: 18px;
   margin: 0 auto 10px;
-  background: #b0aca0;
-  border-radius: 0 0 14px 14px;
-  box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(180deg, #b0aca0 0%, #c5c1b4 100%);
+  border-radius: 4px 4px 10px 10px;
+  box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.28), 0 1px 0 rgba(255, 255, 255, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-scoop-text {
+  font-family: var(--font-display, "Space Grotesk", sans-serif);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: #726f64;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6), 0 -1px 0 rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+}
+
+/* Embossed downward insertion arrow */
+.cart-arrow {
+  text-align: center;
+  font-size: 0.72rem;
+  color: #939084;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6), 0 -1px 0 rgba(0, 0, 0, 0.2);
+  margin-top: 6px;
+  line-height: 1;
 }
 
 /* Embossed Cartridge Brand */
