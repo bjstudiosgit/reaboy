@@ -1963,23 +1963,7 @@ html[data-theme="classic"] .compat-cta-banner {
   user-select: none;
 }
 
-/* Notched top corner */
-.cart-unit::before {
-  content: "";
-  position: absolute;
-  top: -2px;
-  right: -2px;
-  width: 24px;
-  height: 24px;
-  background: var(--bg);
-  border-left: 2px solid #9f9c90;
-  border-bottom: 2px solid #9f9c90;
-  border-bottom-left-radius: 6px;
-}
-
-html[data-theme="classic"] .cart-unit::before {
-  background: #f3f5e9;
-}
+/* Symmetrical rounded top */
 
 /* 5 Top ridges */
 .cart-ridges {
