@@ -428,32 +428,51 @@
     });
   }
 
-  // Interactive Tactile Game Boy Console Click -> Play Boot Chime
+  // Interactive Tactile Game Boy Console Click -> Play Boot Chime & Switch Playable Games!
   const dmgConsole = $('#dmg-console');
+  const dmgPlaylist = [
+    { title: "Tetris (1989)", video: "assets/video/tetris.mp4?v=1.1.0", poster: "assets/img/shots/tetris.png" },
+    { title: "Super Mario Land (1989)", video: "assets/video/super-mario-land.mp4", poster: "assets/img/shots/super-mario-land.png" },
+    { title: "The Legend of Zelda: Link's Awakening (1993)", video: "assets/video/zelda-links-awakening.mp4", poster: "assets/img/shots/legend-of-zelda-the-link-s-awakening.png" },
+    { title: "Pokémon Red (1996)", video: "assets/video/pokemon-red.mp4", poster: "assets/img/shots/pokemon-red.png" },
+    { title: "Metroid II: Return of Samus (1991)", video: "assets/video/metroid-2.mp4", poster: "assets/img/shots/metroid-ii-return-of-samus.png" },
+    { title: "Kirby's Dream Land (1992)", video: "assets/video/kirbys-dream-land.mp4", poster: "assets/img/shots/kirby-s-dream-land.png" },
+    { title: "Donkey Kong '94 (1994)", video: "assets/video/donkey-kong.mp4", poster: "assets/img/shots/donkey-kong.png" },
+    { title: "Dr. Mario (1990)", video: "assets/video/dr-mario.mp4", poster: "assets/img/shots/dr-mario.png" },
+    { title: "Mega Man (1991)", video: "assets/video/mega-man.mp4", poster: "assets/img/shots/mega-man.png" },
+    { title: "DuckTales (1990)", video: "assets/video/ducktales.mp4", poster: "assets/img/shots/ducktales.png" }
+  ];
+  let dmgGameIdx = 0;
+
+  function switchDmgGame(step = 1) {
+    if (!dmgVideo) return;
+    dmgGameIdx = (dmgGameIdx + step + dmgPlaylist.length) % dmgPlaylist.length;
+    const game = dmgPlaylist[dmgGameIdx];
+    
+    dmgVideo.src = game.video;
+    dmgVideo.poster = game.poster;
+    dmgVideo.currentTime = 0;
+    dmgVideo.play().catch(() => {});
+    showToast(`🎮 ReaBoy: ${game.title}`);
+  }
+
   if (dmgConsole) {
-    dmgConsole.setAttribute('title', 'Click to play the 1989 Nintendo DMG boot chime!');
+    dmgConsole.setAttribute('title', 'Click to switch games and hear authentic 1989 DMG sounds!');
     dmgConsole.addEventListener('click', (e) => {
-      // If user clicked one of the directional/action buttons, let button handler run
       const isControl = e.target.closest('[data-gb-btn]');
       if (!isControl) {
         playBootChime();
-        showToast('♪ Nintendo DMG Boot Chime ($FF13/$FF14)');
-
-        // Replay boot animation on screen in sync with chime
-        if (dmgVideo && !canvasMode) {
-          try {
-            dmgVideo.currentTime = 0;
-            dmgVideo.play().catch(() => {});
-          } catch (_) {}
-        } else if (canvasMode) {
-          bootY = -14;
-        }
+        switchDmgGame(1);
       }
-
-      // Haptic tactile press animation
       dmgConsole.classList.add('dmg-active');
       setTimeout(() => dmgConsole.classList.remove('dmg-active'), 160);
     });
+
+    if (dmgVideo) {
+      dmgVideo.addEventListener('ended', () => {
+        switchDmgGame(1);
+      });
+    }
   }
 
   // Tactile Hardware Buttons
@@ -461,17 +480,16 @@
     btn.addEventListener('click', () => {
       const name = btn.dataset.gbBtn;
       playButtonTone(name);
-      lastBtnText = `INPUT: ${name} PRESSED`;
 
-      // Start button also replays boot chime
       if (name === 'START') {
         playBootChime();
-        showToast('♪ Nintendo Boot Chime');
-      }
-
-      if (!canvasMode && modeCanvasBtn) {
-        modeCanvasBtn.click();
-        bootY = 58;
+        switchDmgGame(1);
+      } else if (name === 'SELECT' || name === 'RIGHT' || name === 'A') {
+        switchDmgGame(1);
+      } else if (name === 'LEFT' || name === 'B') {
+        switchDmgGame(-1);
+      } else {
+        switchDmgGame(1);
       }
     });
   });
@@ -1134,9 +1152,9 @@
       .then(data => {
         if (Array.isArray(data) && data.length > 0) {
           gamesList = data.map(g => ({
-            id: g.id,
-            title: g.title,
-            shot: `assets/img/shots/${g.slug}.png`
+            id: String(g.Id || g.id || '').padStart(4, '0'),
+            title: g.Title || g.title || 'Game Boy Title',
+            shot: `assets/img/shots/${g.Slug || g.slug}.png`
           }));
           for (let i = 1; i <= 4; i++) {
             preload(gamesList[(currentCartIdx + i) % gamesList.length].shot);
