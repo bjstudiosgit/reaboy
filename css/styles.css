@@ -1294,10 +1294,11 @@ a:hover {
 }
 
 .install-unified-box {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  padding: 2rem;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -1307,8 +1308,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  border-bottom: 1px solid var(--border);
-  padding-bottom: 1.25rem;
+  padding-bottom: 0.5rem;
 }
 
 .install-box-header h3 {
@@ -1385,8 +1385,8 @@ a:hover {
 
 .install-box-footer {
   text-align: center;
-  padding-top: 1rem;
-  border-top: 1px solid var(--border);
+  padding-top: 0.5rem;
+  border-top: none;
   font-size: 0.85rem;
 }
 
@@ -1444,9 +1444,9 @@ a:hover {
   align-items: center;
   justify-content: flex-start;
   gap: 0.85rem 1.5rem;
-  margin-top: 1.75rem;
+  margin-top: 1.25rem;
   padding: 0.85rem 1.25rem;
-  background: rgba(155, 188, 15, 0.04);
+  background: transparent;
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   font-size: 0.84rem;
@@ -2820,13 +2820,14 @@ html[data-theme="classic"] .apu-btn {
 }
 
 html[data-theme="classic"] .install-unified-box {
-  background: #f3f5e9;
-  border-color: #c2ccb8;
-  box-shadow: 0 3px 0 rgba(21, 59, 42, 0.08);
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
 }
 
 html[data-theme="classic"] .install-box-header {
-  border-bottom-color: #d8e2d0;
+  border-bottom: none;
 }
 
 html[data-theme="classic"] .install-box-header h3 {
@@ -2864,7 +2865,7 @@ html[data-theme="classic"] .method-meta {
 }
 
 html[data-theme="classic"] .install-box-footer {
-  border-top-color: #d8e2d0;
+  border-top: none;
 }
 
 html[data-theme="classic"] .install-box-footer a {
@@ -2881,7 +2882,7 @@ html[data-theme="classic"] .term-command code {
 }
 
 html[data-theme="classic"] .install-specs-bar {
-  background: #eaeee1;
+  background: transparent;
   border-color: #c5d0bc;
   color: #3b5c49;
 }
