@@ -2295,6 +2295,33 @@ html[data-theme="classic"] .cart-unit::before {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
+.feature-img-wrap {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 1.15rem;
+  border: 1px solid var(--border);
+  background: #101a14;
+}
+
+.feature-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.25s ease;
+}
+
+.feature-card:hover .feature-img-wrap img {
+  transform: scale(1.03);
+}
+
+html[data-theme="classic"] .feature-img-wrap {
+  border-color: #ced6c4;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
 .feature-card .num {
   display: inline-block;
   font-family: var(--font-mono);
