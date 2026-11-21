@@ -1016,8 +1016,8 @@
   }
 
   // ------------------------------------------------------------
-  // 1529-in-1 Verified Multi-Cartridge Screen Cycler
-  // Plays dynamically from the complete 1,529-title compatibility list!
+  // 1592-in-1 Verified Multi-Cartridge Screen Cycler
+  // Plays dynamically from the complete 1,592-title compatibility list!
   // ------------------------------------------------------------
   const cartImg = $('#cart-screen-img');
   const cartId = $('#cart-game-id');
@@ -1037,7 +1037,7 @@
       { id: '0680', title: 'Castlevania: The Adventure', shot: 'assets/img/shots/castlevania-the-adventure.png' },
       { id: '0924', title: "Kirby's Dream Land", shot: 'assets/img/shots/kirby-s-dream-land.png' },
       { id: '1280', title: "Donkey Kong '94", shot: 'assets/img/shots/donkey-kong.png' },
-      { id: '1529', title: 'Dr. Mario', shot: 'assets/img/shots/dr-mario.png' }
+      { id: '1592', title: 'Dr. Mario', shot: 'assets/img/shots/dr-mario.png' }
     ];
 
     let currentCartIdx = 0;
