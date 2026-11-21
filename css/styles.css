@@ -1743,7 +1743,7 @@ html[data-theme="classic"] .compat-cta-banner {
 }
 
 .compat-cta-title {
-  margin: 0.8rem 0 0.6rem;
+  margin: 0 0 0.85rem;
   font-size: clamp(1.4rem, 2.2vw, 1.85rem);
   font-weight: 700;
   line-height: 1.25;
