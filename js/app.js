@@ -55,6 +55,26 @@
     revealEls.forEach((el) => el.classList.add('visible'));
   }
 
+  // --- Viewport-Aware Lazy Video Playback ---
+  const lazyVideos = $$('.top12-card video');
+  if ('IntersectionObserver' in window && lazyVideos.length) {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const videoObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const video = entry.target;
+          if (entry.isIntersecting && !prefersReducedMotion) {
+            video.play().catch(() => {});
+          } else {
+            video.pause();
+          }
+        });
+      },
+      { rootMargin: '120px 0px', threshold: 0.15 }
+    );
+    lazyVideos.forEach((v) => videoObserver.observe(v));
+  }
+
   // --- One-Click Copy Buttons ---
   $$('[data-copy-target]').forEach((btn) => {
     btn.addEventListener('click', async () => {
