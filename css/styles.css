@@ -1859,7 +1859,7 @@ html[data-theme="classic"] .cart-unit::before {
 .cart-scoop {
   width: 70px;
   height: 10px;
-  margin: 0 auto 6px;
+  margin: 0 auto 10px;
   background: #b0aca0;
   border-radius: 0 0 14px 14px;
   box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.25);
