@@ -908,30 +908,44 @@
   ];
 
   let verifiedLibrary = [];
-  let currentLimit = 40;
+  let currentLimit = 50;
   let activeAlpha = null;
 
   fetch('assets/verified_games.json')
-    .then(r => r.json())
-    .then(data => {
-      verifiedLibrary = data.map(g => ({
-        title: g.title,
-        mapper: g.mapper,
-        status: 'PASS',
-        slug: g.slug || g.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''),
-        notes: `Verified ${g.sizeKb} KiB ROM (${g.mapper}) · Dynamic 240-frame hardware execution PASS.`
-      }));
+    .then((r) => {
+      if (!r.ok) throw new Error(`HTTP ${r.status}`);
+      return r.json();
+    })
+    .then((data) => {
+      verifiedLibrary = data.map((g) => {
+        const title = g.Title || g.title || '';
+        const mapper = g.Mapper || g.mapper || 'ROM-Only';
+        const sizeKb = g.SizeKb || g.sizeKb || 32;
+        const status = g.Status || g.status || 'PASS';
+        const slug = g.Slug || g.slug || title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+        return {
+          title,
+          mapper,
+          sizeKb,
+          status,
+          slug,
+          notes: `Verified ${sizeKb} KiB ROM (${mapper}) · Dynamic 240-frame hardware execution PASS.`,
+        };
+      });
       renderCompatTable();
     })
-    .catch(() => {});
+    .catch((err) => {
+      console.warn('Could not load verified_games.json, using default library', err);
+    });
 
   const STORAGE_KEY = 'reaboy_beta_tests_v1';
   function loadGames() {
+    const base = verifiedLibrary.length > 0 ? verifiedLibrary : DEFAULT_GAMES;
     try {
       const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
-      return [...DEFAULT_GAMES, ...saved, ...verifiedLibrary];
+      return [...saved, ...base];
     } catch {
-      return [...DEFAULT_GAMES, ...verifiedLibrary];
+      return [...base];
     }
   }
 
@@ -998,13 +1012,22 @@
 
   if (compatTbody) {
     renderCompatTable();
-    compatSearch?.addEventListener('input', renderCompatTable);
+    compatSearch?.addEventListener('input', () => {
+      currentLimit = 50;
+      renderCompatTable();
+    });
 
     $$('[data-filter]').forEach((btn) => {
       btn.addEventListener('click', () => {
         $$('[data-filter]').forEach((b) => b.classList.remove('active'));
         btn.classList.add('active');
         activeFilter = btn.dataset.filter;
+        if (activeFilter === 'ALL') {
+          // Reset alpha filter when "All" is clicked
+          activeAlpha = null;
+          $$('[data-alpha]').forEach((b) => b.classList.remove('active'));
+        }
+        currentLimit = 50;
         renderCompatTable();
       });
     });
@@ -1015,9 +1038,11 @@
         $$('[data-alpha]').forEach((b) => b.classList.remove('active'));
         if (isCurrent) {
           activeAlpha = null;
+          $('[data-filter="ALL"]')?.classList.add('active');
         } else {
           btn.classList.add('active');
           activeAlpha = btn.dataset.alpha;
+          $('[data-filter="ALL"]')?.classList.remove('active');
         }
         currentLimit = 50;
         renderCompatTable();
@@ -1033,7 +1058,8 @@
     $('#show-all-btn')?.addEventListener('click', () => {
       currentLimit = 9999;
       renderCompatTable();
-      showToast('Showing all ' + verifiedGamesData.length + ' verified games');
+      const allCount = loadGames().length;
+      showToast('Showing all ' + allCount.toLocaleString() + ' verified games');
     });
 
     $('#beta-log-form')?.addEventListener('submit', (e) => {
