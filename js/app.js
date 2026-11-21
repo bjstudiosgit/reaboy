@@ -442,6 +442,11 @@
     { title: "Mega Man (1991)", video: "assets/video/mega-man.mp4", poster: "assets/img/shots/mega-man.png" },
     { title: "DuckTales (1990)", video: "assets/video/ducktales.mp4", poster: "assets/img/shots/ducktales.png" }
   ];
+  // Randomize Hero Game Boy playlist so every session starts fresh
+  for (let i = dmgPlaylist.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [dmgPlaylist[i], dmgPlaylist[j]] = [dmgPlaylist[j], dmgPlaylist[i]];
+  }
   let dmgGameIdx = 0;
 
   function switchDmgGame(step = 1) {
@@ -1092,6 +1097,11 @@
       { id: '1280', title: "Donkey Kong '94", shot: 'assets/img/shots/donkey-kong.png' },
       { id: '1592', title: 'Dr. Mario', shot: 'assets/img/shots/dr-mario.png' }
     ];
+    // Randomize initial fallback games
+    for (let i = gamesList.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [gamesList[i], gamesList[j]] = [gamesList[j], gamesList[i]];
+    }
 
     let currentCartIdx = 0;
     let cycleTimer = null;
@@ -1146,16 +1156,23 @@
       });
     }
 
-    // Load full verified compatibility database (1,430 vivid gameplay screens)
+    // Load full verified compatibility database (1,430 vivid gameplay screens) and randomize
     fetch('assets/vivid_games.json')
       .then(res => res.json())
       .then(data => {
         if (Array.isArray(data) && data.length > 0) {
-          gamesList = data.map(g => ({
+          const raw = data.map(g => ({
             id: String(g.Id || g.id || '').padStart(4, '0'),
             title: g.Title || g.title || 'Game Boy Title',
             shot: `assets/img/shots/${g.Slug || g.slug}.png`
           }));
+          // Fisher-Yates random shuffle of the entire 1,592 game collection
+          for (let i = raw.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [raw[i], raw[j]] = [raw[j], raw[i]];
+          }
+          gamesList = raw;
+          currentCartIdx = 0;
           for (let i = 1; i <= 4; i++) {
             preload(gamesList[(currentCartIdx + i) % gamesList.length].shot);
           }

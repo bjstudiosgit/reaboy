@@ -1887,56 +1887,46 @@ html[data-theme="classic"] .compat-cta-banner {
   padding: 0.75rem 1.1rem;
 }
 
-/* Second Section: Prominent Compatibility Lab Showcase */
+/* Second Section: Prominent Compatibility Lab Showcase (Clean Open Layout) */
 .compat-section-huge {
-  padding: 3.5rem 0;
+  padding: 4rem 0 3.5rem;
   border-bottom: 1px solid var(--border);
-  background: var(--bg-alt);
 }
 
-.compat-hero-card {
+.compat-hero-grid {
   display: grid;
   grid-template-columns: 1.25fr 0.85fr;
   align-items: center;
-  gap: 3.5rem;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  padding: 3.2rem 3.5rem;
-  box-shadow: 6px 6px 0 var(--border);
+  gap: 4rem;
   position: relative;
-  overflow: hidden;
 }
 
-html[data-theme="classic"] .compat-hero-card {
-  background: #f7f9ee;
-  border-color: #153b2a;
-  box-shadow: 6px 6px 0 #153b2a;
+.compat-hero-grid .compat-cta-title {
+  font-size: clamp(2rem, 3.2vw, 2.7rem);
+  font-weight: 700;
+  line-height: 1.12;
+  margin-bottom: 1.1rem;
+  color: var(--ink);
 }
 
-.compat-hero-card .compat-cta-title {
-  font-size: clamp(1.8rem, 2.8vw, 2.4rem);
-  line-height: 1.15;
-  margin-bottom: 1rem;
-}
-
-.compat-hero-card .compat-cta-desc {
+.compat-hero-grid .compat-cta-desc {
   font-size: 1.05rem;
   line-height: 1.65;
   max-width: 62ch;
-  margin-bottom: 1.4rem;
+  margin-bottom: 1.5rem;
+  color: var(--ink-secondary);
 }
 
-.compat-hero-card .cart-unit {
-  max-width: 350px;
+.compat-hero-grid .cart-unit {
+  max-width: 360px;
   padding: 16px 18px 22px;
 }
 
-.compat-hero-card .cart-title-main {
+.compat-hero-grid .cart-title-main {
   font-size: 1.35rem;
 }
 
-.compat-hero-card .cart-screen-frame {
+.compat-hero-grid .cart-screen-frame {
   padding: 6px;
   border-radius: 6px;
   margin-bottom: 10px;
@@ -1982,14 +1972,14 @@ html[data-theme="classic"] .compat-hero-card {
   right: -2px;
   width: 24px;
   height: 24px;
-  background: var(--bg-card);
+  background: var(--bg);
   border-left: 2px solid #9f9c90;
   border-bottom: 2px solid #9f9c90;
   border-bottom-left-radius: 6px;
 }
 
 html[data-theme="classic"] .cart-unit::before {
-  background: #f7f9ee;
+  background: #f3f5e9;
 }
 
 /* 5 Top ridges */
@@ -2182,12 +2172,11 @@ html[data-theme="classic"] .cart-unit::before {
 
 @media (max-width: 900px) {
   .compat-cta-banner,
-  .compat-hero-card {
+  .compat-hero-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
-    padding: 2rem 1.6rem;
   }
-  .compat-hero-card .cart-unit {
+  .compat-hero-grid .cart-unit {
     max-width: 300px;
   }
   .compat-cta-visual {
