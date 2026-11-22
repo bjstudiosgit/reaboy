@@ -125,11 +125,11 @@
         <div class="hero-copy">
           <h1>The Game Boy &amp; Color Emulator Built from Silicon.</h1>
           <p class="hero-lead">
-            ReaBoy now runs both original Game Boy (DMG-01) and Game Boy Color (CGB) games with machine-cycle-accurate SM83 execution, a dot-accurate Pixel FIFO PPU, 2× double-speed CPU, and bundled Bootix firmware. 1,592 original Game Boy games 100% playable, plus full CGB colour library support with zero installation or admin rights required.
+            ReaBoy runs both original Game Boy (DMG-01) and Game Boy Color (CGB) games with machine-cycle-accurate SM83 execution, a dot-accurate Pixel FIFO PPU, 2× double-speed CPU, and bundled Bootix firmware. 1,592 original Game Boy games 100% playable, plus full CGB colour library support with zero installation or admin rights required.
           </p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="https://github.com/ScientificBrad/ReaBoy/releases/latest/download/ReaBoy-v1.0.1-win-x64.zip">Download Package (.zip) ↓</a>
-            <a class="btn btn-secondary" href="comparison.html">View Architecture Upgrade →</a>
+            <a class="btn btn-secondary" href="comparison.html">Architecture &amp; Comparison →</a>
           </div>
           <div class="hero-meta-block">
             <p class="hero-hardware-features">
@@ -278,16 +278,16 @@
       </div>
     </section>
 
-    <!-- BREAKTHROUGH UPGRADE MATRIX -->
+    <!-- DUAL HARDWARE ARCHITECTURE MATRIX -->
     <section class="section" style="padding: 2.5rem 0 1rem;">
       <div class="wrap">
         <div class="section-head reveal" style="margin-bottom: 1.5rem;">
           <div>
-            <p class="eyebrow">ARCHITECTURAL BREAKTHROUGH · REABOY EVOLUTION</p>
-            <h2 style="font-size:clamp(1.5rem,2.5vw,2rem);margin:0 0 0.5rem;">From 1989 Silicon to Full Color Architecture</h2>
+            <p class="eyebrow">DUAL HARDWARE ARCHITECTURE · SYSTEM SPECIFICATIONS</p>
+            <h2 style="font-size:clamp(1.5rem,2.5vw,2rem);margin:0 0 0.5rem;">Complete Game Boy &amp; Color Hardware Architecture</h2>
           </div>
           <p style="font-size:0.95rem;color:var(--text-secondary);max-width:760px;margin:0;">
-            ReaBoy has evolved into a unified dual-system emulator. Powered by machine-cycle SM83 CPU interleaving and a dot-accurate dual Pixel FIFO PPU, it runs both original Game Boy (DMG) and Game Boy Color (CGB) titles with 10× greater automated test coverage.
+            Powered by machine-cycle SM83 CPU interleaving and a dot-accurate dual Pixel FIFO PPU, ReaBoy runs both original Game Boy (DMG) and Game Boy Color (CGB) titles with verified accuracy and zero heap allocations.
           </p>
         </div>
 
@@ -295,61 +295,61 @@
           <table class="compat-table" style="width:100%; min-width: 620px;">
             <thead>
               <tr>
-                <th style="width:34%;">Capability</th>
-                <th style="width:33%;">ReaBoy v1.0</th>
-                <th style="width:33%; background:rgba(47,224,117,0.08); color:var(--gb-0); font-weight:700;">New ReaBoy (v2.0)</th>
+                <th style="width:34%;">Hardware Capability</th>
+                <th style="width:33%;">Original Game Boy (DMG)</th>
+                <th style="width:33%; background:rgba(47,224,117,0.08); color:var(--gb-0); font-weight:700;">Game Boy Color (CGB)</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><strong>Original Game Boy (DMG)</strong></td>
-                <td>Yes, with limitations</td>
-                <td style="background:rgba(47,224,117,0.04);"><span class="verdict-badge verdict-pass">YES</span> · 1,592 Titles Playable</td>
+                <td><strong>Hardware Model</strong></td>
+                <td>DMG-01 Monochrome (1989)</td>
+                <td style="background:rgba(47,224,117,0.04);"><span class="verdict-badge verdict-pass">CGB-001</span> · Dual-Mode &amp; CGB-Only</td>
               </tr>
               <tr>
-                <td><strong>Game Boy Color (CGB)</strong></td>
-                <td><span class="verdict-badge verdict-warn">NO</span></td>
-                <td style="background:rgba(47,224,117,0.04);"><span class="verdict-badge verdict-pass">YES</span> · Full CGB Dual-Speed &amp; Palettes</td>
+                <td><strong>CPU Frequency</strong></td>
+                <td>Sharp SM83 @ 4.194 MHz (1×)</td>
+                <td style="background:rgba(47,224,117,0.04);"><span class="verdict-badge verdict-pass">8.388 MHz</span> · 2× KEY1 Speed Switch</td>
               </tr>
               <tr>
-                <td><strong>Pokémon Red / Blue (MBC3)</strong></td>
-                <td><span class="verdict-badge verdict-warn">REJECTED</span></td>
-                <td style="background:rgba(47,224,117,0.04);"><span class="verdict-badge verdict-pass">WORKING</span> · MBC3 + RTC Latching</td>
+                <td><strong>Video &amp; Palettes</strong></td>
+                <td>4-shade monochrome DMG palette</td>
+                <td style="background:rgba(47,224,117,0.04);"><span class="verdict-badge verdict-pass">15-Bit RGB555</span> · 64 Custom Palettes</td>
               </tr>
               <tr>
-                <td><strong>Pokémon Crystal (MBC3+RTC)</strong></td>
-                <td><span class="verdict-badge verdict-warn">NO</span></td>
-                <td style="background:rgba(47,224,117,0.04);"><span class="verdict-badge verdict-pass">WORKING</span> · CGB Exclusive ($C0) + Saves</td>
+                <td><strong>Pixel Pipeline</strong></td>
+                <td>Dot-accurate scanline PPU</td>
+                <td style="background:rgba(47,224,117,0.04);"><span class="verdict-badge verdict-pass">Pixel FIFO</span> · Acid2 0/23,040 Diff</td>
               </tr>
               <tr>
-                <td><strong>Zelda: Oracle of Ages / Seasons</strong></td>
-                <td><span class="verdict-badge verdict-warn">NO</span></td>
-                <td style="background:rgba(47,224,117,0.04);"><span class="verdict-badge verdict-pass">WORKING</span> · MBC5 (up to 8 MiB ROM)</td>
+                <td><strong>VRAM &amp; WRAM Banking</strong></td>
+                <td>8 KiB VRAM / 8 KiB WRAM</td>
+                <td style="background:rgba(47,224,117,0.04);"><span class="verdict-badge verdict-pass">16 KiB VRAM</span> · 32 KiB Banked WRAM</td>
               </tr>
               <tr>
-                <td><strong>Colour graphics</strong></td>
-                <td><span class="verdict-badge verdict-warn">NO</span></td>
-                <td style="background:rgba(47,224,117,0.04);"><span class="verdict-badge verdict-pass">YES</span> · 64 Custom RGB555 Palettes</td>
+                <td><strong>DMA Controllers</strong></td>
+                <td>160-M-cycle OAM DMA</td>
+                <td style="background:rgba(47,224,117,0.04);"><span class="verdict-badge verdict-pass">HDMA / GDMA</span> · H-Blank &amp; General DMA</td>
               </tr>
               <tr>
-                <td><strong>Automated tests</strong></td>
-                <td>18 passing</td>
-                <td style="background:rgba(47,224,117,0.04);"><strong>184 passing (10× increase)</strong></td>
+                <td><strong>Commercial Game Library</strong></td>
+                <td><strong style="color:var(--gb-0);">1,592 Titles (100% Playable)</strong></td>
+                <td style="background:rgba(47,224,117,0.04);"><strong style="color:var(--gb-0);">Dual &amp; CGB-Exclusive Library</strong></td>
               </tr>
               <tr>
-                <td><strong>Hardware test ROMs</strong></td>
-                <td>Not established</td>
-                <td style="background:rgba(47,224,117,0.04);"><strong style="color:var(--gb-0);">63 passing</strong> (Blargg, Mooneye, Acid2, Magen)</td>
+                <td><strong>Cartridge Mappers</strong></td>
+                <td>ROM-Only, MBC1, MBC2, MBC3 (+RTC)</td>
+                <td style="background:rgba(47,224,117,0.04);">MBC1, MBC2, MBC3, MBC5, MBC7 (tilt), HuC1/3</td>
               </tr>
               <tr>
-                <td><strong>Battery saves</strong></td>
-                <td>Yes</td>
-                <td style="background:rgba(47,224,117,0.04);"><span class="verdict-badge verdict-pass">YES</span> · Atomic SaveGameManager + .sav.bak</td>
+                <td><strong>Battery Save Persistence</strong></td>
+                <td>Standard <code>.sav</code> in <code>%APPDATA%</code></td>
+                <td style="background:rgba(47,224,117,0.04);"><span class="verdict-badge verdict-pass">Atomic Saves</span> · Automatic <code>.sav.bak</code></td>
               </tr>
               <tr>
-                <td><strong>Double-speed CPU</strong></td>
-                <td><span class="verdict-badge verdict-warn">NO</span></td>
-                <td style="background:rgba(47,224,117,0.04);"><span class="verdict-badge verdict-pass">YES</span> · 2× KEY1 Speed Switch (8.388 MHz)</td>
+                <td><strong>Automated Hardware Tests</strong></td>
+                <td>Blargg &amp; Mooneye-GB suites</td>
+                <td style="background:rgba(47,224,117,0.04);"><strong style="color:var(--gb-0);">63 / 63 Passing Test ROMs</strong></td>
               </tr>
             </tbody>
           </table>
