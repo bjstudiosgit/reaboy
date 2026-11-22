@@ -174,7 +174,7 @@
             <h2 style="font-size:clamp(1.5rem,2.5vw,1.9rem);">Search 2,561+ Tested Game Boy &amp; Color Games</h2>
           </div>
           <p>
-            Filter by platform (Original DMG vs Color CGB), cartridge mapper (ROM-Only, MBC1, MBC2, MBC3, MBC5, MBC7), jump by alphabetical index, inspect execution telemetry, or log new test runs directly in your local browser storage.
+            Filter by platform (Game Boy vs Game Boy Color), cartridge mapper (ROM-Only, MBC1, MBC2, MBC3, MBC5, MBC7), jump by alphabetical index, and inspect verified execution telemetry.
           </p>
         </div>
 
@@ -240,27 +240,6 @@
           </div>
         </div>
 
-        <!-- Beta Tester Game Logger -->
-        <form class="beta-log-form reveal" id="beta-log-form" style="margin-top: 2.5rem;">
-          <h4>Log a Game Test (Saved Locally + Optional GitHub Beta Report)</h4>
-          <div class="form-row">
-            <input class="form-input" id="log-title" type="text" required placeholder="Game name (e.g. Kirby's Dream Land)">
-            <select class="form-select" id="log-mapper" aria-label="Cartridge Mapper">
-              <option value="ROM-Only">ROM-Only</option>
-              <option value="MBC1">MBC1</option>
-              <option value="MBC1+RAM+BATT">MBC1+RAM+BATT</option>
-              <option value="MBC3 (Roadmap)">MBC3 (Roadmap)</option>
-              <option value="MBC5 (Roadmap)">MBC5 (Roadmap)</option>
-            </select>
-            <select class="form-select" id="log-status" aria-label="Test Status">
-              <option value="PASS">PASS</option>
-              <option value="ISSUES">ISSUES</option>
-            </select>
-            <input class="form-input" id="log-notes" type="text" placeholder="Notes (boot intro, sound, battery save...)">
-            <button class="btn btn-primary" type="submit" style="padding:0.6rem 1.1rem;font-size:0.84rem;">+ Add Test</button>
-          </div>
-        </form>
-
       </div>
     </section>
   </main>
@@ -314,6 +293,6 @@
   </footer>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
-  <script src="js/app.js?v=2.2.3" defer></script>
+  <script src="js/app.js?v=2.2.4" defer></script>
 </body>
 </html>

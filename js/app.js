@@ -1167,15 +1167,8 @@
         });
     });
 
-  const STORAGE_KEY = 'reaboy_beta_tests_v1';
   function loadGames() {
-    const base = verifiedLibrary.length > 0 ? verifiedLibrary : DEFAULT_GAMES;
-    try {
-      const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
-      return [...saved, ...base];
-    } catch {
-      return [...base];
-    }
+    return verifiedLibrary.length > 0 ? verifiedLibrary : DEFAULT_GAMES;
   }
 
   const compatTbody = $('#compat-tbody');
@@ -1329,23 +1322,6 @@
       renderCompatTable();
       const allCount = loadGames().length;
       showToast('Showing all ' + allCount.toLocaleString() + ' verified games');
-    });
-
-    $('#beta-log-form')?.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const title = $('#log-title').value.trim();
-      const mapper = $('#log-mapper').value;
-      const status = $('#log-status').value;
-      const notes = $('#log-notes').value.trim() || 'Logged locally in ReaBoy v1.0.1 BETA Compatibility Lab.';
-      if (!title) return;
-
-      const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
-      saved.push({ title, mapper, status, notes });
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(saved));
-      e.target.reset();
-      renderCompatTable();
-      playButtonTone('START');
-      showToast(`Added "${title}" to your Beta Test Log!`);
     });
   }
 
