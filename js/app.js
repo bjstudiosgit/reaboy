@@ -1073,6 +1073,28 @@
     });
   }
 
+  // 5b. Dual Architecture Memory Map & CGB Registers Tab Switcher
+  const mmapTabDmg = $('#mmap-tab-dmg');
+  const mmapTabCgb = $('#mmap-tab-cgb');
+  const mmapTabRegs = $('#mmap-tab-regs');
+  const mmapPanelDmg = $('#mmap-panel-dmg');
+  const mmapPanelCgb = $('#mmap-panel-cgb');
+  const mmapPanelRegs = $('#mmap-panel-regs');
+
+  if (mmapTabDmg && mmapTabCgb && mmapTabRegs) {
+    function setMmapTab(tab) {
+      mmapTabDmg.classList.toggle('active', tab === 'dmg');
+      mmapTabCgb.classList.toggle('active', tab === 'cgb');
+      mmapTabRegs.classList.toggle('active', tab === 'regs');
+      if (mmapPanelDmg) mmapPanelDmg.style.display = tab === 'dmg' ? 'block' : 'none';
+      if (mmapPanelCgb) mmapPanelCgb.style.display = tab === 'cgb' ? 'block' : 'none';
+      if (mmapPanelRegs) mmapPanelRegs.style.display = tab === 'regs' ? 'block' : 'none';
+    }
+    mmapTabDmg.addEventListener('click', () => setMmapTab('dmg'));
+    mmapTabCgb.addEventListener('click', () => setMmapTab('cgb'));
+    mmapTabRegs.addEventListener('click', () => setMmapTab('regs'));
+  }
+
   // ==========================================================================
   // 6. Beta Game Compatibility Lab (Verified Telemetry + Local Test Logger)
   // ==========================================================================
