@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>User Manual &amp; Setup Guide | ReaBoy Emulator</title>
-  <meta name="description" content="Official ReaBoy v1.0.1 user manual: installation, keyboard and gamepad controls, ROM loading, battery save management, and audio troubleshooting.">
+  <title>User Manual &amp; Setup Guide | ReaBoy Game Boy &amp; Color Emulator</title>
+  <meta name="description" content="Official ReaBoy user manual: Game Boy &amp; Game Boy Color hardware modes, controls, ROM loading, battery saves, and MBC1–MBC7 mapper guide.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#0f380f">
   <link rel="canonical" href="https://scientificbrad.github.io/ReaBoy/manual.html">
@@ -222,21 +222,25 @@ c313435280dda8ccfae0786c7159aab791a00930605101c647794f64bfa17b5e  dmg_boot.bin</
       </section>
 
       <section class="manual-block" id="compatibility">
-        <h2>9. Compatibility &amp; Open BETA Roadmap</h2>
-        <h3>Supported &amp; Playable in v1.0.1 BETA</h3>
+        <h2>9. Hardware Models &amp; Cartridge Compatibility</h2>
+        <h3>Supported Hardware Models</h3>
         <ul>
-          <li>Original monochrome Nintendo Game Boy (DMG-01): Sharp SM83 CPU, memory bus, scanline PPU, and 4-channel APU.</li>
-          <li>ROM-only and MBC1 cartridges up to 2 MiB ROM and 32 KiB battery-backed RAM (<strong>1,557 playable commercial titles</strong>).</li>
-          <li>Battery save persistence: automatic `.sav` files for battery-backed MBC1 titles.</li>
-          <li>Automated regression suite: <strong>1,592 canonical Game Boy titles boot-verified</strong> with dynamic 240-frame headless hardware execution.</li>
+          <li><strong>Original Game Boy (DMG-01):</strong> Authentic monochrome Sharp SM83 CPU, scanline PPU, 4-channel APU, and <strong>1,592 of 1,592 original Game Boy commercial titles (100% Playable)</strong>.</li>
+          <li><strong>Dual Game Boy &amp; Game Boy Color ($80):</strong> Switchable between 15-bit CGB colour and authentic monochrome DMG mode via <code>Emulation &gt; Hardware Mode</code> (e.g. Tetris DX, Zelda: Link's Awakening DX, Pokémon Gold/Silver, Wario Land II).</li>
+          <li><strong>Game Boy Color Exclusive ($C0):</strong> Full CGB hardware exploitation with 2× double-speed CPU (8.388 MHz), 16 KiB banked VRAM, 32 KiB banked WRAM, HDMA/GDMA, and custom RGB555 palettes (e.g. Pokémon Crystal, Zelda: Oracle of Ages/Seasons, Super Mario Bros. Deluxe, Kirby's Tilt 'n' Tumble).</li>
         </ul>
-        <h3>Planned / Active BETA Development</h3>
+        <h3>Supported Cartridge Mappers</h3>
         <ul>
-          <li>MBC2 (built-in 512×4-bit RAM) &amp; MBC3 (Real-Time Clock titles such as Pokémon Red/Blue/Gold/Silver) full banking.</li>
-          <li>Game Boy Color (CGB)-only hardware features.</li>
-          <li>Link cable multiplayer, save states, rewind, and USB gamepad remapping.</li>
+          <li><strong>ROM-Only:</strong> Standard 32 KiB cartridges.</li>
+          <li><strong>MBC1:</strong> Up to 2 MiB ROM and 32 KiB battery-backed RAM.</li>
+          <li><strong>MBC2:</strong> Built-in 512×4-bit internal RAM and battery saves (e.g. F-1 Race).</li>
+          <li><strong>MBC3:</strong> Full hardware Real-Time Clock (RTC) latching and battery saves (e.g. Pokémon Red, Blue, Yellow, Gold, Silver, Crystal).</li>
+          <li><strong>MBC5:</strong> Up to 8 MiB ROM and 128 KiB RAM with rumble and battery saves (e.g. Zelda: Oracle of Ages, Oracle of Seasons, Wario Land 3, Pokémon Pinball).</li>
+          <li><strong>MBC7:</strong> Accelerometer analog tilt controls and 93LC56 SPI EEPROM (e.g. Kirby's Tilt 'n' Tumble).</li>
+          <li><strong>HuC1 &amp; HuC3:</strong> Infrared transceiver and command parser with RTC/EEPROM (e.g. Pocket Family GB2).</li>
         </ul>
-        <p>Continuous hardware timing validation is actively conducted during the BETA period. Please report any game issues on <a href="https://github.com/ScientificBrad/ReaBoy/issues" target="_blank" rel="noopener">GitHub Issues ↗</a>.</p>
+        <h3>Verified Test ROM Suites (63 / 63 Passing)</h3>
+        <p>184 automated tests continuously executed, including 16 Blargg CPU/timing/halt_bug suites, 37 Mooneye-GB acceptance &amp; MBC2 tests, 2 Matt Currie Acid2 suites (<code>dmg-acid2.gb</code> and <code>cgb-acid2.gbc</code> with 0 / 23,040 pixel diff), and 8 MagenTests CGB suites.</p>
       </section>
     </article>
   </main>

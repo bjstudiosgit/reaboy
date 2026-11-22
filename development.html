@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Architecture &amp; Development | ReaBoy DMG-01 Emulator</title>
-  <meta name="description" content="Deep dive into ReaBoy's SM83 CPU core, scanline PPU timing, Bootix reverse engineering, and automated Windows x64 test pipeline.">
+  <title>Architecture &amp; Development | ReaBoy DMG &amp; CGB Emulator</title>
+  <meta name="description" content="Technical architecture: machine-cycle SM83 CPU, dot-accurate Pixel FIFO PPU, CGB double-speed, and 63 hardware test ROMs in ReaBoy.">
   <meta name="author" content="BJ Studios — Manchester, England">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#0f380f">
@@ -113,6 +113,19 @@
               <span>STAT Mode 0 fix</span>
               <span>Pinned WinMM</span>
               <span>59 UI Checks</span>
+            </div>
+          </article>
+
+          <article class="phase-card">
+            <span class="phase-num">PHASE 04 · GAME BOY COLOR ARCHITECTURE UPGRADE</span>
+            <h3>Dual Pixel FIFO &amp; Full CGB Subsystems</h3>
+            <p>Direct in-place architectural evolution to Game Boy Color (CGB). Upgraded to machine-cycle bus interleaving, a dot-accurate dual Pixel FIFO PPU, 2× CPU double-speed, banked VRAM/WRAM, HDMA, and 63 passing hardware test ROMs.</p>
+            <div class="stat-pills">
+              <span>Pixel FIFO PPU</span>
+              <span>2× Speed (8.388MHz)</span>
+              <span>Acid2 0/23,040 Diff</span>
+              <span>63 Test ROMs</span>
+              <span>MBC1–MBC7 &amp; HuC</span>
             </div>
           </article>
         </div>
