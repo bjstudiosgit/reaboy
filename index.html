@@ -434,44 +434,66 @@
       </div>
     </section>
 
-        <!-- SCREENSHOTS & GAMEPLAY SHOWCASE: 18 BEST HANDHELD MASTERPIECES -->
-        <!-- SCREENSHOTS & GAMEPLAY SHOWCASE: 18 BEST HANDHELD MASTERPIECES -->
+    <!-- SCREENSHOTS & GAMEPLAY SHOWCASE: 12 BEST GAMES (MIX OF GAME BOY & GAME BOY COLOR) -->
     <section class="section" id="beta-lab">
       <div class="wrap">
         <div class="section-head reveal" style="margin-bottom: 1.5rem;">
           <div>
             <p class="eyebrow" style="color:var(--gb-0); letter-spacing: 0.12em; font-weight:700;">
-              HANDHELD MASTERPIECES · 18 LANDMARK TITLES
+              HANDHELD MASTERPIECES · 12 BEST GAMES
             </p>
             <h2 style="font-size: clamp(1.6rem, 2.6vw, 2.2rem); line-height: 1.15; margin:0 0 0.5rem;">
               The Best of Game Boy &amp; Game Boy Color.<br>
-              <span class="highlight">Recorded Live in Hardware-Exact 60 FPS.</span>
+              <span class="highlight">Live Gameplay Animations at 60 FPS.</span>
             </h2>
           </div>
           <p style="max-width: 820px; color:var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin:0;">
-            Real gameplay recordings captured directly from ReaBoy's cycle-accurate SM83 CPU and scanline / Pixel FIFO PPU core. Explore 18 landmark handheld masterpieces below—9 original Game Boy classics and 9 vibrant Game Boy Color releases—or visit our dedicated Compatibility Labs.
+            Real animated gameplay captured directly from ReaBoy's cycle-accurate SM83 CPU and Pixel FIFO PPU core—mixing 6 flagship Game Boy Color showpieces and 6 original Game Boy classics side by side.
           </p>
         </div>
 
         <!-- SHOWCASE PLATFORM FILTER TABS -->
         <div class="showcase-filter-tabs reveal" style="display:flex; gap:0.6rem; margin-bottom:2rem; flex-wrap:wrap;">
-          <button class="chip-btn active" id="tab-all" type="button">All 18 Masterpieces</button>
-          <button class="chip-btn" id="tab-dmg" type="button">Original Game Boy (9 Classics)</button>
-          <button class="chip-btn" id="tab-cgb" type="button">Game Boy Color (9 Vibrant Masterpieces)</button>
+          <button class="chip-btn active" id="tab-all" type="button">All 12 Best Games</button>
+          <button class="chip-btn" id="tab-cgb" type="button">Game Boy Color (6)</button>
+          <button class="chip-btn" id="tab-dmg" type="button">Game Boy (6)</button>
         </div>
 
         <div class="top12-grid reveal" id="showcase-grid">
-          <!-- The Legend of Zelda: Link's Awakening -->
+          <!-- 1. Super Mario Bros. Deluxe (CGB) -->
+          <article class="top12-card showcase-item" data-platform="cgb">
+            <div class="top12-header">
+              <div>
+                <h3 class="top12-title" style="margin:0 0 0.2rem;">Super Mario Bros. Deluxe</h3>
+                <span class="verdict-badge" style="font-size:0.68rem; background:rgba(21,59,42,0.12); color:#153b2a; border-color:rgba(21,59,42,0.28);">Game Boy Color · Dual-Mode</span>
+              </div>
+              <span class="top12-year">1999</span>
+            </div>
+            <div class="top12-media">
+              <video autoplay loop muted playsinline preload="metadata" poster="assets/img/shots/cgb/super-mario-bros-deluxe-u-v11-c.png">
+                <source src="assets/video/cgb-super-mario-bros-deluxe.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="top12-body">
+              <div class="top12-info" style="padding-left:0;">
+                <p class="top12-desc">
+                  Full-colour pocket edition of the 1985 classic running live through World 1-1 with smooth camera panning, vibrant RGB555 skies, and Challenge Mode. <span class="top12-rom-spec">(1,024 KB · MBC5+RAM+BATT).</span>
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2. The Legend of Zelda: Link's Awakening (DMG) -->
           <article class="top12-card showcase-item" data-platform="dmg">
             <div class="top12-header">
               <div>
                 <h3 class="top12-title" style="margin:0 0 0.2rem;">The Legend of Zelda: Link's Awakening</h3>
-                <span class="verdict-badge" style="font-size:0.68rem; background:rgba(255,255,255,0.08); color:var(--text-muted);">DMG-01 · 4.194 MHz</span>
+                <span class="verdict-badge verdict-pass" style="font-size:0.68rem;">Game Boy · 4.194 MHz</span>
               </div>
               <span class="top12-year">1993</span>
             </div>
             <div class="top12-media">
-              <video loop muted playsinline preload="none" poster="assets/img/shots/legend-of-zelda-the-link-s-awakening.png">
+              <video autoplay loop muted playsinline preload="metadata" poster="assets/img/shots/legend-of-zelda-the-link-s-awakening.png">
                 <source src="assets/video/zelda-links-awakening.mp4?v=1.1.0" type="video/mp4">
               </video>
             </div>
@@ -485,65 +507,40 @@
             </div>
           </article>
 
-          <!-- Pokémon Red & Blue -->
-          <article class="top12-card showcase-item" data-platform="dmg">
+          <!-- 3. Pokémon Crystal Version (CGB) -->
+          <article class="top12-card showcase-item" data-platform="cgb">
             <div class="top12-header">
               <div>
-                <h3 class="top12-title" style="margin:0 0 0.2rem;">Pokémon Red & Blue</h3>
-                <span class="verdict-badge" style="font-size:0.68rem; background:rgba(255,255,255,0.08); color:var(--text-muted);">DMG-01 · 4.194 MHz</span>
+                <h3 class="top12-title" style="margin:0 0 0.2rem;">Pokémon Crystal Version</h3>
+                <span class="verdict-badge" style="font-size:0.68rem; background:rgba(21,59,42,0.12); color:#153b2a; border-color:rgba(21,59,42,0.28);">Game Boy Color · 8.388 MHz</span>
               </div>
-              <span class="top12-year">1996</span>
+              <span class="top12-year">2000</span>
             </div>
             <div class="top12-media">
-              <video loop muted playsinline preload="none" poster="assets/img/shots/pokemon-red.png">
-                <source src="assets/video/pokemon-red.mp4?v=1.1.0" type="video/mp4">
+              <video autoplay loop muted playsinline preload="metadata" poster="assets/img/shots/cgb/pokemon-crystal-version-ue-v11-c.png">
+                <source src="assets/video/cgb-pokemon-crystal.mp4" type="video/mp4">
               </video>
             </div>
             <div class="top12-body">
-              <img class="top12-boxart-img" src="assets/img/boxart/pokemon-red.jpg" alt="Pokémon Red & Blue Box Art" loading="lazy">
-              <div class="top12-info">
+              <div class="top12-info" style="padding-left:0;">
                 <p class="top12-desc">
-                  The monster-catching phenomenon that defined handheld gaming. ReaBoy's upgraded MBC3 mapper faithfully executes battery-backed trainer saves and battle state. <span class="top12-rom-spec">(1,024 KB · MBC3+RAM+BATT).</span>
+                  The crown jewel of Game Boy Color RPGs featuring Suicune's animated title screen, real-time clock events, and double-speed CPU execution. <span class="top12-rom-spec">(2,048 KB · MBC3+RTC+RAM+BATT).</span>
                 </p>
               </div>
             </div>
           </article>
 
-          <!-- Tetris -->
-          <article class="top12-card showcase-item" data-platform="dmg">
-            <div class="top12-header">
-              <div>
-                <h3 class="top12-title" style="margin:0 0 0.2rem;">Tetris</h3>
-                <span class="verdict-badge" style="font-size:0.68rem; background:rgba(255,255,255,0.08); color:var(--text-muted);">DMG-01 · 4.194 MHz</span>
-              </div>
-              <span class="top12-year">1989</span>
-            </div>
-            <div class="top12-media">
-              <video loop muted playsinline preload="none" poster="assets/img/shots/tetris.png">
-                <source src="assets/video/tetris.mp4?v=1.1.0" type="video/mp4">
-              </video>
-            </div>
-            <div class="top12-body">
-              <img class="top12-boxart-img" src="assets/img/boxart/tetris.jpg" alt="Tetris Box Art" loading="lazy">
-              <div class="top12-info">
-                <p class="top12-desc">
-                  The quintessential pack-in masterpiece. Requires cycle-strict APU frequency accuracy for the iconic Korobeiniki theme and drop-timing precision. <span class="top12-rom-spec">(32 KB · ROM-Only).</span>
-                </p>
-              </div>
-            </div>
-          </article>
-
-          <!-- Super Mario Land 2: 6 Golden Coins -->
+          <!-- 4. Super Mario Land 2: 6 Golden Coins (DMG) -->
           <article class="top12-card showcase-item" data-platform="dmg">
             <div class="top12-header">
               <div>
                 <h3 class="top12-title" style="margin:0 0 0.2rem;">Super Mario Land 2: 6 Golden Coins</h3>
-                <span class="verdict-badge" style="font-size:0.68rem; background:rgba(255,255,255,0.08); color:var(--text-muted);">DMG-01 · 4.194 MHz</span>
+                <span class="verdict-badge verdict-pass" style="font-size:0.68rem;">Game Boy · 4.194 MHz</span>
               </div>
               <span class="top12-year">1992</span>
             </div>
             <div class="top12-media">
-              <video loop muted playsinline preload="none" poster="assets/img/shots/super-mario-land-2-6-golden-coins.png">
+              <video autoplay loop muted playsinline preload="metadata" poster="assets/img/shots/super-mario-land-2-6-golden-coins.png">
                 <source src="assets/video/super-mario-land-2.mp4?v=1.1.0" type="video/mp4">
               </video>
             </div>
@@ -557,18 +554,135 @@
             </div>
           </article>
 
-          <!-- Metroid II: Return of Samus -->
+          <!-- 5. The Legend of Zelda: Link's Awakening DX (CGB) -->
+          <article class="top12-card showcase-item" data-platform="cgb">
+            <div class="top12-header">
+              <div>
+                <h3 class="top12-title" style="margin:0 0 0.2rem;">The Legend of Zelda: Link's Awakening DX</h3>
+                <span class="verdict-badge" style="font-size:0.68rem; background:rgba(21,59,42,0.12); color:#153b2a; border-color:rgba(21,59,42,0.28);">Game Boy Color · Dual-Mode</span>
+              </div>
+              <span class="top12-year">1998</span>
+            </div>
+            <div class="top12-media">
+              <video autoplay loop muted playsinline preload="metadata" poster="assets/img/shots/cgb/legend-of-zelda-the-links-awakening-dx-u-v12-c.png">
+                <source src="assets/video/cgb-links-awakening-dx.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="top12-body">
+              <div class="top12-info" style="padding-left:0;">
+                <p class="top12-desc">
+                  The vibrant colour re-release featuring the stormy sea opening, exclusive Color Dungeon, and rich 15-bit RGB555 tile palettes. <span class="top12-rom-spec">(1,024 KB · MBC1+RAM+BATT).</span>
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- 6. Pokémon Red & Blue (DMG) -->
+          <article class="top12-card showcase-item" data-platform="dmg">
+            <div class="top12-header">
+              <div>
+                <h3 class="top12-title" style="margin:0 0 0.2rem;">Pokémon Red &amp; Blue</h3>
+                <span class="verdict-badge verdict-pass" style="font-size:0.68rem;">Game Boy · 4.194 MHz</span>
+              </div>
+              <span class="top12-year">1996</span>
+            </div>
+            <div class="top12-media">
+              <video autoplay loop muted playsinline preload="metadata" poster="assets/img/shots/pokemon-red.png">
+                <source src="assets/video/pokemon-red.mp4?v=1.1.0" type="video/mp4">
+              </video>
+            </div>
+            <div class="top12-body">
+              <img class="top12-boxart-img" src="assets/img/boxart/pokemon-red.jpg" alt="Pokémon Red & Blue Box Art" loading="lazy">
+              <div class="top12-info">
+                <p class="top12-desc">
+                  The monster-catching phenomenon that defined handheld gaming. ReaBoy's upgraded MBC3 mapper faithfully executes battery-backed trainer saves. <span class="top12-rom-spec">(1,024 KB · MBC3+RAM+BATT).</span>
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- 7. The Legend of Zelda: Oracle of Ages (CGB) -->
+          <article class="top12-card showcase-item" data-platform="cgb">
+            <div class="top12-header">
+              <div>
+                <h3 class="top12-title" style="margin:0 0 0.2rem;">The Legend of Zelda: Oracle of Ages</h3>
+                <span class="verdict-badge" style="font-size:0.68rem; background:rgba(21,59,42,0.12); color:#153b2a; border-color:rgba(21,59,42,0.28);">Game Boy Color · 8.388 MHz</span>
+              </div>
+              <span class="top12-year">2001</span>
+            </div>
+            <div class="top12-media">
+              <video autoplay loop muted playsinline preload="metadata" poster="assets/img/shots/cgb/legend-of-zelda-the-oracle-of-ages-u-c.png">
+                <source src="assets/video/cgb-oracle-of-ages.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="top12-body">
+              <div class="top12-info" style="padding-left:0;">
+                <p class="top12-desc">
+                  Capcom &amp; Flagship masterpiece featuring animated sunset horseback riding, dual-bank VRAM tiles, and vibrant multi-palette rendering. <span class="top12-rom-spec">(1,024 KB · MBC5+RAM+BATT).</span>
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- 8. Tetris (DMG) -->
+          <article class="top12-card showcase-item" data-platform="dmg">
+            <div class="top12-header">
+              <div>
+                <h3 class="top12-title" style="margin:0 0 0.2rem;">Tetris</h3>
+                <span class="verdict-badge verdict-pass" style="font-size:0.68rem;">Game Boy · 4.194 MHz</span>
+              </div>
+              <span class="top12-year">1989</span>
+            </div>
+            <div class="top12-media">
+              <video autoplay loop muted playsinline preload="metadata" poster="assets/img/shots/tetris.png">
+                <source src="assets/video/tetris.mp4?v=1.1.0" type="video/mp4">
+              </video>
+            </div>
+            <div class="top12-body">
+              <img class="top12-boxart-img" src="assets/img/boxart/tetris.jpg" alt="Tetris Box Art" loading="lazy">
+              <div class="top12-info">
+                <p class="top12-desc">
+                  The quintessential pack-in masterpiece. Requires cycle-strict APU frequency accuracy for the iconic Korobeiniki theme and drop-timing precision. <span class="top12-rom-spec">(32 KB · ROM-Only).</span>
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- 9. Wario Land 3 (CGB) -->
+          <article class="top12-card showcase-item" data-platform="cgb">
+            <div class="top12-header">
+              <div>
+                <h3 class="top12-title" style="margin:0 0 0.2rem;">Wario Land 3</h3>
+                <span class="verdict-badge" style="font-size:0.68rem; background:rgba(21,59,42,0.12); color:#153b2a; border-color:rgba(21,59,42,0.28);">Game Boy Color · 8.388 MHz</span>
+              </div>
+              <span class="top12-year">2000</span>
+            </div>
+            <div class="top12-media">
+              <video autoplay loop muted playsinline preload="metadata" poster="assets/img/shots/cgb/wario-land-3-ju-m2-c.png">
+                <source src="assets/video/cgb-wario-land-3.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="top12-body">
+              <div class="top12-info" style="padding-left:0;">
+                <p class="top12-desc">
+                  Puzzle-platforming inside a magical music box with vibrant parallax skies, biplane flights, and day/night palette transitions. <span class="top12-rom-spec">(2,048 KB · MBC5+RAM+BATT).</span>
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- 10. Metroid II: Return of Samus (DMG) -->
           <article class="top12-card showcase-item" data-platform="dmg">
             <div class="top12-header">
               <div>
                 <h3 class="top12-title" style="margin:0 0 0.2rem;">Metroid II: Return of Samus</h3>
-                <span class="verdict-badge" style="font-size:0.68rem; background:rgba(255,255,255,0.08); color:var(--text-muted);">DMG-01 · 4.194 MHz</span>
+                <span class="verdict-badge verdict-pass" style="font-size:0.68rem;">Game Boy · 4.194 MHz</span>
               </div>
               <span class="top12-year">1991</span>
             </div>
             <div class="top12-media">
-              <video loop muted playsinline preload="none" poster="assets/img/shots/metroid-ii-return-of-samus.png">
-                <source src="assets/video/metroid-ii.mp4?v=1.1.0" type="video/mp4">
+              <video autoplay loop muted playsinline preload="metadata" poster="assets/img/shots/metroid-ii-return-of-samus.png">
+                <source src="assets/video/metroid-2.mp4?v=1.1.0" type="video/mp4">
               </video>
             </div>
             <div class="top12-body">
@@ -581,286 +695,48 @@
             </div>
           </article>
 
-          <!-- Kirby's Dream Land 2 -->
+          <!-- 11. Metal Gear Solid (CGB) -->
+          <article class="top12-card showcase-item" data-platform="cgb">
+            <div class="top12-header">
+              <div>
+                <h3 class="top12-title" style="margin:0 0 0.2rem;">Metal Gear Solid</h3>
+                <span class="verdict-badge" style="font-size:0.68rem; background:rgba(21,59,42,0.12); color:#153b2a; border-color:rgba(21,59,42,0.28);">Game Boy Color · 8.388 MHz</span>
+              </div>
+              <span class="top12-year">2000</span>
+            </div>
+            <div class="top12-media">
+              <video autoplay loop muted playsinline preload="metadata" poster="assets/img/shots/cgb/metal-gear-solid-u-c.png">
+                <source src="assets/video/cgb-metal-gear-solid.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="top12-body">
+              <div class="top12-info" style="padding-left:0;">
+                <p class="top12-desc">
+                  Konami's critically acclaimed stealth-action classic featuring high-contrast animated intros, crisp codec portraits, and double-speed CGB rendering. <span class="top12-rom-spec">(2,048 KB · MBC5+RAM+BATT).</span>
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- 12. Kirby's Dream Land 2 (DMG) -->
           <article class="top12-card showcase-item" data-platform="dmg">
             <div class="top12-header">
               <div>
                 <h3 class="top12-title" style="margin:0 0 0.2rem;">Kirby's Dream Land 2</h3>
-                <span class="verdict-badge" style="font-size:0.68rem; background:rgba(255,255,255,0.08); color:var(--text-muted);">DMG-01 · 4.194 MHz</span>
+                <span class="verdict-badge verdict-pass" style="font-size:0.68rem;">Game Boy · 4.194 MHz</span>
               </div>
               <span class="top12-year">1995</span>
             </div>
             <div class="top12-media">
-              <video loop muted playsinline preload="none" poster="assets/img/shots/kirby-s-dream-land-2.png">
-                <source src="assets/video/kirby-dream-land-2.mp4?v=1.1.0" type="video/mp4">
+              <video autoplay loop muted playsinline preload="metadata" poster="assets/img/shots/kirby-s-dream-land-2.png">
+                <source src="assets/video/kirbys-dream-land-2.mp4?v=1.1.0" type="video/mp4">
               </video>
             </div>
             <div class="top12-body">
               <img class="top12-boxart-img" src="assets/img/boxart/kirbys-dream-land-2.jpg" alt="Kirby's Dream Land 2 Box Art" loading="lazy">
               <div class="top12-info">
                 <p class="top12-desc">
-                  Animal companions Rick, Kine, and Coo. Pushes DMG hardware with parallax background tricks and dense sprite composition across Rainbow Islands. <span class="top12-rom-spec">(1,024 KB · MBC1+RAM+BATT).</span>
-                </p>
-              </div>
-            </div>
-          </article>
-
-          <!-- Donkey Kong ('94) -->
-          <article class="top12-card showcase-item" data-platform="dmg">
-            <div class="top12-header">
-              <div>
-                <h3 class="top12-title" style="margin:0 0 0.2rem;">Donkey Kong ('94)</h3>
-                <span class="verdict-badge" style="font-size:0.68rem; background:rgba(255,255,255,0.08); color:var(--text-muted);">DMG-01 · 4.194 MHz</span>
-              </div>
-              <span class="top12-year">1994</span>
-            </div>
-            <div class="top12-media">
-              <video loop muted playsinline preload="none" poster="assets/img/shots/donkey-kong.png">
-                <source src="assets/video/donkey-kong.mp4?v=1.1.0" type="video/mp4">
-              </video>
-            </div>
-            <div class="top12-body">
-              <img class="top12-boxart-img" src="assets/img/boxart/donkey-kong.jpg" alt="Donkey Kong ('94) Box Art" loading="lazy">
-              <div class="top12-info">
-                <p class="top12-desc">
-                  Starts as classic arcade Donkey Kong before expanding into 101 brilliant puzzle-platforming stages. Demonstrates pinpoint input latency. <span class="top12-rom-spec">(512 KB · MBC1+RAM+BATT).</span>
-                </p>
-              </div>
-            </div>
-          </article>
-
-          <!-- Wario Land: Super Mario Land 3 -->
-          <article class="top12-card showcase-item" data-platform="dmg">
-            <div class="top12-header">
-              <div>
-                <h3 class="top12-title" style="margin:0 0 0.2rem;">Wario Land: Super Mario Land 3</h3>
-                <span class="verdict-badge" style="font-size:0.68rem; background:rgba(255,255,255,0.08); color:var(--text-muted);">DMG-01 · 4.194 MHz</span>
-              </div>
-              <span class="top12-year">1994</span>
-            </div>
-            <div class="top12-media">
-              <video loop muted playsinline preload="none" poster="assets/img/shots/wario-land-super-mario-land-3.png">
-                <source src="assets/video/wario-land.mp4?v=1.1.0" type="video/mp4">
-              </video>
-            </div>
-            <div class="top12-body">
-              <img class="top12-boxart-img" src="assets/img/boxart/wario-land.jpg" alt="Wario Land: Super Mario Land 3 Box Art" loading="lazy">
-              <div class="top12-info">
-                <p class="top12-desc">
-                  Wario's premier starring role on Kitchen Island. Bull, Jet, and Dragon pots with coin-collecting mechanics and multiple treasure endings. <span class="top12-rom-spec">(512 KB · MBC1+RAM+BATT).</span>
-                </p>
-              </div>
-            </div>
-          </article>
-
-          <!-- Dr. Mario -->
-          <article class="top12-card showcase-item" data-platform="dmg">
-            <div class="top12-header">
-              <div>
-                <h3 class="top12-title" style="margin:0 0 0.2rem;">Dr. Mario</h3>
-                <span class="verdict-badge" style="font-size:0.68rem; background:rgba(255,255,255,0.08); color:var(--text-muted);">DMG-01 · 4.194 MHz</span>
-              </div>
-              <span class="top12-year">1990</span>
-            </div>
-            <div class="top12-media">
-              <video loop muted playsinline preload="none" poster="assets/img/shots/dr-mario.png">
-                <source src="assets/video/dr-mario.mp4?v=1.1.0" type="video/mp4">
-              </video>
-            </div>
-            <div class="top12-body">
-              <img class="top12-boxart-img" src="assets/img/boxart/dr-mario.jpg" alt="Dr. Mario Box Art" loading="lazy">
-              <div class="top12-info">
-                <p class="top12-desc">
-                  Rapid virus eradication puzzle mechanics. Rock-solid under v2.0 with cycle-strict interrupt handling and zero freeze. <span class="top12-rom-spec">(32 KB · ROM-Only).</span>
-                </p>
-              </div>
-            </div>
-          </article>
-
-          <!-- Pokémon Crystal Version -->
-          <article class="top12-card showcase-item" data-platform="cgb">
-            <div class="top12-header">
-              <div>
-                <h3 class="top12-title" style="margin:0 0 0.2rem;">Pokémon Crystal Version</h3>
-                <span class="verdict-badge verdict-pass" style="font-size:0.68rem; background:rgba(47,224,117,0.12); color:var(--gb-0);">CGB-001 · 8.388 MHz 2×</span>
-              </div>
-              <span class="top12-year">2000</span>
-            </div>
-            <div class="top12-media" style="background:#050705; display:flex; align-items:center; justify-content:center; overflow:hidden;">
-              <img src="assets/img/cgb-pokemon-crystal-window.png" alt="Pokémon Crystal Version Live Capture" loading="lazy" style="width:100%; height:100%; object-fit:contain; image-rendering:pixelated;">
-            </div>
-            <div class="top12-body">
-              <div class="top12-info" style="padding-left:0;">
-                <p class="top12-desc">
-                  The crown jewel of the Game Boy Color library. Animated battle sprites, real-time day/night cycles, and CGB exclusive double-speed CPU execution. <span class="top12-rom-spec">(2,048 KB · MBC3+RTC+RAM+BATT ($C0)).</span>
-                </p>
-              </div>
-            </div>
-          </article>
-
-          <!-- The Legend of Zelda: Oracle of Ages -->
-          <article class="top12-card showcase-item" data-platform="cgb">
-            <div class="top12-header">
-              <div>
-                <h3 class="top12-title" style="margin:0 0 0.2rem;">The Legend of Zelda: Oracle of Ages</h3>
-                <span class="verdict-badge verdict-pass" style="font-size:0.68rem; background:rgba(47,224,117,0.12); color:var(--gb-0);">CGB-001 · 8.388 MHz 2×</span>
-              </div>
-              <span class="top12-year">2001</span>
-            </div>
-            <div class="top12-media" style="background:#050705; display:flex; align-items:center; justify-content:center; overflow:hidden;">
-              <img src="assets/img/cgb-zelda-ages-window.png" alt="The Legend of Zelda: Oracle of Ages Live Capture" loading="lazy" style="width:100%; height:100%; object-fit:contain; image-rendering:pixelated;">
-            </div>
-            <div class="top12-body">
-              <div class="top12-info" style="padding-left:0;">
-                <p class="top12-desc">
-                  Capcom / Flagship masterpiece featuring time travel between past and present Labrynna, demanding tile banking in VRAM Bank 1, and 24 colors/frame. <span class="top12-rom-spec">(1,024 KB · MBC5+RAM+BATT ($C0)).</span>
-                </p>
-              </div>
-            </div>
-          </article>
-
-          <!-- The Legend of Zelda: Oracle of Seasons -->
-          <article class="top12-card showcase-item" data-platform="cgb">
-            <div class="top12-header">
-              <div>
-                <h3 class="top12-title" style="margin:0 0 0.2rem;">The Legend of Zelda: Oracle of Seasons</h3>
-                <span class="verdict-badge verdict-pass" style="font-size:0.68rem; background:rgba(47,224,117,0.12); color:var(--gb-0);">CGB-001 · 8.388 MHz 2×</span>
-              </div>
-              <span class="top12-year">2001</span>
-            </div>
-            <div class="top12-media" style="background:#050705; display:flex; align-items:center; justify-content:center; overflow:hidden;">
-              <img src="assets/img/cgb-zelda-seasons-window.png" alt="The Legend of Zelda: Oracle of Seasons Live Capture" loading="lazy" style="width:100%; height:100%; object-fit:contain; image-rendering:pixelated;">
-            </div>
-            <div class="top12-body">
-              <div class="top12-info" style="padding-left:0;">
-                <p class="top12-desc">
-                  Dynamic four-season environmental shifts changing overworld traversal in real time. Pushes 123 total RGB555 colors and link passwords. <span class="top12-rom-spec">(1,024 KB · MBC5+RAM+BATT ($C0)).</span>
-                </p>
-              </div>
-            </div>
-          </article>
-
-          <!-- Super Mario Bros. Deluxe -->
-          <article class="top12-card showcase-item" data-platform="cgb">
-            <div class="top12-header">
-              <div>
-                <h3 class="top12-title" style="margin:0 0 0.2rem;">Super Mario Bros. Deluxe</h3>
-                <span class="verdict-badge verdict-pass" style="font-size:0.68rem; background:rgba(47,224,117,0.12); color:var(--gb-0);">CGB-001 · Dual-Mode ($80)</span>
-              </div>
-              <span class="top12-year">1999</span>
-            </div>
-            <div class="top12-media" style="background:#050705; display:flex; align-items:center; justify-content:center; overflow:hidden;">
-              <img src="assets/img/cgb-mario-deluxe-window.png" alt="Super Mario Bros. Deluxe Live Capture" loading="lazy" style="width:100%; height:100%; object-fit:contain; image-rendering:pixelated;">
-            </div>
-            <div class="top12-body">
-              <div class="top12-info" style="padding-left:0;">
-                <p class="top12-desc">
-                  Full color remake of the 1985 NES classic with camera map-scrolling, Challenge Mode, Boo races, and Game Boy Printer print integration. <span class="top12-rom-spec">(1,024 KB · MBC5+RAM+BATT ($80)).</span>
-                </p>
-              </div>
-            </div>
-          </article>
-
-          <!-- Wario Land 3 -->
-          <article class="top12-card showcase-item" data-platform="cgb">
-            <div class="top12-header">
-              <div>
-                <h3 class="top12-title" style="margin:0 0 0.2rem;">Wario Land 3</h3>
-                <span class="verdict-badge verdict-pass" style="font-size:0.68rem; background:rgba(47,224,117,0.12); color:var(--gb-0);">CGB-001 · 8.388 MHz 2×</span>
-              </div>
-              <span class="top12-year">2000</span>
-            </div>
-            <div class="top12-media" style="background:#050705; display:flex; align-items:center; justify-content:center; overflow:hidden;">
-              <img src="assets/img/cgb-wario-land-3-window.png" alt="Wario Land 3 Live Capture" loading="lazy" style="width:100%; height:100%; object-fit:contain; image-rendering:pixelated;">
-            </div>
-            <div class="top12-body">
-              <div class="top12-info" style="padding-left:0;">
-                <p class="top12-desc">
-                  Invincible puzzle-platforming inside a magical music box. Day and night palette transitions alter level layouts and unlock hidden treasures. <span class="top12-rom-spec">(2,048 KB · MBC5+RAM+BATT ($C0)).</span>
-                </p>
-              </div>
-            </div>
-          </article>
-
-          <!-- The Legend of Zelda: Link's Awakening DX -->
-          <article class="top12-card showcase-item" data-platform="cgb">
-            <div class="top12-header">
-              <div>
-                <h3 class="top12-title" style="margin:0 0 0.2rem;">The Legend of Zelda: Link's Awakening DX</h3>
-                <span class="verdict-badge verdict-pass" style="font-size:0.68rem; background:rgba(47,224,117,0.12); color:var(--gb-0);">CGB-001 · Dual-Mode ($80)</span>
-              </div>
-              <span class="top12-year">1998</span>
-            </div>
-            <div class="top12-media" style="background:#050705; display:flex; align-items:center; justify-content:center; overflow:hidden;">
-              <img src="assets/img/cgb-links-awakening-dx-window.png" alt="The Legend of Zelda: Link's Awakening DX Live Capture" loading="lazy" style="width:100%; height:100%; object-fit:contain; image-rendering:pixelated;">
-            </div>
-            <div class="top12-body">
-              <div class="top12-info" style="padding-left:0;">
-                <p class="top12-desc">
-                  The vibrant color re-release featuring the exclusive Color Dungeon, blue/red mail upgrades, and 16-color tile palettes. <span class="top12-rom-spec">(1,024 KB · MBC1+RAM+BATT ($80)).</span>
-                </p>
-              </div>
-            </div>
-          </article>
-
-          <!-- Pokémon Gold & Silver -->
-          <article class="top12-card showcase-item" data-platform="cgb">
-            <div class="top12-header">
-              <div>
-                <h3 class="top12-title" style="margin:0 0 0.2rem;">Pokémon Gold & Silver</h3>
-                <span class="verdict-badge verdict-pass" style="font-size:0.68rem; background:rgba(47,224,117,0.12); color:var(--gb-0);">CGB-001 · Dual-Mode ($80)</span>
-              </div>
-              <span class="top12-year">1999</span>
-            </div>
-            <div class="top12-media" style="background:#050705; display:flex; align-items:center; justify-content:center; overflow:hidden;">
-              <img src="assets/img/cgb-pokemon-gold-window.png" alt="Pokémon Gold & Silver Live Capture" loading="lazy" style="width:100%; height:100%; object-fit:contain; image-rendering:pixelated;">
-            </div>
-            <div class="top12-body">
-              <div class="top12-info" style="padding-left:0;">
-                <p class="top12-desc">
-                  The generation that introduced 100 new Pokémon, dual regions (Johto & Kanto), and hardware real-time clock tracking in the cartridge. <span class="top12-rom-spec">(1,024 KB · MBC3+RTC+RAM+BATT ($80)).</span>
-                </p>
-              </div>
-            </div>
-          </article>
-
-          <!-- Tetris DX -->
-          <article class="top12-card showcase-item" data-platform="cgb">
-            <div class="top12-header">
-              <div>
-                <h3 class="top12-title" style="margin:0 0 0.2rem;">Tetris DX</h3>
-                <span class="verdict-badge verdict-pass" style="font-size:0.68rem; background:rgba(47,224,117,0.12); color:var(--gb-0);">CGB-001 · Dual-Mode ($80)</span>
-              </div>
-              <span class="top12-year">1998</span>
-            </div>
-            <div class="top12-media" style="background:#050705; display:flex; align-items:center; justify-content:center; overflow:hidden;">
-              <img src="assets/img/cgb-tetris-dx-window.png" alt="Tetris DX Live Capture" loading="lazy" style="width:100%; height:100%; object-fit:contain; image-rendering:pixelated;">
-            </div>
-            <div class="top12-body">
-              <div class="top12-info" style="padding-left:0;">
-                <p class="top12-desc">
-                  High-speed color edition featuring battery-backed profile saving, high scores, Ultra mode, 40-lines, and VS CPU mode. <span class="top12-rom-spec">(512 KB · MBC1+RAM+BATT ($80)).</span>
-                </p>
-              </div>
-            </div>
-          </article>
-
-          <!-- Kirby's Tilt 'n' Tumble -->
-          <article class="top12-card showcase-item" data-platform="cgb">
-            <div class="top12-header">
-              <div>
-                <h3 class="top12-title" style="margin:0 0 0.2rem;">Kirby's Tilt 'n' Tumble</h3>
-                <span class="verdict-badge verdict-pass" style="font-size:0.68rem; background:rgba(47,224,117,0.12); color:var(--gb-0);">CGB-001 · 8.388 MHz 2×</span>
-              </div>
-              <span class="top12-year">2000</span>
-            </div>
-            <div class="top12-media" style="background:#050705; display:flex; align-items:center; justify-content:center; overflow:hidden;">
-              <img src="assets/img/cgb-kirby-tilt-window.png" alt="Kirby's Tilt 'n' Tumble Live Capture" loading="lazy" style="width:100%; height:100%; object-fit:contain; image-rendering:pixelated;">
-            </div>
-            <div class="top12-body">
-              <div class="top12-info" style="padding-left:0;">
-                <p class="top12-desc">
-                  Special translucent pink cartridge housing an analog ADXL202 dual-axis accelerometer. ReaBoy accurately maps MBC7 tilt registers and rumble. <span class="top12-rom-spec">(1,024 KB · MBC7+SENSOR+RAM+BATT ($C0)).</span>
+                  Animal companions Rick, Kine, and Coo push DMG hardware with parallax background tricks and dense sprite composition across Rainbow Islands. <span class="top12-rom-spec">(1,024 KB · MBC1+RAM+BATT).</span>
                 </p>
               </div>
             </div>
@@ -869,10 +745,7 @@
 
         <div class="showcase-more-cta reveal" style="display:flex; gap:1rem; flex-wrap:wrap; margin-top: 2.5rem; margin-bottom: 1rem;">
           <a class="btn btn-primary" href="compatibility.html" style="font-size:0.9rem; padding:0.75rem 1.4rem;">
-            Explore Original Game Boy Lab (1,592+) →
-          </a>
-          <a class="btn btn-secondary" href="compatibility.html" style="font-size:0.9rem; padding:0.75rem 1.4rem;">
-            Explore Game Boy Color Lab (969+) →
+            Explore All 2,561+ Tested Games →
           </a>
         </div>
       </div>
