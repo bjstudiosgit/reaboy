@@ -34,6 +34,7 @@
 
   /* Typography */
   --font-display: 'Space Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-sans: 'Space Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   --font-pixel: 'Press Start 2P', var(--font-mono);
 
@@ -491,14 +492,14 @@ a:hover {
 
 .hero-meta-block p {
   margin: 0;
-  font-family: var(--font-sans);
+  font-family: var(--font-display);
   font-size: 0.88rem;
   color: var(--ink-secondary);
   line-height: 1.5;
 }
 
 .hero-meta-block .hero-update-text {
-  font-family: var(--font-sans);
+  font-family: var(--font-display);
   font-size: 0.88rem;
   color: var(--ink);
 }
@@ -1284,6 +1285,7 @@ a:hover {
 
 /* --- Unified Single Setup Card --- */
 .install-head-title {
+  font-family: var(--font-display);
   white-space: nowrap;
 }
 
