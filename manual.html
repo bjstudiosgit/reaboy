@@ -214,19 +214,19 @@
         <p>ReaBoy includes built-in open-source boot engines for both original <strong>Game Boy (DMG-01 · 256 Bytes)</strong> and <strong>Game Boy Color (CGB-001 · 2,048 Bytes)</strong>. Both firmware routines are embedded directly inside <code>ReaBoy.exe</code> and bundled in the portable <code>rom/</code> directory using <strong>Bootix</strong> (CC0-1.0 Public Domain). No external BIOS dumps or copyrighted files are required—ReaBoy is 100% legal and playable out of the box.</p>
 
         <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin: 1.25rem 0;">
-          <div style="background: rgba(9, 13, 11, 0.6); border: 1px solid var(--border); border-radius: 6px; padding: 1.1rem;">
+          <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; padding: 1.1rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
             <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
               <strong style="color:var(--gb-0); font-family:var(--font-display, inherit);">Game Boy (DMG-01) Firmware</strong>
-              <span style="font-size:0.75rem; padding:0.15rem 0.45rem; background:rgba(196,240,58,0.15); border:1px solid rgba(196,240,58,0.3); border-radius:3px; color:var(--gb-0); font-weight:700;">256 BYTES</span>
+              <span style="font-size:0.75rem; padding:0.15rem 0.45rem; background:rgba(21,59,42,0.08); border:1px solid rgba(21,59,42,0.2); border-radius:3px; color:var(--gb-0); font-weight:700;">256 BYTES</span>
             </div>
             <p style="font-size:0.88rem; margin:0 0 0.5rem; color:var(--text-muted);">Memory range: <code>$0000–$00FF</code>. Executes CPU stack initialization, 8 KiB VRAM zeroing, 4-channel APU startup, scrolling logo decompression, and header checksum verification before unmapping at <code>$FF50</code>.</p>
             <div style="font-size:0.82rem; color:var(--text-dim);">Default: <code>rom/dmg_boot.bin</code> (or embedded Bootix DMG v1.2)</div>
           </div>
 
-          <div style="background: rgba(9, 13, 11, 0.6); border: 1px solid var(--border); border-radius: 6px; padding: 1.1rem;">
+          <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; padding: 1.1rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
             <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
               <strong style="color:var(--gb-0); font-family:var(--font-display, inherit);">Game Boy Color (CGB-001) Firmware</strong>
-              <span style="font-size:0.75rem; padding:0.15rem 0.45rem; background:rgba(90,140,255,0.15); border:1px solid rgba(90,140,255,0.3); border-radius:3px; color:#70a5ff; font-weight:700;">2,048 BYTES</span>
+              <span style="font-size:0.75rem; padding:0.15rem 0.45rem; background:rgba(30,90,180,0.1); border:1px solid rgba(30,90,180,0.25); border-radius:3px; color:#1a52b8; font-weight:700;">2,048 BYTES</span>
             </div>
             <p style="font-size:0.88rem; margin:0 0 0.5rem; color:var(--text-muted);">Memory range: <code>$0000–$08FF</code>. Manages 2× speed CPU negotiation, VRAM/WRAM banking registers, 15-bit RGB palette generation, cartridge mode detection (<code>$80</code> dual vs <code>$C0</code> CGB-only), and post-boot handoff.</p>
             <div style="font-size:0.82rem; color:var(--text-dim);">Default: <code>rom/cgb_boot.bin</code> (or embedded Bootix CGB)</div>
