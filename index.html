@@ -201,56 +201,49 @@
           </div>
         </div>
 
-        <!-- Unified Setup Box with Both Methods Visibly Side-by-Side -->
+        <!-- Unified Setup Box with Both Methods Stacked Vertically -->
         <div class="reveal" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-md, 12px); padding: 1.75rem; box-shadow: 0 4px 20px rgba(0,0,0,0.06); margin-bottom: 1.25rem;">
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; align-items: stretch; margin-bottom: 1.5rem;">
+          <div style="display: flex; flex-direction: column; gap: 1.25rem; margin-bottom: 1.5rem;">
             
             <!-- Method A: Direct Download -->
-            <div style="background: #e4ebe0; border: 1px solid #153b2a; border-radius: 8px; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between;">
-              <div>
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
-                  <h3 style="margin: 0; font-size: 1.22rem; color: #153b2a; font-family: var(--font-display, inherit);">Portable Package (.zip)</h3>
-                  <span style="font-size: 0.75rem; font-weight: 700; padding: 0.2rem 0.55rem; background: #153b2a; color: #d4f68c; border-radius: 3px; letter-spacing: 0.05em;">RECOMMENDED</span>
-                </div>
-                <p style="margin: 0 0 1.25rem; font-size: 0.92rem; line-height: 1.55; color: #3b5c49;">
-                  Download the complete standalone package, unzip anywhere on your PC (e.g. <code>C:\Games\ReaBoy</code>), and launch <code>ReaBoy.exe</code> directly. No admin rights or installer wizard needed.
-                </p>
+            <div style="background: #e4ebe0; border: 1px solid #153b2a; border-radius: 8px; padding: 1.5rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                <h3 style="margin: 0; font-size: 1.25rem; color: #153b2a; font-family: var(--font-display, inherit);">Portable Package (.zip)</h3>
+                <span style="font-size: 0.75rem; font-weight: 700; padding: 0.2rem 0.55rem; background: #153b2a; color: #d4f68c; border-radius: 3px; letter-spacing: 0.05em;">RECOMMENDED</span>
               </div>
-
-              <div>
-                <div style="margin-bottom: 0.75rem;">
-                  <a class="btn btn-primary" href="https://github.com/ScientificBrad/ReaBoy/releases/latest/download/ReaBoy-v2.0-win-x64.zip" style="font-size: 1.05rem; padding: 0.8rem 1.6rem; font-weight: 700; width: 100%; justify-content: center; box-shadow: 0 3px 10px rgba(21, 59, 42, 0.25);">
-                    Download Complete Package (.zip) ↓
-                  </a>
-                </div>
-                <div style="font-size: 0.83rem; color: #52685a; text-align: center;">
-                  <strong>v2.0</strong> · 23.4 MB · Windows 10/11 x64 · SHA-256 Verified
-                </div>
+              <p style="margin: 0 0 1.25rem; font-size: 0.95rem; line-height: 1.55; color: #3b5c49;">
+                Download the complete standalone package, unzip anywhere on your PC (e.g. <code>C:\Games\ReaBoy</code>), and launch <code>ReaBoy.exe</code> directly. No admin rights or installer wizard needed.
+              </p>
+              <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 1.25rem;">
+                <a class="btn btn-primary" href="https://github.com/ScientificBrad/ReaBoy/releases/latest/download/ReaBoy-v2.0-win-x64.zip" style="font-size: 1.05rem; padding: 0.8rem 1.6rem; font-weight: 700; box-shadow: 0 3px 10px rgba(21, 59, 42, 0.25);">
+                  Download Complete Package (.zip) ↓
+                </a>
+                <span style="font-size: 0.88rem; color: #52685a; font-weight: 500;">
+                  <strong>v2.0</strong> · 23.4 MB · Windows 10/11 x64 · SHA-256 Verified · All Files Included
+                </span>
               </div>
             </div>
 
             <!-- Method B: One-Line Command Install -->
-            <div style="background: #eaefe2; border: 1px solid #c8d3bf; border-radius: 8px; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between;">
-              <div>
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
-                  <h3 style="margin: 0; font-size: 1.22rem; color: #153b2a; font-family: var(--font-display, inherit);">One-Line Quick Setup</h3>
-                  <span style="font-size: 0.75rem; font-weight: 700; padding: 0.2rem 0.55rem; background: rgba(21,59,42,0.1); border: 1px solid rgba(21,59,42,0.25); color: #153b2a; border-radius: 3px; letter-spacing: 0.05em;">TERMINAL</span>
-                </div>
-                <p style="margin: 0 0 1rem; font-size: 0.92rem; line-height: 1.55; color: #3b5c49;">
-                  Run this single command in PowerShell or Windows Terminal to automatically download, verify checksums, extract, and start ReaBoy instantly:
-                </p>
+            <div style="background: #eaefe2; border: 1px solid #c8d3bf; border-radius: 8px; padding: 1.5rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                <h3 style="margin: 0; font-size: 1.25rem; color: #153b2a; font-family: var(--font-display, inherit);">One-Line Quick Setup</h3>
+                <span style="font-size: 0.75rem; font-weight: 700; padding: 0.2rem 0.55rem; background: rgba(21,59,42,0.1); border: 1px solid rgba(21,59,42,0.25); color: #153b2a; border-radius: 3px; letter-spacing: 0.05em;">TERMINAL</span>
+              </div>
+              <p style="margin: 0 0 1rem; font-size: 0.95rem; line-height: 1.55; color: #3b5c49;">
+                Run this single command in PowerShell or Windows Terminal to automatically download, verify checksums, extract, and start ReaBoy instantly:
+              </p>
 
-                <!-- Interactive Terminal Box -->
-                <div class="terminal-box" style="margin-bottom: 0.75rem;">
-                  <div class="terminal-top" style="padding: 0.4rem 0.75rem; font-size: 0.78rem;">
-                    <span>POWERSHELL / TERMINAL</span>
-                    <button class="copy-btn" type="button" data-copy-target="ps-quick-cmd" style="padding: 0.2rem 0.6rem; font-size: 0.75rem;">Copy</button>
-                  </div>
-                  <pre style="margin: 0; padding: 0.85rem 1rem;"><code id="ps-quick-cmd" style="color: #d4f68c; font-size: 0.82rem; font-family: var(--font-mono); word-break: break-all; white-space: pre-wrap;">irm https://raw.githubusercontent.com/ScientificBrad/ReaBoy/main/install.ps1 | iex</code></pre>
+              <!-- Interactive Terminal Box -->
+              <div class="terminal-box" style="margin-bottom: 0.75rem;">
+                <div class="terminal-top" style="padding: 0.45rem 0.85rem; font-size: 0.78rem;">
+                  <span>POWERSHELL / TERMINAL</span>
+                  <button class="copy-btn" type="button" data-copy-target="ps-quick-cmd" style="padding: 0.2rem 0.65rem; font-size: 0.75rem;">Copy</button>
                 </div>
+                <pre style="margin: 0; padding: 0.9rem 1.1rem;"><code id="ps-quick-cmd" style="color: #d4f68c; font-size: 0.85rem; font-family: var(--font-mono); word-break: break-all; white-space: pre-wrap;">irm https://raw.githubusercontent.com/ScientificBrad/ReaBoy/main/install.ps1 | iex</code></pre>
               </div>
 
-              <div style="font-size: 0.82rem; color: #52685a; line-height: 1.45;">
+              <div style="font-size: 0.83rem; color: #52685a; line-height: 1.45;">
                 Extracts to <code>%LOCALAPPDATA%\Programs\ReaBoy</code> and adds optional Start Menu &amp; Desktop shortcuts.
               </div>
             </div>
