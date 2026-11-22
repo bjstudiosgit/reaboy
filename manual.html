@@ -84,7 +84,7 @@
         <li><a href="#package">2. Production Package Contents</a></li>
         <li><a href="#menus">3. Menus, Video &amp; Audio</a></li>
         <li><a href="#controls">4. Controls &amp; Key Remapping</a></li>
-        <li><a href="#boot-rom">5. Boot Firmware &amp; Bootix v1.2</a></li>
+        <li><a href="#boot-rom">5. Boot Firmware &amp; Dual Bootix Engine</a></li>
         <li><a href="#saves">6. Battery Saves &amp; Settings</a></li>
         <li><a href="#cli">7. Command-Line &amp; Headless Mode</a></li>
         <li><a href="#checksums">8. SHA-256 Verification</a></li>
@@ -116,10 +116,10 @@
         <h2>2. Production Package Contents</h2>
         <p>The portable ZIP distribution (<code>ReaBoy-v1.0.1-win-x64.zip</code>) contains:</p>
         <ul>
-          <li><code>ReaBoy.exe</code> — Standalone application with bundled .NET 8 runtime and embedded Bootix DMG v1.2 firmware.</li>
+          <li><code>ReaBoy.exe</code> — Standalone application with bundled .NET 8 runtime and embedded Bootix DMG v1.2 &amp; CGB boot firmware.</li>
           <li><code>README.md</code> — Bundled quick guide, controls reference, and version details.</li>
           <li><code>LICENSES.txt</code> — Application copyright and complete Microsoft .NET runtime licence notices.</li>
-          <li><code>rom/</code> — Unmodified Bootix DMG v1.2 (<code>dmg_boot.bin</code>), <code>BOOTIX-LICENSE.txt</code> (CC0-1.0), <code>BOOTIX-SOURCE.txt</code>, and game-folder instructions.</li>
+          <li><code>rom/</code> — Open-source Bootix boot ROMs (<code>dmg_boot.bin</code> and <code>cgb_boot.bin</code>), <code>BOOTIX-LICENSE.txt</code> (CC0-1.0), and ROM instructions.</li>
         </ul>
         <p>The runtime unpacks native components into the standard per-user .NET temporary cache when needed. Nothing needs to be written beside <code>ReaBoy.exe</code>.</p>
       </section>
@@ -210,15 +210,62 @@
       </section>
 
       <section class="manual-block" id="boot-rom">
-        <h2>5. Boot Firmware &amp; Bootix DMG v1.2</h2>
-        <p>ReaBoy includes unmodified <strong>Bootix DMG v1.2</strong> (CC0-1.0 public domain replacement boot ROM) both embedded inside <code>ReaBoy.exe</code> and in the portable <code>rom/</code> directory. Original Nintendo boot firmware is not distributed.</p>
+        <h2>5. Boot Firmware &amp; Dual Bootix Engine (Game Boy &amp; Color)</h2>
+        <p>ReaBoy includes built-in open-source boot engines for both original <strong>Game Boy (DMG-01 · 256 Bytes)</strong> and <strong>Game Boy Color (CGB-001 · 2,048 Bytes)</strong>. Both firmware routines are embedded directly inside <code>ReaBoy.exe</code> and bundled in the portable <code>rom/</code> directory using <strong>Bootix</strong> (CC0-1.0 Public Domain). No external BIOS dumps or copyrighted files are required—ReaBoy is 100% legal and playable out of the box.</p>
+
+        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin: 1.25rem 0;">
+          <div style="background: rgba(9, 13, 11, 0.6); border: 1px solid var(--border); border-radius: 6px; padding: 1.1rem;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+              <strong style="color:var(--gb-0); font-family:var(--font-display, inherit);">Game Boy (DMG-01) Firmware</strong>
+              <span style="font-size:0.75rem; padding:0.15rem 0.45rem; background:rgba(196,240,58,0.15); border:1px solid rgba(196,240,58,0.3); border-radius:3px; color:var(--gb-0); font-weight:700;">256 BYTES</span>
+            </div>
+            <p style="font-size:0.88rem; margin:0 0 0.5rem; color:var(--text-muted);">Memory range: <code>$0000–$00FF</code>. Executes CPU stack initialization, 8 KiB VRAM zeroing, 4-channel APU startup, scrolling logo decompression, and header checksum verification before unmapping at <code>$FF50</code>.</p>
+            <div style="font-size:0.82rem; color:var(--text-dim);">Default: <code>rom/dmg_boot.bin</code> (or embedded Bootix DMG v1.2)</div>
+          </div>
+
+          <div style="background: rgba(9, 13, 11, 0.6); border: 1px solid var(--border); border-radius: 6px; padding: 1.1rem;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+              <strong style="color:var(--gb-0); font-family:var(--font-display, inherit);">Game Boy Color (CGB-001) Firmware</strong>
+              <span style="font-size:0.75rem; padding:0.15rem 0.45rem; background:rgba(90,140,255,0.15); border:1px solid rgba(90,140,255,0.3); border-radius:3px; color:#70a5ff; font-weight:700;">2,048 BYTES</span>
+            </div>
+            <p style="font-size:0.88rem; margin:0 0 0.5rem; color:var(--text-muted);">Memory range: <code>$0000–$08FF</code>. Manages 2× speed CPU negotiation, VRAM/WRAM banking registers, 15-bit RGB palette generation, cartridge mode detection (<code>$80</code> dual vs <code>$C0</code> CGB-only), and post-boot handoff.</p>
+            <div style="font-size:0.82rem; color:var(--text-dim);">Default: <code>rom/cgb_boot.bin</code> (or embedded Bootix CGB)</div>
+          </div>
+        </div>
+
         <h3>Firmware Resolution Priority</h3>
-        <ol>
-          <li>A valid 256-byte custom boot ROM selected via <strong>File &gt; Choose Boot ROM</strong> (your own original Nintendo DMG boot ROM is supported and retains its original scrolling logo).</li>
-          <li>An adjacent <code>rom/dmg_boot.bin</code> beside <code>ReaBoy.exe</code>.</li>
-          <li>The embedded Bootix DMG v1.2 fallback inside <code>ReaBoy.exe</code>.</li>
-        </ol>
-        <p>Check <strong>File &gt; Skip Intro</strong> to jump straight to cartridge entry point <code>$0100</code> with canonical post-boot registers on subsequent loads and resets.</p>
+        <p>When launching any ROM, ReaBoy automatically detects whether the title requires DMG or CGB firmware, then resolves the active boot image in this strict order:</p>
+        <div class="compat-table-wrap" style="margin-bottom:1.25rem;">
+          <table class="compat-table" style="width:100%;">
+            <thead>
+              <tr>
+                <th style="width:20%;">Priority</th>
+                <th style="width:35%;">Boot Source</th>
+                <th style="width:45%;">Behavior &amp; Custom ROM Compatibility</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1 · Highest</strong></td>
+                <td><strong>Custom User Boot ROM</strong><br><small style="color:var(--text-dim);">File &gt; Choose Boot ROM...</small></td>
+                <td>Loads any custom 256-byte DMG or 2,048-byte CGB binary. Supports genuine dumped Nintendo boot ROMs with original scrolling animation and chime sound.</td>
+              </tr>
+              <tr>
+                <td><strong>2 · Portable</strong></td>
+                <td><strong>Adjacent <code>rom/</code> Folder</strong><br><small style="color:var(--text-dim);">rom/dmg_boot.bin or rom/cgb_boot.bin</small></td>
+                <td>Automatically loaded if present beside <code>ReaBoy.exe</code>. Allows simple portable drop-in replacements without reconfiguring menus.</td>
+              </tr>
+              <tr>
+                <td><strong>3 · Safe Fallback</strong></td>
+                <td><strong>Embedded Bootix Firmware</strong><br><small style="color:var(--text-dim);">Compiled inside ReaBoy.exe</small></td>
+                <td>Guarantees 100% plug-and-play operation even if portable files are missing. Zero configuration or setup needed.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Fast Boot &amp; Skip Intro</h3>
+        <p>Enable <strong>File &gt; Skip Intro</strong> (or use the <code>--skip-intro</code> command-line flag) to bypass the scrolling boot animation entirely. ReaBoy will jump immediately to cartridge entry point <code>$0100</code> within 0 milliseconds, with all Sharp SM83 registers (<code>AF</code>, <code>BC</code>, <code>DE</code>, <code>HL</code>, <code>SP</code>) and hardware I/O registers precisely initialized to exact post-boot silicon values.</p>
       </section>
 
       <section class="manual-block" id="saves">
@@ -232,7 +279,7 @@
 
       <section class="manual-block" id="cli">
         <h2>7. Command-Line Interface &amp; Headless Mode</h2>
-        <p>ReaBoy supports automated launching and headless frame benchmarking directly from Windows Terminal or PowerShell:</p>
+        <p>ReaBoy supports automated launching and headless frame benchmarking directly from the <strong>Command Prompt</strong>, <strong>PowerShell</strong>, or <strong>Windows Terminal</strong>:</p>
         <div class="terminal-box">
           <div class="terminal-top">
             <span>CLI USAGE EXAMPLES</span>
@@ -245,7 +292,7 @@ ReaBoy.exe game.gb --headless --skip-intro --frames 600</code></pre>
 
       <section class="manual-block" id="checksums">
         <h2>8. Official v1.0.1 BETA SHA-256 Checksums</h2>
-        <p>Verify your downloads using PowerShell <code>Get-FileHash</code> against the published <code>SHA256SUMS.txt</code>:</p>
+        <p>Verify your downloads against the published <code>SHA256SUMS.txt</code> using Command Prompt (<code>certutil</code>) or PowerShell (<code>Get-FileHash</code>):</p>
         <div class="terminal-box">
           <div class="terminal-top">
             <span>SHA256SUMS.txt (v1.0.1)</span>
