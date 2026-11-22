@@ -1,6 +1,26 @@
 (function () {
   'use strict';
 
+  // Reveal animations for .reveal elements
+  const revealElements = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-revealed');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.05, rootMargin: '50px' });
+    revealElements.forEach((el) => observer.observe(el));
+  } else {
+    revealElements.forEach((el) => el.classList.add('is-revealed'));
+  }
+  // Safety timeout: ensure everything reveals even if offscreen
+  setTimeout(() => {
+    revealElements.forEach((el) => el.classList.add('is-revealed'));
+  }, 100);
+
   // Theme toggle persistence
   const themeToggle = document.getElementById('theme-toggle');
   if (themeToggle) {

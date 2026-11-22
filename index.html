@@ -101,9 +101,9 @@
   <!-- Sticky Navigation -->
   <header class="site-header">
     <div class="wrap nav-bar">
-      <a class="brand" href="index.html">
-        <span class="brand-mark" aria-hidden="true">R</span>
-        <span>ReaBoy</span>
+      <a class="brand" href="index.html" aria-label="ReaBoy homepage">
+        <span class="brand-mark">RB</span>
+        <span class="brand-text">ReaBoy <span class="brand-ver">v2.0</span></span>
       </a>
       <button class="mobile-menu-btn" id="mobile-menu-btn" type="button" aria-expanded="false" aria-controls="nav-links">MENU</button>
       <nav class="nav-links" id="nav-links" aria-label="Primary Navigation">
@@ -415,6 +415,7 @@
     </section>
 
         <!-- SCREENSHOTS & GAMEPLAY SHOWCASE: 18 BEST HANDHELD MASTERPIECES -->
+        <!-- SCREENSHOTS & GAMEPLAY SHOWCASE: 18 BEST HANDHELD MASTERPIECES -->
     <section class="section" id="beta-lab">
       <div class="wrap">
         <div class="section-head reveal" style="margin-bottom: 1.5rem;">
@@ -434,9 +435,9 @@
 
         <!-- SHOWCASE PLATFORM FILTER TABS -->
         <div class="showcase-filter-tabs reveal" style="display:flex; gap:0.6rem; margin-bottom:2rem; flex-wrap:wrap;">
-          <button class="chip-btn active" id="tab-all" type="button" onclick="filterShowcase('all')">All 18 Masterpieces</button>
-          <button class="chip-btn" id="tab-dmg" type="button" onclick="filterShowcase('dmg')">Original Game Boy (9 Classics)</button>
-          <button class="chip-btn" id="tab-cgb" type="button" onclick="filterShowcase('cgb')">Game Boy Color (9 Vibrant Masterpieces)</button>
+          <button class="chip-btn active" id="tab-all" type="button">All 18 Masterpieces</button>
+          <button class="chip-btn" id="tab-dmg" type="button">Original Game Boy (9 Classics)</button>
+          <button class="chip-btn" id="tab-cgb" type="button">Game Boy Color (9 Vibrant Masterpieces)</button>
         </div>
 
         <div class="top12-grid reveal" id="showcase-grid">
@@ -455,7 +456,7 @@
               </video>
             </div>
             <div class="top12-body">
-              <img class="top12-boxart-img" src="assets/img/boxart/zelda-links-awakening.jpg" alt="The Legend of Zelda: Link's Awakening Box Art" loading="lazy" title="Box Art" onerror="this.style.display='none'">
+              <img class="top12-boxart-img" src="assets/img/boxart/zelda-links-awakening.jpg" alt="The Legend of Zelda: Link's Awakening Box Art" loading="lazy">
               <div class="top12-info">
                 <p class="top12-desc">
                   Arguably the greatest adventure ever made for the original Game Boy. Huge Koholint Island overworld, complex dungeons, and smooth 4-way scrolling. <span class="top12-rom-spec">(1,024 KB · MBC1+RAM+BATT).</span>
@@ -479,7 +480,7 @@
               </video>
             </div>
             <div class="top12-body">
-              <img class="top12-boxart-img" src="assets/img/boxart/pokemon-red.jpg" alt="Pokémon Red & Blue Box Art" loading="lazy" title="Box Art" onerror="this.style.display='none'">
+              <img class="top12-boxart-img" src="assets/img/boxart/pokemon-red.jpg" alt="Pokémon Red & Blue Box Art" loading="lazy">
               <div class="top12-info">
                 <p class="top12-desc">
                   The monster-catching phenomenon that defined handheld gaming. ReaBoy's upgraded MBC3 mapper faithfully executes battery-backed trainer saves and battle state. <span class="top12-rom-spec">(1,024 KB · MBC3+RAM+BATT).</span>
@@ -503,7 +504,7 @@
               </video>
             </div>
             <div class="top12-body">
-              <img class="top12-boxart-img" src="assets/img/boxart/tetris.jpg" alt="Tetris Box Art" loading="lazy" title="Box Art" onerror="this.style.display='none'">
+              <img class="top12-boxart-img" src="assets/img/boxart/tetris.jpg" alt="Tetris Box Art" loading="lazy">
               <div class="top12-info">
                 <p class="top12-desc">
                   The quintessential pack-in masterpiece. Requires cycle-strict APU frequency accuracy for the iconic Korobeiniki theme and drop-timing precision. <span class="top12-rom-spec">(32 KB · ROM-Only).</span>
@@ -527,7 +528,7 @@
               </video>
             </div>
             <div class="top12-body">
-              <img class="top12-boxart-img" src="assets/img/boxart/super-mario-land-2.jpg" alt="Super Mario Land 2: 6 Golden Coins Box Art" loading="lazy" title="Box Art" onerror="this.style.display='none'">
+              <img class="top12-boxart-img" src="assets/img/boxart/super-mario-land-2.jpg" alt="Super Mario Land 2: 6 Golden Coins Box Art" loading="lazy">
               <div class="top12-info">
                 <p class="top12-desc">
                   Rich 16×16 sprite graphics, responsive physics, and Wario's debut. Verifies mid-frame scanline PPU timing and fluid integer scaling. <span class="top12-rom-spec">(512 KB · MBC1+RAM+BATT).</span>
@@ -551,7 +552,7 @@
               </video>
             </div>
             <div class="top12-body">
-              <img class="top12-boxart-img" src="assets/img/boxart/metroid-ii.jpg" alt="Metroid II: Return of Samus Box Art" loading="lazy" title="Box Art" onerror="this.style.display='none'">
+              <img class="top12-boxart-img" src="assets/img/boxart/metroid-2.jpg" alt="Metroid II: Return of Samus Box Art" loading="lazy">
               <div class="top12-info">
                 <p class="top12-desc">
                   Atmospheric, cavernous SR388 exploration with massive Samus Aran sprites, morph ball physics, and demanding VRAM tile-update routines. <span class="top12-rom-spec">(256 KB · MBC1).</span>
@@ -575,7 +576,7 @@
               </video>
             </div>
             <div class="top12-body">
-              <img class="top12-boxart-img" src="assets/img/boxart/kirby-dream-land-2.jpg" alt="Kirby's Dream Land 2 Box Art" loading="lazy" title="Box Art" onerror="this.style.display='none'">
+              <img class="top12-boxart-img" src="assets/img/boxart/kirbys-dream-land-2.jpg" alt="Kirby's Dream Land 2 Box Art" loading="lazy">
               <div class="top12-info">
                 <p class="top12-desc">
                   Animal companions Rick, Kine, and Coo. Pushes DMG hardware with parallax background tricks and dense sprite composition across Rainbow Islands. <span class="top12-rom-spec">(1,024 KB · MBC1+RAM+BATT).</span>
@@ -595,11 +596,11 @@
             </div>
             <div class="top12-media">
               <video loop muted playsinline preload="none" poster="assets/img/shots/donkey-kong.png">
-                <source src="assets/video/donkey-kong-94.mp4?v=1.1.0" type="video/mp4">
+                <source src="assets/video/donkey-kong.mp4?v=1.1.0" type="video/mp4">
               </video>
             </div>
             <div class="top12-body">
-              <img class="top12-boxart-img" src="assets/img/boxart/donkey-kong.jpg" alt="Donkey Kong ('94) Box Art" loading="lazy" title="Box Art" onerror="this.style.display='none'">
+              <img class="top12-boxart-img" src="assets/img/boxart/donkey-kong.jpg" alt="Donkey Kong ('94) Box Art" loading="lazy">
               <div class="top12-info">
                 <p class="top12-desc">
                   Starts as classic arcade Donkey Kong before expanding into 101 brilliant puzzle-platforming stages. Demonstrates pinpoint input latency. <span class="top12-rom-spec">(512 KB · MBC1+RAM+BATT).</span>
@@ -623,7 +624,7 @@
               </video>
             </div>
             <div class="top12-body">
-              <img class="top12-boxart-img" src="assets/img/boxart/wario-land.jpg" alt="Wario Land: Super Mario Land 3 Box Art" loading="lazy" title="Box Art" onerror="this.style.display='none'">
+              <img class="top12-boxart-img" src="assets/img/boxart/wario-land.jpg" alt="Wario Land: Super Mario Land 3 Box Art" loading="lazy">
               <div class="top12-info">
                 <p class="top12-desc">
                   Wario's premier starring role on Kitchen Island. Bull, Jet, and Dragon pots with coin-collecting mechanics and multiple treasure endings. <span class="top12-rom-spec">(512 KB · MBC1+RAM+BATT).</span>
@@ -647,10 +648,10 @@
               </video>
             </div>
             <div class="top12-body">
-              <img class="top12-boxart-img" src="assets/img/boxart/dr-mario.jpg" alt="Dr. Mario Box Art" loading="lazy" title="Box Art" onerror="this.style.display='none'">
+              <img class="top12-boxart-img" src="assets/img/boxart/dr-mario.jpg" alt="Dr. Mario Box Art" loading="lazy">
               <div class="top12-info">
                 <p class="top12-desc">
-                  Rapid virus eradication puzzle mechanics. Fixed in v1.0.1 BETA and rock-solid under v2.0 with cycle-strict interrupt handling and zero freeze. <span class="top12-rom-spec">(32 KB · ROM-Only).</span>
+                  Rapid virus eradication puzzle mechanics. Rock-solid under v2.0 with cycle-strict interrupt handling and zero freeze. <span class="top12-rom-spec">(32 KB · ROM-Only).</span>
                 </p>
               </div>
             </div>
@@ -661,16 +662,15 @@
             <div class="top12-header">
               <div>
                 <h3 class="top12-title" style="margin:0 0 0.2rem;">Pokémon Crystal Version</h3>
-                <span class="verdict-badge" style="font-size:0.68rem; background:rgba(47,224,117,0.12); color:var(--gb-0);">CGB-001 · 8.388 MHz 2×</span>
+                <span class="verdict-badge verdict-pass" style="font-size:0.68rem; background:rgba(47,224,117,0.12); color:var(--gb-0);">CGB-001 · 8.388 MHz 2×</span>
               </div>
               <span class="top12-year">2000</span>
             </div>
             <div class="top12-media" style="background:#050705; display:flex; align-items:center; justify-content:center; overflow:hidden;">
-              <img src="assets/img/cgb-pokemon-crystal-window.png" alt="Pokémon Crystal Version Gameplay" loading="lazy" style="width:100%; height:auto; object-fit:contain; image-rendering:pixelated;">
+              <img src="assets/img/cgb-pokemon-crystal-window.png" alt="Pokémon Crystal Version Live Capture" loading="lazy" style="width:100%; height:100%; object-fit:contain; image-rendering:pixelated;">
             </div>
             <div class="top12-body">
-              <img class="top12-boxart-img" src="assets/img/boxart/pokemon-crystal.jpg" alt="Pokémon Crystal Version Box Art" loading="lazy" title="Box Art" onerror="this.style.display='none'">
-              <div class="top12-info">
+              <div class="top12-info" style="padding-left:0;">
                 <p class="top12-desc">
                   The crown jewel of the Game Boy Color library. Animated battle sprites, real-time day/night cycles, and CGB exclusive double-speed CPU execution. <span class="top12-rom-spec">(2,048 KB · MBC3+RTC+RAM+BATT ($C0)).</span>
                 </p>
@@ -683,16 +683,15 @@
             <div class="top12-header">
               <div>
                 <h3 class="top12-title" style="margin:0 0 0.2rem;">The Legend of Zelda: Oracle of Ages</h3>
-                <span class="verdict-badge" style="font-size:0.68rem; background:rgba(47,224,117,0.12); color:var(--gb-0);">CGB-001 · 8.388 MHz 2×</span>
+                <span class="verdict-badge verdict-pass" style="font-size:0.68rem; background:rgba(47,224,117,0.12); color:var(--gb-0);">CGB-001 · 8.388 MHz 2×</span>
               </div>
               <span class="top12-year">2001</span>
             </div>
             <div class="top12-media" style="background:#050705; display:flex; align-items:center; justify-content:center; overflow:hidden;">
-              <img src="assets/img/cgb-zelda-ages-window.png" alt="The Legend of Zelda: Oracle of Ages Gameplay" loading="lazy" style="width:100%; height:auto; object-fit:contain; image-rendering:pixelated;">
+              <img src="assets/img/cgb-zelda-ages-window.png" alt="The Legend of Zelda: Oracle of Ages Live Capture" loading="lazy" style="width:100%; height:100%; object-fit:contain; image-rendering:pixelated;">
             </div>
             <div class="top12-body">
-              <img class="top12-boxart-img" src="assets/img/boxart/zelda-oracle-of-ages.jpg" alt="The Legend of Zelda: Oracle of Ages Box Art" loading="lazy" title="Box Art" onerror="this.style.display='none'">
-              <div class="top12-info">
+              <div class="top12-info" style="padding-left:0;">
                 <p class="top12-desc">
                   Capcom / Flagship masterpiece featuring time travel between past and present Labrynna, demanding tile banking in VRAM Bank 1, and 24 colors/frame. <span class="top12-rom-spec">(1,024 KB · MBC5+RAM+BATT ($C0)).</span>
                 </p>
@@ -705,16 +704,15 @@
             <div class="top12-header">
               <div>
                 <h3 class="top12-title" style="margin:0 0 0.2rem;">The Legend of Zelda: Oracle of Seasons</h3>
-                <span class="verdict-badge" style="font-size:0.68rem; background:rgba(47,224,117,0.12); color:var(--gb-0);">CGB-001 · 8.388 MHz 2×</span>
+                <span class="verdict-badge verdict-pass" style="font-size:0.68rem; background:rgba(47,224,117,0.12); color:var(--gb-0);">CGB-001 · 8.388 MHz 2×</span>
               </div>
               <span class="top12-year">2001</span>
             </div>
             <div class="top12-media" style="background:#050705; display:flex; align-items:center; justify-content:center; overflow:hidden;">
-              <img src="assets/img/cgb-zelda-seasons-window.png" alt="The Legend of Zelda: Oracle of Seasons Gameplay" loading="lazy" style="width:100%; height:auto; object-fit:contain; image-rendering:pixelated;">
+              <img src="assets/img/cgb-zelda-seasons-window.png" alt="The Legend of Zelda: Oracle of Seasons Live Capture" loading="lazy" style="width:100%; height:100%; object-fit:contain; image-rendering:pixelated;">
             </div>
             <div class="top12-body">
-              <img class="top12-boxart-img" src="assets/img/boxart/zelda-oracle-of-seasons.jpg" alt="The Legend of Zelda: Oracle of Seasons Box Art" loading="lazy" title="Box Art" onerror="this.style.display='none'">
-              <div class="top12-info">
+              <div class="top12-info" style="padding-left:0;">
                 <p class="top12-desc">
                   Dynamic four-season environmental shifts changing overworld traversal in real time. Pushes 123 total RGB555 colors and link passwords. <span class="top12-rom-spec">(1,024 KB · MBC5+RAM+BATT ($C0)).</span>
                 </p>
@@ -727,16 +725,15 @@
             <div class="top12-header">
               <div>
                 <h3 class="top12-title" style="margin:0 0 0.2rem;">Super Mario Bros. Deluxe</h3>
-                <span class="verdict-badge" style="font-size:0.68rem; background:rgba(47,224,117,0.12); color:var(--gb-0);">CGB-001 · Dual-Mode ($80)</span>
+                <span class="verdict-badge verdict-pass" style="font-size:0.68rem; background:rgba(47,224,117,0.12); color:var(--gb-0);">CGB-001 · Dual-Mode ($80)</span>
               </div>
               <span class="top12-year">1999</span>
             </div>
             <div class="top12-media" style="background:#050705; display:flex; align-items:center; justify-content:center; overflow:hidden;">
-              <img src="assets/img/cgb-mario-deluxe-window.png" alt="Super Mario Bros. Deluxe Gameplay" loading="lazy" style="width:100%; height:auto; object-fit:contain; image-rendering:pixelated;">
+              <img src="assets/img/cgb-mario-deluxe-window.png" alt="Super Mario Bros. Deluxe Live Capture" loading="lazy" style="width:100%; height:100%; object-fit:contain; image-rendering:pixelated;">
             </div>
             <div class="top12-body">
-              <img class="top12-boxart-img" src="assets/img/boxart/super-mario-bros-deluxe.jpg" alt="Super Mario Bros. Deluxe Box Art" loading="lazy" title="Box Art" onerror="this.style.display='none'">
-              <div class="top12-info">
+              <div class="top12-info" style="padding-left:0;">
                 <p class="top12-desc">
                   Full color remake of the 1985 NES classic with camera map-scrolling, Challenge Mode, Boo races, and Game Boy Printer print integration. <span class="top12-rom-spec">(1,024 KB · MBC5+RAM+BATT ($80)).</span>
                 </p>
@@ -749,16 +746,15 @@
             <div class="top12-header">
               <div>
                 <h3 class="top12-title" style="margin:0 0 0.2rem;">Wario Land 3</h3>
-                <span class="verdict-badge" style="font-size:0.68rem; background:rgba(47,224,117,0.12); color:var(--gb-0);">CGB-001 · 8.388 MHz 2×</span>
+                <span class="verdict-badge verdict-pass" style="font-size:0.68rem; background:rgba(47,224,117,0.12); color:var(--gb-0);">CGB-001 · 8.388 MHz 2×</span>
               </div>
               <span class="top12-year">2000</span>
             </div>
             <div class="top12-media" style="background:#050705; display:flex; align-items:center; justify-content:center; overflow:hidden;">
-              <img src="assets/img/cgb-wario-land-3-window.png" alt="Wario Land 3 Gameplay" loading="lazy" style="width:100%; height:auto; object-fit:contain; image-rendering:pixelated;">
+              <img src="assets/img/cgb-wario-land-3-window.png" alt="Wario Land 3 Live Capture" loading="lazy" style="width:100%; height:100%; object-fit:contain; image-rendering:pixelated;">
             </div>
             <div class="top12-body">
-              <img class="top12-boxart-img" src="assets/img/boxart/wario-land-3.jpg" alt="Wario Land 3 Box Art" loading="lazy" title="Box Art" onerror="this.style.display='none'">
-              <div class="top12-info">
+              <div class="top12-info" style="padding-left:0;">
                 <p class="top12-desc">
                   Invincible puzzle-platforming inside a magical music box. Day and night palette transitions alter level layouts and unlock hidden treasures. <span class="top12-rom-spec">(2,048 KB · MBC5+RAM+BATT ($C0)).</span>
                 </p>
@@ -771,16 +767,15 @@
             <div class="top12-header">
               <div>
                 <h3 class="top12-title" style="margin:0 0 0.2rem;">The Legend of Zelda: Link's Awakening DX</h3>
-                <span class="verdict-badge" style="font-size:0.68rem; background:rgba(47,224,117,0.12); color:var(--gb-0);">CGB-001 · Dual-Mode ($80)</span>
+                <span class="verdict-badge verdict-pass" style="font-size:0.68rem; background:rgba(47,224,117,0.12); color:var(--gb-0);">CGB-001 · Dual-Mode ($80)</span>
               </div>
               <span class="top12-year">1998</span>
             </div>
             <div class="top12-media" style="background:#050705; display:flex; align-items:center; justify-content:center; overflow:hidden;">
-              <img src="assets/img/cgb-links-awakening-dx-window.png" alt="The Legend of Zelda: Link's Awakening DX Gameplay" loading="lazy" style="width:100%; height:auto; object-fit:contain; image-rendering:pixelated;">
+              <img src="assets/img/cgb-links-awakening-dx-window.png" alt="The Legend of Zelda: Link's Awakening DX Live Capture" loading="lazy" style="width:100%; height:100%; object-fit:contain; image-rendering:pixelated;">
             </div>
             <div class="top12-body">
-              <img class="top12-boxart-img" src="assets/img/boxart/zelda-links-awakening-dx.jpg" alt="The Legend of Zelda: Link's Awakening DX Box Art" loading="lazy" title="Box Art" onerror="this.style.display='none'">
-              <div class="top12-info">
+              <div class="top12-info" style="padding-left:0;">
                 <p class="top12-desc">
                   The vibrant color re-release featuring the exclusive Color Dungeon, blue/red mail upgrades, and 16-color tile palettes. <span class="top12-rom-spec">(1,024 KB · MBC1+RAM+BATT ($80)).</span>
                 </p>
@@ -793,16 +788,15 @@
             <div class="top12-header">
               <div>
                 <h3 class="top12-title" style="margin:0 0 0.2rem;">Pokémon Gold & Silver</h3>
-                <span class="verdict-badge" style="font-size:0.68rem; background:rgba(47,224,117,0.12); color:var(--gb-0);">CGB-001 · Dual-Mode ($80)</span>
+                <span class="verdict-badge verdict-pass" style="font-size:0.68rem; background:rgba(47,224,117,0.12); color:var(--gb-0);">CGB-001 · Dual-Mode ($80)</span>
               </div>
               <span class="top12-year">1999</span>
             </div>
             <div class="top12-media" style="background:#050705; display:flex; align-items:center; justify-content:center; overflow:hidden;">
-              <img src="assets/img/cgb-pokemon-gold-window.png" alt="Pokémon Gold & Silver Gameplay" loading="lazy" style="width:100%; height:auto; object-fit:contain; image-rendering:pixelated;">
+              <img src="assets/img/cgb-pokemon-gold-window.png" alt="Pokémon Gold & Silver Live Capture" loading="lazy" style="width:100%; height:100%; object-fit:contain; image-rendering:pixelated;">
             </div>
             <div class="top12-body">
-              <img class="top12-boxart-img" src="assets/img/boxart/pokemon-gold.jpg" alt="Pokémon Gold & Silver Box Art" loading="lazy" title="Box Art" onerror="this.style.display='none'">
-              <div class="top12-info">
+              <div class="top12-info" style="padding-left:0;">
                 <p class="top12-desc">
                   The generation that introduced 100 new Pokémon, dual regions (Johto & Kanto), and hardware real-time clock tracking in the cartridge. <span class="top12-rom-spec">(1,024 KB · MBC3+RTC+RAM+BATT ($80)).</span>
                 </p>
@@ -815,16 +809,15 @@
             <div class="top12-header">
               <div>
                 <h3 class="top12-title" style="margin:0 0 0.2rem;">Tetris DX</h3>
-                <span class="verdict-badge" style="font-size:0.68rem; background:rgba(47,224,117,0.12); color:var(--gb-0);">CGB-001 · Dual-Mode ($80)</span>
+                <span class="verdict-badge verdict-pass" style="font-size:0.68rem; background:rgba(47,224,117,0.12); color:var(--gb-0);">CGB-001 · Dual-Mode ($80)</span>
               </div>
               <span class="top12-year">1998</span>
             </div>
             <div class="top12-media" style="background:#050705; display:flex; align-items:center; justify-content:center; overflow:hidden;">
-              <img src="assets/img/cgb-tetris-dx-window.png" alt="Tetris DX Gameplay" loading="lazy" style="width:100%; height:auto; object-fit:contain; image-rendering:pixelated;">
+              <img src="assets/img/cgb-tetris-dx-window.png" alt="Tetris DX Live Capture" loading="lazy" style="width:100%; height:100%; object-fit:contain; image-rendering:pixelated;">
             </div>
             <div class="top12-body">
-              <img class="top12-boxart-img" src="assets/img/boxart/tetris-dx.jpg" alt="Tetris DX Box Art" loading="lazy" title="Box Art" onerror="this.style.display='none'">
-              <div class="top12-info">
+              <div class="top12-info" style="padding-left:0;">
                 <p class="top12-desc">
                   High-speed color edition featuring battery-backed profile saving, high scores, Ultra mode, 40-lines, and VS CPU mode. <span class="top12-rom-spec">(512 KB · MBC1+RAM+BATT ($80)).</span>
                 </p>
@@ -837,16 +830,15 @@
             <div class="top12-header">
               <div>
                 <h3 class="top12-title" style="margin:0 0 0.2rem;">Kirby's Tilt 'n' Tumble</h3>
-                <span class="verdict-badge" style="font-size:0.68rem; background:rgba(47,224,117,0.12); color:var(--gb-0);">CGB-001 · 8.388 MHz 2×</span>
+                <span class="verdict-badge verdict-pass" style="font-size:0.68rem; background:rgba(47,224,117,0.12); color:var(--gb-0);">CGB-001 · 8.388 MHz 2×</span>
               </div>
               <span class="top12-year">2000</span>
             </div>
             <div class="top12-media" style="background:#050705; display:flex; align-items:center; justify-content:center; overflow:hidden;">
-              <img src="assets/img/cgb-kirby-tilt-window.png" alt="Kirby's Tilt 'n' Tumble Gameplay" loading="lazy" style="width:100%; height:auto; object-fit:contain; image-rendering:pixelated;">
+              <img src="assets/img/cgb-kirby-tilt-window.png" alt="Kirby's Tilt 'n' Tumble Live Capture" loading="lazy" style="width:100%; height:100%; object-fit:contain; image-rendering:pixelated;">
             </div>
             <div class="top12-body">
-              <img class="top12-boxart-img" src="assets/img/boxart/kirbys-tilt-n-tumble.jpg" alt="Kirby's Tilt 'n' Tumble Box Art" loading="lazy" title="Box Art" onerror="this.style.display='none'">
-              <div class="top12-info">
+              <div class="top12-info" style="padding-left:0;">
                 <p class="top12-desc">
                   Special translucent pink cartridge housing an analog ADXL202 dual-axis accelerometer. ReaBoy accurately maps MBC7 tilt registers and rumble. <span class="top12-rom-spec">(1,024 KB · MBC7+SENSOR+RAM+BATT ($C0)).</span>
                 </p>
@@ -865,6 +857,35 @@
         </div>
       </div>
     </section>
+
+    <script>
+      (function() {
+        function initFilter() {
+          var tabs = document.querySelectorAll('.showcase-filter-tabs .chip-btn');
+          var items = document.querySelectorAll('.showcase-item');
+          tabs.forEach(function(btn) {
+            btn.addEventListener('click', function() {
+              tabs.forEach(function(b) { b.classList.remove('active'); });
+              btn.classList.add('active');
+              var filter = btn.id === 'tab-dmg' ? 'dmg' : (btn.id === 'tab-cgb' ? 'cgb' : 'all');
+              items.forEach(function(item) {
+                var platform = item.getAttribute('data-platform');
+                if (filter === 'all' || platform === filter) {
+                  item.style.display = '';
+                } else {
+                  item.style.display = 'none';
+                }
+              });
+            });
+          });
+        }
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', initFilter);
+        } else {
+          initFilter();
+        }
+      })();
+    </script>
 
   <!-- FOOTER -->
   <footer class="site-footer">
