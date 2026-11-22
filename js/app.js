@@ -1221,13 +1221,9 @@
       .map((g) => {
         const shotSrc = g.screenshot || (g.slug ? `assets/img/shots/${g.slug}.png` : 'assets/img/shots/cgb/cgb-placeholder.png');
 
-        let platBadge = `<span class="verdict-badge verdict-pass" style="font-size:0.72rem;">DMG-01</span>`;
+        let platBadge = `<span class="verdict-badge verdict-pass" style="font-size:0.72rem; white-space:nowrap;">Game Boy</span>`;
         if (g.platform === 'CGB') {
-          if (g.categoryBadge === 'Exclusive' || g.platformBadge?.includes('Exclusive')) {
-            platBadge = `<span class="verdict-badge verdict-pass" style="font-size:0.72rem;">CGB Exclusive</span>`;
-          } else {
-            platBadge = `<span class="verdict-badge" style="font-size:0.72rem; background:rgba(255,193,7,0.15); color:#ffd166;">Dual DMG/CGB</span>`;
-          }
+          platBadge = `<span class="verdict-badge verdict-pass" style="font-size:0.72rem; white-space:nowrap; background:rgba(21,59,42,0.12); color:#153b2a; border-color:rgba(21,59,42,0.28);">Game Boy Color</span>`;
         }
 
         const statusBadge = `<span class="verdict-badge verdict-pass" style="font-size:0.72rem; font-weight:700; letter-spacing:0.04em;">PASSED</span>`;
