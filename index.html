@@ -229,76 +229,84 @@
         <div class="section-head reveal" style="margin-bottom: 1.5rem;">
           <div>
             <h2 class="install-head-title">Installation &amp; Quick Start</h2>
-            <p style="color: var(--text-muted); font-size: 1.05rem; margin-top: 0.35rem;">
-              Zero installation wizards, zero registry clutter. Self-contained and ready to play in three simple steps.
+            <p style="color: var(--text-muted); font-size: 1.05rem; margin-top: 0.35rem; max-width: 820px;">
+              Zero installation wizards, zero registry clutter, and zero external dependencies. Choose your preferred setup method:
             </p>
           </div>
         </div>
 
-        <div class="reveal" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-md, 12px); padding: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.06); margin-bottom: 2rem;">
-          <!-- 3 Step Quick Start Progress -->
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-bottom: 2rem; padding-bottom: 1.75rem; border-bottom: 1px solid var(--border);">
-            <div style="display: flex; gap: 1rem; align-items: flex-start;">
-              <span style="display: flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 50%; background: #153b2a; color: #d4f68c; font-weight: 700; font-size: 0.95rem; flex-shrink: 0;">1</span>
+        <!-- Unified Setup Box with Both Methods Visibly Side-by-Side -->
+        <div class="reveal" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-md, 12px); padding: 1.75rem; box-shadow: 0 4px 20px rgba(0,0,0,0.06); margin-bottom: 1.25rem;">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; align-items: stretch; margin-bottom: 1.5rem;">
+            
+            <!-- Method A: Direct Download -->
+            <div style="background: #e4ebe0; border: 1px solid #153b2a; border-radius: 8px; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between;">
               <div>
-                <strong style="display: block; font-size: 1.05rem; margin-bottom: 0.25rem; color: var(--text);">Download</strong>
-                <p style="font-size: 0.88rem; color: var(--text-muted); margin: 0; line-height: 1.45;">Get the portable ZIP package (23.4 MB). Includes <code>ReaBoy.exe</code>, .NET 8 runtime, and Bootix firmware.</p>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                  <h3 style="margin: 0; font-size: 1.22rem; color: #153b2a; font-family: var(--font-display, inherit);">Portable Package (.zip)</h3>
+                  <span style="font-size: 0.75rem; font-weight: 700; padding: 0.2rem 0.55rem; background: #153b2a; color: #d4f68c; border-radius: 3px; letter-spacing: 0.05em;">RECOMMENDED</span>
+                </div>
+                <p style="margin: 0 0 1.25rem; font-size: 0.92rem; line-height: 1.55; color: #3b5c49;">
+                  Download the complete standalone package, unzip anywhere on your PC (e.g. <code>C:\Games\ReaBoy</code>), and launch <code>ReaBoy.exe</code> directly. No admin rights or installer wizard needed.
+                </p>
+              </div>
+
+              <div>
+                <div style="margin-bottom: 0.75rem;">
+                  <a class="btn btn-primary" href="https://github.com/ScientificBrad/ReaBoy/releases/latest" style="font-size: 1.05rem; padding: 0.8rem 1.6rem; font-weight: 700; width: 100%; justify-content: center; box-shadow: 0 3px 10px rgba(21, 59, 42, 0.25);">
+                    Download Complete Package (.zip) ↓
+                  </a>
+                </div>
+                <div style="font-size: 0.83rem; color: #52685a; text-align: center;">
+                  <strong>v1.0.1 BETA</strong> · 23.4 MB · Windows 10/11 x64 · SHA-256 Verified
+                </div>
               </div>
             </div>
 
-            <div style="display: flex; gap: 1rem; align-items: flex-start;">
-              <span style="display: flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 50%; background: #153b2a; color: #d4f68c; font-weight: 700; font-size: 0.95rem; flex-shrink: 0;">2</span>
+            <!-- Method B: One-Line Command Install -->
+            <div style="background: #eaefe2; border: 1px solid #c8d3bf; border-radius: 8px; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between;">
               <div>
-                <strong style="display: block; font-size: 1.05rem; margin-bottom: 0.25rem; color: var(--text);">Extract</strong>
-                <p style="font-size: 0.88rem; color: var(--text-muted); margin: 0; line-height: 1.45;">Unzip the archive anywhere on your PC (e.g. <code>C:\Games\ReaBoy</code>). No administrator rights required.</p>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                  <h3 style="margin: 0; font-size: 1.22rem; color: #153b2a; font-family: var(--font-display, inherit);">One-Line Quick Setup</h3>
+                  <span style="font-size: 0.75rem; font-weight: 700; padding: 0.2rem 0.55rem; background: rgba(21,59,42,0.1); border: 1px solid rgba(21,59,42,0.25); color: #153b2a; border-radius: 3px; letter-spacing: 0.05em;">TERMINAL</span>
+                </div>
+                <p style="margin: 0 0 1rem; font-size: 0.92rem; line-height: 1.55; color: #3b5c49;">
+                  Run this single command in PowerShell or Windows Terminal to automatically download, verify checksums, extract, and start ReaBoy instantly:
+                </p>
+
+                <!-- Interactive Terminal Box -->
+                <div class="terminal-box" style="margin-bottom: 0.75rem;">
+                  <div class="terminal-top" style="padding: 0.4rem 0.75rem; font-size: 0.78rem;">
+                    <span>POWERSHELL / TERMINAL</span>
+                    <button class="copy-btn" type="button" data-copy-target="ps-quick-cmd" style="padding: 0.2rem 0.6rem; font-size: 0.75rem;">Copy</button>
+                  </div>
+                  <pre style="margin: 0; padding: 0.85rem 1rem;"><code id="ps-quick-cmd" style="color: #d4f68c; font-size: 0.82rem; font-family: var(--font-mono); word-break: break-all; white-space: pre-wrap;">irm https://raw.githubusercontent.com/ScientificBrad/ReaBoy/main/install.ps1 | iex</code></pre>
+                </div>
+              </div>
+
+              <div style="font-size: 0.82rem; color: #52685a; line-height: 1.45;">
+                Extracts to <code>%LOCALAPPDATA%\Programs\ReaBoy</code> and adds optional Start Menu &amp; Desktop shortcuts.
               </div>
             </div>
 
-            <div style="display: flex; gap: 1rem; align-items: flex-start;">
-              <span style="display: flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 50%; background: #153b2a; color: #d4f68c; font-weight: 700; font-size: 0.95rem; flex-shrink: 0;">3</span>
-              <div>
-                <strong style="display: block; font-size: 1.05rem; margin-bottom: 0.25rem; color: var(--text);">Play</strong>
-                <p style="font-size: 0.88rem; color: var(--text-muted); margin: 0; line-height: 1.45;">Double-click <code>ReaBoy.exe</code> and drag-and-drop any <code>.gb</code> or <code>.gbc</code> ROM directly into the window.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Download Action Bar -->
-          <div style="display: flex; align-items: center; gap: 1.25rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
-            <a class="btn btn-primary" href="https://github.com/ScientificBrad/ReaBoy/releases/latest" style="font-size: 1.08rem; padding: 0.85rem 1.85rem; font-weight: 700; box-shadow: 0 4px 12px rgba(21, 59, 42, 0.25);">
-              Download Complete Package (.zip) ↓
-            </a>
-            <div style="font-size: 0.9rem; color: var(--text-muted);">
-              <strong>v1.0.1 BETA</strong> · 23.4 MB · Windows 10/11 x64 · SHA-256 Verified
-            </div>
           </div>
 
           <!-- Discrete System Specification Pills -->
           <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; padding-top: 1.25rem; border-top: 1px dashed var(--border);">
-            <span style="font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700; color: var(--text-dim); margin-right: 0.25rem;">Specifications:</span>
+            <span style="font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700; color: var(--text-dim); margin-right: 0.25rem;">Included:</span>
             <span style="font-size: 0.82rem; padding: 0.25rem 0.65rem; background: rgba(21,59,42,0.06); border: 1px solid var(--border); border-radius: 4px; color: var(--text);">Windows 10/11 x64</span>
             <span style="font-size: 0.82rem; padding: 0.25rem 0.65rem; background: rgba(21,59,42,0.06); border: 1px solid var(--border); border-radius: 4px; color: var(--text);">Zero-Install Portable</span>
-            <span style="font-size: 0.82rem; padding: 0.25rem 0.65rem; background: rgba(21,59,42,0.06); border: 1px solid var(--border); border-radius: 4px; color: var(--text);">Embedded .NET 8 Runtime</span>
-            <span style="font-size: 0.82rem; padding: 0.25rem 0.65rem; background: rgba(21,59,42,0.06); border: 1px solid var(--border); border-radius: 4px; color: var(--text);">Bootix DMG &amp; CGB Included</span>
+            <span style="font-size: 0.82rem; padding: 0.25rem 0.65rem; background: rgba(21,59,42,0.06); border: 1px solid var(--border); border-radius: 4px; color: var(--text);">Embedded .NET 8 (0 MB Download)</span>
+            <span style="font-size: 0.82rem; padding: 0.25rem 0.65rem; background: rgba(21,59,42,0.06); border: 1px solid var(--border); border-radius: 4px; color: var(--text);">Bootix DMG &amp; CGB (CC0) Included</span>
             <span style="font-size: 0.82rem; padding: 0.25rem 0.65rem; background: rgba(21,59,42,0.06); border: 1px solid var(--border); border-radius: 4px; color: var(--text);">WinMM Direct Audio</span>
-            <span style="font-size: 0.82rem; padding: 0.25rem 0.65rem; background: rgba(21,59,42,0.06); border: 1px solid var(--border); border-radius: 4px; color: var(--text);">ROM, MBC1, MBC2, MBC3, MBC5</span>
+            <span style="font-size: 0.82rem; padding: 0.25rem 0.65rem; background: rgba(21,59,42,0.06); border: 1px solid var(--border); border-radius: 4px; color: var(--text);">ROM, MBC1, MBC2, MBC3, MBC5, MBC7</span>
           </div>
-
-          <!-- Advanced Terminal Dropdown -->
-          <details style="margin-top: 1.25rem; font-size: 0.85rem; color: var(--text-muted);">
-            <summary style="cursor: pointer; font-weight: 600; color: var(--text-muted); user-select: none;">
-              Advanced: Automated Command-Line Setup (PowerShell / Terminal)
-            </summary>
-            <div style="margin-top: 0.75rem; padding: 0.75rem 1rem; background: rgba(0,0,0,0.05); border: 1px solid var(--border); border-radius: 6px;">
-              <p style="margin: 0 0 0.5rem; font-size: 0.82rem;">Run in PowerShell to automatically download, verify SHA-256 checksums, and extract to <code>%LOCALAPPDATA%\Programs\ReaBoy</code>:</p>
-              <code style="display: block; padding: 0.4rem 0.6rem; background: #090d0b; color: #d6ff4d; border-radius: 4px; font-family: var(--font-mono); font-size: 0.82rem; overflow-x: auto;">irm https://raw.githubusercontent.com/ScientificBrad/ReaBoy/main/install.ps1 | iex</code>
-            </div>
-          </details>
         </div>
 
-        <div class="reveal" style="text-align: center; margin-top: 1.25rem; margin-bottom: 0.5rem;">
+        <!-- Underneath the Box -->
+        <div class="reveal" style="text-align: center; margin-top: 1rem; margin-bottom: 2rem;">
           <a href="manual.html" style="color: var(--gb-0); font-weight: 600; font-size: 0.95rem; text-decoration: underline;">
-            View User Manual &amp; Setup Guide →
+            Need help, custom controller remapping, or CLI flags? View User Manual &amp; Setup Guide →
           </a>
         </div>
       </div>
