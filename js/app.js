@@ -975,40 +975,35 @@
   let verifiedLibrary = [];
   let currentLimit = 50;
   let activeAlpha = null;
+  let activePlatform = 'ALL';
+  let activeFilter = 'ALL';
 
-  fetch('assets/verified_games.json')
+  const dialog = document.getElementById('shot-dialog');
+  const dialogTitle = document.getElementById('shot-dialog-title');
+  const dialogImg = document.getElementById('shot-dialog-img');
+  const dialogMeta = document.getElementById('shot-dialog-meta');
+  const dialogClose = document.getElementById('shot-dialog-close');
+  if (dialogClose && dialog) {
+    dialogClose.addEventListener('click', () => dialog.close());
+  }
+
+  fetch('assets/all_verified_games.json')
     .then((r) => {
       if (!r.ok) throw new Error(`HTTP ${r.status}`);
       return r.json();
     })
     .then((data) => {
-      verifiedLibrary = data.map((g) => {
-        const title = g.Title || g.title || '';
-        const mapper = g.Mapper || g.mapper || 'ROM-Only';
-        const sizeKb = g.SizeKb || g.sizeKb || 32;
-        const slug = g.Slug || g.slug || title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-        const isPlayable = true;
-        const status = 'PLAYABLE';
-        let notes = '';
-        if (mapper.includes('BATT') || mapper.includes('RTC') || mapper.includes('TIMER')) {
-          notes = `Original Game Boy (DMG) · ${sizeKb} KiB (${mapper}) · Battery save (.sav) & scanline PPU timing PASS.`;
-        } else {
-          notes = `Original Game Boy (DMG) · ${sizeKb} KiB (${mapper}) · Full gameplay & scanline PPU timing PASS.`;
-        }
-        return {
-          title,
-          mapper,
-          sizeKb,
-          status,
-          isPlayable,
-          slug,
-          notes,
-        };
-      });
+      verifiedLibrary = data;
       renderCompatTable();
     })
     .catch((err) => {
-      console.warn('Could not load verified_games.json, using default library', err);
+      console.warn('Could not load all_verified_games.json, trying verified_games.json', err);
+      fetch('assets/verified_games.json')
+        .then((r) => r.json())
+        .then((data) => {
+          verifiedLibrary = data;
+          renderCompatTable();
+        });
     });
 
   const STORAGE_KEY = 'reaboy_beta_tests_v1';
@@ -1025,19 +1020,22 @@
   const compatTbody = $('#compat-tbody');
   const compatSearch = $('#compat-search');
   const compatCountLabel = $('#compat-count-label');
-  let activeFilter = 'ALL';
 
   function renderCompatTable() {
     if (!compatTbody) return;
     const q = (compatSearch?.value || '').trim().toLowerCase();
     const all = loadGames();
     const rows = all.filter((g) => {
-      const matchesFilter = activeFilter === 'ALL' || g.status === activeFilter;
-      const matchesQuery =
+      const matchesFilter = activeFilter === 'ALL' || (activeFilter === 'PASS' ? (g.status === 'PLAYABLE' || g.status === 'PASS' || g.isPlayable) : g.status === activeFilter);
+      const matchesPlatform = activePlatform === 'ALL' || g.platform === activePlatform;
+
+      const qMatches =
         !q ||
-        g.title.toLowerCase().includes(q) ||
-        g.mapper.toLowerCase().includes(q) ||
-        g.notes.toLowerCase().includes(q);
+        (g.title || '').toLowerCase().includes(q) ||
+        (g.canonicalFilename || '').toLowerCase().includes(q) ||
+        (g.mapper || '').toLowerCase().includes(q) ||
+        (g.platformBadge || '').toLowerCase().includes(q) ||
+        (g.notes || '').toLowerCase().includes(q);
 
       let matchesAlpha = true;
       if (activeAlpha) {
@@ -1048,7 +1046,7 @@
         }
       }
 
-      return matchesFilter && matchesQuery && matchesAlpha;
+      return matchesFilter && matchesPlatform && qMatches && matchesAlpha;
     });
 
     const limit = q ? Math.max(currentLimit, 100) : currentLimit;
@@ -1059,24 +1057,58 @@
     }
 
     compatTbody.innerHTML = displayRows
-      .map(
-        (g) => {
-          const slug = g.slug || g.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-          return `
-      <tr>
-        <td>
-          <a href="assets/img/shots/${escapeHtml(slug)}.png" target="_blank" title="View full screenshot for ${escapeHtml(g.title)}">
-            <img src="assets/img/shots/${escapeHtml(slug)}.png" onerror="this.onerror=null;this.src='assets/img/tetris.png';" loading="lazy" alt="${escapeHtml(g.title)}" style="width:48px;height:43px;object-fit:cover;border-radius:3px;image-rendering:pixelated;border:1px solid rgba(0,0,0,0.18);display:block;">
-          </a>
-        </td>
-        <td><strong>${escapeHtml(g.title)}</strong></td>
-        <td><code>${escapeHtml(g.mapper)}</code></td>
-        <td><span class="verdict-badge ${g.status === 'PLAYABLE' || g.status === 'PASS' ? 'verdict-pass' : 'verdict-warn'}" title="${g.status === 'PLAYABLE' || g.status === 'PASS' ? 'Full interactive gameplay verified' : 'Automated 240-frame boot verified'}">${escapeHtml(g.status)}</span></td>
-        <td>${escapeHtml(g.notes)}</td>
-      </tr>`;
+      .map((g) => {
+        const shotSrc = g.screenshot || (g.slug ? `assets/img/shots/${g.slug}.png` : 'assets/img/shots/cgb/cgb-placeholder.png');
+
+        let platBadge = `<span class="verdict-badge verdict-pass" style="font-size:0.72rem;">DMG-01</span>`;
+        if (g.platform === 'CGB') {
+          if (g.categoryBadge === 'Exclusive' || g.platformBadge?.includes('Exclusive')) {
+            platBadge = `<span class="verdict-badge verdict-pass" style="font-size:0.72rem;">CGB Exclusive</span>`;
+          } else {
+            platBadge = `<span class="verdict-badge" style="font-size:0.72rem; background:rgba(255,193,7,0.15); color:#ffd166;">Dual DMG/CGB</span>`;
+          }
         }
-      )
+
+        const isPlayable = g.isPlayable || g.status === 'PLAYABLE' || g.status === 'PASS';
+        const statusBadge = isPlayable
+          ? `<span class="verdict-badge verdict-pass" style="font-size:0.72rem;">PLAYABLE</span>`
+          : `<span class="verdict-badge" style="font-size:0.72rem; background:rgba(255,193,7,0.15); color:#ffd166;">BOOTS</span>`;
+
+        const variantsBadge = g.variantCount > 0
+          ? `<span style="background:rgba(47,224,117,0.14); color:var(--gb-0); font-size:0.68rem; padding:1px 5px; border-radius:3px; font-weight:600;" title="Includes tested releases across UK, USA, Europe, and regional languages">+${g.variantCount} regional variants</span>`
+          : '';
+
+        return `
+      <tr>
+        <td style="text-align:center;">
+          <img src="${shotSrc}" onerror="this.onerror=null;this.src='assets/img/shots/cgb/cgb-placeholder.png';" loading="lazy" alt="${escapeHtml(g.title)}" class="compat-thumb" data-shot="${shotSrc}" data-title="${escapeHtml(g.title)}" data-meta="${escapeHtml(g.canonicalFilename || g.title)} · ${escapeHtml(g.mapper)} · ${escapeHtml(g.effectiveMode || g.platform || 'DMG')}" style="width:48px;height:43px;object-fit:cover;border-radius:3px;image-rendering:pixelated;border:1px solid rgba(0,0,0,0.18);display:block;cursor:pointer;margin:0 auto;">
+        </td>
+        <td>
+          <strong>${escapeHtml(g.title)}</strong>
+          <div style="font-size:0.72rem; color:var(--text-muted); font-family:var(--font-mono); margin-top:2px; display:flex; align-items:center; flex-wrap:wrap; gap:4px;">
+            <span>${escapeHtml(g.canonicalFilename || '')}</span>
+            ${variantsBadge}
+          </div>
+        </td>
+        <td>${platBadge}</td>
+        <td><code>${escapeHtml(g.mapper)}</code></td>
+        <td>${statusBadge}</td>
+        <td style="font-size:0.82rem;">${escapeHtml(g.notes)}</td>
+      </tr>`;
+      })
       .join('');
+
+    // Attach click listeners to thumbnails
+    compatTbody.querySelectorAll('.compat-thumb').forEach((thumb) => {
+      thumb.addEventListener('click', () => {
+        if (!dialog) return;
+        dialogTitle.textContent = thumb.dataset.title;
+        dialogImg.onerror = () => { dialogImg.src = 'assets/img/shots/cgb/cgb-placeholder.png'; };
+        dialogImg.src = thumb.dataset.shot;
+        dialogMeta.textContent = thumb.dataset.meta;
+        dialog.showModal();
+      });
+    });
   }
 
   function escapeHtml(str) {
@@ -1088,6 +1120,16 @@
     compatSearch?.addEventListener('input', () => {
       currentLimit = 50;
       renderCompatTable();
+    });
+
+    $$('[data-platform]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        $$('[data-platform]').forEach((b) => b.classList.remove('active'));
+        btn.classList.add('active');
+        activePlatform = btn.dataset.platform;
+        currentLimit = 50;
+        renderCompatTable();
+      });
     });
 
     $$('[data-filter]').forEach((btn) => {
