@@ -21,19 +21,6 @@
     revealElements.forEach((el) => el.classList.add('is-revealed'));
   }, 100);
 
-  // Theme toggle persistence
-  const themeToggle = document.getElementById('theme-toggle');
-  if (themeToggle) {
-    const savedTheme = localStorage.getItem('reaboy-theme') || 'classic';
-    document.documentElement.setAttribute('data-theme', savedTheme);
-    themeToggle.addEventListener('click', () => {
-      const current = document.documentElement.getAttribute('data-theme');
-      const next = current === 'classic' ? 'dark' : 'classic';
-      document.documentElement.setAttribute('data-theme', next);
-      localStorage.setItem('reaboy-theme', next);
-    });
-  }
-
   let allGames = [];
   let filteredGames = [];
   let currentPage = 1;
