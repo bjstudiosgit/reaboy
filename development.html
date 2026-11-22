@@ -211,9 +211,13 @@
           <div class="pipeline-top">
             <div>
               <span class="eyebrow" style="margin-bottom:0.25rem;">INTERACTIVE HARDWARE TRACE</span>
-              <h3 style="margin:0;">DMG-01 Boot Execution Pipeline ($0000 → $0100)</h3>
+              <h3 id="pipeline-title" style="margin:0;">DMG-01 Boot Execution Pipeline ($0000 → $0100)</h3>
+              <div style="display:flex;gap:0.5rem;margin-top:0.75rem;">
+                <button class="chip-btn active" id="trace-tab-dmg" type="button" style="font-size:0.8rem;padding:0.35rem 0.85rem;">Original Game Boy (DMG-01 · 256B)</button>
+                <button class="chip-btn" id="trace-tab-cgb" type="button" style="font-size:0.8rem;padding:0.35rem 0.85rem;">Game Boy Color (CGB-001 · 2 KiB)</button>
+              </div>
             </div>
-            <div style="display:flex;gap:0.6rem;flex-wrap:wrap;">
+            <div style="display:flex;gap:0.6rem;flex-wrap:wrap;align-self:flex-start;">
               <button class="btn btn-primary" type="button" id="pipeline-play-btn" style="padding:0.55rem 1rem;font-size:0.84rem;">▶ Auto-Step Trace</button>
               <button class="btn btn-secondary" type="button" id="pipeline-reset-btn" style="padding:0.55rem 1rem;font-size:0.84rem;">↺ Reset to $0000</button>
             </div>
@@ -741,6 +745,6 @@
     </div>
   </footer>
 
-  <script src="js/app.js?v=2.0.0" defer></script>
+  <script src="js/app.js?v=2.1.0" defer></script>
 </body>
 </html>

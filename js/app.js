@@ -884,13 +884,113 @@
     },
   ];
 
+  const CGB_MILESTONES = [
+    {
+      addr: '$0000',
+      title: '1. CPU & Stack Initialization',
+      sub: 'LD SP, $FFFE · XOR A · DI',
+      cycles: 16,
+      mapped: true,
+      regs: { A: '$00', F: '$80', B: '$00', C: '$00', D: '$00', E: '$00', H: '$00', L: '$00', SP: '$FFFE', PC: '$0004' },
+      detail: 'The Sharp SM83 boots with the 2,048-byte CGB boot ROM overlaid at $0000–$08FF. Stack pointer SP is initialized to top of HRAM ($FFFE) with interrupts disabled.',
+    },
+    {
+      addr: '$0027',
+      title: '2. 16 KiB VRAM Dual-Bank Wipe',
+      sub: 'VBK=0 then VBK=1 ($8000–$9FFF)',
+      cycles: 524288,
+      mapped: true,
+      regs: { A: '$00', F: '$80', B: '$00', C: '$4F', D: '$00', E: '$00', H: '$7F', L: '$FF', SP: '$FFFE', PC: '$004A' },
+      detail: 'Clears both 8 KiB VRAM banks (Bank 0 and Bank 1 via register $FF4F/VBK), clearing 16,384 total bytes of video RAM, sprite OAM, and tile attribute maps.',
+    },
+    {
+      addr: '$004F',
+      title: '3. APU & Wave RAM Initialization',
+      sub: 'NR52=$80 · Wave RAM $FF30–$FF3F pattern',
+      cycles: 524650,
+      mapped: true,
+      regs: { A: '$77', F: '$80', B: '$00', C: '$26', D: '$00', E: '$00', H: '$FF', L: '$30', SP: '$FFFE', PC: '$0072' },
+      detail: 'Powers on the APU sound controller ($FF26), configures custom 32-sample 4-bit Wave pattern data for Channel 3, and enables stereo master volume.',
+    },
+    {
+      addr: '$0080',
+      title: '4. 15-Bit RGB Palette RAM Setup',
+      sub: 'BCPS=$80 auto-inc · BCPD palette writes',
+      cycles: 526200,
+      mapped: true,
+      regs: { A: '$80', F: '$80', B: '$40', C: '$68', D: '$00', E: '$00', H: '$02', L: '$A0', SP: '$FFFE', PC: '$00B4' },
+      detail: 'Initializes Background Color Palette Index ($FF68) with auto-increment and uploads the full 64-color 15-bit RGB555 palette set for the CGB rainbow bootstrap screen.',
+    },
+    {
+      addr: '$00E8',
+      title: '5. Logo Decompression & Tile Assembly',
+      sub: 'Unpacks $0104–$0133 → VRAM Bank 0',
+      cycles: 580000,
+      mapped: true,
+      regs: { A: '$00', F: '$A0', B: '$00', C: '$00', D: '$01', E: '$34', H: '$80', L: '$10', SP: '$FFFE', PC: '$013A' },
+      detail: 'Decompresses the 48-byte cartridge Nintendo logo into VRAM Bank 0, expanding 1-bit bitmap graphics into 2-bit color tile data at $8010–$8100.',
+    },
+    {
+      addr: '$013C',
+      title: '6. CGB Color Attribute Assignment',
+      sub: 'VBK=1 · Writes palette IDs 0–7 to Map',
+      cycles: 615000,
+      mapped: true,
+      regs: { A: '$01', F: '$40', B: '$00', C: '$4F', D: '$00', E: '$20', H: '$99', L: '$04', SP: '$FFFE', PC: '$017E' },
+      detail: 'Switches to VRAM Bank 1 ($FF4F=$01) and writes palette attributes across BG Map 0 ($9900) so each letter of the logo glows in vibrant CGB rainbow hues.',
+    },
+    {
+      addr: '$0182',
+      title: '7. Cartridge CGB Flag Detection',
+      sub: 'Reads $0143: $C0 (Exclusive) vs $80 (Dual)',
+      cycles: 650000,
+      mapped: true,
+      regs: { A: '$C0', F: '$20', B: '$00', C: '$43', D: '$01', E: '$43', H: '$01', L: '$43', SP: '$FFFE', PC: '$01D0' },
+      detail: 'Inspects header byte $0143. If $C0 (CGB Exclusive) or $80 (Dual Mode), CGB hardware stays in Color mode; if $00, CGB switches to DMG compatibility palette mode.',
+    },
+    {
+      addr: '$0240',
+      title: '8. Logo & Header Security Verification',
+      sub: 'Checks $0104..$0133 and checksum $014D',
+      cycles: 24200000,
+      mapped: true,
+      regs: { A: '$00', F: '$B0', B: '$00', C: '$13', D: '$00', E: '$D8', H: '$01', L: '$4D', SP: '$FFFE', PC: '$0288' },
+      detail: 'Security verification against reference ROM data and computes the 8-bit complement header checksum. Any mismatch halts CPU execution.',
+    },
+    {
+      addr: '$08F0',
+      title: '9. Dual-Tone Boot Chime & VBlank Sync',
+      sub: 'Ch 1 Sweep/Freq trigger · LY==144 sync',
+      cycles: 25100000,
+      mapped: true,
+      regs: { A: '$91', F: '$20', B: '$00', C: '$40', D: '$00', E: '$08', H: '$00', L: '$7C', SP: '$FFFE', PC: '$08FA' },
+      detail: 'Fires the classic high-pitched CGB dual-tone frequency sequence through Channel 1, synchronizes to LCD VBlank (LY=144), and fades the intro screen.',
+    },
+    {
+      addr: '$08FE',
+      title: '10. Boot ROM Unmap & $0100 Handover',
+      sub: 'LD A, $01 · LDH [$FF50], A → A=$11, PC=$0100',
+      cycles: 25150000,
+      mapped: false,
+      regs: { A: '$11', F: '$80', B: '$00', C: '$00', D: '$00', E: '$08', H: '$00', L: '$7C', SP: '$FFFE', PC: '$0100' },
+      detail: 'Writes $01 to $FF50, permanently unmapping the 2 KiB CGB boot ROM. Hands over to $0100 with A=$11 (identifying CGB hardware to the game!), F=$80, and E=$08.',
+    },
+  ];
+
+  let currentTraceMode = 'DMG';
   const milestoneList = $('#milestone-list');
   let activeMilestone = 9;
   let pipelineTimer = null;
 
+  function getActiveMilestones() {
+    return currentTraceMode === 'DMG' ? MILESTONES : CGB_MILESTONES;
+  }
+
   function selectMilestone(idx) {
+    const list = getActiveMilestones();
     activeMilestone = idx;
-    const m = MILESTONES[idx];
+    const m = list[idx];
+    if (!m) return;
     $$('.milestone-item', milestoneList).forEach((el, i) => {
       el.classList.toggle('active', i === idx);
     });
@@ -902,13 +1002,17 @@
     const stateEl = $('#bootrom-state');
     stateEl.textContent = m.mapped ? '$FF50 MAPPED (BOOT)' : '$FF50 UNMAPPED → GAME';
     stateEl.style.color = m.mapped ? '#ffd54f' : '#ccff2e';
-    const pct = Math.max(4, Math.round((m.cycles / 23454204) * 100));
+    const maxCycles = currentTraceMode === 'DMG' ? 23454204 : 25150000;
+    const pct = Math.max(4, Math.round((m.cycles / maxCycles) * 100));
     $('#cycle-bar-fill').style.width = `${pct}%`;
     $('#milestone-detail').textContent = m.detail;
   }
 
-  if (milestoneList) {
-    MILESTONES.forEach((m, idx) => {
+  function renderMilestones() {
+    if (!milestoneList) return;
+    milestoneList.innerHTML = '';
+    const list = getActiveMilestones();
+    list.forEach((m, idx) => {
       const btn = document.createElement('button');
       btn.type = 'button';
       btn.className = 'milestone-item';
@@ -919,15 +1023,42 @@
       });
       milestoneList.appendChild(btn);
     });
-    selectMilestone(9);
+    const titleEl = $('#pipeline-title');
+    if (titleEl) {
+      titleEl.textContent = currentTraceMode === 'DMG'
+        ? 'DMG-01 Boot Execution Pipeline ($0000 → $0100)'
+        : 'CGB-001 Boot Execution Pipeline ($0000 → $08FE → $0100)';
+    }
+    selectMilestone(list.length - 1);
+  }
+
+  if (milestoneList) {
+    renderMilestones();
+
+    $('#trace-tab-dmg')?.addEventListener('click', () => {
+      clearInterval(pipelineTimer);
+      currentTraceMode = 'DMG';
+      $('#trace-tab-dmg')?.classList.add('active');
+      $('#trace-tab-cgb')?.classList.remove('active');
+      renderMilestones();
+    });
+
+    $('#trace-tab-cgb')?.addEventListener('click', () => {
+      clearInterval(pipelineTimer);
+      currentTraceMode = 'CGB';
+      $('#trace-tab-cgb')?.classList.add('active');
+      $('#trace-tab-dmg')?.classList.remove('active');
+      renderMilestones();
+    });
 
     $('#pipeline-play-btn')?.addEventListener('click', () => {
       clearInterval(pipelineTimer);
       let step = 0;
       selectMilestone(0);
+      const list = getActiveMilestones();
       pipelineTimer = setInterval(() => {
         step++;
-        if (step >= MILESTONES.length) {
+        if (step >= list.length) {
           clearInterval(pipelineTimer);
           playBootChime();
           return;
