@@ -1148,7 +1148,7 @@
     });
   }
 
-  fetch('assets/all_verified_games.json?v=2.0.0')
+  fetch('assets/all_verified_games.json?v=2.0.1')
     .then((r) => {
       if (!r.ok) throw new Error(`HTTP ${r.status}`);
       return r.json();
@@ -1159,7 +1159,7 @@
     })
     .catch((err) => {
       console.warn('Could not load all_verified_games.json, trying verified_games.json', err);
-      fetch('assets/verified_games.json?v=2.0.0')
+      fetch('assets/verified_games.json?v=2.0.1')
         .then((r) => r.json())
         .then((data) => {
           verifiedLibrary = data;
