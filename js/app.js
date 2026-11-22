@@ -454,39 +454,89 @@
 
   // Interactive Tactile Game Boy Console Click -> Play Boot Chime & Switch Playable Games!
   const dmgConsole = $('#dmg-console');
+  const dmgCgbImg = $('#dmg-cgb-img');
+  const dmgPlatformPill = $('#dmg-platform-pill');
+  const dmgGameLabel = $('#dmg-game-label');
   const dmgPlaylist = [
-    { title: "Tetris (1989)", video: "assets/video/tetris.mp4?v=1.1.0", poster: "assets/img/shots/tetris.png" },
-    { title: "Super Mario Land (1989)", video: "assets/video/super-mario-land.mp4", poster: "assets/img/shots/super-mario-land.png" },
-    { title: "The Legend of Zelda: Link's Awakening (1993)", video: "assets/video/zelda-links-awakening.mp4", poster: "assets/img/shots/legend-of-zelda-the-link-s-awakening.png" },
-    { title: "Pokémon Red (1996)", video: "assets/video/pokemon-red.mp4", poster: "assets/img/shots/pokemon-red.png" },
-    { title: "Metroid II: Return of Samus (1991)", video: "assets/video/metroid-2.mp4", poster: "assets/img/shots/metroid-ii-return-of-samus.png" },
-    { title: "Kirby's Dream Land (1992)", video: "assets/video/kirbys-dream-land.mp4", poster: "assets/img/shots/kirby-s-dream-land.png" },
-    { title: "Donkey Kong '94 (1994)", video: "assets/video/donkey-kong.mp4", poster: "assets/img/shots/donkey-kong.png" },
-    { title: "Dr. Mario (1990)", video: "assets/video/dr-mario.mp4", poster: "assets/img/shots/dr-mario.png" },
-    { title: "Mega Man (1991)", video: "assets/video/mega-man.mp4", poster: "assets/img/shots/mega-man.png" },
-    { title: "DuckTales (1990)", video: "assets/video/ducktales.mp4", poster: "assets/img/shots/ducktales.png" }
+    { title: "Super Mario Bros. Deluxe (1999)", platform: "CGB", image: "assets/img/shots/cgb/super-mario-bros-deluxe-u-v11-c.png" },
+    { title: "Super Mario Land 2 (1992)", platform: "DMG", video: "assets/video/super-mario-land-2.mp4", poster: "assets/img/shots/super-mario-land-2-6-golden-coins.png" },
+    { title: "Pokémon Crystal (2000)", platform: "CGB", image: "assets/img/shots/cgb/pokemon-crystal-version-ue-v11-c.png" },
+    { title: "Tetris (1989)", platform: "DMG", video: "assets/video/tetris.mp4?v=1.1.0", poster: "assets/img/shots/tetris.png" },
+    { title: "Link's Awakening DX (1998)", platform: "CGB", image: "assets/img/shots/cgb/legend-of-zelda-the-links-awakening-dx-u-v12-c.png" },
+    { title: "Pokémon Red (1996)", platform: "DMG", video: "assets/video/pokemon-red.mp4", poster: "assets/img/shots/pokemon-red.png" },
+    { title: "Zelda: Oracle of Ages (2001)", platform: "CGB", image: "assets/img/shots/cgb/legend-of-zelda-the-oracle-of-ages-u-c.png" },
+    { title: "Metroid II: Return of Samus (1991)", platform: "DMG", video: "assets/video/metroid-2.mp4", poster: "assets/img/shots/metroid-ii-return-of-samus.png" },
+    { title: "Wario Land 3 (2000)", platform: "CGB", image: "assets/img/shots/cgb/wario-land-3-ju-m2-c.png" },
+    { title: "Kirby's Dream Land (1992)", platform: "DMG", video: "assets/video/kirbys-dream-land.mp4", poster: "assets/img/shots/kirby-s-dream-land.png" },
+    { title: "Shantae (2002)", platform: "CGB", image: "assets/img/shots/cgb/shantae-u-c.png" },
+    { title: "Donkey Kong '94 (1994)", platform: "DMG", video: "assets/video/donkey-kong.mp4", poster: "assets/img/shots/donkey-kong.png" }
   ];
-  // Randomize Hero Game Boy playlist so every session starts fresh
-  for (let i = dmgPlaylist.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [dmgPlaylist[i], dmgPlaylist[j]] = [dmgPlaylist[j], dmgPlaylist[i]];
-  }
   let dmgGameIdx = 0;
+  let dmgSlideTimer = null;
 
-  function switchDmgGame(step = 1) {
-    if (!dmgVideo) return;
-    dmgGameIdx = (dmgGameIdx + step + dmgPlaylist.length) % dmgPlaylist.length;
+  function renderDmgSlide(index) {
+    clearTimeout(dmgSlideTimer);
+    dmgGameIdx = ((index % dmgPlaylist.length) + dmgPlaylist.length) % dmgPlaylist.length;
     const game = dmgPlaylist[dmgGameIdx];
-    
-    dmgVideo.src = game.video;
-    dmgVideo.poster = game.poster;
-    dmgVideo.currentTime = 0;
-    dmgVideo.play().catch(() => {});
-    showToast(`🎮 ReaBoy: ${game.title}`);
+
+    if (dmgPlatformPill) {
+      if (game.platform === 'CGB') {
+        dmgPlatformPill.textContent = 'GAME BOY COLOR';
+        dmgPlatformPill.className = 'verdict-badge';
+        dmgPlatformPill.style.background = 'rgba(21,59,42,0.12)';
+        dmgPlatformPill.style.color = '#153b2a';
+        dmgPlatformPill.style.borderColor = 'rgba(21,59,42,0.28)';
+      } else {
+        dmgPlatformPill.textContent = 'GAME BOY';
+        dmgPlatformPill.className = 'verdict-badge verdict-pass';
+        dmgPlatformPill.style.background = '';
+        dmgPlatformPill.style.color = '';
+        dmgPlatformPill.style.borderColor = '';
+      }
+    }
+    if (dmgGameLabel) {
+      dmgGameLabel.textContent = game.title;
+    }
+
+    if (game.platform === 'CGB') {
+      if (dmgVideo) {
+        dmgVideo.pause();
+        dmgVideo.hidden = true;
+      }
+      if (dmgCgbImg) {
+        dmgCgbImg.src = game.image;
+        dmgCgbImg.alt = `${game.title} running in Game Boy Color mode`;
+        dmgCgbImg.hidden = false;
+      }
+      dmgSlideTimer = setTimeout(() => switchDmgGame(1, true), 5000);
+    } else {
+      if (dmgCgbImg) {
+        dmgCgbImg.hidden = true;
+      }
+      if (dmgVideo) {
+        dmgVideo.hidden = false;
+        dmgVideo.src = game.video;
+        dmgVideo.poster = game.poster;
+        dmgVideo.currentTime = 0;
+        dmgVideo.play().catch(() => {});
+      }
+      dmgSlideTimer = setTimeout(() => switchDmgGame(1, true), 7000);
+    }
+  }
+
+  function switchDmgGame(step = 1, silent = false) {
+    if (!dmgConsole) return;
+    renderDmgSlide(dmgGameIdx + step);
+    if (!silent) {
+      const game = dmgPlaylist[dmgGameIdx];
+      const platText = game.platform === 'CGB' ? 'Game Boy Color' : 'Game Boy';
+      showToast(`🎮 ${platText}: ${game.title}`);
+    }
   }
 
   if (dmgConsole) {
-    dmgConsole.setAttribute('title', 'Click to switch games and hear authentic 1989 DMG sounds!');
+    dmgConsole.setAttribute('title', 'Click to switch between Game Boy Color & Game Boy classics!');
+    renderDmgSlide(0);
     dmgConsole.addEventListener('click', (e) => {
       const isControl = e.target.closest('[data-gb-btn]');
       if (!isControl) {
@@ -499,7 +549,7 @@
 
     if (dmgVideo) {
       dmgVideo.addEventListener('ended', () => {
-        switchDmgGame(1);
+        switchDmgGame(1, true);
       });
     }
   }

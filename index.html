@@ -130,9 +130,10 @@
                   <span>BATTERY</span>
                 </div>
                 <div class="dmg-screen-frame" id="dmg-screen-frame">
-                  <video id="dmg-video" autoplay muted loop playsinline poster="assets/img/boot-poster.png" aria-label="Real ReaBoy v2.0 boot-up capture">
+                  <img id="dmg-cgb-img" src="assets/img/shots/cgb/super-mario-bros-deluxe-u-v11-c.png" alt="Super Mario Bros. Deluxe running in Game Boy Color mode" style="width:100%;height:100%;object-fit:cover;image-rendering:pixelated;vertical-align:top;">
+                  <video id="dmg-video" muted playsinline hidden poster="assets/img/boot-poster.png" aria-label="Real ReaBoy v2.0 gameplay capture">
                     <source src="assets/video/boot-preview.mp4" type="video/mp4">
-                    <img src="assets/img/boot-preview.gif" alt="ReaBoy boot-up animation">
+                    <img src="assets/img/boot-preview.gif" alt="ReaBoy gameplay capture">
                   </video>
                   <canvas id="dmg-canvas" width="160" height="144" hidden aria-label="Interactive pixel-art ReaBoy boot screen"></canvas>
                   <div class="dmg-scanlines"></div>
@@ -184,6 +185,13 @@
             </div>
           </div>
 
+          <div id="dmg-now-playing" style="display:flex;flex-direction:column;align-items:center;gap:0.35rem;text-align:center;max-width:390px;width:100%;">
+            <div style="display:inline-flex;align-items:center;gap:0.5rem;flex-wrap:wrap;justify-content:center;background:rgba(21,59,42,0.06);border:1px solid var(--border);border-radius:999px;padding:0.3rem 0.85rem;">
+              <span id="dmg-platform-pill" class="verdict-badge" style="font-size:0.68rem;font-weight:700;background:rgba(21,59,42,0.12);color:#153b2a;border-color:rgba(21,59,42,0.28);white-space:nowrap;">GAME BOY COLOR</span>
+              <strong id="dmg-game-label" style="font-size:0.84rem;color:var(--text);">Super Mario Bros. Deluxe (1999)</strong>
+            </div>
+            <span style="font-size:0.74rem;color:var(--text-muted);">Click console or D-pad to switch games</span>
+          </div>
 
         </div>
       </div>
@@ -949,6 +957,6 @@
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-  <script src="js/app.js?v=2.2.4" defer></script>
+  <script src="js/app.js?v=2.2.5" defer></script>
 </body>
 </html>
