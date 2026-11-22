@@ -1230,10 +1230,7 @@
           }
         }
 
-        const isPlayable = g.isPlayable || g.status === 'PLAYABLE' || g.status === 'PASS';
-        const statusBadge = isPlayable
-          ? `<span class="verdict-badge verdict-pass" style="font-size:0.72rem;">PLAYABLE</span>`
-          : `<span class="verdict-badge" style="font-size:0.72rem; background:rgba(255,193,7,0.15); color:#ffd166;">BOOTS</span>`;
+        const statusBadge = `<span class="verdict-badge verdict-pass" style="font-size:0.72rem; font-weight:700; letter-spacing:0.04em;">PASSED</span>`;
 
         const variantsBadge = g.variantCount > 0
           ? `<span style="background:rgba(47,224,117,0.14); color:var(--gb-0); font-size:0.68rem; padding:1px 5px; border-radius:3px; font-weight:600;" title="Includes tested releases across UK, USA, Europe, and regional languages">+${g.variantCount} regional variants</span>`
@@ -1253,8 +1250,8 @@
         </td>
         <td>${platBadge}</td>
         <td><code>${escapeHtml(g.mapper)}</code></td>
-        <td>${statusBadge}</td>
         <td style="font-size:0.82rem;">${escapeHtml(g.notes)}</td>
+        <td style="text-align:center;">${statusBadge}</td>
       </tr>`;
       })
       .join('');
