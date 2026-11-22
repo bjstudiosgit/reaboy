@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Game Boy Compatibility Lab &amp; ROM Inspector (1,592+ Titles) — ReaBoy v1.0.1 BETA | BJ Studios</title>
-  <meta name="description" content="Search and browse verified compatibility test results for 1,592+ canonical Game Boy (DMG-01) games, and inspect local cartridge header bytes ($0104–$014F) in ReaBoy v1.0.1 BETA emulator on Windows x64.">
+  <title>Game Boy Compatibility Database | ReaBoy Emulator</title>
+  <meta name="description" content="Explore ReaBoy's Game Boy compatibility database. Search 1,592 tested titles, cartridge mappers, and documented execution telemetry for Windows x64.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#0f380f">
   <link rel="canonical" href="https://scientificbrad.github.io/ReaBoy/compatibility.html">
@@ -50,6 +50,7 @@
       <nav class="nav-links" id="nav-links" aria-label="Primary Navigation">
         <a href="index.html">Home</a>
         <a href="development.html">Development</a>
+        <a href="comparison.html">Comparison</a>
         <a class="active" href="compatibility.html" title="Compatibility Lab: 1,592+ Game Boy games verified in ReaBoy">1,592+ Games Tested</a>
         <a href="manual.html">User Manual</a>
         <a href="https://github.com/ScientificBrad/ReaBoy/issues" target="_blank" rel="noopener">Report Bug ↗</a>
@@ -129,7 +130,7 @@
         </div>
 
         <!-- Subheading for Database Table -->
-        <div class="section-head reveal" style="margin-bottom: 1.5rem;">
+        <div class="section-head reveal" id="browse" style="margin-bottom: 1.5rem;">
           <div>
             <p class="eyebrow">CANONICAL VERIFICATION MATRIX</p>
             <h2 style="font-size:clamp(1.5rem,2.5vw,1.9rem);">Search 1,592+ Tested Titles</h2>
@@ -137,6 +138,28 @@
           <p>
             Filter by cartridge mapper (ROM-Only, MBC1), jump by alphabetical index, inspect execution telemetry, or log new test runs directly in your local browser storage.
           </p>
+        </div>
+
+        <!-- Compatibility Tiers Explainer -->
+        <div class="reveal" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem;margin-bottom:1.5rem;">
+          <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#d4ded4);border-radius:6px;padding:1rem 1.25rem;">
+            <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.35rem;">
+              <span class="verdict-badge verdict-pass" style="font-size:0.75rem;">PLAYABLE</span>
+              <strong style="font-size:0.92rem;color:var(--text-main);">1,557 Games (97.8%)</strong>
+            </div>
+            <p style="margin:0;font-size:0.84rem;color:var(--text-muted);line-height:1.45;">
+              ROM-Only &amp; MBC1 titles (up to 2 MiB ROM / 32 KiB RAM). Full interactive gameplay, scanline PPU timing, 4-channel APU audio, and battery save persistence.
+            </p>
+          </div>
+          <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#d4ded4);border-radius:6px;padding:1rem 1.25rem;">
+            <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.35rem;">
+              <span class="verdict-badge verdict-warn" style="font-size:0.75rem;">BOOT VERIFIED</span>
+              <strong style="font-size:0.92rem;color:var(--text-main);">35 Games (2.2%)</strong>
+            </div>
+            <p style="margin:0;font-size:0.84rem;color:var(--text-muted);line-height:1.45;">
+              MBC2 &amp; MBC3 titles. Automated 240-frame headless execution confirms Sharp SM83 opcode dispatch and header validation. Full banking &amp; RTC in active beta development.
+            </p>
+          </div>
         </div>
 
         <!-- Filterable Compatibility Table Toolbar -->
@@ -210,24 +233,50 @@
   <!-- SITE FOOTER -->
   <footer class="site-footer">
     <div class="wrap footer-grid">
-      <div>
+      <div class="footer-col footer-col-brand">
         <a class="brand" href="index.html">
           <span class="brand-mark" aria-hidden="true">R</span>
           <span>ReaBoy</span>
         </a>
-        <p>BJ Studios — Manchester, England · © 2026 BJ Studios. All rights reserved.</p>
+        <p class="footer-tagline">
+          Pure 1989 silicon fidelity. The scientific, bit-exact Game Boy emulator for Windows x64.
+        </p>
+        <p class="footer-copy">
+          Engineered by <strong>BJ Studios — Manchester, England</strong> · &copy; 2026 BJ Studios. Built with precision for emulation purists.
+        </p>
+        <p class="footer-disclaimer">
+          ReaBoy is an independent open-source emulator. Not affiliated with or endorsed by Nintendo. All Game Boy trademarks and titles belong to their respective rights holders.
+        </p>
       </div>
-      <div>
+
+      <div class="footer-col">
+        <h4>Downloads</h4>
         <ul class="footer-links">
-          <li><a href="index.html">← Back to Main Website</a></li>
-          <li><a href="development.html">Architecture &amp; Development</a></li>
-          <li><a href="manual.html">Official User Manual</a></li>
-          <li><a href="https://github.com/ScientificBrad/ReaBoy/releases/latest" target="_blank" rel="noopener">Latest Release Downloads ↗</a></li>
-          <li><a href="https://github.com/ScientificBrad/ReaBoy/issues" target="_blank" rel="noopener">Report Game Bug on GitHub ↗</a></li>
+          <li><a href="https://github.com/ScientificBrad/ReaBoy/releases/latest/download/ReaBoy-v1.0.1-win-x64.zip">ReaBoy v1.0.1 (64-Bit ZIP)</a></li>
+          <li><a href="https://raw.githubusercontent.com/ScientificBrad/ReaBoy/main/install.ps1">install.ps1 (CLI Installer)</a></li>
+          <li><a href="https://github.com/ScientificBrad/ReaBoy/releases/latest/download/SHA256SUMS.txt">SHA256 Checksums ↗</a></li>
+          <li><a href="https://github.com/ScientificBrad/ReaBoy/releases" target="_blank" rel="noopener">Release Notes (v1.0.1) ↗</a></li>
         </ul>
       </div>
-      <div>
-        <p>Independent software. Not affiliated with or endorsed by Nintendo.</p>
+
+      <div class="footer-col">
+        <h4>Technical</h4>
+        <ul class="footer-links">
+          <li><a href="development.html">Architecture &amp; Development</a></li>
+          <li><a href="comparison.html">Comparison (SameBoy &amp; BGB)</a></li>
+          <li><a href="compatibility.html">Compatibility Lab (1,592+ Games)</a></li>
+          <li><a href="manual.html">Official User Manual</a></li>
+          <li><a href="https://github.com/ScientificBrad/ReaBoy/blob/main/rom/BOOTIX-LICENSE.txt" target="_blank" rel="noopener">Bootix CC0-1.0 Licence ↗</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Open Source</h4>
+        <ul class="footer-links">
+          <li><a href="https://github.com/ScientificBrad/ReaBoy" target="_blank" rel="noopener">GitHub Repository ↗</a></li>
+          <li><a href="https://github.com/ScientificBrad/ReaBoy/issues" target="_blank" rel="noopener">Issue Tracker ↗</a></li>
+          <li><a href="https://github.com/ScientificBrad/ReaBoy/blob/main/LICENSE" target="_blank" rel="noopener">MIT License ↗</a></li>
+        </ul>
       </div>
     </div>
   </footer>

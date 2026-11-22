@@ -64,8 +64,8 @@
     "Slug": "addams-family-the"
   },
   {
-    "Title": "Addams Family, The - Pugsley\u0027s Scavenger Hunt",
-    "FileName": "Addams Family, The - Pugsley\u0027s Scavenger Hunt (U).gb",
+    "Title": "Addams Family, The - Pugsley's Scavenger Hunt",
+    "FileName": "Addams Family, The - Pugsley's Scavenger Hunt (U).gb",
     "Mapper": "MBC1",
     "SizeKb": 128,
     "Status": "PASS",
@@ -186,7 +186,7 @@
   {
     "Title": "Akumajou Dracula - Shikkokutaru Zensoukyoku",
     "FileName": "Akumajou Dracula - Shikkokutaru Zensoukyoku (J) [S][!].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 256,
     "Status": "PASS",
     "Slug": "akumajou-dracula-shikkokutaru-zensoukyoku"
@@ -240,8 +240,8 @@
     "Slug": "alien-vs-predator-the-last-of-his-clan"
   },
   {
-    "Title": "All-Star Baseball \u002799",
-    "FileName": "All-Star Baseball \u002799 (U) [!].gb",
+    "Title": "All-Star Baseball '99",
+    "FileName": "All-Star Baseball '99 (U) [!].gb",
     "Mapper": "MBC1",
     "SizeKb": 512,
     "Status": "PASS",
@@ -354,7 +354,7 @@
   {
     "Title": "Animal Breeder",
     "FileName": "Animal Breeder (J) [S].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "animal-breeder"
@@ -362,7 +362,7 @@
   {
     "Title": "Animal Breeder 2",
     "FileName": "Animal Breeder 2 (J) [S].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "animal-breeder-2"
@@ -378,7 +378,7 @@
   {
     "Title": "Another Bible",
     "FileName": "Another Bible (J) [S].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "another-bible"
@@ -442,7 +442,7 @@
   {
     "Title": "Aretha III",
     "FileName": "Aretha III (J).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 256,
     "Status": "PASS",
     "Slug": "aretha-iii"
@@ -480,8 +480,8 @@
     "Slug": "asterix"
   },
   {
-    "Title": "Asteroids \u0026 Missile Command",
-    "FileName": "Asteroids \u0026 Missile Command (U) [S][!].gb",
+    "Title": "Asteroids & Missile Command",
+    "FileName": "Asteroids & Missile Command (U) [S][!].gb",
     "Mapper": "MBC1",
     "SizeKb": 128,
     "Status": "PASS",
@@ -506,7 +506,7 @@
   {
     "Title": "Asukatti Slide Show",
     "FileName": "Asukatti Slide Show (PD).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "asukatti-slide-show"
@@ -592,9 +592,9 @@
     "Slug": "baby-t-rex"
   },
   {
-    "Title": "Bakenou TV \u002794",
-    "FileName": "Bakenou TV \u002794 (J) [S].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Title": "Bakenou TV '94",
+    "FileName": "Bakenou TV '94 (J) [S].gb",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 128,
     "Status": "PASS",
     "Slug": "bakenou-tv-94"
@@ -602,7 +602,7 @@
   {
     "Title": "Bakenou V3",
     "FileName": "Bakenou V3 (J).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 128,
     "Status": "PASS",
     "Slug": "bakenou-v3"
@@ -730,7 +730,7 @@
   {
     "Title": "Battle Dodge Ball",
     "FileName": "Battle Dodge Ball (J).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 128,
     "Status": "PASS",
     "Slug": "battle-dodge-ball"
@@ -760,8 +760,8 @@
     "Slug": "battle-unit-zeoth"
   },
   {
-    "Title": "Battle Zone \u0026 Super Breakout",
-    "FileName": "Battle Zone \u0026 Super Breakout (U) [S].gb",
+    "Title": "Battle Zone & Super Breakout",
+    "FileName": "Battle Zone & Super Breakout (U) [S].gb",
     "Mapper": "MBC1",
     "SizeKb": 256,
     "Status": "PASS",
@@ -816,8 +816,8 @@
     "Slug": "battletoads-double-dragon-the-ultimate-team"
   },
   {
-    "Title": "Battletoads in Ragnarok\u0027s World",
-    "FileName": "Battletoads in Ragnarok\u0027s World (E) [!].gb",
+    "Title": "Battletoads in Ragnarok's World",
+    "FileName": "Battletoads in Ragnarok's World (E) [!].gb",
     "Mapper": "MBC1",
     "SizeKb": 128,
     "Status": "PASS",
@@ -840,8 +840,8 @@
     "Slug": "beavis-and-butthead"
   },
   {
-    "Title": "Beethoven\u0027s 2nd",
-    "FileName": "Beethoven\u0027s 2nd (U) [S].gb",
+    "Title": "Beethoven's 2nd",
+    "FileName": "Beethoven's 2nd (U) [S].gb",
     "Mapper": "MBC1",
     "SizeKb": 128,
     "Status": "PASS",
@@ -896,16 +896,16 @@
     "Slug": "bikkuri-nekketsu-shinkiroku-dokodemo-kin-medal"
   },
   {
-    "Title": "Bill \u0026 Ted\u0027s Excellent Gameboy Adventure",
-    "FileName": "Bill \u0026 Ted\u0027s Excellent Gameboy Adventure (UE) [!].gb",
+    "Title": "Bill & Ted's Excellent Gameboy Adventure",
+    "FileName": "Bill & Ted's Excellent Gameboy Adventure (UE) [!].gb",
     "Mapper": "MBC1",
     "SizeKb": 128,
     "Status": "PASS",
     "Slug": "bill-ted-s-excellent-gameboy-adventure"
   },
   {
-    "Title": "Bill Elliott\u0027s NASCAR Fast Tracks",
-    "FileName": "Bill Elliott\u0027s NASCAR Fast Tracks (U).gb",
+    "Title": "Bill Elliott's NASCAR Fast Tracks",
+    "FileName": "Bill Elliott's NASCAR Fast Tracks (U).gb",
     "Mapper": "MBC1",
     "SizeKb": 128,
     "Status": "PASS",
@@ -1104,16 +1104,16 @@
     "Slug": "bomberman-gb-3"
   },
   {
-    "Title": "Bonk\u0027s Adventure",
-    "FileName": "Bonk\u0027s Adventure (U) [!].gb",
+    "Title": "Bonk's Adventure",
+    "FileName": "Bonk's Adventure (U) [!].gb",
     "Mapper": "MBC1",
     "SizeKb": 256,
     "Status": "PASS",
     "Slug": "bonk-s-adventure"
   },
   {
-    "Title": "Bonk\u0027s Revenge",
-    "FileName": "Bonk\u0027s Revenge (U) [S][!].gb",
+    "Title": "Bonk's Revenge",
+    "FileName": "Bonk's Revenge (U) [S][!].gb",
     "Mapper": "MBC1",
     "SizeKb": 256,
     "Status": "PASS",
@@ -1136,16 +1136,16 @@
     "Slug": "books-of-the-bible"
   },
   {
-    "Title": "Boomer\u0027s Adventure in ASMIK World",
-    "FileName": "Boomer\u0027s Adventure in ASMIK World (U) [!].gb",
+    "Title": "Boomer's Adventure in ASMIK World",
+    "FileName": "Boomer's Adventure in ASMIK World (U) [!].gb",
     "Mapper": "MBC1",
     "SizeKb": 64,
     "Status": "PASS",
     "Slug": "boomer-s-adventure-in-asmik-world"
   },
   {
-    "Title": "Boomer\u0027s Adventure in ASMIK World 2",
-    "FileName": "Boomer\u0027s Adventure in ASMIK World 2 (J).gb",
+    "Title": "Boomer's Adventure in ASMIK World 2",
+    "FileName": "Boomer's Adventure in ASMIK World 2 (J).gb",
     "Mapper": "MBC1",
     "SizeKb": 128,
     "Status": "PASS",
@@ -1178,7 +1178,7 @@
   {
     "Title": "Boxes",
     "FileName": "Boxes (PD).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 64,
     "Status": "PASS",
     "Slug": "boxes"
@@ -1186,7 +1186,7 @@
   {
     "Title": "Boxes for Bung",
     "FileName": "Boxes for Bung (PD).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 64,
     "Status": "PASS",
     "Slug": "boxes-for-bung"
@@ -1240,8 +1240,8 @@
     "Slug": "brainbender"
   },
   {
-    "Title": "Bram Stoker\u0027s Dracula",
-    "FileName": "Bram Stoker\u0027s Dracula (U) [!].gb",
+    "Title": "Bram Stoker's Dracula",
+    "FileName": "Bram Stoker's Dracula (U) [!].gb",
     "Mapper": "MBC1",
     "SizeKb": 128,
     "Status": "PASS",
@@ -1512,8 +1512,8 @@
     "Slug": "castlevania-adventure-the"
   },
   {
-    "Title": "Castlevania II - Belmont\u0027s Revenge",
-    "FileName": "Castlevania II - Belmont\u0027s Revenge (U) [!].gb",
+    "Title": "Castlevania II - Belmont's Revenge",
+    "FileName": "Castlevania II - Belmont's Revenge (U) [!].gb",
     "Mapper": "MBC1",
     "SizeKb": 128,
     "Status": "PASS",
@@ -1530,7 +1530,7 @@
   {
     "Title": "Cave Noire",
     "FileName": "Cave Noire (J).gb",
-    "Mapper": "MBC2\u002BBATT",
+    "Mapper": "MBC2+BATT",
     "SizeKb": 128,
     "Status": "PASS",
     "Slug": "cave-noire"
@@ -1570,7 +1570,7 @@
   {
     "Title": "Chapter 4 Link Test",
     "FileName": "Chapter 4 Link Test (PD).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 32,
     "Status": "PASS",
     "Slug": "chapter-4-link-test"
@@ -1656,8 +1656,8 @@
     "Slug": "choplifter-ii"
   },
   {
-    "Title": "Choplifter II - Rescue \u0026 Survive",
-    "FileName": "Choplifter II - Rescue \u0026 Survive (E) [!].gb",
+    "Title": "Choplifter II - Rescue & Survive",
+    "FileName": "Choplifter II - Rescue & Survive (E) [!].gb",
     "Mapper": "MBC1",
     "SizeKb": 128,
     "Status": "PASS",
@@ -1954,7 +1954,7 @@
   {
     "Title": "Cutthroats",
     "FileName": "Cutthroats (PD).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 128,
     "Status": "PASS",
     "Slug": "cutthroats"
@@ -1986,7 +1986,7 @@
   {
     "Title": "DX Bakenou",
     "FileName": "DX Bakenou (J) [!].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 64,
     "Status": "PASS",
     "Slug": "dx-bakenou"
@@ -1994,7 +1994,7 @@
   {
     "Title": "DX Bakenou Z",
     "FileName": "DX Bakenou Z (J) (V1.0).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 128,
     "Status": "PASS",
     "Slug": "dx-bakenou-z"
@@ -2018,7 +2018,7 @@
   {
     "Title": "Dai-2-Ji Super Robot Taisen G",
     "FileName": "Dai-2-Ji Super Robot Taisen G (J) [S].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "dai-2-ji-super-robot-taisen-g"
@@ -2090,7 +2090,7 @@
   {
     "Title": "Deadline",
     "FileName": "Deadline (PD).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 128,
     "Status": "PASS",
     "Slug": "deadline"
@@ -2162,7 +2162,7 @@
   {
     "Title": "Dino Breeder 2",
     "FileName": "Dino Breeder 2 (J) [S].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "dino-breeder-2"
@@ -2176,8 +2176,8 @@
     "Slug": "dirty-racing"
   },
   {
-    "Title": "Disney\u0027s Mulan",
-    "FileName": "Disney\u0027s Mulan (U) [S].gb",
+    "Title": "Disney's Mulan",
+    "FileName": "Disney's Mulan (U) [S].gb",
     "Mapper": "MBC1",
     "SizeKb": 512,
     "Status": "PASS",
@@ -2234,7 +2234,7 @@
   {
     "Title": "Donkey Kong",
     "FileName": "Donkey Kong (JU) (V1.0) [S][!].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "donkey-kong"
@@ -2242,7 +2242,7 @@
   {
     "Title": "Donkey Kong Land",
     "FileName": "Donkey Kong Land (U) [S][!].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "donkey-kong-land"
@@ -2250,7 +2250,7 @@
   {
     "Title": "Donkey Kong Land 2",
     "FileName": "Donkey Kong Land 2 (UE) [S][!].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "donkey-kong-land-2"
@@ -2258,7 +2258,7 @@
   {
     "Title": "Donkey Kong Land III",
     "FileName": "Donkey Kong Land III (U) [S][!].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "donkey-kong-land-iii"
@@ -2402,7 +2402,7 @@
   {
     "Title": "Dragon Ball Z - Gokuu Gekitouden",
     "FileName": "Dragon Ball Z - Gokuu Gekitouden (J) [S].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "dragon-ball-z-gokuu-gekitouden"
@@ -2432,24 +2432,24 @@
     "Slug": "dragon-tail"
   },
   {
-    "Title": "Dragon\u0027s Lair",
-    "FileName": "Dragon\u0027s Lair (J).gb",
+    "Title": "Dragon's Lair",
+    "FileName": "Dragon's Lair (J).gb",
     "Mapper": "MBC1",
     "SizeKb": 128,
     "Status": "PASS",
     "Slug": "dragon-s-lair"
   },
   {
-    "Title": "Dragon\u0027s Lair - The Legend",
-    "FileName": "Dragon\u0027s Lair - The Legend (E) [!].gb",
+    "Title": "Dragon's Lair - The Legend",
+    "FileName": "Dragon's Lair - The Legend (E) [!].gb",
     "Mapper": "MBC1",
     "SizeKb": 128,
     "Status": "PASS",
     "Slug": "dragon-s-lair-the-legend"
   },
   {
-    "Title": "DragonEagle\u0027s GBDK Printer Library",
-    "FileName": "DragonEagle\u0027s GBDK Printer Library (PD).gb",
+    "Title": "DragonEagle's GBDK Printer Library",
+    "FileName": "DragonEagle's GBDK Printer Library (PD).gb",
     "Mapper": "ROM-Only",
     "SizeKb": 32,
     "Status": "PASS",
@@ -2490,7 +2490,7 @@
   {
     "Title": "Dungeon Escape",
     "FileName": "Dungeon Escape (PD).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 32,
     "Status": "PASS",
     "Slug": "dungeon-escape"
@@ -2498,7 +2498,7 @@
   {
     "Title": "Dungeonland",
     "FileName": "Dungeonland (J).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 128,
     "Status": "PASS",
     "Slug": "dungeonland"
@@ -2594,7 +2594,7 @@
   {
     "Title": "Enchanter",
     "FileName": "Enchanter (PD).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 128,
     "Status": "PASS",
     "Slug": "enchanter"
@@ -2602,7 +2602,7 @@
   {
     "Title": "Enchanter 2 - Sorcerer",
     "FileName": "Enchanter 2 - Sorcerer (PD).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 128,
     "Status": "PASS",
     "Slug": "enchanter-2-sorcerer"
@@ -2616,8 +2616,8 @@
     "Slug": "exchanger"
   },
   {
-    "Title": "Explosive Brick \u002794",
-    "FileName": "Explosive Brick \u002794 (Sachen) [!].gb",
+    "Title": "Explosive Brick '94",
+    "FileName": "Explosive Brick '94 (Sachen) [!].gb",
     "Mapper": "ROM-Only",
     "SizeKb": 32,
     "Status": "PASS",
@@ -2672,16 +2672,16 @@
     "Slug": "fifa-international-soccer"
   },
   {
-    "Title": "FIFA Soccer \u002796",
-    "FileName": "FIFA Soccer \u002796 (UE) (M4) [S][!].gb",
+    "Title": "FIFA Soccer '96",
+    "FileName": "FIFA Soccer '96 (UE) (M4) [S][!].gb",
     "Mapper": "MBC1",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "fifa-soccer-96"
   },
   {
-    "Title": "FIFA Soccer \u002798 - Road to the World Cup",
-    "FileName": "FIFA Soccer \u002798 - Road to the World Cup (U) [S].gb",
+    "Title": "FIFA Soccer '98 - Road to the World Cup",
+    "FileName": "FIFA Soccer '98 - Road to the World Cup (U) [S].gb",
     "Mapper": "MBC1",
     "SizeKb": 512,
     "Status": "PASS",
@@ -2696,8 +2696,8 @@
     "Slug": "faceball-2000"
   },
   {
-    "Title": "Fairy Tale\u0027s Club",
-    "FileName": "Fairy Tale\u0027s Club (J).gb",
+    "Title": "Fairy Tale's Club",
+    "FileName": "Fairy Tale's Club (J).gb",
     "Mapper": "MBC1",
     "SizeKb": 128,
     "Status": "PASS",
@@ -2714,7 +2714,7 @@
   {
     "Title": "Family Jockey 2",
     "FileName": "Family Jockey 2 (J).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 128,
     "Status": "PASS",
     "Slug": "family-jockey-2"
@@ -2738,7 +2738,7 @@
   {
     "Title": "Famista 3",
     "FileName": "Famista 3 (J).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 256,
     "Status": "PASS",
     "Slug": "famista-3"
@@ -2786,7 +2786,7 @@
   {
     "Title": "Final Fantasy 4",
     "FileName": "Final Fantasy 4 (Unl).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "final-fantasy-4"
@@ -2794,7 +2794,7 @@
   {
     "Title": "Final Fantasy Legend II",
     "FileName": "Final Fantasy Legend II (U) [!].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 256,
     "Status": "PASS",
     "Slug": "final-fantasy-legend-ii"
@@ -2802,7 +2802,7 @@
   {
     "Title": "Final Fantasy Legend III",
     "FileName": "Final Fantasy Legend III (U) [!].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 256,
     "Status": "PASS",
     "Slug": "final-fantasy-legend-iii"
@@ -2874,7 +2874,7 @@
   {
     "Title": "Fleet Commander VS",
     "FileName": "Fleet Commander VS (J).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 256,
     "Status": "PASS",
     "Slug": "fleet-commander-vs"
@@ -2944,8 +2944,8 @@
     "Slug": "fortified-zone"
   },
   {
-    "Title": "Frank Thomas\u0027 Big Hurt Baseball",
-    "FileName": "Frank Thomas\u0027 Big Hurt Baseball (U) [!].gb",
+    "Title": "Frank Thomas' Big Hurt Baseball",
+    "FileName": "Frank Thomas' Big Hurt Baseball (U) [!].gb",
     "Mapper": "MBC1",
     "SizeKb": 512,
     "Status": "PASS",
@@ -2976,16 +2976,16 @@
     "Slug": "from-tv-animation-slam-dunk-2-zenkoku-heno-tip-off"
   },
   {
-    "Title": "Frommer\u0027s Personal Organizer",
-    "FileName": "Frommer\u0027s Personal Organizer (U).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Title": "Frommer's Personal Organizer",
+    "FileName": "Frommer's Personal Organizer (U).gb",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 64,
     "Status": "PASS",
     "Slug": "frommer-s-personal-organizer"
   },
   {
-    "Title": "Frommer\u0027s Travel Guide",
-    "FileName": "Frommer\u0027s Travel Guide (U) [!].gb",
+    "Title": "Frommer's Travel Guide",
+    "FileName": "Frommer's Travel Guide (U) [!].gb",
     "Mapper": "MBC1",
     "SizeKb": 256,
     "Status": "PASS",
@@ -3018,7 +3018,7 @@
   {
     "Title": "Fushigi no Dungeon - Fuurai no Shiren GB",
     "FileName": "Fushigi no Dungeon - Fuurai no Shiren GB (J) [S].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "fushigi-no-dungeon-fuurai-no-shiren-gb"
@@ -3026,7 +3026,7 @@
   {
     "Title": "G1 King - 3 Biki no Yosouya",
     "FileName": "G1 King - 3 Biki no Yosouya (J).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 64,
     "Status": "PASS",
     "Slug": "g1-king-3-biki-no-yosouya"
@@ -3088,8 +3088,8 @@
     "Slug": "gb-audioarts-sounds-road-rash"
   },
   {
-    "Title": "GB Audioarts Sounds - Toobin\u0027",
-    "FileName": "GB Audioarts Sounds - Toobin\u0027 (PD).gb",
+    "Title": "GB Audioarts Sounds - Toobin'",
+    "FileName": "GB Audioarts Sounds - Toobin' (PD).gb",
     "Mapper": "ROM-Only",
     "SizeKb": 32,
     "Status": "PASS",
@@ -3098,7 +3098,7 @@
   {
     "Title": "GB Basic V1.06",
     "FileName": "GB Basic V1.06 (PD).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 32,
     "Status": "PASS",
     "Slug": "gb-basic-v1-06"
@@ -3106,7 +3106,7 @@
   {
     "Title": "GB Basic V1.21",
     "FileName": "GB Basic V1.21 (PD).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 32,
     "Status": "PASS",
     "Slug": "gb-basic-v1-21"
@@ -3114,7 +3114,7 @@
   {
     "Title": "GB Basic V1.22",
     "FileName": "GB Basic V1.22 (PD).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 32,
     "Status": "PASS",
     "Slug": "gb-basic-v1-22"
@@ -3130,7 +3130,7 @@
   {
     "Title": "GB Cart Mag-E-Zine Vol 1 Issue 1 October 2nd, 2000",
     "FileName": "GB Cart Mag-E-Zine Vol 1 Issue 1 October 2nd, 2000 (PD).gb",
-    "Mapper": "MBC1\u002BRAM",
+    "Mapper": "MBC1+RAM",
     "SizeKb": 32,
     "Status": "PASS",
     "Slug": "gb-cart-mag-e-zine-vol-1-issue-1-october-2nd-2000"
@@ -3258,7 +3258,7 @@
   {
     "Title": "GB Pachislot Hissyouhou Jr.",
     "FileName": "GB Pachislot Hissyouhou Jr. (J).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 128,
     "Status": "PASS",
     "Slug": "gb-pachislot-hissyouhou-jr"
@@ -3304,8 +3304,8 @@
     "Slug": "gb-quiz-for-kids"
   },
   {
-    "Title": "GB Runtime - Terminal \u0026 Basic Graphics Demo",
-    "FileName": "GB Runtime - Terminal \u0026 Basic Graphics Demo (PD).gb",
+    "Title": "GB Runtime - Terminal & Basic Graphics Demo",
+    "FileName": "GB Runtime - Terminal & Basic Graphics Demo (PD).gb",
     "Mapper": "ROM-Only",
     "SizeKb": 32,
     "Status": "PASS",
@@ -3314,7 +3314,7 @@
   {
     "Title": "GB Sound Xperimenter V1.0",
     "FileName": "GB Sound Xperimenter V1.0 (PD).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 32,
     "Status": "PASS",
     "Slug": "gb-sound-xperimenter-v1-0"
@@ -3338,7 +3338,7 @@
   {
     "Title": "GB Tracker V990220",
     "FileName": "GB Tracker V990220 (PD).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 64,
     "Status": "PASS",
     "Slug": "gb-tracker-v990220"
@@ -3416,8 +3416,8 @@
     "Slug": "gbs-player-v1-00-bionic-command"
   },
   {
-    "Title": "GBS Player V1.00 - Bonk\u0027s Adventure",
-    "FileName": "GBS Player V1.00 - Bonk\u0027s Adventure (PD).gb",
+    "Title": "GBS Player V1.00 - Bonk's Adventure",
+    "FileName": "GBS Player V1.00 - Bonk's Adventure (PD).gb",
     "Mapper": "ROM-Only",
     "SizeKb": 32,
     "Status": "PASS",
@@ -3432,8 +3432,8 @@
     "Slug": "gbs-player-v1-00-bubble-ghost"
   },
   {
-    "Title": "GBS Player V1.00 - Castlevania 2 - Belmont\u0027s Revenge",
-    "FileName": "GBS Player V1.00 - Castlevania 2 - Belmont\u0027s Revenge (PD).gb",
+    "Title": "GBS Player V1.00 - Castlevania 2 - Belmont's Revenge",
+    "FileName": "GBS Player V1.00 - Castlevania 2 - Belmont's Revenge (PD).gb",
     "Mapper": "ROM-Only",
     "SizeKb": 32,
     "Status": "PASS",
@@ -3536,8 +3536,8 @@
     "Slug": "gbs-player-v1-00-final-fantasy-legend-iii"
   },
   {
-    "Title": "GBS Player V1.00 - Gargoyle\u0027s Quest",
-    "FileName": "GBS Player V1.00 - Gargoyle\u0027s Quest (PD).gb",
+    "Title": "GBS Player V1.00 - Gargoyle's Quest",
+    "FileName": "GBS Player V1.00 - Gargoyle's Quest (PD).gb",
     "Mapper": "ROM-Only",
     "SizeKb": 32,
     "Status": "PASS",
@@ -3568,24 +3568,24 @@
     "Slug": "gbs-player-v1-00-kid-dracula"
   },
   {
-    "Title": "GBS Player V1.00 - Kirby\u0027s Dreamland",
-    "FileName": "GBS Player V1.00 - Kirby\u0027s Dreamland (PD).gb",
+    "Title": "GBS Player V1.00 - Kirby's Dreamland",
+    "FileName": "GBS Player V1.00 - Kirby's Dreamland (PD).gb",
     "Mapper": "ROM-Only",
     "SizeKb": 32,
     "Status": "PASS",
     "Slug": "gbs-player-v1-00-kirby-s-dreamland"
   },
   {
-    "Title": "GBS Player V1.00 - Kirby\u0027s Dreamland 2",
-    "FileName": "GBS Player V1.00 - Kirby\u0027s Dreamland 2 (PD).gb",
+    "Title": "GBS Player V1.00 - Kirby's Dreamland 2",
+    "FileName": "GBS Player V1.00 - Kirby's Dreamland 2 (PD).gb",
     "Mapper": "MBC1",
     "SizeKb": 64,
     "Status": "PASS",
     "Slug": "gbs-player-v1-00-kirby-s-dreamland-2"
   },
   {
-    "Title": "GBS Player V1.00 - Legend of Zelda - Link\u0027s Awakening",
-    "FileName": "GBS Player V1.00 - Legend of Zelda - Link\u0027s Awakening (PD).gb",
+    "Title": "GBS Player V1.00 - Legend of Zelda - Link's Awakening",
+    "FileName": "GBS Player V1.00 - Legend of Zelda - Link's Awakening (PD).gb",
     "Mapper": "MBC1",
     "SizeKb": 64,
     "Status": "PASS",
@@ -3920,16 +3920,16 @@
     "Slug": "gbs-player-v1-01-popeye-2"
   },
   {
-    "Title": "GBS Player V1.01 - Rolan\u0027s Curse",
-    "FileName": "GBS Player V1.01 - Rolan\u0027s Curse (PD).gb",
+    "Title": "GBS Player V1.01 - Rolan's Curse",
+    "FileName": "GBS Player V1.01 - Rolan's Curse (PD).gb",
     "Mapper": "ROM-Only",
     "SizeKb": 32,
     "Status": "PASS",
     "Slug": "gbs-player-v1-01-rolan-s-curse"
   },
   {
-    "Title": "GBS Player V1.01 - Rolan\u0027s Curse II",
-    "FileName": "GBS Player V1.01 - Rolan\u0027s Curse II (PD).gb",
+    "Title": "GBS Player V1.01 - Rolan's Curse II",
+    "FileName": "GBS Player V1.01 - Rolan's Curse II (PD).gb",
     "Mapper": "ROM-Only",
     "SizeKb": 32,
     "Status": "PASS",
@@ -4000,8 +4000,8 @@
     "Slug": "gabe-edit-v0-1"
   },
   {
-    "Title": "Galaga \u0026 Galaxian",
-    "FileName": "Galaga \u0026 Galaxian (E) [S][!].gb",
+    "Title": "Galaga & Galaxian",
+    "FileName": "Galaga & Galaxian (E) [S][!].gb",
     "Mapper": "MBC1",
     "SizeKb": 128,
     "Status": "PASS",
@@ -4024,17 +4024,17 @@
     "Slug": "galaxy-demo"
   },
   {
-    "Title": "Game \u0026 Watch Gallery",
-    "FileName": "Game \u0026 Watch Gallery (E) [S][!].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Title": "Game & Watch Gallery",
+    "FileName": "Game & Watch Gallery (E) [S][!].gb",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 256,
     "Status": "PASS",
     "Slug": "game-watch-gallery"
   },
   {
-    "Title": "Game \u0026 Watch Gallery 2",
-    "FileName": "Game \u0026 Watch Gallery 2 (J) [S].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Title": "Game & Watch Gallery 2",
+    "FileName": "Game & Watch Gallery 2 (J) [S].gb",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "game-watch-gallery-2"
@@ -4050,7 +4050,7 @@
   {
     "Title": "GameDepot.com Credits Scroll",
     "FileName": "GameDepot.com Credits Scroll (PD).gb",
-    "Mapper": "MBC1\u002BRAM",
+    "Mapper": "MBC1+RAM",
     "SizeKb": 32,
     "Status": "PASS",
     "Slug": "gamedepot-com-credits-scroll"
@@ -4066,7 +4066,7 @@
   {
     "Title": "Gameboy Gallery 2",
     "FileName": "Gameboy Gallery 2 (A) [S][!].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 256,
     "Status": "PASS",
     "Slug": "gameboy-gallery-2"
@@ -4082,7 +4082,7 @@
   {
     "Title": "Gameboy Printer Emulator V1.0 by Jeff Frohwein",
     "FileName": "Gameboy Printer Emulator V1.0 by Jeff Frohwein (PD).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 32,
     "Status": "PASS",
     "Slug": "gameboy-printer-emulator-v1-0-by-jeff-frohwein"
@@ -4098,7 +4098,7 @@
   {
     "Title": "Gameboy Wars",
     "FileName": "Gameboy Wars (J).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 256,
     "Status": "PASS",
     "Slug": "gameboy-wars"
@@ -4106,7 +4106,7 @@
   {
     "Title": "Gameboy Wars Turbo",
     "FileName": "Gameboy Wars Turbo (J) [S].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "gameboy-wars-turbo"
@@ -4130,7 +4130,7 @@
   {
     "Title": "Ganbare Goemon 2",
     "FileName": "Ganbare Goemon 2 (J) [S].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 256,
     "Status": "PASS",
     "Slug": "ganbare-goemon-2"
@@ -4152,8 +4152,8 @@
     "Slug": "garfield-labyrinth"
   },
   {
-    "Title": "Gargoyle\u0027s Quest - Ghosts\u0027n Goblins",
-    "FileName": "Gargoyle\u0027s Quest - Ghosts\u0027n Goblins (UE) [!].gb",
+    "Title": "Gargoyle's Quest - Ghosts'n Goblins",
+    "FileName": "Gargoyle's Quest - Ghosts'n Goblins (UE) [!].gb",
     "Mapper": "MBC1",
     "SizeKb": 128,
     "Status": "PASS",
@@ -4178,7 +4178,7 @@
   {
     "Title": "Gem Gem",
     "FileName": "Gem Gem (J).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 64,
     "Status": "PASS",
     "Slug": "gem-gem"
@@ -4216,8 +4216,8 @@
     "Slug": "gensan-quiz"
   },
   {
-    "Title": "George Foreman\u0027s KO Boxing",
-    "FileName": "George Foreman\u0027s KO Boxing (U) [!].gb",
+    "Title": "George Foreman's KO Boxing",
+    "FileName": "George Foreman's KO Boxing (U) [!].gb",
     "Mapper": "MBC1",
     "SizeKb": 128,
     "Status": "PASS",
@@ -4274,7 +4274,7 @@
   {
     "Title": "Go Go Hitchike",
     "FileName": "Go Go Hitchike (J) [S].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "go-go-hitchike"
@@ -4298,7 +4298,7 @@
   {
     "Title": "God Medicine",
     "FileName": "God Medicine (J).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 256,
     "Status": "PASS",
     "Slug": "god-medicine"
@@ -4306,7 +4306,7 @@
   {
     "Title": "God Medicine FB",
     "FileName": "God Medicine FB (J) [S].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "god-medicine-fb"
@@ -4370,7 +4370,7 @@
   {
     "Title": "Great Greed",
     "FileName": "Great Greed (U) [!].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 256,
     "Status": "PASS",
     "Slug": "great-greed"
@@ -4378,7 +4378,7 @@
   {
     "Title": "Greeting Card Demo - Planet Console Ad",
     "FileName": "Greeting Card Demo - Planet Console Ad (PD).gb",
-    "Mapper": "MBC1\u002BRAM",
+    "Mapper": "MBC1+RAM",
     "SizeKb": 64,
     "Status": "PASS",
     "Slug": "greeting-card-demo-planet-console-ad"
@@ -4434,7 +4434,7 @@
   {
     "Title": "Gurander Musashi RV",
     "FileName": "Gurander Musashi RV (J) [S].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "gurander-musashi-rv"
@@ -4448,8 +4448,8 @@
     "Slug": "hal-wrestling"
   },
   {
-    "Title": "Hammerin\u0027 Harry - Ghost Building Company",
-    "FileName": "Hammerin\u0027 Harry - Ghost Building Company (U).gb",
+    "Title": "Hammerin' Harry - Ghost Building Company",
+    "FileName": "Hammerin' Harry - Ghost Building Company (U).gb",
     "Mapper": "MBC1",
     "SizeKb": 256,
     "Status": "PASS",
@@ -4458,7 +4458,7 @@
   {
     "Title": "Hangman",
     "FileName": "Hangman (PD).gb",
-    "Mapper": "MBC1\u002BRAM",
+    "Mapper": "MBC1+RAM",
     "SizeKb": 256,
     "Status": "PASS",
     "Slug": "hangman"
@@ -4466,7 +4466,7 @@
   {
     "Title": "Happy Birthday HOME Demo",
     "FileName": "Happy Birthday HOME Demo (PD).gb",
-    "Mapper": "MBC1\u002BRAM",
+    "Mapper": "MBC1+RAM",
     "SizeKb": 32,
     "Status": "PASS",
     "Slug": "happy-birthday-home-demo"
@@ -4474,7 +4474,7 @@
   {
     "Title": "Harvest Moon GB",
     "FileName": "Harvest Moon GB (U) [S][!].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "harvest-moon-gb"
@@ -4632,9 +4632,9 @@
     "Slug": "hit-the-ice"
   },
   {
-    "Title": "Hitchiker\u0027s Guide to the Galaxy, The",
-    "FileName": "Hitchiker\u0027s Guide to the Galaxy, The (PD).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Title": "Hitchiker's Guide to the Galaxy, The",
+    "FileName": "Hitchiker's Guide to the Galaxy, The (PD).gb",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 128,
     "Status": "PASS",
     "Slug": "hitchiker-s-guide-to-the-galaxy-the"
@@ -4666,7 +4666,7 @@
   {
     "Title": "Hollywood Hijinx",
     "FileName": "Hollywood Hijinx (PD).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 128,
     "Status": "PASS",
     "Slug": "hollywood-hijinx"
@@ -4682,7 +4682,7 @@
   {
     "Title": "Hon Shougi",
     "FileName": "Hon Shougi (J) [S].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 64,
     "Status": "PASS",
     "Slug": "hon-shougi"
@@ -4698,7 +4698,7 @@
   {
     "Title": "Honmei Boy",
     "FileName": "Honmei Boy (J).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 256,
     "Status": "PASS",
     "Slug": "honmei-boy"
@@ -4800,8 +4800,8 @@
     "Slug": "hybrid-gbplot"
   },
   {
-    "Title": "Hyper Black Bass \u002795",
-    "FileName": "Hyper Black Bass \u002795 (J).gb",
+    "Title": "Hyper Black Bass '95",
+    "FileName": "Hyper Black Bass '95 (J).gb",
     "Mapper": "MBC1",
     "SizeKb": 256,
     "Status": "PASS",
@@ -4890,7 +4890,7 @@
   {
     "Title": "Infidel",
     "FileName": "Infidel (PD).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 128,
     "Status": "PASS",
     "Slug": "infidel"
@@ -4898,7 +4898,7 @@
   {
     "Title": "Initial D Gaiden",
     "FileName": "Initial D Gaiden (J) [S][!].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 256,
     "Status": "PASS",
     "Slug": "initial-d-gaiden"
@@ -4944,8 +4944,8 @@
     "Slug": "ishidou"
   },
   {
-    "Title": "Itchy \u0026 Scratchy - Miniature Golf Madness",
-    "FileName": "Itchy \u0026 Scratchy - Miniature Golf Madness (U).gb",
+    "Title": "Itchy & Scratchy - Miniature Golf Madness",
+    "FileName": "Itchy & Scratchy - Miniature Golf Madness (U).gb",
     "Mapper": "MBC1",
     "SizeKb": 128,
     "Status": "PASS",
@@ -4962,15 +4962,15 @@
   {
     "Title": "J.League Fighting Soccer",
     "FileName": "J.League Fighting Soccer (J).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 128,
     "Status": "PASS",
     "Slug": "j-league-fighting-soccer"
   },
   {
-    "Title": "J.League Live \u002795",
-    "FileName": "J.League Live \u002795 (J) [S].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Title": "J.League Live '95",
+    "FileName": "J.League Live '95 (J) [S].gb",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 256,
     "Status": "PASS",
     "Slug": "j-league-live-95"
@@ -4978,7 +4978,7 @@
   {
     "Title": "J.League Supporter Soccer",
     "FileName": "J.League Supporter Soccer (J) [S].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "j-league-supporter-soccer"
@@ -4986,7 +4986,7 @@
   {
     "Title": "J.League Winning Goal",
     "FileName": "J.League Winning Goal (J).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 128,
     "Status": "PASS",
     "Slug": "j-league-winning-goal"
@@ -5002,7 +5002,7 @@
   {
     "Title": "James Bond 007",
     "FileName": "James Bond 007 (U) [S][!].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "james-bond-007"
@@ -5130,7 +5130,7 @@
   {
     "Title": "Jida Igeki",
     "FileName": "Jida Igeki (J).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 256,
     "Status": "PASS",
     "Slug": "jida-igeki"
@@ -5152,8 +5152,8 @@
     "Slug": "jinsei"
   },
   {
-    "Title": "Joe \u0026 Mac",
-    "FileName": "Joe \u0026 Mac (U) [!].gb",
+    "Title": "Joe & Mac",
+    "FileName": "Joe & Mac (U) [!].gb",
     "Mapper": "MBC1",
     "SizeKb": 256,
     "Status": "PASS",
@@ -5170,7 +5170,7 @@
   {
     "Title": "Joy Rider Demo",
     "FileName": "Joy Rider Demo (PD).gb",
-    "Mapper": "MBC1\u002BRAM",
+    "Mapper": "MBC1+RAM",
     "SizeKb": 32,
     "Status": "PASS",
     "Slug": "joy-rider-demo"
@@ -5218,7 +5218,7 @@
   {
     "Title": "Jungle Wars",
     "FileName": "Jungle Wars (J).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 256,
     "Status": "PASS",
     "Slug": "jungle-wars"
@@ -5250,23 +5250,23 @@
   {
     "Title": "Jurassic Park 3",
     "FileName": "Jurassic Park 3 (Unl) [f1].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "jurassic-park-3"
   },
   {
-    "Title": "Kachiu Mayoso Keiba Kizoku Ex \u002794",
-    "FileName": "Kachiu Mayoso Keiba Kizoku Ex \u002794 (J).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Title": "Kachiu Mayoso Keiba Kizoku Ex '94",
+    "FileName": "Kachiu Mayoso Keiba Kizoku Ex '94 (J).gb",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 128,
     "Status": "PASS",
     "Slug": "kachiu-mayoso-keiba-kizoku-ex-94"
   },
   {
-    "Title": "Kachiu Mayoso Keiba Kizoku Ex \u002795",
-    "FileName": "Kachiu Mayoso Keiba Kizoku Ex \u002795 (J).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Title": "Kachiu Mayoso Keiba Kizoku Ex '95",
+    "FileName": "Kachiu Mayoso Keiba Kizoku Ex '95 (J).gb",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 128,
     "Status": "PASS",
     "Slug": "kachiu-mayoso-keiba-kizoku-ex-95"
@@ -5274,7 +5274,7 @@
   {
     "Title": "Kaeruno Tameni",
     "FileName": "Kaeruno Tameni (J).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "kaeruno-tameni"
@@ -5290,7 +5290,7 @@
   {
     "Title": "Kanjiro",
     "FileName": "Kanjiro (J) [S].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "kanjiro"
@@ -5314,7 +5314,7 @@
   {
     "Title": "Kaseki Reborn",
     "FileName": "Kaseki Reborn (J) [S].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "kaseki-reborn"
@@ -5330,7 +5330,7 @@
   {
     "Title": "Kattobi Road",
     "FileName": "Kattobi Road (J).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 128,
     "Status": "PASS",
     "Slug": "kattobi-road"
@@ -5338,7 +5338,7 @@
   {
     "Title": "Kawa no Nushi Tsuri 3",
     "FileName": "Kawa no Nushi Tsuri 3 (J) [S][p1][!].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "kawa-no-nushi-tsuri-3"
@@ -5346,7 +5346,7 @@
   {
     "Title": "Keiba Kizoku",
     "FileName": "Keiba Kizoku (J).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 128,
     "Status": "PASS",
     "Slug": "keiba-kizoku"
@@ -5354,7 +5354,7 @@
   {
     "Title": "Keitai Keiba 8 Special",
     "FileName": "Keitai Keiba 8 Special (J).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 128,
     "Status": "PASS",
     "Slug": "keitai-keiba-8-special"
@@ -5362,14 +5362,14 @@
   {
     "Title": "Ken Griffey Jr. Presents Major League Baseball",
     "FileName": "Ken Griffey Jr. Presents Major League Baseball (U) [S][!].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "ken-griffey-jr-presents-major-league-baseball"
   },
   {
-    "Title": "Ken Kameda\u0027s World Demo",
-    "FileName": "Ken Kameda\u0027s World Demo (PD).gb",
+    "Title": "Ken Kameda's World Demo",
+    "FileName": "Ken Kameda's World Demo (PD).gb",
     "Mapper": "ROM-Only",
     "SizeKb": 32,
     "Status": "PASS",
@@ -5416,8 +5416,8 @@
     "Slug": "killer-instinct"
   },
   {
-    "Title": "King of Fighters \u002795, The",
-    "FileName": "King of Fighters \u002795, The (U) [S][!].gb",
+    "Title": "King of Fighters '95, The",
+    "FileName": "King of Fighters '95, The (U) [S][!].gb",
     "Mapper": "MBC1",
     "SizeKb": 512,
     "Status": "PASS",
@@ -5442,7 +5442,7 @@
   {
     "Title": "Kingyo Chuuihou! 2",
     "FileName": "Kingyo Chuuihou! 2 (J).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 128,
     "Status": "PASS",
     "Slug": "kingyo-chuuihou-2"
@@ -5458,7 +5458,7 @@
   {
     "Title": "Kira Kira Kids",
     "FileName": "Kira Kira Kids (J) [S].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 256,
     "Status": "PASS",
     "Slug": "kira-kira-kids"
@@ -5466,7 +5466,7 @@
   {
     "Title": "Kirby 2 - Hoshinoka 2",
     "FileName": "Kirby 2 - Hoshinoka 2 (J) [S].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "kirby-2-hoshinoka-2"
@@ -5482,47 +5482,47 @@
   {
     "Title": "Kirby no Block Ball",
     "FileName": "Kirby no Block Ball (J) [S].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "kirby-no-block-ball"
   },
   {
-    "Title": "Kirby\u0027s Block Ball",
-    "FileName": "Kirby\u0027s Block Ball (U) [S][!].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Title": "Kirby's Block Ball",
+    "FileName": "Kirby's Block Ball (U) [S][!].gb",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "kirby-s-block-ball"
   },
   {
-    "Title": "Kirby\u0027s Dream Land",
-    "FileName": "Kirby\u0027s Dream Land (UE) [!].gb",
+    "Title": "Kirby's Dream Land",
+    "FileName": "Kirby's Dream Land (UE) [!].gb",
     "Mapper": "MBC1",
     "SizeKb": 256,
     "Status": "PASS",
     "Slug": "kirby-s-dream-land"
   },
   {
-    "Title": "Kirby\u0027s Dream Land 2",
-    "FileName": "Kirby\u0027s Dream Land 2 (U) [S][!].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Title": "Kirby's Dream Land 2",
+    "FileName": "Kirby's Dream Land 2 (U) [S][!].gb",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "kirby-s-dream-land-2"
   },
   {
-    "Title": "Kirby\u0027s Hoshinoka-Bi",
-    "FileName": "Kirby\u0027s Hoshinoka-Bi (J) (V1.0).gb",
+    "Title": "Kirby's Hoshinoka-Bi",
+    "FileName": "Kirby's Hoshinoka-Bi (J) (V1.0).gb",
     "Mapper": "MBC1",
     "SizeKb": 256,
     "Status": "PASS",
     "Slug": "kirby-s-hoshinoka-bi"
   },
   {
-    "Title": "Kirby\u0027s Star Stacker",
-    "FileName": "Kirby\u0027s Star Stacker (U) [S][!].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Title": "Kirby's Star Stacker",
+    "FileName": "Kirby's Star Stacker (U) [S][!].gb",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 256,
     "Status": "PASS",
     "Slug": "kirby-s-star-stacker"
@@ -5570,7 +5570,7 @@
   {
     "Title": "Kokiatsu Boy",
     "FileName": "Kokiatsu Boy (J) [S].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "kokiatsu-boy"
@@ -5634,7 +5634,7 @@
   {
     "Title": "Konchuu Hakase",
     "FileName": "Konchuu Hakase (J) (V1.0) [S].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "konchuu-hakase"
@@ -5768,9 +5768,9 @@
     "Slug": "legend-of-prince-valiant-the"
   },
   {
-    "Title": "Legend of Zelda, The - Link\u0027s Awakening",
-    "FileName": "Legend of Zelda, The - Link\u0027s Awakening (USA, Europe) (Rev 2).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Title": "Legend of Zelda, The - Link's Awakening",
+    "FileName": "Legend of Zelda, The - Link's Awakening (USA, Europe) (Rev 2).gb",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "legend-of-zelda-the-link-s-awakening"
@@ -5778,7 +5778,7 @@
   {
     "Title": "Legend of the River King GB",
     "FileName": "Legend of the River King GB (U) [S][!].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "legend-of-the-river-king-gb"
@@ -5802,7 +5802,7 @@
   {
     "Title": "Lemon Player Demo by Lemon Productions",
     "FileName": "Lemon Player Demo by Lemon Productions (PD).gb",
-    "Mapper": "MBC1\u002BRAM",
+    "Mapper": "MBC1+RAM",
     "SizeKb": 64,
     "Status": "PASS",
     "Slug": "lemon-player-demo-by-lemon-productions"
@@ -5842,7 +5842,7 @@
   {
     "Title": "Lik Sang MP3 Demo",
     "FileName": "Lik Sang MP3 Demo (PD).gb",
-    "Mapper": "MBC1\u002BRAM",
+    "Mapper": "MBC1+RAM",
     "SizeKb": 32,
     "Status": "PASS",
     "Slug": "lik-sang-mp3-demo"
@@ -5866,7 +5866,7 @@
   {
     "Title": "Little Master 2",
     "FileName": "Little Master 2 (J).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 256,
     "Status": "PASS",
     "Slug": "little-master-2"
@@ -5880,8 +5880,8 @@
     "Slug": "little-mermaid-the"
   },
   {
-    "Title": "Lock \u0027N Chase",
-    "FileName": "Lock \u0027N Chase (JU) [!].gb",
+    "Title": "Lock 'N Chase",
+    "FileName": "Lock 'N Chase (JU) [!].gb",
     "Mapper": "MBC1",
     "SizeKb": 64,
     "Status": "PASS",
@@ -5890,7 +5890,7 @@
   {
     "Title": "Log-X",
     "FileName": "Log-X (PD).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 32,
     "Status": "PASS",
     "Slug": "log-x"
@@ -5946,7 +5946,7 @@
   {
     "Title": "Lucle",
     "FileName": "Lucle (J).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "lucle"
@@ -5960,24 +5960,24 @@
     "Slug": "lunar-lander"
   },
   {
-    "Title": "Madden \u002795",
-    "FileName": "Madden \u002795 (UE) [S][!].gb",
+    "Title": "Madden '95",
+    "FileName": "Madden '95 (UE) [S][!].gb",
     "Mapper": "MBC1",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "madden-95"
   },
   {
-    "Title": "Madden \u002796",
-    "FileName": "Madden \u002796 (U) [S].gb",
+    "Title": "Madden '96",
+    "FileName": "Madden '96 (U) [S].gb",
     "Mapper": "MBC1",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "madden-96"
   },
   {
-    "Title": "Madden \u002797",
-    "FileName": "Madden \u002797 (U) [S][!].gb",
+    "Title": "Madden '97",
+    "FileName": "Madden '97 (U) [S][!].gb",
     "Mapper": "MBC1",
     "SizeKb": 512,
     "Status": "PASS",
@@ -6026,7 +6026,7 @@
   {
     "Title": "Mahou Kishi Rayearth",
     "FileName": "Mahou Kishi Rayearth (J) [S].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 256,
     "Status": "PASS",
     "Slug": "mahou-kishi-rayearth"
@@ -6120,25 +6120,25 @@
     "Slug": "marble-madness"
   },
   {
-    "Title": "Mario \u0026 Yoshi",
-    "FileName": "Mario \u0026 Yoshi (E) [!].gb",
+    "Title": "Mario & Yoshi",
+    "FileName": "Mario & Yoshi (E) [!].gb",
     "Mapper": "MBC1",
     "SizeKb": 64,
     "Status": "PASS",
     "Slug": "mario-yoshi"
   },
   {
-    "Title": "Mario\u0027s Picross",
-    "FileName": "Mario\u0027s Picross (UE) [S][!].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Title": "Mario's Picross",
+    "FileName": "Mario's Picross (UE) [S][!].gb",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 256,
     "Status": "PASS",
     "Slug": "mario-s-picross"
   },
   {
-    "Title": "Mario\u0027s Picross 2",
-    "FileName": "Mario\u0027s Picross 2 (J) [S].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Title": "Mario's Picross 2",
+    "FileName": "Mario's Picross 2 (J) [S].gb",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "mario-s-picross-2"
@@ -6152,8 +6152,8 @@
     "Slug": "marmalade-boy"
   },
   {
-    "Title": "Maru\u0027s Mission",
-    "FileName": "Maru\u0027s Mission (U) [!].gb",
+    "Title": "Maru's Mission",
+    "FileName": "Maru's Mission (U) [!].gb",
     "Mapper": "MBC1",
     "SizeKb": 128,
     "Status": "PASS",
@@ -6170,7 +6170,7 @@
   {
     "Title": "Masakari Densetsu Kintarou RPG Hen",
     "FileName": "Masakari Densetsu Kintarou RPG Hen (J) [S].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "masakari-densetsu-kintarou-rpg-hen"
@@ -6226,7 +6226,7 @@
   {
     "Title": "Mazekko Monster",
     "FileName": "Mazekko Monster (J) [S].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "mazekko-monster"
@@ -6234,7 +6234,7 @@
   {
     "Title": "Mazekko Monster 2",
     "FileName": "Mazekko Monster 2 (J) [S].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "mazekko-monster-2"
@@ -6258,7 +6258,7 @@
   {
     "Title": "Medarot Kabuto",
     "FileName": "Medarot Kabuto (J) (V1.0) [S].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "medarot-kabuto"
@@ -6266,7 +6266,7 @@
   {
     "Title": "Medarot Kuwagata",
     "FileName": "Medarot Kuwagata (J) (V1.0) [S].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "medarot-kuwagata"
@@ -6280,8 +6280,8 @@
     "Slug": "meganime-by-megaman-x"
   },
   {
-    "Title": "Mega Man - Dr. Wily\u0027s Revenge",
-    "FileName": "Mega Man - Dr. Wily\u0027s Revenge (E) [!].gb",
+    "Title": "Mega Man - Dr. Wily's Revenge",
+    "FileName": "Mega Man - Dr. Wily's Revenge (E) [!].gb",
     "Mapper": "MBC1",
     "SizeKb": 256,
     "Status": "PASS",
@@ -6338,7 +6338,7 @@
   {
     "Title": "Megami Tensei Gaiden - Last Bible",
     "FileName": "Megami Tensei Gaiden - Last Bible (J).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 256,
     "Status": "PASS",
     "Slug": "megami-tensei-gaiden-last-bible"
@@ -6346,7 +6346,7 @@
   {
     "Title": "Megami Tensei Gaiden - Last Bible II",
     "FileName": "Megami Tensei Gaiden - Last Bible II (J) [f1].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 256,
     "Status": "PASS",
     "Slug": "megami-tensei-gaiden-last-bible-ii"
@@ -6370,7 +6370,7 @@
   {
     "Title": "Memory Banks Demo",
     "FileName": "Memory Banks Demo (PD).gb",
-    "Mapper": "MBC1\u002BRAM",
+    "Mapper": "MBC1+RAM",
     "SizeKb": 64,
     "Status": "PASS",
     "Slug": "memory-banks-demo"
@@ -6410,7 +6410,7 @@
   {
     "Title": "Metroid II - Return of Samus",
     "FileName": "Metroid II - Return of Samus (UE) [!].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 256,
     "Status": "PASS",
     "Slug": "metroid-ii-return-of-samus"
@@ -6418,7 +6418,7 @@
   {
     "Title": "Metroid II DX by Redrum",
     "FileName": "Metroid II DX by Redrum (Hack).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 256,
     "Status": "PASS",
     "Slug": "metroid-ii-dx-by-redrum"
@@ -6480,16 +6480,16 @@
     "Slug": "mickey-mouse-v"
   },
   {
-    "Title": "Mickey\u0027s Dangerous Chase",
-    "FileName": "Mickey\u0027s Dangerous Chase (E) [!].gb",
+    "Title": "Mickey's Dangerous Chase",
+    "FileName": "Mickey's Dangerous Chase (E) [!].gb",
     "Mapper": "MBC1",
     "SizeKb": 128,
     "Status": "PASS",
     "Slug": "mickey-s-dangerous-chase"
   },
   {
-    "Title": "Mickey\u0027s Ultimate Challenge",
-    "FileName": "Mickey\u0027s Ultimate Challenge (U).gb",
+    "Title": "Mickey's Ultimate Challenge",
+    "FileName": "Mickey's Ultimate Challenge (U).gb",
     "Mapper": "MBC1",
     "SizeKb": 256,
     "Status": "PASS",
@@ -6568,8 +6568,8 @@
     "Slug": "milon-no-meikyuu-kumikyoku"
   },
   {
-    "Title": "Milon\u0027s Secret Castle",
-    "FileName": "Milon\u0027s Secret Castle (U).gb",
+    "Title": "Milon's Secret Castle",
+    "FileName": "Milon's Secret Castle (U).gb",
     "Mapper": "MBC1",
     "SizeKb": 128,
     "Status": "PASS",
@@ -6602,7 +6602,7 @@
   {
     "Title": "Mini 4 Boy II - Final Evolution",
     "FileName": "Mini 4 Boy II - Final Evolution (J) [S].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "mini-4-boy-ii-final-evolution"
@@ -6634,7 +6634,7 @@
   {
     "Title": "Missing Files",
     "FileName": "Missing Files (E-Mag Article) (PD).gb",
-    "Mapper": "MBC1\u002BRAM",
+    "Mapper": "MBC1+RAM",
     "SizeKb": 32,
     "Status": "PASS",
     "Slug": "missing-files"
@@ -6666,7 +6666,7 @@
   {
     "Title": "Moguranya",
     "FileName": "Moguranya (J) [S].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "moguranya"
@@ -6674,7 +6674,7 @@
   {
     "Title": "Mole Mania",
     "FileName": "Mole Mania (U) [S][!].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "mole-mania"
@@ -6682,7 +6682,7 @@
   {
     "Title": "Momotarou Collection",
     "FileName": "Momotarou Collection (J) [S].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 1024,
     "Status": "PASS",
     "Slug": "momotarou-collection"
@@ -6706,7 +6706,7 @@
   {
     "Title": "Momotetsu Jr.",
     "FileName": "Momotetsu Jr. (J) [S].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "momotetsu-jr"
@@ -6730,7 +6730,7 @@
   {
     "Title": "Monster Maker 2",
     "FileName": "Monster Maker 2 (J).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 256,
     "Status": "PASS",
     "Slug": "monster-maker-2"
@@ -6746,7 +6746,7 @@
   {
     "Title": "Monster Race",
     "FileName": "Monster Race (J) [S].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "monster-race"
@@ -6754,7 +6754,7 @@
   {
     "Title": "Monster Race Other",
     "FileName": "Monster Race Other (J) [S].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "monster-race-other"
@@ -6776,8 +6776,8 @@
     "Slug": "monster-truck-wars"
   },
   {
-    "Title": "Montezuma\u0027s Return",
-    "FileName": "Montezuma\u0027s Return (E) (M5) [!].gb",
+    "Title": "Montezuma's Return",
+    "FileName": "Montezuma's Return (E) (M5) [!].gb",
     "Mapper": "MBC1",
     "SizeKb": 256,
     "Status": "PASS",
@@ -6800,8 +6800,8 @@
     "Slug": "mortal-kombat-3"
   },
   {
-    "Title": "Mortal Kombat I \u0026 II",
-    "FileName": "Mortal Kombat I \u0026 II (U) [f1].gb",
+    "Title": "Mortal Kombat I & II",
+    "FileName": "Mortal Kombat I & II (U) [f1].gb",
     "Mapper": "MBC1",
     "SizeKb": 1024,
     "Status": "PASS",
@@ -6864,8 +6864,8 @@
     "Slug": "ms-pac-man"
   },
   {
-    "Title": "Muhammad Ali\u0027s Boxing",
-    "FileName": "Muhammad Ali\u0027s Boxing (U).gb",
+    "Title": "Muhammad Ali's Boxing",
+    "FileName": "Muhammad Ali's Boxing (U).gb",
     "Mapper": "MBC1",
     "SizeKb": 128,
     "Status": "PASS",
@@ -6889,16 +6889,16 @@
   },
   {
     "Title": "Multikart 2 V1.1",
-    "FileName": "Multikart 2 V1.1 (GB BASIC \u0026 Debugger) (PD).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "FileName": "Multikart 2 V1.1 (GB BASIC & Debugger) (PD).gb",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 64,
     "Status": "PASS",
     "Slug": "multikart-2-v1-1"
   },
   {
     "Title": "Multikart 2 V1.3",
-    "FileName": "Multikart 2 V1.3 (GB BASIC \u0026 Debugger) (PD).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "FileName": "Multikart 2 V1.3 (GB BASIC & Debugger) (PD).gb",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 64,
     "Status": "PASS",
     "Slug": "multikart-2-v1-3"
@@ -7008,16 +7008,16 @@
     "Slug": "nfl-quarterback-club-96"
   },
   {
-    "Title": "NHL Hockey \u002795",
-    "FileName": "NHL Hockey \u002795 (U) [S][!].gb",
+    "Title": "NHL Hockey '95",
+    "FileName": "NHL Hockey '95 (U) [S][!].gb",
     "Mapper": "MBC1",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "nhl-hockey-95"
   },
   {
-    "Title": "NHL Hockey \u002796",
-    "FileName": "NHL Hockey \u002796 (U) [S][!].gb",
+    "Title": "NHL Hockey '96",
+    "FileName": "NHL Hockey '96 (U) [S][!].gb",
     "Mapper": "MBC1",
     "SizeKb": 512,
     "Status": "PASS",
@@ -7032,8 +7032,8 @@
     "Slug": "nada-asatarou-no-powerful-mahjong-tsugi-no-itte-100-dai"
   },
   {
-    "Title": "Nail\u0027N Scale",
-    "FileName": "Nail\u0027N Scale (U).gb",
+    "Title": "Nail'N Scale",
+    "FileName": "Nail'N Scale (U).gb",
     "Mapper": "MBC1",
     "SizeKb": 128,
     "Status": "PASS",
@@ -7074,7 +7074,7 @@
   {
     "Title": "NanoLoop Demo",
     "FileName": "NanoLoop Demo (PD).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 64,
     "Status": "PASS",
     "Slug": "nanoloop-demo"
@@ -7082,7 +7082,7 @@
   {
     "Title": "NanoLoop Music Generator",
     "FileName": "NanoLoop Music Generator (E) [!].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 64,
     "Status": "PASS",
     "Slug": "nanoloop-music-generator"
@@ -7106,7 +7106,7 @@
   {
     "Title": "Nanonote",
     "FileName": "Nanonote (J).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 128,
     "Status": "PASS",
     "Slug": "nanonote"
@@ -7192,16 +7192,16 @@
     "Slug": "nettou-garou-2"
   },
   {
-    "Title": "Nettou King of Fighters \u002795",
-    "FileName": "Nettou King of Fighters \u002795 (J) [S].gb",
+    "Title": "Nettou King of Fighters '95",
+    "FileName": "Nettou King of Fighters '95 (J) [S].gb",
     "Mapper": "MBC1",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "nettou-king-of-fighters-95"
   },
   {
-    "Title": "Nettou King of Fighters \u002796",
-    "FileName": "Nettou King of Fighters \u002796 (J) [S].gb",
+    "Title": "Nettou King of Fighters '96",
+    "FileName": "Nettou King of Fighters '96 (J) [S].gb",
     "Mapper": "MBC1",
     "SizeKb": 512,
     "Status": "PASS",
@@ -7248,24 +7248,24 @@
     "Slug": "nichibutsu-mahjong-yoshimoto-gekijou"
   },
   {
-    "Title": "Nick\u0027s GAME1",
-    "FileName": "Nick\u0027s GAME1 (PD).gb",
+    "Title": "Nick's GAME1",
+    "FileName": "Nick's GAME1 (PD).gb",
     "Mapper": "ROM-Only",
     "SizeKb": 32,
     "Status": "PASS",
     "Slug": "nick-s-game1"
   },
   {
-    "Title": "Nigel Mansell\u0027s World Championship \u002792",
-    "FileName": "Nigel Mansell\u0027s World Championship \u002792 (E).gb",
+    "Title": "Nigel Mansell's World Championship '92",
+    "FileName": "Nigel Mansell's World Championship '92 (E).gb",
     "Mapper": "MBC1",
     "SizeKb": 128,
     "Status": "PASS",
     "Slug": "nigel-mansell-s-world-championship-92"
   },
   {
-    "Title": "Nigel Mansell\u0027s World Championship \u002793",
-    "FileName": "Nigel Mansell\u0027s World Championship \u002793 (U).gb",
+    "Title": "Nigel Mansell's World Championship '93",
+    "FileName": "Nigel Mansell's World Championship '93 (U).gb",
     "Mapper": "MBC1",
     "SizeKb": 128,
     "Status": "PASS",
@@ -7386,15 +7386,15 @@
   {
     "Title": "Nobunaga no Yabou",
     "FileName": "Nobunaga no Yabou (J).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 128,
     "Status": "PASS",
     "Slug": "nobunaga-no-yabou"
   },
   {
-    "Title": "Nobunaga\u0027s Ambition",
-    "FileName": "Nobunaga\u0027s Ambition (U) [!].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Title": "Nobunaga's Ambition",
+    "FileName": "Nobunaga's Ambition (U) [!].gb",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 128,
     "Status": "PASS",
     "Slug": "nobunaga-s-ambition"
@@ -7440,16 +7440,16 @@
     "Slug": "obj-put0-demo"
   },
   {
-    "Title": "Obsession\u0027s SokoBan V1.1",
-    "FileName": "Obsession\u0027s SokoBan V1.1 (PD).gb",
+    "Title": "Obsession's SokoBan V1.1",
+    "FileName": "Obsession's SokoBan V1.1 (PD).gb",
     "Mapper": "ROM-Only",
     "SizeKb": 32,
     "Status": "PASS",
     "Slug": "obsession-s-sokoban-v1-1"
   },
   {
-    "Title": "Obsession\u0027s SokoBan V1.2",
-    "FileName": "Obsession\u0027s SokoBan V1.2 (PD).gb",
+    "Title": "Obsession's SokoBan V1.2",
+    "FileName": "Obsession's SokoBan V1.2 (PD).gb",
     "Mapper": "ROM-Only",
     "SizeKb": 32,
     "Status": "PASS",
@@ -7480,8 +7480,8 @@
     "Slug": "olympic-summer-games"
   },
   {
-    "Title": "On the Tiles - Franky, Joe \u0026 Dirk",
-    "FileName": "On the Tiles - Franky, Joe \u0026 Dirk (E) [!].gb",
+    "Title": "On the Tiles - Franky, Joe & Dirk",
+    "FileName": "On the Tiles - Franky, Joe & Dirk (E) [!].gb",
     "Mapper": "MBC1",
     "SizeKb": 128,
     "Status": "PASS",
@@ -7490,7 +7490,7 @@
   {
     "Title": "Oni 2 - Innin Densetsu",
     "FileName": "Oni 2 - Innin Densetsu (J) [!].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 256,
     "Status": "PASS",
     "Slug": "oni-2-innin-densetsu"
@@ -7498,7 +7498,7 @@
   {
     "Title": "Oni 3 - Kuro no Hakaishin",
     "FileName": "Oni 3 - Kuro no Hakaishin (J) [!].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 256,
     "Status": "PASS",
     "Slug": "oni-3-kuro-no-hakaishin"
@@ -7506,7 +7506,7 @@
   {
     "Title": "Oni 4 - Kishin no Ketsuzoku",
     "FileName": "Oni 4 - Kishin no Ketsuzoku (J) [!].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 256,
     "Status": "PASS",
     "Slug": "oni-4-kishin-no-ketsuzoku"
@@ -7514,7 +7514,7 @@
   {
     "Title": "Oni 5 - Innin wo Tsugumono",
     "FileName": "Oni 5 - Innin wo Tsugumono (J) [S][!].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 256,
     "Status": "PASS",
     "Slug": "oni-5-innin-wo-tsugumono"
@@ -7576,8 +7576,8 @@
     "Slug": "otoko-jyuku"
   },
   {
-    "Title": "Otto\u0027s Ottifanten",
-    "FileName": "Otto\u0027s Ottifanten (E).gb",
+    "Title": "Otto's Ottifanten",
+    "FileName": "Otto's Ottifanten (E).gb",
     "Mapper": "MBC1",
     "SizeKb": 256,
     "Status": "PASS",
@@ -7624,8 +7624,8 @@
     "Slug": "pga-european-tour"
   },
   {
-    "Title": "PGA Tour \u002796",
-    "FileName": "PGA Tour \u002796 (U) [S].gb",
+    "Title": "PGA Tour '96",
+    "FileName": "PGA Tour '96 (U) [S].gb",
     "Mapper": "MBC1",
     "SizeKb": 512,
     "Status": "PASS",
@@ -7688,8 +7688,8 @@
     "Slug": "pachi-slot-kids-3"
   },
   {
-    "Title": "Pachi-Slot World Cup \u002794",
-    "FileName": "Pachi-Slot World Cup \u002794 (J).gb",
+    "Title": "Pachi-Slot World Cup '94",
+    "FileName": "Pachi-Slot World Cup '94 (J).gb",
     "Mapper": "MBC1",
     "SizeKb": 128,
     "Status": "PASS",
@@ -7874,7 +7874,7 @@
   {
     "Title": "Parts Collection - Medarot Kuma",
     "FileName": "Parts Collection - Medarot Kuma (J) [S].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "parts-collection-medarot-kuma"
@@ -7882,7 +7882,7 @@
   {
     "Title": "Parts Collection 2",
     "FileName": "Parts Collection 2 (J) [S].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "parts-collection-2"
@@ -7930,7 +7930,7 @@
   {
     "Title": "Penta Dragon",
     "FileName": "Penta Dragon (J).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 256,
     "Status": "PASS",
     "Slug": "penta-dragon"
@@ -7954,7 +7954,7 @@
   {
     "Title": "Pika Killa",
     "FileName": "Pika Killa (PD).gb",
-    "Mapper": "MBC1\u002BRAM",
+    "Mapper": "MBC1+RAM",
     "SizeKb": 32,
     "Status": "PASS",
     "Slug": "pika-killa"
@@ -8082,7 +8082,7 @@
   {
     "Title": "Planetfall",
     "FileName": "Planetfall (PD).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 128,
     "Status": "PASS",
     "Slug": "planetfall"
@@ -8154,7 +8154,7 @@
   {
     "Title": "Pocket Love",
     "FileName": "Pocket Love (J) [S].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "pocket-love"
@@ -8162,7 +8162,7 @@
   {
     "Title": "Pocket Love 2",
     "FileName": "Pocket Love 2 (J) [S].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 1024,
     "Status": "PASS",
     "Slug": "pocket-love-2"
@@ -8178,7 +8178,7 @@
   {
     "Title": "Pocket Monsters - Blue Version",
     "FileName": "Pocket Monsters - Blue Version (J) [S].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "pocket-monsters-blue-version"
@@ -8186,7 +8186,7 @@
   {
     "Title": "Pocket Monsters - Green Version",
     "FileName": "Pocket Monsters - Green Version (J) (V1.0) [S].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "pocket-monsters-green-version"
@@ -8194,7 +8194,7 @@
   {
     "Title": "Pocket Monsters - Red Version",
     "FileName": "Pocket Monsters - Red Version (J) (V1.0) [S].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "pocket-monsters-red-version"
@@ -8256,32 +8256,32 @@
     "Slug": "pocket-voice-multi-rom-menu-v2-0"
   },
   {
-    "Title": "Poke Mission \u002797",
-    "FileName": "Poke Mission \u002797 (PD).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Title": "Poke Mission '97",
+    "FileName": "Poke Mission '97 (PD).gb",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 32,
     "Status": "PASS",
     "Slug": "poke-mission-97"
   },
   {
-    "Title": "Poke Mission \u002797 Beta",
-    "FileName": "Poke Mission \u002797 Beta (PD).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Title": "Poke Mission '97 Beta",
+    "FileName": "Poke Mission '97 Beta (PD).gb",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 32,
     "Status": "PASS",
     "Slug": "poke-mission-97-beta"
   },
   {
-    "Title": "Poke Mission \u002797 Final",
-    "FileName": "Poke Mission \u002797 Final (PD).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Title": "Poke Mission '97 Final",
+    "FileName": "Poke Mission '97 Final (PD).gb",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 32,
     "Status": "PASS",
     "Slug": "poke-mission-97-final"
   },
   {
-    "Title": "Poke Mission \u002797 V1.01",
-    "FileName": "Poke Mission \u002797 V1.01 (PD).gb",
+    "Title": "Poke Mission '97 V1.01",
+    "FileName": "Poke Mission '97 V1.01 (PD).gb",
     "Mapper": "ROM-Only",
     "SizeKb": 32,
     "Status": "PASS",
@@ -8290,7 +8290,7 @@
   {
     "Title": "Pokemon - Blue Version",
     "FileName": "Pokemon - Blue Version (UE) [S][!].gb",
-    "Mapper": "MBC3\u002BRAM\u002BBATT",
+    "Mapper": "MBC3+RAM+BATT",
     "SizeKb": 1024,
     "Status": "PASS",
     "Slug": "pokemon-blue-version"
@@ -8306,7 +8306,7 @@
   {
     "Title": "Pokemon Red",
     "FileName": "Pokemon Red (UE) [S][!].gb",
-    "Mapper": "MBC3\u002BRAM\u002BBATT",
+    "Mapper": "MBC3+RAM+BATT",
     "SizeKb": 1024,
     "Status": "PASS",
     "Slug": "pokemon-red"
@@ -8314,7 +8314,7 @@
   {
     "Title": "Pokemon of the Past V0.1 by PR",
     "FileName": "Pokemon of the Past V0.1 by PR (Zelda Hack).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "pokemon-of-the-past-v0-1-by-pr"
@@ -8344,8 +8344,8 @@
     "Slug": "ponta-to-hinako-no-chindouchuu-yuutou-hen"
   },
   {
-    "Title": "Pop \u0027N TwinBee",
-    "FileName": "Pop \u0027N TwinBee (E) [!].gb",
+    "Title": "Pop 'N TwinBee",
+    "FileName": "Pop 'N TwinBee (E) [!].gb",
     "Mapper": "MBC1",
     "SizeKb": 128,
     "Status": "PASS",
@@ -8394,7 +8394,7 @@
   {
     "Title": "Power Pro GB",
     "FileName": "Power Pro GB (J) (V1.0) [S].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 256,
     "Status": "PASS",
     "Slug": "power-pro-gb"
@@ -8402,7 +8402,7 @@
   {
     "Title": "Power Quest - Gekitou Power Modeler",
     "FileName": "Power Quest - Gekitou Power Modeler (J) [S].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "power-quest-gekitou-power-modeler"
@@ -8522,7 +8522,7 @@
   {
     "Title": "Purikura Pocket - Fukanzen Joshikousei Manual",
     "FileName": "Purikura Pocket - Fukanzen Joshikousei Manual (J) [S].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "purikura-pocket-fukanzen-joshikousei-manual"
@@ -8530,7 +8530,7 @@
   {
     "Title": "Purikura Pocket 2 - Kareshi Kaizou Daisakusen",
     "FileName": "Purikura Pocket 2 - Kareshi Kaizou Daisakusen (J) [S].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "purikura-pocket-2-kareshi-kaizou-daisakusen"
@@ -8705,15 +8705,15 @@
   },
   {
     "Title": "Race Days",
-    "FileName": "Race Days (Dirty Racing \u0026 4 Wheel Drive) (E).gb",
+    "FileName": "Race Days (Dirty Racing & 4 Wheel Drive) (E).gb",
     "Mapper": "MBC1",
     "SizeKb": 256,
     "Status": "PASS",
     "Slug": "race-days"
   },
   {
-    "Title": "Race Drivin\u0027",
-    "FileName": "Race Drivin\u0027 (U) [!].gb",
+    "Title": "Race Drivin'",
+    "FileName": "Race Drivin' (U) [!].gb",
     "Mapper": "MBC1",
     "SizeKb": 128,
     "Status": "PASS",
@@ -8722,7 +8722,7 @@
   {
     "Title": "Racing Mini 4WD",
     "FileName": "Racing Mini 4WD (J) [S].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "racing-mini-4wd"
@@ -8866,7 +8866,7 @@
   {
     "Title": "Rei 3D Pyramid Demo",
     "FileName": "Rei 3D Pyramid Demo (PD).gb",
-    "Mapper": "MBC1\u002BRAM",
+    "Mapper": "MBC1+RAM",
     "SizeKb": 32,
     "Status": "PASS",
     "Slug": "rei-3d-pyramid-demo"
@@ -8888,24 +8888,24 @@
     "Slug": "rekishi-nendai-anki-point-240"
   },
   {
-    "Title": "Ren \u0026 Stimpy Show, The - Space Cadet Adventures",
-    "FileName": "Ren \u0026 Stimpy Show, The - Space Cadet Adventures (U) [!].gb",
+    "Title": "Ren & Stimpy Show, The - Space Cadet Adventures",
+    "FileName": "Ren & Stimpy Show, The - Space Cadet Adventures (U) [!].gb",
     "Mapper": "MBC1",
     "SizeKb": 256,
     "Status": "PASS",
     "Slug": "ren-stimpy-show-the-space-cadet-adventures"
   },
   {
-    "Title": "Ren \u0026 Stimpy Show, The - Veediots!",
-    "FileName": "Ren \u0026 Stimpy Show, The - Veediots! (U) [!].gb",
+    "Title": "Ren & Stimpy Show, The - Veediots!",
+    "FileName": "Ren & Stimpy Show, The - Veediots! (U) [!].gb",
     "Mapper": "MBC1",
     "SizeKb": 256,
     "Status": "PASS",
     "Slug": "ren-stimpy-show-the-veediots"
   },
   {
-    "Title": "Ren \u0026 Stimpy Sound Sample Test",
-    "FileName": "Ren \u0026 Stimpy Sound Sample Test (PD).gb",
+    "Title": "Ren & Stimpy Sound Sample Test",
+    "FileName": "Ren & Stimpy Sound Sample Test (PD).gb",
     "Mapper": "ROM-Only",
     "SizeKb": 32,
     "Status": "PASS",
@@ -8922,7 +8922,7 @@
   {
     "Title": "Rentaiou",
     "FileName": "Rentaiou (J).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 64,
     "Status": "PASS",
     "Slug": "rentaiou"
@@ -8930,7 +8930,7 @@
   {
     "Title": "Retrieve",
     "FileName": "Retrieve (J) [S].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "retrieve"
@@ -9008,8 +9008,8 @@
     "Slug": "robot-war"
   },
   {
-    "Title": "Rock\u0027n Monster!!",
-    "FileName": "Rock\u0027n Monster!! (J) [S].gb",
+    "Title": "Rock'n Monster!!",
+    "FileName": "Rock'n Monster!! (J) [S].gb",
     "Mapper": "MBC1",
     "SizeKb": 512,
     "Status": "PASS",
@@ -9072,8 +9072,8 @@
     "Slug": "roger-clemens-mvp-baseball"
   },
   {
-    "Title": "Rolan\u0027s Curse",
-    "FileName": "Rolan\u0027s Curse (U) [!].gb",
+    "Title": "Rolan's Curse",
+    "FileName": "Rolan's Curse (U) [!].gb",
     "Mapper": "MBC1",
     "SizeKb": 64,
     "Status": "PASS",
@@ -9154,7 +9154,7 @@
   {
     "Title": "SQRXZ V1.1",
     "FileName": "SQRXZ V1.1 (PD).gb",
-    "Mapper": "MBC1\u002BRAM",
+    "Mapper": "MBC1+RAM",
     "SizeKb": 32,
     "Status": "PASS",
     "Slug": "sqrxz-v1-1"
@@ -9162,7 +9162,7 @@
   {
     "Title": "SaGa 2 - Hihou Densetsu",
     "FileName": "SaGa 2 - Hihou Densetsu (J) (V1.0).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 256,
     "Status": "PASS",
     "Slug": "saga-2-hihou-densetsu"
@@ -9170,7 +9170,7 @@
   {
     "Title": "SaGa 3 - Jikuu no Hasha",
     "FileName": "SaGa 3 - Jikuu no Hasha (J).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 256,
     "Status": "PASS",
     "Slug": "saga-3-jikuu-no-hasha"
@@ -9186,7 +9186,7 @@
   {
     "Title": "Sailor Super V Movie",
     "FileName": "Sailor Super V Movie (PD).gb",
-    "Mapper": "MBC1\u002BRAM",
+    "Mapper": "MBC1+RAM",
     "SizeKb": 256,
     "Status": "PASS",
     "Slug": "sailor-super-v-movie"
@@ -9202,7 +9202,7 @@
   {
     "Title": "Sakigake Memorial",
     "FileName": "Sakigake Memorial (PD).gb",
-    "Mapper": "MBC1\u002BRAM",
+    "Mapper": "MBC1+RAM",
     "SizeKb": 256,
     "Status": "PASS",
     "Slug": "sakigake-memorial"
@@ -9210,7 +9210,7 @@
   {
     "Title": "Same Game",
     "FileName": "Same Game (J) [S].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 256,
     "Status": "PASS",
     "Slug": "same-game"
@@ -9226,7 +9226,7 @@
   {
     "Title": "Sangokushi - GameBoy Han",
     "FileName": "Sangokushi - GameBoy Han (J) [p1].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 256,
     "Status": "PASS",
     "Slug": "sangokushi-gameboy-han"
@@ -9256,16 +9256,16 @@
     "Slug": "sanrio-uranai-party"
   },
   {
-    "Title": "Satoru Nakajima - F-1 Hero \u002791",
-    "FileName": "Satoru Nakajima - F-1 Hero \u002791 (J).gb",
+    "Title": "Satoru Nakajima - F-1 Hero '91",
+    "FileName": "Satoru Nakajima - F-1 Hero '91 (J).gb",
     "Mapper": "MBC1",
     "SizeKb": 128,
     "Status": "PASS",
     "Slug": "satoru-nakajima-f-1-hero-91"
   },
   {
-    "Title": "Satoru Nakajima - F-1 Hero - The Graded Driver \u002792",
-    "FileName": "Satoru Nakajima - F-1 Hero - The Graded Driver \u002792 (J) [!].gb",
+    "Title": "Satoru Nakajima - F-1 Hero - The Graded Driver '92",
+    "FileName": "Satoru Nakajima - F-1 Hero - The Graded Driver '92 (J) [!].gb",
     "Mapper": "MBC1",
     "SizeKb": 256,
     "Status": "PASS",
@@ -9328,9 +9328,9 @@
     "Slug": "selection-erabareshi-mono"
   },
   {
-    "Title": "Selection I \u0026 II",
-    "FileName": "Selection I \u0026 II (J) [S].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Title": "Selection I & II",
+    "FileName": "Selection I & II (J) [S].gb",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "selection-i-ii"
@@ -9338,7 +9338,7 @@
   {
     "Title": "Selection II",
     "FileName": "Selection II (J).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 256,
     "Status": "PASS",
     "Slug": "selection-ii"
@@ -9474,7 +9474,7 @@
   {
     "Title": "Shou Hyper Fish",
     "FileName": "Shou Hyper Fish (J) [S].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "shou-hyper-fish"
@@ -9560,8 +9560,8 @@
     "Slug": "simple-parallax-scroller"
   },
   {
-    "Title": "Simpsons, The - Bart \u0026 the Beanstalk",
-    "FileName": "Simpsons, The - Bart \u0026 the Beanstalk (U).gb",
+    "Title": "Simpsons, The - Bart & the Beanstalk",
+    "FileName": "Simpsons, The - Bart & the Beanstalk (U).gb",
     "Mapper": "MBC1",
     "SizeKb": 128,
     "Status": "PASS",
@@ -9584,16 +9584,16 @@
     "Slug": "simpsons-the-escape-from-camp-deadly"
   },
   {
-    "Title": "Simpsons, The - Krusty\u0027s Funhouse",
-    "FileName": "Simpsons, The - Krusty\u0027s Funhouse (U).gb",
+    "Title": "Simpsons, The - Krusty's Funhouse",
+    "FileName": "Simpsons, The - Krusty's Funhouse (U).gb",
     "Mapper": "MBC1",
     "SizeKb": 128,
     "Status": "PASS",
     "Slug": "simpsons-the-krusty-s-funhouse"
   },
   {
-    "Title": "Skate or Die - Bad \u0027N Rad",
-    "FileName": "Skate or Die - Bad \u0027N Rad (E) [!].gb",
+    "Title": "Skate or Die - Bad 'N Rad",
+    "FileName": "Skate or Die - Bad 'N Rad (E) [!].gb",
     "Mapper": "MBC1",
     "SizeKb": 128,
     "Status": "PASS",
@@ -9744,8 +9744,8 @@
     "Slug": "solitaire-funpak"
   },
   {
-    "Title": "Solomon\u0027s Club",
-    "FileName": "Solomon\u0027s Club (UE) [!].gb",
+    "Title": "Solomon's Club",
+    "FileName": "Solomon's Club (UE) [!].gb",
     "Mapper": "MBC1",
     "SizeKb": 64,
     "Status": "PASS",
@@ -9754,7 +9754,7 @@
   {
     "Title": "Song Pro Demo",
     "FileName": "Song Pro Demo (PD).gb",
-    "Mapper": "MBC1\u002BRAM",
+    "Mapper": "MBC1+RAM",
     "SizeKb": 32,
     "Status": "PASS",
     "Slug": "song-pro-demo"
@@ -9840,8 +9840,8 @@
     "Slug": "space-invaders"
   },
   {
-    "Title": "Spanky\u0027s Quest",
-    "FileName": "Spanky\u0027s Quest (E).gb",
+    "Title": "Spanky's Quest",
+    "FileName": "Spanky's Quest (E).gb",
     "Mapper": "MBC1",
     "SizeKb": 64,
     "Status": "PASS",
@@ -9888,8 +9888,8 @@
     "Slug": "speedy-gonzales"
   },
   {
-    "Title": "Spider-Man and the X-Men in Arcade\u0027s Revenge",
-    "FileName": "Spider-Man and the X-Men in Arcade\u0027s Revenge (U).gb",
+    "Title": "Spider-Man and the X-Men in Arcade's Revenge",
+    "FileName": "Spider-Man and the X-Men in Arcade's Revenge (U).gb",
     "Mapper": "MBC1",
     "SizeKb": 128,
     "Status": "PASS",
@@ -9920,8 +9920,8 @@
     "Slug": "sports-collection"
   },
   {
-    "Title": "Sports Illustrated - Football \u0026 Baseball",
-    "FileName": "Sports Illustrated - Football \u0026 Baseball (U) [!].gb",
+    "Title": "Sports Illustrated - Football & Baseball",
+    "FileName": "Sports Illustrated - Football & Baseball (U) [!].gb",
     "Mapper": "MBC1",
     "SizeKb": 512,
     "Status": "PASS",
@@ -9952,8 +9952,8 @@
     "Slug": "spot-the-cool-adventure"
   },
   {
-    "Title": "Spud\u0027s Adventure",
-    "FileName": "Spud\u0027s Adventure (U).gb",
+    "Title": "Spud's Adventure",
+    "FileName": "Spud's Adventure (U).gb",
     "Mapper": "MBC1",
     "SizeKb": 64,
     "Status": "PASS",
@@ -9986,7 +9986,7 @@
   {
     "Title": "Star Sweep",
     "FileName": "Star Sweep (J) [S].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 256,
     "Status": "PASS",
     "Slug": "star-sweep"
@@ -10050,7 +10050,7 @@
   {
     "Title": "Starcross",
     "FileName": "Starcross (PD).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 128,
     "Status": "PASS",
     "Slug": "starcross"
@@ -10120,8 +10120,8 @@
     "Slug": "sumou-fighter-toukaidou-basho"
   },
   {
-    "Title": "SunTsu7\u0027s Monty Python Greeting",
-    "FileName": "SunTsu7\u0027s Monty Python Greeting (PD).gb",
+    "Title": "SunTsu7's Monty Python Greeting",
+    "FileName": "SunTsu7's Monty Python Greeting (PD).gb",
     "Mapper": "ROM-Only",
     "SizeKb": 32,
     "Status": "PASS",
@@ -10146,7 +10146,7 @@
   {
     "Title": "Super B-Daman - Fighting Phoenix",
     "FileName": "Super B-Daman - Fighting Phoenix (J) [S].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "super-b-daman-fighting-phoenix"
@@ -10178,7 +10178,7 @@
   {
     "Title": "Super Black Bass Pocket",
     "FileName": "Super Black Bass Pocket (J) [S].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 1024,
     "Status": "PASS",
     "Slug": "super-black-bass-pocket"
@@ -10186,7 +10186,7 @@
   {
     "Title": "Super Black Bass Pocket 2",
     "FileName": "Super Black Bass Pocket 2 (J) [S].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 1024,
     "Status": "PASS",
     "Slug": "super-black-bass-pocket-2"
@@ -10250,7 +10250,7 @@
   {
     "Title": "Super Donkey Kong GB",
     "FileName": "Super Donkey Kong GB (J) [S].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "super-donkey-kong-gb"
@@ -10290,7 +10290,7 @@
   {
     "Title": "Super Mario Land 2 - 6 Golden Coins",
     "FileName": "Super Mario Land 2 - 6 Golden Coins (UE) (V1.0) [!].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "super-mario-land-2-6-golden-coins"
@@ -10298,7 +10298,7 @@
   {
     "Title": "Super Mario Land 2 - 6tsu no Kinka",
     "FileName": "Super Mario Land 2 - 6tsu no Kinka (J) (V1.0).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "super-mario-land-2-6tsu-no-kinka"
@@ -10314,7 +10314,7 @@
   {
     "Title": "Super Momotarou Dentetsu II",
     "FileName": "Super Momotarou Dentetsu II (J).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 256,
     "Status": "PASS",
     "Slug": "super-momotarou-dentetsu-ii"
@@ -10426,7 +10426,7 @@
   {
     "Title": "Suspect",
     "FileName": "Suspect (PD).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 128,
     "Status": "PASS",
     "Slug": "suspect"
@@ -10434,7 +10434,7 @@
   {
     "Title": "Suspended",
     "FileName": "Suspended (PD).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 128,
     "Status": "PASS",
     "Slug": "suspended"
@@ -10458,7 +10458,7 @@
   {
     "Title": "Sword of Hope II, The",
     "FileName": "Sword of Hope II, The (U) [!].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 256,
     "Status": "PASS",
     "Slug": "sword-of-hope-ii-the"
@@ -10586,7 +10586,7 @@
   {
     "Title": "Tamagotchi",
     "FileName": "Tamagotchi (UE) [S][!].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "tamagotchi"
@@ -10594,7 +10594,7 @@
   {
     "Title": "Tamagotchi 2",
     "FileName": "Tamagotchi 2 (J) [S].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "tamagotchi-2"
@@ -10842,7 +10842,7 @@
   {
     "Title": "Tetris Plus",
     "FileName": "Tetris Plus (U) [S][!].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 256,
     "Status": "PASS",
     "Slug": "tetris-plus"
@@ -10882,7 +10882,7 @@
   {
     "Title": "Tiny One Gameboy",
     "FileName": "Tiny One Gameboy (J) (V1.1).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "tiny-one-gameboy"
@@ -10890,14 +10890,14 @@
   {
     "Title": "Tiny One Gameboy Special Use - 5-3 Bright Season",
     "FileName": "Tiny One Gameboy Special Use - 5-3 Bright Season (J) (V1.1).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "tiny-one-gameboy-special-use-5-3-bright-season"
   },
   {
-    "Title": "Tiny Toon Adventures - Babs\u0027 Big Break",
-    "FileName": "Tiny Toon Adventures - Babs\u0027 Big Break (E) [!].gb",
+    "Title": "Tiny Toon Adventures - Babs' Big Break",
+    "FileName": "Tiny Toon Adventures - Babs' Big Break (E) [!].gb",
     "Mapper": "MBC1",
     "SizeKb": 128,
     "Status": "PASS",
@@ -10920,8 +10920,8 @@
     "Slug": "tiny-toon-adventures-2"
   },
   {
-    "Title": "Tiny Toon Adventures 2 - Montana\u0027s Movie Madness",
-    "FileName": "Tiny Toon Adventures 2 - Montana\u0027s Movie Madness (U) [!].gb",
+    "Title": "Tiny Toon Adventures 2 - Montana's Movie Madness",
+    "FileName": "Tiny Toon Adventures 2 - Montana's Movie Madness (U) [!].gb",
     "Mapper": "MBC1",
     "SizeKb": 128,
     "Status": "PASS",
@@ -10962,7 +10962,7 @@
   {
     "Title": "To-Heart Slideshow Green",
     "FileName": "To-Heart Slideshow Green (PD).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "to-heart-slideshow-green"
@@ -10970,7 +10970,7 @@
   {
     "Title": "To-Heart Slideshow Red",
     "FileName": "To-Heart Slideshow Red (PD).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "to-heart-slideshow-red"
@@ -10978,7 +10978,7 @@
   {
     "Title": "Tokio Senki",
     "FileName": "Tokio Senki (J).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 128,
     "Status": "PASS",
     "Slug": "tokio-senki"
@@ -10986,7 +10986,7 @@
   {
     "Title": "Tokoro Jr.",
     "FileName": "Tokoro Jr. (J) [S][!].gb",
-    "Mapper": "MBC1\u002BRAM",
+    "Mapper": "MBC1+RAM",
     "SizeKb": 256,
     "Status": "PASS",
     "Slug": "tokoro-jr"
@@ -11016,8 +11016,8 @@
     "Slug": "tom-and-jerry-part-2"
   },
   {
-    "Title": "Top Gun - Guts \u0026 Glory",
-    "FileName": "Top Gun - Guts \u0026 Glory (U) [!].gb",
+    "Title": "Top Gun - Guts & Glory",
+    "FileName": "Top Gun - Guts & Glory (U) [!].gb",
     "Mapper": "MBC1",
     "SizeKb": 128,
     "Status": "PASS",
@@ -11080,8 +11080,8 @@
     "Slug": "toy-story"
   },
   {
-    "Title": "Track \u0026 Field",
-    "FileName": "Track \u0026 Field (U).gb",
+    "Title": "Track & Field",
+    "FileName": "Track & Field (U).gb",
     "Mapper": "MBC1",
     "SizeKb": 128,
     "Status": "PASS",
@@ -11096,8 +11096,8 @@
     "Slug": "track-meet"
   },
   {
-    "Title": "Trap \u0026 Turn",
-    "FileName": "Trap \u0026 Turn (Sachen) [!].gb",
+    "Title": "Trap & Turn",
+    "FileName": "Trap & Turn (Sachen) [!].gb",
     "Mapper": "ROM-Only",
     "SizeKb": 32,
     "Status": "PASS",
@@ -11202,7 +11202,7 @@
   {
     "Title": "Tsuri Sensei",
     "FileName": "Tsuri Sensei (J) [S].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "tsuri-sensei"
@@ -11266,7 +11266,7 @@
   {
     "Title": "Two Hearts",
     "FileName": "Two Hearts (Beta).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "two-hearts"
@@ -11322,7 +11322,7 @@
   {
     "Title": "Umi no Nushi Tsuri 2",
     "FileName": "Umi no Nushi Tsuri 2 (J) [S].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "umi-no-nushi-tsuri-2"
@@ -11426,7 +11426,7 @@
   {
     "Title": "Vegas Stakes",
     "FileName": "Vegas Stakes (U) [S][!].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "vegas-stakes"
@@ -11490,7 +11490,7 @@
   {
     "Title": "Vitamina Oukoku Monogatari",
     "FileName": "Vitamina Oukoku Monogatari (J).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 256,
     "Status": "PASS",
     "Slug": "vitamina-oukoku-monogatari"
@@ -11602,7 +11602,7 @@
   {
     "Title": "Wario Land - Super Mario Land 3",
     "FileName": "Wario Land - Super Mario Land 3 (JUE) [!].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "wario-land-super-mario-land-3"
@@ -11632,16 +11632,16 @@
     "Slug": "water-world"
   },
   {
-    "Title": "Wayne\u0027s World",
-    "FileName": "Wayne\u0027s World (U).gb",
+    "Title": "Wayne's World",
+    "FileName": "Wayne's World (U).gb",
     "Mapper": "MBC1",
     "SizeKb": 256,
     "Status": "PASS",
     "Slug": "wayne-s-world"
   },
   {
-    "Title": "We\u0027re Back! - A Dinosaur\u0027s Story",
-    "FileName": "We\u0027re Back! - A Dinosaur\u0027s Story (U) [!].gb",
+    "Title": "We're Back! - A Dinosaur's Story",
+    "FileName": "We're Back! - A Dinosaur's Story (U) [!].gb",
     "Mapper": "MBC1",
     "SizeKb": 128,
     "Status": "PASS",
@@ -11698,7 +11698,7 @@
   {
     "Title": "Witness, The",
     "FileName": "Witness, The (PD).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 128,
     "Status": "PASS",
     "Slug": "witness-the"
@@ -11706,7 +11706,7 @@
   {
     "Title": "Wizardry Gaiden 1 - Suffering of the Queen",
     "FileName": "Wizardry Gaiden 1 - Suffering of the Queen (J) [!].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 256,
     "Status": "PASS",
     "Slug": "wizardry-gaiden-1-suffering-of-the-queen"
@@ -11714,7 +11714,7 @@
   {
     "Title": "Wizardry Gaiden 2 - Curse of the Ancient Emperor",
     "FileName": "Wizardry Gaiden 2 - Curse of the Ancient Emperor (J) [!].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 256,
     "Status": "PASS",
     "Slug": "wizardry-gaiden-2-curse-of-the-ancient-emperor"
@@ -11722,14 +11722,14 @@
   {
     "Title": "Wizardry Gaiden 3 - Scripture of the Dark",
     "FileName": "Wizardry Gaiden 3 - Scripture of the Dark (J) [!].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "wizardry-gaiden-3-scripture-of-the-dark"
   },
   {
-    "Title": "Wizards \u0026 Warriors Chapter X - The Fortress of Fear",
-    "FileName": "Wizards \u0026 Warriors Chapter X - The Fortress of Fear (E) [!].gb",
+    "Title": "Wizards & Warriors Chapter X - The Fortress of Fear",
+    "FileName": "Wizards & Warriors Chapter X - The Fortress of Fear (E) [!].gb",
     "Mapper": "MBC1",
     "SizeKb": 64,
     "Status": "PASS",
@@ -11754,7 +11754,7 @@
   {
     "Title": "Work Master V1.00 - Multitask OS for Gameboy",
     "FileName": "Work Master V1.00 - Multitask OS for Gameboy (PD).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "work-master-v1-00-multitask-os-for-gameboy"
@@ -11784,8 +11784,8 @@
     "Slug": "world-circuit-series"
   },
   {
-    "Title": "World Cup \u002798",
-    "FileName": "World Cup \u002798 (E) [S][!].gb",
+    "Title": "World Cup '98",
+    "FileName": "World Cup '98 (E) [S][!].gb",
     "Mapper": "MBC1",
     "SizeKb": 512,
     "Status": "PASS",
@@ -11808,9 +11808,9 @@
     "Slug": "world-cup-striker"
   },
   {
-    "Title": "World Cup USA \u002794",
-    "FileName": "World Cup USA \u002794 (UE) (M8) [!].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Title": "World Cup USA '94",
+    "FileName": "World Cup USA '94 (UE) (M8) [!].gb",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 256,
     "Status": "PASS",
     "Slug": "world-cup-usa-94"
@@ -11834,7 +11834,7 @@
   {
     "Title": "World Soccer GB",
     "FileName": "World Soccer GB (J) [S].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "world-soccer-gb"
@@ -11904,8 +11904,8 @@
     "Slug": "yannick-noah-tennis"
   },
   {
-    "Title": "Yars\u0027 Revenge - The Quotile Ultimatum",
-    "FileName": "Yars\u0027 Revenge - The Quotile Ultimatum (PD).gb",
+    "Title": "Yars' Revenge - The Quotile Ultimatum",
+    "FileName": "Yars' Revenge - The Quotile Ultimatum (PD).gb",
     "Mapper": "MBC1",
     "SizeKb": 64,
     "Status": "PASS",
@@ -11920,8 +11920,8 @@
     "Slug": "yie-ar-kung-fu"
   },
   {
-    "Title": "Yogi Bear in Yogi Bear\u0027s Goldrush",
-    "FileName": "Yogi Bear in Yogi Bear\u0027s Goldrush (E) [!].gb",
+    "Title": "Yogi Bear in Yogi Bear's Goldrush",
+    "FileName": "Yogi Bear in Yogi Bear's Goldrush (E) [!].gb",
     "Mapper": "MBC1",
     "SizeKb": 128,
     "Status": "PASS",
@@ -11976,8 +11976,8 @@
     "Slug": "yoshi-no-tamago"
   },
   {
-    "Title": "Yoshi\u0027s Cookie",
-    "FileName": "Yoshi\u0027s Cookie (U) [!].gb",
+    "Title": "Yoshi's Cookie",
+    "FileName": "Yoshi's Cookie (U) [!].gb",
     "Mapper": "MBC1",
     "SizeKb": 128,
     "Status": "PASS",
@@ -11994,7 +11994,7 @@
   {
     "Title": "Yu-Gi-Oh! Duel Monsters",
     "FileName": "Yu-Gi-Oh! Duel Monsters (J) [S].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 1024,
     "Status": "PASS",
     "Slug": "yu-gi-oh-duel-monsters"
@@ -12090,7 +12090,7 @@
   {
     "Title": "Zelda no Densetsu - Yume no Miru Shima",
     "FileName": "Zelda no Densetsu - Yume no Miru Shima (J) (V1.0).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "zelda-no-densetsu-yume-no-miru-shima"
@@ -12114,7 +12114,7 @@
   {
     "Title": "Zerd no Densetsu",
     "FileName": "Zerd no Densetsu (J).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 128,
     "Status": "PASS",
     "Slug": "zerd-no-densetsu"
@@ -12122,7 +12122,7 @@
   {
     "Title": "Zerd no Densetsu 2 - Xerd!! Gishin no Ryouiki",
     "FileName": "Zerd no Densetsu 2 - Xerd!! Gishin no Ryouiki (J).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "zerd-no-densetsu-2-xerd-gishin-no-ryouiki"
@@ -12178,7 +12178,7 @@
   {
     "Title": "Zoomar Demo V2",
     "FileName": "Zoomar Demo V2 (PD).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 32,
     "Status": "PASS",
     "Slug": "zoomar-demo-v2"
@@ -12186,7 +12186,7 @@
   {
     "Title": "Zoomar Demo V3",
     "FileName": "Zoomar Demo V3 (PD).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 32,
     "Status": "PASS",
     "Slug": "zoomar-demo-v3"
@@ -12210,7 +12210,7 @@
   {
     "Title": "Zork II - The Wizard of Frobozz",
     "FileName": "Zork II - The Wizard of Frobozz (PD).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 128,
     "Status": "PASS",
     "Slug": "zork-ii-the-wizard-of-frobozz"
@@ -12218,18 +12218,18 @@
   {
     "Title": "Zork III - The Dungeon Master",
     "FileName": "Zork III - The Dungeon Master (PD).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 128,
     "Status": "PASS",
     "Slug": "zork-iii-the-dungeon-master"
   },
   {
-    "Title": "tetris",
+    "Title": "Tetris (Alt Dump)",
     "FileName": "tetris.gb",
     "Mapper": "ROM-Only",
     "SizeKb": 32,
     "Status": "PASS",
-    "Slug": "tetris"
+    "Slug": "tetris-alt"
   },
   {
     "Title": "16-in-1 Super Card (Unl)",
@@ -12266,7 +12266,7 @@
   {
     "Title": "BALLYHOO (PD)",
     "FileName": "BALLYHOO (PD) [a1].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 256,
     "Status": "PASS",
     "Slug": "ballyhoo-pd"
@@ -12297,7 +12297,7 @@
   },
   {
     "Title": "Dragon Ball Z - Gokuu Hishouden (J)",
-    "FileName": "Dragon Ball Z - Gokuu Hishouden (J) [S][T\u002BChi].gb",
+    "FileName": "Dragon Ball Z - Gokuu Hishouden (J) [S][T+Chi].gb",
     "Mapper": "MBC2",
     "SizeKb": 512,
     "Status": "PASS",
@@ -12329,7 +12329,7 @@
   },
   {
     "Title": "Final Fantasy Adventure (U)",
-    "FileName": "Final Fantasy Adventure (U) [T\u002BSpa100%_Paladin Knights].gb",
+    "FileName": "Final Fantasy Adventure (U) [T+Spa100%_Paladin Knights].gb",
     "Mapper": "MBC2",
     "SizeKb": 256,
     "Status": "PASS",
@@ -12376,8 +12376,8 @@
     "Slug": "kid-icarus-of-myths-and-monsters-ue"
   },
   {
-    "Title": "Kirby\u0027s Pinball Land (J)",
-    "FileName": "Kirby\u0027s Pinball Land (J).gb",
+    "Title": "Kirby's Pinball Land (J)",
+    "FileName": "Kirby's Pinball Land (J).gb",
     "Mapper": "MBC2",
     "SizeKb": 256,
     "Status": "PASS",
@@ -12392,8 +12392,8 @@
     "Slug": "konami-golf-e"
   },
   {
-    "Title": "Lazlos\u0027 Leap (U)",
-    "FileName": "Lazlos\u0027 Leap (U).gb",
+    "Title": "Lazlos' Leap (U)",
+    "FileName": "Lazlos' Leap (U).gb",
     "Mapper": "MBC2",
     "SizeKb": 32,
     "Status": "PASS",
@@ -12402,7 +12402,7 @@
   {
     "Title": "Leather Goddesses of Phobos, The (PD)",
     "FileName": "Leather Goddesses of Phobos, The (PD) [a1].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 128,
     "Status": "PASS",
     "Slug": "leather-goddesses-of-phobos-the-pd"
@@ -12410,7 +12410,7 @@
   {
     "Title": "Legend of Zelda, The - Link Gets Laid by P3",
     "FileName": "Legend of Zelda, The - Link Gets Laid by P3 [h1].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "legend-of-zelda-the-link-gets-laid-by-p3"
@@ -12426,7 +12426,7 @@
   {
     "Title": "Lurking Horror, The (PD)",
     "FileName": "Lurking Horror, The (PD) [a1].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 256,
     "Status": "PASS",
     "Slug": "lurking-horror-the-pd"
@@ -12442,14 +12442,14 @@
   {
     "Title": "Metroid II - Samus Bares All by P3",
     "FileName": "Metroid II - Samus Bares All by P3 [h1].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 256,
     "Status": "PASS",
     "Slug": "metroid-ii-samus-bares-all-by-p3"
   },
   {
     "Title": "Mickey Mouse - Magiczna Rozdzka (U)",
-    "FileName": "Mickey Mouse - Magiczna Rozdzka (U) [S][T\u002BPol_aRPi].gb",
+    "FileName": "Mickey Mouse - Magiczna Rozdzka (U) [S][T+Pol_aRPi].gb",
     "Mapper": "MBC1",
     "SizeKb": 128,
     "Status": "PASS",
@@ -12458,7 +12458,7 @@
   {
     "Title": "Moonmist (PD)",
     "FileName": "Moonmist (PD) [a1].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 128,
     "Status": "PASS",
     "Slug": "moonmist-pd"
@@ -12552,8 +12552,8 @@
     "Slug": "rockman-8-unl"
   },
   {
-    "Title": "Rolan\u0027s Curse II (U)",
-    "FileName": "Rolan\u0027s Curse II (U).gb",
+    "Title": "Rolan's Curse II (U)",
+    "FileName": "Rolan's Curse II (U).gb",
     "Mapper": "MBC2",
     "SizeKb": 128,
     "Status": "PASS",
@@ -12568,8 +12568,8 @@
     "Slug": "sagaia-j"
   },
   {
-    "Title": "SD Gundam Gaiden - Lacroan\u0027 Heroes (J)",
-    "FileName": "SD Gundam Gaiden - Lacroan\u0027 Heroes (J) [p1][T\u002BChi][!].gb",
+    "Title": "SD Gundam Gaiden - Lacroan' Heroes (J)",
+    "FileName": "SD Gundam Gaiden - Lacroan' Heroes (J) [p1][T+Chi][!].gb",
     "Mapper": "MBC1",
     "SizeKb": 512,
     "Status": "PASS",
@@ -12577,7 +12577,7 @@
   },
   {
     "Title": "SD Saint Seiya Paradise (J)",
-    "FileName": "SD Saint Seiya Paradise (J) [T\u002BSpa1.0b_waseiyakusha].gb",
+    "FileName": "SD Saint Seiya Paradise (J) [T+Spa1.0b_waseiyakusha].gb",
     "Mapper": "MBC2",
     "SizeKb": 256,
     "Status": "PASS",
@@ -12602,7 +12602,7 @@
   {
     "Title": "Spellbreaker (PD)",
     "FileName": "Spellbreaker (PD) [a1].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 128,
     "Status": "PASS",
     "Slug": "spellbreaker-pd"
@@ -12634,7 +12634,7 @@
   {
     "Title": "Super 8-in-1 (Unl)",
     "FileName": "Super 8-in-1 (Unl).gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 256,
     "Status": "PASS",
     "Slug": "super-8-in-1-unl"
@@ -12657,7 +12657,7 @@
   },
   {
     "Title": "Super Robot Taisen (J)",
-    "FileName": "Super Robot Taisen (J) [T\u002BChi].gb",
+    "FileName": "Super Robot Taisen (J) [T+Chi].gb",
     "Mapper": "MBC2",
     "SizeKb": 128,
     "Status": "PASS",
@@ -12665,8 +12665,8 @@
   },
   {
     "Title": "Tenchi Wo Kurau (J)",
-    "FileName": "Tenchi Wo Kurau (J) [p1][T\u002BChi][!].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "FileName": "Tenchi Wo Kurau (J) [p1][T+Chi][!].gb",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 512,
     "Status": "PASS",
     "Slug": "tenchi-wo-kurau-j"
@@ -12697,7 +12697,7 @@
   },
   {
     "Title": "Urusei Yatsura - Miss Tomobiki wo Saguse! (J)",
-    "FileName": "Urusei Yatsura - Miss Tomobiki wo Saguse! (J) [T\u002BEng0.05_Razor-X].gb",
+    "FileName": "Urusei Yatsura - Miss Tomobiki wo Saguse! (J) [T+Eng0.05_Razor-X].gb",
     "Mapper": "MBC2",
     "SizeKb": 256,
     "Status": "PASS",
@@ -12722,7 +12722,7 @@
   {
     "Title": "Wishbringer (PD)",
     "FileName": "Wishbringer (PD) [a1].gb",
-    "Mapper": "MBC1\u002BRAM\u002BBATT",
+    "Mapper": "MBC1+RAM+BATT",
     "SizeKb": 128,
     "Status": "PASS",
     "Slug": "wishbringer-pd"

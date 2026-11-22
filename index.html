@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ReaBoy — Free Game Boy (DMG-01) Emulator for Windows x64</title>
-  <meta name="description" content="Download ReaBoy v1.0.1 BETA: a standalone Game Boy (DMG-01) emulator for Windows x64. Cycle-accurate Sharp SM83 core, 4-channel APU, Bootix firmware included.">
+  <title>ReaBoy — Free Game Boy Emulator for Windows x64</title>
+  <meta name="description" content="Download ReaBoy v1.0.1 BETA: Free, cycle-accurate Nintendo Game Boy (DMG-01) emulator for Windows 10/11 x64. Bundled Bootix firmware and 1,592 verified games.">
   <meta name="author" content="BJ Studios — Manchester, England">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#0f380f">
@@ -17,13 +17,13 @@
   <meta property="og:title" content="ReaBoy v1.0.1 BETA — Scientific Game Boy (DMG-01) Emulator for Windows">
   <meta property="og:description" content="One click, one drag & drop. Built from reverse-engineered 1989 Game Boy DMG-01 hardware with bit-exact Sharp SM83 boot handover, 4-channel APU, and bundled Bootix firmware.">
   <meta property="og:url" content="https://scientificbrad.github.io/ReaBoy/">
-  <meta property="og:image" content="https://scientificbrad.github.io/ReaBoy/assets/img/boot-poster.png">
+  <meta property="og:image" content="https://scientificbrad.github.io/ReaBoy/assets/img/og-preview.png">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="ReaBoy v1.0.1 BETA — Scientific Game Boy Emulator for Windows">
   <meta name="twitter:description" content="Standalone Windows x64 DMG-01 Game Boy emulator. Reverse-engineered Sharp SM83 core, 4-channel APU, one-click drag & drop. Open BETA now live.">
-  <meta name="twitter:image" content="https://scientificbrad.github.io/ReaBoy/assets/img/boot-poster.png">
+  <meta name="twitter:image" content="https://scientificbrad.github.io/ReaBoy/assets/img/og-preview.png">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -109,6 +109,7 @@
       <nav class="nav-links" id="nav-links" aria-label="Primary Navigation">
         <a class="active" href="index.html">Home</a>
         <a href="development.html">Development</a>
+        <a href="comparison.html">Comparison</a>
         <a href="compatibility.html" title="Compatibility Lab: 1,592+ Game Boy games verified in ReaBoy">1,592+ Games Tested</a>
         <a href="manual.html">User Manual</a>
         <a href="https://github.com/ScientificBrad/ReaBoy/issues" target="_blank" rel="noopener">Report Bug ↗</a>
@@ -124,7 +125,7 @@
         <div class="hero-copy">
           <h1>The Game Boy Emulator Built from Silicon.<br><span class="highlight">Reverse-Engineered Byte-for-Byte.</span></h1>
           <p class="hero-lead">
-            ReaBoy delivers what other emulators miss: bit-exact hardware fidelity without bloated frontends, missing BIOS errors, or input lag. Reconstructed directly from original 1989 DMG-01 silicon using REA (Reverse Engineer Anything) powered by frontier OpenAI and Astra AI models.
+            ReaBoy focuses on pure 1989 DMG-01 silicon fidelity: cycle-timed Sharp SM83 execution, scanline PPU timing, and pinned WinMM 4-channel audio without bloated frontends, missing BIOS errors, or complex setup. Engineered with deep reverse-engineering of the original hardware boot pipeline and open verification telemetry.
           </p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="https://github.com/ScientificBrad/ReaBoy/releases/latest/download/ReaBoy-v1.0.1-win-x64.zip">Download Package (.zip) ↓</a>
@@ -284,7 +285,7 @@
           <div class="compat-cta-copy">
             <h2 class="compat-cta-title">1,592 Game Boy ROMs Tested.<br>Explore the Complete Database.</h2>
             <p class="compat-cta-desc">
-              Every commercial Game Boy release—1,592 of 1,592 titles (100%)—dynamically executed and verified across ROM-Only, MBC1, MBC2, and MBC3 mappers with cycle-accurate Sharp SM83 timing and scanline PPU telemetry. Search the complete database, inspect runtime cycles, and test your own ROM collection.
+              1,592 commercial Game Boy releases dynamically executed in our automated 240-frame headless test harness. Full in-game interactive play and battery saves supported across 1,557 ROM-Only and MBC1 titles, with MBC2/MBC3 banking in active beta development. Search the complete database, inspect telemetry, and test your own ROM collection.
             </p>
             <div class="compat-cta-actions">
               <a class="btn btn-primary btn-compat-cta" href="compatibility.html">
@@ -298,7 +299,7 @@
 
           <div class="compat-cta-visual">
             <!-- 1592-in-1 Physical Cartridge & Screen -->
-            <div class="cart-unit" id="compat-cart" aria-label="1,592-in-1 Verified Multi-Cartridge">
+            <div class="cart-unit" id="compat-cart" aria-label="1,592-in-1 Verified Multi-Cartridge" role="button" tabindex="0">
               <div class="cart-scoop" aria-hidden="true"></div>
               <div class="cart-label">
                 <div class="cart-label-head" style="margin-bottom: 8px;">
@@ -970,32 +971,49 @@
   <!-- FOOTER -->
   <footer class="site-footer">
     <div class="wrap footer-grid">
-      <div>
+      <div class="footer-col footer-col-brand">
         <a class="brand" href="index.html">
           <span class="brand-mark" aria-hidden="true">R</span>
           <span>ReaBoy</span>
         </a>
-        <p>Engineered by <strong>BJ Studios — Manchester, England</strong>.<br>© 2026 BJ Studios. All rights reserved.</p>
-        <p>ReaBoy is an independent Game Boy emulator and is not affiliated with or endorsed by Nintendo. Game names and trademarks belong to their respective rights holders. Commercial game ROMs are not distributed.</p>
+        <p class="footer-tagline">
+          Pure 1989 silicon fidelity. The scientific, bit-exact Game Boy emulator for Windows x64.
+        </p>
+        <p class="footer-copy">
+          Engineered by <strong>BJ Studios — Manchester, England</strong> · &copy; 2026 BJ Studios. Built with precision for emulation purists.
+        </p>
+        <p class="footer-disclaimer">
+          ReaBoy is an independent open-source emulator. Not affiliated with or endorsed by Nintendo. All Game Boy trademarks and titles belong to their respective rights holders.
+        </p>
       </div>
 
-      <div>
-        <strong style="font-family:var(--font-mono);font-size:0.8rem;color:var(--gb-0);">DOWNLOADS</strong>
+      <div class="footer-col">
+        <h4>Downloads</h4>
         <ul class="footer-links">
-          <li><a href="https://github.com/ScientificBrad/ReaBoy/releases/latest/download/ReaBoy-v1.0.1-win-x64.zip">ReaBoy Package (.zip)</a></li>
-          <li><a href="https://raw.githubusercontent.com/ScientificBrad/ReaBoy/main/install.ps1">PowerShell Installer</a></li>
-          <li><a href="https://github.com/ScientificBrad/ReaBoy/releases/latest/download/SHA256SUMS.txt">SHA256SUMS.txt</a></li>
+          <li><a href="https://github.com/ScientificBrad/ReaBoy/releases/latest/download/ReaBoy-v1.0.1-win-x64.zip">ReaBoy v1.0.1 (64-Bit ZIP)</a></li>
+          <li><a href="https://raw.githubusercontent.com/ScientificBrad/ReaBoy/main/install.ps1">install.ps1 (CLI Installer)</a></li>
+          <li><a href="https://github.com/ScientificBrad/ReaBoy/releases/latest/download/SHA256SUMS.txt">SHA256 Checksums ↗</a></li>
+          <li><a href="https://github.com/ScientificBrad/ReaBoy/releases" target="_blank" rel="noopener">Release Notes (v1.0.1) ↗</a></li>
         </ul>
       </div>
 
-      <div>
-        <strong style="font-family:var(--font-mono);font-size:0.8rem;color:var(--gb-0);">DOCUMENTATION</strong>
+      <div class="footer-col">
+        <h4>Technical</h4>
         <ul class="footer-links">
           <li><a href="development.html">Architecture &amp; Development</a></li>
+          <li><a href="comparison.html">Comparison (SameBoy &amp; BGB)</a></li>
           <li><a href="compatibility.html">Compatibility Lab (1,592+ Games)</a></li>
-          <li><a href="manual.html">Complete User Manual</a></li>
-          <li><a href="https://github.com/ScientificBrad/ReaBoy" target="_blank" rel="noopener">GitHub Repository ↗</a></li>
+          <li><a href="manual.html">Official User Manual</a></li>
           <li><a href="https://github.com/ScientificBrad/ReaBoy/blob/main/rom/BOOTIX-LICENSE.txt" target="_blank" rel="noopener">Bootix CC0-1.0 Licence ↗</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Open Source</h4>
+        <ul class="footer-links">
+          <li><a href="https://github.com/ScientificBrad/ReaBoy" target="_blank" rel="noopener">GitHub Repository ↗</a></li>
+          <li><a href="https://github.com/ScientificBrad/ReaBoy/issues" target="_blank" rel="noopener">Issue Tracker ↗</a></li>
+          <li><a href="https://github.com/ScientificBrad/ReaBoy/blob/main/LICENSE" target="_blank" rel="noopener">MIT License ↗</a></li>
         </ul>
       </div>
     </div>

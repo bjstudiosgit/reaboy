@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ReaBoy v1.0.1 BETA — Official User Manual &amp; Technical Guide | BJ Studios</title>
-  <meta name="description" content="Official User Manual for ReaBoy v1.0.1 BETA Game Boy (DMG-01) emulator on Windows x64. Installation, drag & drop controls, Bootix firmware, MBC1 battery saves, CLI flags, and SHA-256 verification.">
+  <title>User Manual &amp; Setup Guide | ReaBoy Emulator</title>
+  <meta name="description" content="Official ReaBoy v1.0.1 user manual: installation, keyboard and gamepad controls, ROM loading, battery save management, and audio troubleshooting.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#0f380f">
   <link rel="canonical" href="https://scientificbrad.github.io/ReaBoy/manual.html">
@@ -13,6 +13,20 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Press+Start+2P&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css?v=1.3.3">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ReaBoy by BJ Studios">
+  <meta property="og:title" content="ReaBoy User Manual &amp; Setup Guide">
+  <meta property="og:description" content="Official User Manual for ReaBoy v1.0.1 BETA Game Boy (DMG-01) emulator on Windows x64. Installation, drag & drop controls, Bootix firmware, and saves.">
+  <meta property="og:url" content="https://scientificbrad.github.io/ReaBoy/manual.html">
+  <meta property="og:image" content="https://scientificbrad.github.io/ReaBoy/assets/img/og-preview.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ReaBoy User Manual &amp; Setup Guide">
+  <meta name="twitter:description" content="Official User Manual for ReaBoy v1.0.1 BETA Game Boy (DMG-01) emulator on Windows x64. Installation, drag & drop controls, Bootix firmware, and saves.">
+  <meta name="twitter:image" content="https://scientificbrad.github.io/ReaBoy/assets/img/og-preview.png">
 
   <script type="application/ld+json">
   {
@@ -53,6 +67,7 @@
       <nav class="nav-links" id="nav-links" aria-label="Manual Navigation">
         <a href="index.html">Home</a>
         <a href="development.html">Development</a>
+        <a href="comparison.html">Comparison</a>
         <a href="compatibility.html" title="Compatibility Lab: 1,592+ Game Boy games verified in ReaBoy">1,592+ Games Tested</a>
         <a class="active" href="manual.html">User Manual</a>
         <a href="https://github.com/ScientificBrad/ReaBoy/issues" target="_blank" rel="noopener">Report Bug ↗</a>
@@ -208,41 +223,71 @@ c313435280dda8ccfae0786c7159aab791a00930605101c647794f64bfa17b5e  dmg_boot.bin</
 
       <section class="manual-block" id="compatibility">
         <h2>9. Compatibility &amp; Open BETA Roadmap</h2>
-        <h3>Supported in v1.0.1 BETA</h3>
+        <h3>Supported &amp; Playable in v1.0.1 BETA</h3>
         <ul>
           <li>Original monochrome Nintendo Game Boy (DMG-01): Sharp SM83 CPU, memory bus, scanline PPU, and 4-channel APU.</li>
-          <li>ROM-only and MBC1 cartridges up to 2 MiB ROM and 32 KiB battery-backed RAM.</li>
-          <li>Verified catalogue: <strong>1,424+ canonical Game Boy titles tested and verified</strong> with dynamic 240-frame hardware execution (including Tetris, Super Mario Land, Dr. Mario, Kirby's Dream Land, Metroid II, Donkey Kong, Mega Man, Batman, Alleyway, etc.).</li>
+          <li>ROM-only and MBC1 cartridges up to 2 MiB ROM and 32 KiB battery-backed RAM (<strong>1,557 playable commercial titles</strong>).</li>
+          <li>Battery save persistence: automatic `.sav` files for battery-backed MBC1 titles.</li>
+          <li>Automated regression suite: <strong>1,592 canonical Game Boy titles boot-verified</strong> with dynamic 240-frame headless hardware execution.</li>
         </ul>
-        <h3>Planned / Not Yet Supported in BETA</h3>
+        <h3>Planned / Active BETA Development</h3>
         <ul>
-          <li>MBC3 (Real-Time Clock titles such as Pokémon Red/Blue/Gold/Silver) &amp; MBC5 cartridges.</li>
+          <li>MBC2 (built-in 512×4-bit RAM) &amp; MBC3 (Real-Time Clock titles such as Pokémon Red/Blue/Gold/Silver) full banking.</li>
           <li>Game Boy Color (CGB)-only hardware features.</li>
           <li>Link cable multiplayer, save states, rewind, and USB gamepad remapping.</li>
         </ul>
-        <p>Exact hardware cycle-by-cycle timing across the entire Game Boy catalogue is actively being tested during the BETA period. Please report any game issues on <a href="https://github.com/ScientificBrad/ReaBoy/issues" target="_blank" rel="noopener">GitHub Issues ↗</a>.</p>
+        <p>Continuous hardware timing validation is actively conducted during the BETA period. Please report any game issues on <a href="https://github.com/ScientificBrad/ReaBoy/issues" target="_blank" rel="noopener">GitHub Issues ↗</a>.</p>
       </section>
     </article>
   </main>
 
+  <!-- SITE FOOTER -->
   <footer class="site-footer">
     <div class="wrap footer-grid">
-      <div>
+      <div class="footer-col footer-col-brand">
         <a class="brand" href="index.html">
           <span class="brand-mark" aria-hidden="true">R</span>
           <span>ReaBoy</span>
         </a>
-        <p>BJ Studios — Manchester, England · © 2026 BJ Studios. All rights reserved.</p>
+        <p class="footer-tagline">
+          Pure 1989 silicon fidelity. The scientific, bit-exact Game Boy emulator for Windows x64.
+        </p>
+        <p class="footer-copy">
+          Engineered by <strong>BJ Studios — Manchester, England</strong> · &copy; 2026 BJ Studios. Built with precision for emulation purists.
+        </p>
+        <p class="footer-disclaimer">
+          ReaBoy is an independent open-source emulator. Not affiliated with or endorsed by Nintendo. All Game Boy trademarks and titles belong to their respective rights holders.
+        </p>
       </div>
-      <div>
+
+      <div class="footer-col">
+        <h4>Downloads</h4>
         <ul class="footer-links">
-          <li><a href="index.html">← Back to Main Website</a></li>
-          <li><a href="development.html">Architecture &amp; Development</a></li>
-          <li><a href="https://github.com/ScientificBrad/ReaBoy/releases/latest">Latest Release Downloads ↗</a></li>
+          <li><a href="https://github.com/ScientificBrad/ReaBoy/releases/latest/download/ReaBoy-v1.0.1-win-x64.zip">ReaBoy v1.0.1 (64-Bit ZIP)</a></li>
+          <li><a href="https://raw.githubusercontent.com/ScientificBrad/ReaBoy/main/install.ps1">install.ps1 (CLI Installer)</a></li>
+          <li><a href="https://github.com/ScientificBrad/ReaBoy/releases/latest/download/SHA256SUMS.txt">SHA256 Checksums ↗</a></li>
+          <li><a href="https://github.com/ScientificBrad/ReaBoy/releases" target="_blank" rel="noopener">Release Notes (v1.0.1) ↗</a></li>
         </ul>
       </div>
-      <div>
-        <p>Independent software. Not affiliated with or endorsed by Nintendo.</p>
+
+      <div class="footer-col">
+        <h4>Technical</h4>
+        <ul class="footer-links">
+          <li><a href="development.html">Architecture &amp; Development</a></li>
+          <li><a href="comparison.html">Comparison (SameBoy &amp; BGB)</a></li>
+          <li><a href="compatibility.html">Compatibility Lab (1,592+ Games)</a></li>
+          <li><a href="manual.html">Official User Manual</a></li>
+          <li><a href="https://github.com/ScientificBrad/ReaBoy/blob/main/rom/BOOTIX-LICENSE.txt" target="_blank" rel="noopener">Bootix CC0-1.0 Licence ↗</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Open Source</h4>
+        <ul class="footer-links">
+          <li><a href="https://github.com/ScientificBrad/ReaBoy" target="_blank" rel="noopener">GitHub Repository ↗</a></li>
+          <li><a href="https://github.com/ScientificBrad/ReaBoy/issues" target="_blank" rel="noopener">Issue Tracker ↗</a></li>
+          <li><a href="https://github.com/ScientificBrad/ReaBoy/blob/main/LICENSE" target="_blank" rel="noopener">MIT License ↗</a></li>
+        </ul>
       </div>
     </div>
   </footer>

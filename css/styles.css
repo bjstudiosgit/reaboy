@@ -2513,24 +2513,76 @@ kbd {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr;
-  gap: 2rem;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  gap: 2.25rem;
   align-items: start;
 }
 
+.footer-col h4 {
+  font-family: var(--font-display, "Space Grotesk", sans-serif);
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--gb-0);
+  margin: 0 0 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+[data-theme="dark"] .footer-col h4 {
+  color: #c4f03a;
+}
+
+.footer-col-brand .brand {
+  margin-bottom: 0.75rem;
+  display: inline-flex;
+}
+
+.footer-tagline {
+  color: var(--ink-secondary);
+  font-size: 0.88rem;
+  line-height: 1.5;
+  margin: 0 0 0.5rem;
+}
+
+.footer-copy {
+  color: var(--ink-muted);
+  font-size: 0.82rem;
+  line-height: 1.45;
+  margin: 0 0 0.5rem;
+}
+
+.footer-disclaimer {
+  color: var(--ink-muted);
+  font-size: 0.76rem;
+  line-height: 1.4;
+  margin: 0.75rem 0 0;
+  opacity: 0.85;
+}
+
 .footer-grid p {
-  color: var(--text-dim);
-  font-size: 0.86rem;
-  margin: 0.6rem 0 0;
+  color: var(--ink-muted);
+  font-size: 0.84rem;
+  margin: 0.5rem 0 0;
 }
 
 .footer-links {
   list-style: none;
   padding: 0;
-  margin: 0.6rem 0 0;
+  margin: 0.4rem 0 0;
   display: grid;
-  gap: 0.4rem;
-  font-size: 0.88rem;
+  gap: 0.45rem;
+  font-size: 0.86rem;
+}
+
+.footer-links a {
+  color: var(--ink-secondary);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.footer-links a:hover {
+  color: var(--gb-0);
+  text-decoration: underline;
 }
 
 .toast {
@@ -2596,9 +2648,13 @@ kbd {
   .feature-grid,
   .download-cards,
   .download-grid-improved,
-  .req-specs-grid,
-  .footer-grid {
+  .req-specs-grid {
     grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.75rem;
   }
 
   .form-row {
