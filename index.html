@@ -98,19 +98,20 @@
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
 
-  <!-- Sticky Navigation -->
+    <!-- SITE HEADER / NAVIGATION -->
   <header class="site-header">
     <div class="wrap nav-bar">
-      <a class="brand" href="index.html" aria-label="ReaBoy homepage">
-        <span class="brand-mark">RB</span>
-        <span class="brand-text">ReaBoy <span class="brand-ver">v2.0</span></span>
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">R</span>
+        <span>ReaBoy</span>
       </a>
       <button class="mobile-menu-btn" id="mobile-menu-btn" type="button" aria-expanded="false" aria-controls="nav-links">MENU</button>
       <nav class="nav-links" id="nav-links" aria-label="Primary Navigation">
         <a class="active" href="index.html">Home</a>
-        <a href="development.html">Development</a>
+        <a href="compatibility.html">Game Boy (1,592+)</a>
+        <a href="cgb-compatibility.html">Color Lab (969+)</a>
         <a href="comparison.html">Comparison</a>
-        <a href="compatibility.html" title="Compatibility Lab: 1,592+ Game Boy games verified in ReaBoy">1,592+ Games Tested</a>
+        <a href="development.html">Architecture</a>
         <a href="manual.html">User Manual</a>
         <a href="https://github.com/ScientificBrad/ReaBoy/issues" target="_blank" rel="noopener">Report Bug ↗</a>
         <a href="https://github.com/ScientificBrad/ReaBoy" target="_blank" rel="noopener">GitHub ↗</a>
@@ -123,13 +124,19 @@
     <section class="wrap hero">
       <div class="hero-grid">
         <div class="hero-copy">
-          <h1>The Game Boy &amp; Color Emulator Built from Silicon.</h1>
+          <span class="eyebrow" style="color:var(--gb-0); letter-spacing: 0.12em; font-weight:700; margin-bottom:0.75rem; display:block;">
+            DUAL-SYSTEM REVERSE ENGINEERING · DMG-01 &amp; CGB-001
+          </span>
+          <h1 style="font-size: clamp(2.3rem, 4.2vw, 3.4rem); line-height: 1.12; margin: 0 0 1.25rem; letter-spacing: -0.02em;">
+            Pure 1989 Silicon Fidelity.<br>
+            <span class="highlight">Now in Full 15-Bit Colour.</span>
+          </h1>
           <p class="hero-lead">
-            ReaBoy runs both original Game Boy (DMG-01) and Game Boy Color (CGB) games with machine-cycle-accurate SM83 execution, a dot-accurate Pixel FIFO PPU, 2× double-speed CPU, and bundled Bootix firmware. 1,592 original Game Boy games 100% playable, plus full CGB colour library support with zero installation or admin rights required.
+            ReaBoy unites the iconic monochrome Game Boy (DMG-01) and Game Boy Color (CGB) into one bit-exact desktop emulator for Windows x64. Engineered from byte <code>$0000</code> with dot-accurate Pixel FIFO scanline timing, 8.388 MHz double-speed SM83 execution, 4-channel sound, and zero installation or external dependencies.
           </p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="https://github.com/ScientificBrad/ReaBoy/releases/latest/download/ReaBoy-v1.0.1-win-x64.zip">Download Package (.zip) ↓</a>
-            <a class="btn btn-secondary" href="comparison.html">Architecture &amp; Comparison →</a>
+            <a class="btn btn-primary" href="https://github.com/ScientificBrad/ReaBoy/releases/latest">Download ReaBoy v2.0 (.zip) ↓</a>
+            <a class="btn btn-secondary" href="cgb-compatibility.html">Explore Color Lab (969+) →</a>
           </div>
           <div class="hero-meta-block">
             <p class="hero-hardware-features">
