@@ -234,52 +234,38 @@
           </div>
         </div>
 
-        <!-- Unified Setup Box -->
-        <div class="install-unified-box reveal" style="background: transparent !important; border: none !important; box-shadow: none !important; padding: 0 !important;">
-          <div class="install-box-header" style="width: 100% !important;">
-            <p style="max-width: 100% !important; width: 100% !important;">
-              No runtime installers, missing DLLs, or firmware dumps. Everything you need is self-contained in one portable package: <code>ReaBoy.exe</code>, embedded .NET 8 runtime, user manual, and the ready-to-run <code>rom/</code> folder with open-source Bootix DMG v1.2 firmware.
-            </p>
+        <!-- Clean Direct Install Link (No Boxes) -->
+        <div class="reveal" style="margin-bottom: 2rem;">
+          <p style="font-size: 1.05rem; line-height: 1.6; color: var(--text-secondary); max-width: 820px; margin: 0 0 1.5rem;">
+            No runtime installers, missing DLLs, or firmware dumps. Everything you need is self-contained in one portable package: <code>ReaBoy.exe</code>, embedded .NET 8 runtime, user manual, and the ready-to-run <code>rom/</code> folder with open-source Bootix DMG v1.2 and CGB firmware.
+          </p>
+
+          <div style="display: flex; align-items: center; gap: 1.25rem; flex-wrap: wrap; margin-bottom: 1.25rem;">
+            <a class="btn btn-primary" href="https://github.com/ScientificBrad/ReaBoy/releases/latest" style="font-size: 1.05rem; padding: 0.75rem 1.6rem;">
+              Download Complete Package (.zip) ↓
+            </a>
+            <span style="font-size: 0.92rem; color: var(--text-muted); font-family: var(--font-display);">
+              23.4 MB · SHA-256 Verified · All Files Included · Windows 10/11 x64
+            </span>
           </div>
 
-          <div class="install-box-methods">
-            <!-- Method A: Direct ZIP -->
-            <div class="install-method-panel primary-method">
-              <h4>Portable Archive (.zip)</h4>
-              <p>Download, unzip anywhere on your PC, and launch <code>ReaBoy.exe</code> immediately. Zero installation wizard and zero administrator rights required.</p>
-              <a class="btn btn-primary btn-install-cta" href="https://github.com/ScientificBrad/ReaBoy/releases/latest">
-                Download Complete Package (.zip) ↓
-              </a>
-              <span class="method-meta">23.4 MB · SHA-256 Verified · All Files Included</span>
-            </div>
+          <p style="font-size: 0.92rem; color: var(--text-secondary); margin: 0 0 1rem;">
+            Or run via PowerShell: <code style="padding: 0.25rem 0.55rem; background: rgba(0,0,0,0.25); border: 1px solid var(--border); border-radius: 4px; font-family: var(--font-mono); font-size: 0.85rem;">irm https://raw.githubusercontent.com/ScientificBrad/ReaBoy/main/install.ps1 | iex</code>
+          </p>
 
-            <!-- Method B: PowerShell One-Liner -->
-            <div class="install-method-panel terminal-method">
-              <div class="term-header">
-                <h4>PowerShell One-Liner</h4>
-                <button class="copy-btn" type="button" data-copy-target="ps-install-cmd">Copy command</button>
-              </div>
-              <p>Paste into Windows PowerShell to download the package, verify SHA-256 checksums, extract the <code>rom/</code> folder, and add a Start Menu shortcut.</p>
-              <div class="term-command">
-                <code id="ps-install-cmd">irm https://raw.githubusercontent.com/ScientificBrad/ReaBoy/main/install.ps1 | iex</code>
-              </div>
-              <span class="method-meta">Installs to <code>%LOCALAPPDATA%\Programs\ReaBoy</code></span>
-            </div>
+          <div>
+            <a href="https://github.com/ScientificBrad/ReaBoy/releases/latest" target="_blank" rel="noopener" style="color: var(--gb-0); font-weight: 600; text-decoration: underline; font-size: 0.9rem;">
+              View Release Notes, SHA256SUMS &amp; Source on GitHub ↗
+            </a>
           </div>
 
           <!-- Minimalist System Specs Bar -->
-          <div class="install-specs-bar" style="background: transparent !important; border: none !important; padding: 0.5rem 0;">
+          <div class="install-specs-bar" style="background: transparent !important; border: none !important; padding: 1.25rem 0 0;">
             <div class="spec-pill"><strong>OS:</strong> Windows 10/11 x64</div>
             <div class="spec-pill"><strong>Runtime:</strong> Embedded .NET 8 (0 install)</div>
-            <div class="spec-pill"><strong>Firmware:</strong> Bootix DMG (CC0) Included</div>
+            <div class="spec-pill"><strong>Firmware:</strong> Bootix DMG &amp; CGB (CC0) Included</div>
             <div class="spec-pill"><strong>Audio:</strong> 4-Channel WinMM APU</div>
-            <div class="spec-pill"><strong>Cartridges:</strong> ROM, MBC1, MBC2, MBC3</div>
-          </div>
-
-          <div class="install-box-footer">
-            <a href="https://github.com/ScientificBrad/ReaBoy/releases/tag/v1.0.1" target="_blank" rel="noopener">
-              View Release Notes, SHA256SUMS &amp; Source on GitHub ↗
-            </a>
+            <div class="spec-pill"><strong>Cartridges:</strong> ROM, MBC1, MBC2, MBC3, MBC5</div>
           </div>
         </div>
       </div>
