@@ -156,7 +156,7 @@
     tableBody.innerHTML = pageItems
       .map((g) => {
         const shotHtml = g.screenshot
-          ? `<img src="${g.screenshot}" alt="${g.title}" loading="lazy" onerror="this.onerror=null;this.src='assets/img/shots/tetris.png';" style="width:36px; height:32px; object-fit:cover; border-radius:2px; cursor:pointer; image-rendering:pixelated;" class="cgb-thumb" data-shot="${g.screenshot}" data-title="${escapeHtml(g.title)}" data-meta="${escapeHtml(g.canonicalFilename || g.filename)} · ${g.mapper} · ${g.effectiveMode} · ${g.fps} FPS">`
+          ? `<img src="${g.screenshot}" alt="${g.title}" loading="lazy" onerror="this.onerror=null;this.src='assets/img/shots/cgb/cgb-placeholder.png';" style="width:36px; height:32px; object-fit:cover; border-radius:2px; cursor:pointer; image-rendering:pixelated;" class="cgb-thumb" data-shot="${g.screenshot}" data-title="${escapeHtml(g.title)}" data-meta="${escapeHtml(g.canonicalFilename || g.filename)} · ${g.mapper} · ${g.effectiveMode} · ${g.fps} FPS">`
           : `<span style="font-size:0.7rem; color:var(--text-muted);">N/A</span>`;
 
         const catBadge =
@@ -207,6 +207,7 @@
       thumb.addEventListener('click', () => {
         if (!dialog) return;
         dialogTitle.textContent = thumb.dataset.title;
+        dialogImg.onerror = () => { dialogImg.src = 'assets/img/shots/cgb/cgb-placeholder.png'; };
         dialogImg.src = thumb.dataset.shot;
         dialogMeta.textContent = thumb.dataset.meta;
         dialog.showModal();
