@@ -1309,6 +1309,7 @@ a:hover {
   flex-direction: column;
   gap: 0.5rem;
   padding-bottom: 0.5rem;
+  width: 100%;
 }
 
 .install-box-header h3 {
@@ -1319,10 +1320,11 @@ a:hover {
 
 .install-box-header p {
   margin: 0;
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   line-height: 1.6;
   color: var(--text-muted);
-  max-width: 820px;
+  width: 100%;
+  max-width: 100%;
 }
 
 .install-box-methods {
