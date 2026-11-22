@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Press+Start+2P&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=1.3.4">
+  <link rel="stylesheet" href="css/styles.css?v=1.3.5">
 
   <!-- OpenGraph -->
   <meta property="og:type" content="website">
@@ -66,51 +66,127 @@
     <section class="section" style="padding-top: 2.5rem; padding-bottom: 4.5rem;">
       <div class="wrap">
 
-        <!-- Section Heading -->
-        <div class="reveal" style="margin-bottom: 2.5rem; max-width: 860px;">
-          <p class="eyebrow">VERIFIED GAME TESTING · 2,561 TITLES BENCHMARKED</p>
-          <h1 style="margin:0 0 0.75rem;font-size:clamp(1.9rem,3.4vw,2.6rem);">Game Boy &amp; Color Game Testing (2,561+ Games)</h1>
-          <p style="font-size:1.02rem;color:var(--text-muted);line-height:1.6;margin:0 0 1.5rem;">
-            Every canonical monochrome original Game Boy (DMG-01) release and Game Boy Color (CGB) retail title executed in ReaBoy's machine-cycle-accurate SM83 CPU and dot-accurate Pixel FIFO PPU. Search 2,561+ titles across both hardware platforms in one unified database, inspect execution telemetry, or test your own ROM collection.
-          </p>
+        <!-- Section Heading + Boot Showcase -->
+        <div class="compat-boot-hero reveal">
+          <div>
+            <p class="eyebrow">VERIFIED GAME TESTING · 2,561 TITLES BENCHMARKED</p>
+            <h1 style="margin:0 0 0.75rem;font-size:clamp(1.9rem,3.4vw,2.6rem);">Game Boy &amp; Color Game Testing (2,561+ Games)</h1>
+            <p style="font-size:1.02rem;color:var(--text-muted);line-height:1.6;margin:0 0 1.5rem;">
+              Every canonical monochrome original Game Boy (DMG-01) release and Game Boy Color (CGB) retail title executed in ReaBoy's machine-cycle-accurate SM83 CPU and dot-accurate Pixel FIFO PPU. Search 2,561+ titles across both hardware platforms in one unified database, inspect execution telemetry, or test your own ROM collection.
+            </p>
 
-          <!-- 4 Summary Metrics Cards -->
-          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-top:1.25rem;">
-            <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#d4ded4);border-radius:6px;padding:1.1rem 1.25rem;">
-              <div style="display:flex;align-items:center;gap:0.4rem;margin-bottom:0.4rem;">
-                <span class="verdict-badge verdict-pass" style="font-size:0.75rem;">UNIFIED LAB</span>
-                <strong style="font-size:0.92rem;color:var(--text-main);">2,561 Total Games</strong>
+            <!-- 4 Summary Metrics Cards -->
+            <div class="compat-metrics-grid">
+              <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#d4ded4);border-radius:6px;padding:1.1rem 1.25rem;">
+                <div style="display:flex;align-items:center;gap:0.4rem;margin-bottom:0.4rem;">
+                  <span class="verdict-badge verdict-pass" style="font-size:0.75rem;">UNIFIED LAB</span>
+                  <strong style="font-size:0.92rem;color:var(--text-main);">2,561 Total Games</strong>
+                </div>
+                <p style="margin:0;font-size:0.83rem;color:var(--text-muted);line-height:1.45;">
+                  Unified database of all official monochrome DMG and Game Boy Color releases.
+                </p>
               </div>
-              <p style="margin:0;font-size:0.83rem;color:var(--text-muted);line-height:1.45;">
-                Unified database of all official monochrome DMG and Game Boy Color releases.
-              </p>
+              <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#d4ded4);border-radius:6px;padding:1.1rem 1.25rem;">
+                <div style="display:flex;align-items:center;gap:0.4rem;margin-bottom:0.4rem;">
+                  <span class="verdict-badge verdict-pass" style="font-size:0.75rem;">ORIGINAL DMG</span>
+                  <strong style="font-size:0.92rem;color:var(--text-main);">1,592 Titles (100%)</strong>
+                </div>
+                <p style="margin:0;font-size:0.83rem;color:var(--text-muted);line-height:1.45;">
+                  ROM-Only, MBC1, MBC2, and MBC3. Full gameplay, scanline PPU timing, and saves.
+                </p>
+              </div>
+              <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#d4ded4);border-radius:6px;padding:1.1rem 1.25rem;">
+                <div style="display:flex;align-items:center;gap:0.4rem;margin-bottom:0.4rem;">
+                  <span class="verdict-badge verdict-pass" style="font-size:0.75rem;">COLOR (CGB)</span>
+                  <strong style="font-size:0.92rem;color:var(--text-main);">969 Commercial Titles</strong>
+                </div>
+                <p style="margin:0;font-size:0.83rem;color:var(--text-muted);line-height:1.45;">
+                  Dual-mode and CGB-exclusive titles with 2× CPU speed, 64 palettes, and MBC5.
+                </p>
+              </div>
+              <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#d4ded4);border-radius:6px;padding:1.1rem 1.25rem;">
+                <div style="display:flex;align-items:center;gap:0.4rem;margin-bottom:0.4rem;">
+                  <span class="verdict-badge verdict-pass" style="font-size:0.75rem;">TEST SUITES</span>
+                  <strong style="font-size:0.92rem;color:var(--text-main);">63 / 63 Hardware Suites</strong>
+                </div>
+                <p style="margin:0;font-size:0.83rem;color:var(--text-muted);line-height:1.45;">
+                  Blargg SM83 instruction &amp; timing, Mooneye acceptance, and Acid2 (0/23,040 diff).
+                </p>
+              </div>
             </div>
-            <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#d4ded4);border-radius:6px;padding:1.1rem 1.25rem;">
-              <div style="display:flex;align-items:center;gap:0.4rem;margin-bottom:0.4rem;">
-                <span class="verdict-badge verdict-pass" style="font-size:0.75rem;">ORIGINAL DMG</span>
-                <strong style="font-size:0.92rem;color:var(--text-main);">1,592 Titles (100%)</strong>
+          </div>
+
+          <!-- Game Boy Boot Showcase -->
+          <div class="dmg-stage">
+            <div class="dmg-shell" id="compat-dmg-console" aria-label="ReaBoy Bootix firmware boot sequence showcase">
+              <div class="dmg-top-grooves">
+                <span>◀ OFF·ON ▶</span>
               </div>
-              <p style="margin:0;font-size:0.83rem;color:var(--text-muted);line-height:1.45;">
-                ROM-Only, MBC1, MBC2, and MBC3. Full gameplay, scanline PPU timing, and saves.
-              </p>
-            </div>
-            <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#d4ded4);border-radius:6px;padding:1.1rem 1.25rem;">
-              <div style="display:flex;align-items:center;gap:0.4rem;margin-bottom:0.4rem;">
-                <span class="verdict-badge verdict-pass" style="font-size:0.75rem;">COLOR (CGB)</span>
-                <strong style="font-size:0.92rem;color:var(--text-main);">969 Commercial Titles</strong>
+
+              <div class="dmg-bezel">
+                <div class="dmg-bezel-header">
+                  <div class="dmg-bezel-lines"></div>
+                  <span class="dmg-bezel-title">DOT MATRIX WITH STEREO SOUND</span>
+                  <div class="dmg-bezel-lines"></div>
+                </div>
+
+                <div class="dmg-screen-row">
+                  <div class="dmg-battery">
+                    <span class="led-dot"></span>
+                    <span>BATTERY</span>
+                  </div>
+                  <div class="dmg-screen-frame" id="compat-dmg-screen-frame">
+                    <video id="compat-dmg-video" autoplay muted loop playsinline poster="assets/img/boot-poster.png" aria-label="Real ReaBoy v2.0 boot-up capture">
+                      <source src="assets/video/boot-preview.mp4" type="video/mp4">
+                      <img src="assets/img/boot-preview.gif" alt="ReaBoy boot-up animation">
+                    </video>
+                    <div class="dmg-scanlines"></div>
+                  </div>
+                </div>
               </div>
-              <p style="margin:0;font-size:0.83rem;color:var(--text-muted);line-height:1.45;">
-                Dual-mode and CGB-exclusive titles with 2× CPU speed, 64 palettes, and MBC5.
-              </p>
-            </div>
-            <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#d4ded4);border-radius:6px;padding:1.1rem 1.25rem;">
-              <div style="display:flex;align-items:center;gap:0.4rem;margin-bottom:0.4rem;">
-                <span class="verdict-badge verdict-pass" style="font-size:0.75rem;">TEST SUITES</span>
-                <strong style="font-size:0.92rem;color:var(--text-main);">63 / 63 Hardware Suites</strong>
+
+              <div class="dmg-wordmark">
+                <div class="dmg-brand-lockup" style="display:flex;flex-direction:column;align-items:flex-start;gap:1px;">
+                  <span class="brand-text" style="font-size:1.15rem;">ReaBoy<sub>™</sub></span>
+                </div>
               </div>
-              <p style="margin:0;font-size:0.83rem;color:var(--text-muted);line-height:1.45;">
-                Blargg SM83 instruction &amp; timing, Mooneye acceptance, and Acid2 (0/23,040 diff).
-              </p>
+
+              <div class="dmg-controls">
+                <div class="dpad" role="group" aria-label="Interactive Game Boy D-Pad">
+                  <button class="dpad-btn dpad-up" type="button" data-gb-btn="UP" aria-label="D-Pad Up">▲</button>
+                  <button class="dpad-btn dpad-down" type="button" data-gb-btn="DOWN" aria-label="D-Pad Down">▼</button>
+                  <button class="dpad-btn dpad-left" type="button" data-gb-btn="LEFT" aria-label="D-Pad Left">◀</button>
+                  <button class="dpad-btn dpad-right" type="button" data-gb-btn="RIGHT" aria-label="D-Pad Right">▶</button>
+                  <div class="dpad-center" aria-hidden="true"></div>
+                </div>
+
+                <div class="ab-cluster" role="group" aria-label="A and B Buttons">
+                  <div class="ab-wrap">
+                    <button class="ab-btn" type="button" data-gb-btn="B" aria-label="B Button"></button>
+                    <span>B</span>
+                  </div>
+                  <div class="ab-wrap">
+                    <button class="ab-btn" type="button" data-gb-btn="A" aria-label="A Button"></button>
+                    <span>A</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="dmg-bottom-row">
+                <div class="start-select">
+                  <div class="pill-wrap">
+                    <button class="pill-btn" type="button" data-gb-btn="SELECT" aria-label="Select Button"></button>
+                    <span>SELECT</span>
+                  </div>
+                  <div class="pill-wrap">
+                    <button class="pill-btn" type="button" data-gb-btn="START" aria-label="Start Button"></button>
+                    <span>START</span>
+                  </div>
+                </div>
+                <div class="speaker-grille" aria-hidden="true">
+                  <span></span><span></span><span></span><span></span><span></span><span></span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -181,11 +257,6 @@
         <!-- Filterable Compatibility Table Toolbar -->
         <div class="compat-toolbar reveal">
           <input class="compat-search" id="compat-search" type="search" placeholder="Search 2,561+ verified games (e.g. Zelda, Pokémon, Metroid, MBC5, CGB)..." aria-label="Filter tested games">
-          <div style="display:flex;gap:0.45rem;flex-wrap:wrap;margin-bottom:0.5rem;">
-            <button class="chip-btn active" type="button" data-platform="ALL">All Platforms (2,561)</button>
-            <button class="chip-btn" type="button" data-platform="DMG">Original Game Boy (1,592)</button>
-            <button class="chip-btn" type="button" data-platform="CGB">Game Boy Color (969)</button>
-          </div>
           <div style="display:flex;gap:0.45rem;flex-wrap:wrap;">
             <button class="chip-btn" type="button" data-alpha="0-9">0–9</button>
             <button class="chip-btn" type="button" data-alpha="A-C">A–C</button>
