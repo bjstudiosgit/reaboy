@@ -985,9 +985,17 @@
   const dialogClose = document.getElementById('shot-dialog-close');
   if (dialogClose && dialog) {
     dialogClose.addEventListener('click', () => dialog.close());
+    dialog.addEventListener('click', (e) => {
+      const rect = dialog.getBoundingClientRect();
+      const inDialog = (rect.top <= e.clientY && e.clientY <= rect.top + rect.height
+        && rect.left <= e.clientX && e.clientX <= rect.left + rect.width);
+      if (!inDialog) {
+        dialog.close();
+      }
+    });
   }
 
-  fetch('assets/all_verified_games.json')
+  fetch('assets/all_verified_games.json?v=2.0.0')
     .then((r) => {
       if (!r.ok) throw new Error(`HTTP ${r.status}`);
       return r.json();
@@ -998,7 +1006,7 @@
     })
     .catch((err) => {
       console.warn('Could not load all_verified_games.json, trying verified_games.json', err);
-      fetch('assets/verified_games.json')
+      fetch('assets/verified_games.json?v=2.0.0')
         .then((r) => r.json())
         .then((data) => {
           verifiedLibrary = data;

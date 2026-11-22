@@ -3461,3 +3461,13 @@ html[data-theme="classic"] .showcase-inline-link:hover {
   color: #273766;
 }
 
+
+/* Dialog / Modal Styling */
+dialog#shot-dialog {
+  border: 1px solid var(--border);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.35);
+}
+dialog#shot-dialog::backdrop {
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(3px);
+}

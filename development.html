@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Architecture &amp; Development | ReaBoy DMG &amp; CGB Emulator</title>
+  <title>Development &amp; Architecture | ReaBoy Technical Deep Dive &amp; Comparison</title>
   <meta name="description" content="Technical architecture: machine-cycle SM83 CPU, dot-accurate Pixel FIFO PPU, CGB double-speed, and 63 hardware test ROMs in ReaBoy.">
   <meta name="author" content="BJ Studios — Manchester, England">
   <meta name="robots" content="index, follow">
@@ -42,11 +42,10 @@
         <span>ReaBoy</span>
       </a>
       <button class="mobile-menu-btn" id="mobile-menu-btn" type="button" aria-expanded="false" aria-controls="nav-links">MENU</button>
-      <nav class="nav-links" id="nav-links" aria-label="Primary Navigation">
+            <nav class="nav-links" id="nav-links" aria-label="Primary Navigation">
         <a href="index.html">Home</a>
-        <a href="compatibility.html">Compatibility (2,561+)</a>
-        <a href="comparison.html">Comparison</a>
-        <a class="active" href="development.html">Architecture</a>
+        <a href="compatibility.html">Compatibility (2,516+)</a>
+        <a class="active" href="development.html">Development</a>
         <a href="manual.html">User Manual</a>
         <a href="https://github.com/ScientificBrad/ReaBoy/issues" target="_blank" rel="noopener">Report Bug ↗</a>
         <a href="https://github.com/ScientificBrad/ReaBoy" target="_blank" rel="noopener">GitHub ↗</a>
@@ -417,6 +416,242 @@
           </table>
         </div>
 
+        
+        <!-- ================================================================= -->
+        <!-- COMPARISON MATRIX: REABOY VS SAMEBOY & BGB (MERGED)               -->
+        <!-- ================================================================= -->
+        <div id="comparison" style="margin-top: 4.5rem; padding-top: 2rem; border-top: 1px solid var(--border);">
+        <!-- Section Heading -->
+        <div class="reveal" style="margin-bottom: 2.5rem; max-width: 860px;">
+          <p class="eyebrow">EMULATOR ARCHITECTURE &amp; METHODOLOGY</p>
+          <h2 style="margin:0 0 0.85rem;font-size:clamp(1.8rem,3vw,2.4rem);line-height:1.2;">Architectural Comparison: ReaBoy vs SameBoy &amp; BGB</h2>
+          <p style="font-size:1.05rem;color:var(--text-muted);line-height:1.6;margin:0 0 1.5rem;">
+            An objective, engineering-focused comparison of Game Boy (DMG-01) and Game Boy Color (CGB) emulation architectures, design trade-offs, and verification methodology.
+          </p>
+
+          <!-- Engineering Philosophy Callout -->
+          <div style="background:var(--card-bg,#fff);border-left:4px solid var(--gb-0,#1a3c26);border:1px solid var(--border,#d4ded4);border-left-width:4px;border-radius:6px;padding:1.25rem 1.5rem;line-height:1.55;font-size:0.92rem;color:var(--text-main);">
+            <strong>Emulation Heritage &amp; Context:</strong> The Game Boy emulation ecosystem owes an enormous debt to legendary projects like <strong>SameBoy</strong> (by LIJI32) and <strong>BGB</strong> (by beware). Their decades of hardware reverse engineering and accuracy testing represent the gold standard of Game Boy research. ReaBoy does not seek to displace these monumental achievements. Rather, ReaBoy was engineered to fulfill a distinct architectural mission: providing an accessible, zero-dependency native Windows x64 emulator for <strong>both Game Boy (DMG) and Game Boy Color (CGB)</strong> with clean reverse-engineered C# architecture, bundled open-source Bootix firmware, and published automated test telemetry.
+          </div>
+        </div>
+
+        <!-- DUAL HARDWARE ARCHITECTURE SPECIFICATIONS -->
+        <div class="section-head reveal" style="margin-bottom: 1.25rem;">
+          <div>
+            <span class="verdict-badge verdict-pass" style="margin-bottom:0.5rem;">DUAL HARDWARE ARCHITECTURE</span>
+            <h2 style="font-size:clamp(1.4rem,2.2vw,1.8rem);margin:0 0 0.4rem;">Game Boy (DMG) &amp; Game Boy Color (CGB) Capabilities</h2>
+            <p style="margin:0;font-size:0.9rem;color:var(--text-muted);">Hardware specifications and capabilities supported within ReaBoy's unified emulation engine.</p>
+          </div>
+        </div>
+
+        <div class="compat-table-wrap reveal" style="margin-bottom: 3.5rem; overflow-x: auto;">
+          <table class="compat-table" style="width:100%; min-width: 650px;">
+            <thead>
+              <tr>
+                <th style="width:34%;">Hardware Capability</th>
+                <th style="width:33%;">Original Game Boy (DMG)</th>
+                <th style="width:33%; background:rgba(47,224,117,0.08); color:var(--gb-0); font-weight:700;">Game Boy Color (CGB)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Hardware Model</strong></td>
+                <td>DMG-01 Monochrome (1989)</td>
+                <td style="background:rgba(47,224,117,0.04);"><span class="verdict-badge verdict-pass">CGB-001</span> · Dual-Mode &amp; CGB-Only</td>
+              </tr>
+              <tr>
+                <td><strong>CPU Frequency</strong></td>
+                <td>Sharp SM83 @ 4.194 MHz (1×)</td>
+                <td style="background:rgba(47,224,117,0.04);"><span class="verdict-badge verdict-pass">8.388 MHz</span> · 2× KEY1 Speed Switch</td>
+              </tr>
+              <tr>
+                <td><strong>Video &amp; Palettes</strong></td>
+                <td>4-shade monochrome DMG palette</td>
+                <td style="background:rgba(47,224,117,0.04);"><span class="verdict-badge verdict-pass">15-Bit RGB555</span> · 64 Custom Palettes</td>
+              </tr>
+              <tr>
+                <td><strong>Pixel Pipeline</strong></td>
+                <td>Dot-accurate scanline PPU</td>
+                <td style="background:rgba(47,224,117,0.04);"><span class="verdict-badge verdict-pass">Pixel FIFO</span> · Acid2 0/23,040 Diff</td>
+              </tr>
+              <tr>
+                <td><strong>VRAM &amp; WRAM Banking</strong></td>
+                <td>8 KiB VRAM / 8 KiB WRAM</td>
+                <td style="background:rgba(47,224,117,0.04);"><span class="verdict-badge verdict-pass">16 KiB VRAM</span> · 32 KiB Banked WRAM</td>
+              </tr>
+              <tr>
+                <td><strong>DMA Controllers</strong></td>
+                <td>160-M-cycle OAM DMA</td>
+                <td style="background:rgba(47,224,117,0.04);"><span class="verdict-badge verdict-pass">HDMA / GDMA</span> · H-Blank &amp; General DMA</td>
+              </tr>
+              <tr>
+                <td><strong>Commercial Game Library</strong></td>
+                <td><strong style="color:var(--gb-0);">1,592 Titles (100% Playable)</strong></td>
+                <td style="background:rgba(47,224,117,0.04);"><strong style="color:var(--gb-0);">Dual &amp; CGB-Exclusive Library</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Cartridge Mappers</strong></td>
+                <td>ROM-Only, MBC1, MBC2, MBC3 (+RTC)</td>
+                <td style="background:rgba(47,224,117,0.04);">MBC1, MBC2, MBC3, MBC5, MBC7 (tilt), HuC1/3</td>
+              </tr>
+              <tr>
+                <td><strong>Battery Save Persistence</strong></td>
+                <td>Standard <code>.sav</code> in <code>%APPDATA%</code></td>
+                <td style="background:rgba(47,224,117,0.04);"><span class="verdict-badge verdict-pass">Atomic Saves</span> · Automatic <code>.sav.bak</code></td>
+              </tr>
+              <tr>
+                <td><strong>Automated Hardware Tests</strong></td>
+                <td>Blargg &amp; Mooneye-GB suites</td>
+                <td style="background:rgba(47,224,117,0.04);"><strong style="color:var(--gb-0);">63 / 63 Passing Test ROMs</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- COMPARISON MATRIX TABLE -->
+        <div class="section-head reveal" style="margin-bottom: 1.25rem;">
+          <div>
+            <h2 style="font-size:clamp(1.4rem,2.2vw,1.8rem);margin:0 0 0.4rem;">Architectural Comparison: ReaBoy vs SameBoy &amp; BGB</h2>
+            <p style="margin:0;font-size:0.9rem;color:var(--text-muted);">Key specifications, dependencies, and capabilities across major Game Boy &amp; Game Boy Color emulators.</p>
+          </div>
+        </div>
+
+        <div class="compat-table-wrap reveal" style="margin-bottom: 3.5rem; overflow-x: auto;">
+          <table class="compat-table" style="width:100%; min-width: 760px;">
+            <thead>
+              <tr>
+                <th style="width:22%;">Feature / Capability</th>
+                <th style="width:28%; background:rgba(47,224,117,0.08); color:var(--gb-0); font-weight:700;">ReaBoy (Game Boy &amp; Color)</th>
+                <th style="width:25%;">SameBoy v0.16.x</th>
+                <th style="width:25%;">BGB v1.6.0</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Primary Focus</strong></td>
+                <td style="background:rgba(47,224,117,0.04);"><strong>DMG &amp; CGB Dual Architecture</strong><br><span style="font-size:0.8rem;color:var(--text-muted);">M-cycle execution, Pixel FIFO PPU, zero-install portable Windows</span></td>
+                <td><strong>Reference Accuracy &amp; Debugging</strong><br><span style="font-size:0.8rem;color:var(--text-muted);">DMG &amp; CGB reference emulation, macOS Cocoa &amp; SDL</span></td>
+                <td><strong>Hardware Research &amp; Debugging</strong><br><span style="font-size:0.8rem;color:var(--text-muted);">Exhaustive debugger for ROM developers</span></td>
+              </tr>
+              <tr>
+                <td><strong>Windows Packaging</strong></td>
+                <td style="background:rgba(47,224,117,0.04);"><span class="verdict-badge verdict-pass">PORTABLE ZIP</span><br><span style="font-size:0.82rem;">Native Windows x64, zero admin, no external runtime required</span></td>
+                <td><span class="verdict-badge" style="background:#eef2ff;color:#3b82f6;border:1px solid #93c5fd;">CROSS-PLATFORM</span><br><span style="font-size:0.82rem;">Windows, macOS, libretro, WebAssembly</span></td>
+                <td><span class="verdict-badge" style="background:#eef2ff;color:#3b82f6;border:1px solid #93c5fd;">WIN32 NATIVE</span><br><span style="font-size:0.82rem;">Standalone 32-bit Windows binary (Wine compatible)</span></td>
+              </tr>
+              <tr>
+                <td><strong>Boot Firmware</strong></td>
+                <td style="background:rgba(47,224,117,0.04);"><strong>Bundled Bootix DMG &amp; CGB</strong><br><span style="font-size:0.82rem;color:var(--text-muted);">Clean CC0 open-source boot ROM preinstalled. Zero BIOS errors.</span></td>
+                <td><strong>Bundled Open-Source Boot ROM</strong><br><span style="font-size:0.82rem;color:var(--text-muted);">Custom open-source boot ROM or optional user BIOS</span></td>
+                <td><strong>Internal HLE Boot Bypass</strong><br><span style="font-size:0.82rem;color:var(--text-muted);">Simulated register state or optional user DMG ROM</span></td>
+              </tr>
+              <tr>
+                <td><strong>Supported Mappers</strong></td>
+                <td style="background:rgba(47,224,117,0.04);"><strong>MBC1, MBC2, MBC3, MBC5, MBC7, HuC1, HuC3</strong><br><span style="font-size:0.82rem;color:var(--text-muted);">Full RTC timekeeping, 93LC56 EEPROM, accelerometer tilt, rumble</span></td>
+                <td><strong>Comprehensive Library</strong><br><span style="font-size:0.82rem;color:var(--text-muted);">MBC1, MBC2, MBC3 (RTC), MBC5, HuC1, MBC7, MMM01</span></td>
+                <td><strong>Comprehensive Library</strong><br><span style="font-size:0.82rem;color:var(--text-muted);">Full commercial &amp; flash cart mapper support</span></td>
+              </tr>
+              <tr>
+                <td><strong>Pixel Rendering Pipeline</strong></td>
+                <td style="background:rgba(47,224,117,0.04);"><strong>Dot-Accurate Dual Pixel FIFO</strong><br><span style="font-size:0.82rem;color:var(--text-muted);">Zero-heap BgFifo &amp; ObjFifo, Acid2 0/23,040 diff, 1,020–1,354 FPS</span></td>
+                <td><strong>Dot-Accurate Pixel FIFO</strong><br><span style="font-size:0.82rem;color:var(--text-muted);">Cycle-accurate LCD controller emulation</span></td>
+                <td><strong>Cycle-Accurate Scanline Renderer</strong><br><span style="font-size:0.82rem;color:var(--text-muted);">Highly refined timing validation</span></td>
+              </tr>
+              <tr>
+                <td><strong>Audio Engine</strong></td>
+                <td style="background:rgba(47,224,117,0.04);"><strong>WinMM Pinned Buffers</strong><br><span style="font-size:0.82rem;color:var(--text-muted);">4-channel APU with DIV-driven frame sequencer &amp; 60 FPS sync</span></td>
+                <td><strong>SDL2 Audio Subsystem</strong><br><span style="font-size:0.82rem;color:var(--text-muted);">High-precision audio resampler with fractional rates</span></td>
+                <td><strong>DirectSound &amp; WaveOut</strong><br><span style="font-size:0.82rem;color:var(--text-muted);">Cycle-exact APU synthesis with pitch bending</span></td>
+              </tr>
+              <tr>
+                <td><strong>Battery Save Storage</strong></td>
+                <td style="background:rgba(47,224,117,0.04);"><strong>Atomic SaveGameManager</strong><br><span style="font-size:0.82rem;color:var(--text-muted);">Safe <code>.sav.bak</code> backups in <code>%APPDATA%\BJStudios\ReaBoy\saves</code></span></td>
+                <td><strong>Standard <code>.sav</code></strong><br><span style="font-size:0.82rem;color:var(--text-muted);">Stored alongside ROM or in app directory</span></td>
+                <td><strong>Standard <code>.sav</code></strong><br><span style="font-size:0.82rem;color:var(--text-muted);">Stored alongside ROM</span></td>
+              </tr>
+              <tr>
+                <td><strong>Hardware Test Verification</strong></td>
+                <td style="background:rgba(47,224,117,0.04);"><strong>63 / 63 Hardware Test ROMs</strong><br><span style="font-size:0.82rem;color:var(--text-muted);">184 automated tests (Blargg, Mooneye, Acid2 DMG+CGB, Magen)</span></td>
+                <td><strong>Mooneye GB &amp; Blargg Suites</strong><br><span style="font-size:0.82rem;color:var(--text-muted);">Extensive test runner against accuracy benchmarks</span></td>
+                <td><strong>Decades of Hardware Validation</strong><br><span style="font-size:0.82rem;color:var(--text-muted);">Extensive test ROM suite passes</span></td>
+              </tr>
+              <tr>
+                <td><strong>License &amp; Source</strong></td>
+                <td style="background:rgba(47,224,117,0.04);"><strong>MIT License (C#)</strong><br><span style="font-size:0.82rem;color:var(--text-muted);">Clean, modern object-oriented .NET 8 codebase</span></td>
+                <td><strong>Expat / MIT License (C)</strong><br><span style="font-size:0.82rem;color:var(--text-muted);">Open-source GitHub repository</span></td>
+                <td><strong>Freeware (Closed Source)</strong><br><span style="font-size:0.82rem;color:var(--text-muted);">Proprietary Pascal/Delphi codebase</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- THREE-COLUMN DEEP DIVE -->
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;margin-bottom:3.5rem;">
+          
+          <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#d4ded4);border-radius:8px;padding:1.5rem;">
+            <h3 style="font-size:1.15rem;margin:0 0 0.75rem;color:var(--gb-0);">Why Choose ReaBoy?</h3>
+            <ul style="margin:0;padding-left:1.2rem;font-size:0.88rem;color:var(--text-secondary);line-height:1.6;">
+              <li style="margin-bottom:0.5rem;"><strong>Zero Setup Overhead:</strong> Download the ZIP, extract anywhere, and drag-and-drop your ROM. No installation wizards, no administrator privileges required.</li>
+              <li style="margin-bottom:0.5rem;"><strong>No BIOS Search:</strong> Bundled with CC0-licensed Bootix DMG v1.2 firmware out of the box.</li>
+              <li style="margin-bottom:0.5rem;"><strong>Pure 1989 Hardware Purism:</strong> Focused purely on authentic original DMG-01 monochrome gameplay without convoluted multi-system menus.</li>
+              <li><strong>Clean Educational C# Architecture:</strong> Engineered with modern C# and published transparently for researchers and emulation enthusiasts.</li>
+            </ul>
+          </div>
+
+          <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#d4ded4);border-radius:8px;padding:1.5rem;">
+            <h3 style="font-size:1.15rem;margin:0 0 0.75rem;color:var(--gb-0);">When to Use SameBoy</h3>
+            <ul style="margin:0;padding-left:1.2rem;font-size:0.88rem;color:var(--text-secondary);line-height:1.6;">
+              <li style="margin-bottom:0.5rem;"><strong>macOS Native Experience:</strong> First-class native Cocoa frontend with Metal acceleration on macOS.</li>
+              <li style="margin-bottom:0.5rem;"><strong>Instruction Breakpoint Debugging:</strong> Powerful integrated assembly debugger, memory inspector, and VRAM viewer for reverse engineers.</li>
+              <li style="margin-bottom:0.5rem;"><strong>Extensive Peripheral Emulation:</strong> Excellent Game Boy Camera, Barcode Boy, and WorkBoy support.</li>
+              <li>Official Site: <a href="https://sameboy.github.io/" target="_blank" rel="noopener">sameboy.github.io ↗</a></li>
+            </ul>
+          </div>
+
+          <div style="background:var(--card-bg,#fff);border:1px solid var(--border,#d4ded4);border-radius:8px;padding:1.5rem;">
+            <h3 style="font-size:1.15rem;margin:0 0 0.75rem;color:var(--gb-0);">When to Use BGB</h3>
+            <ul style="margin:0;padding-left:1.2rem;font-size:0.88rem;color:var(--text-secondary);line-height:1.6;">
+              <li style="margin-bottom:0.5rem;"><strong>Homebrew Production:</strong> BGB is universally revered as the benchmark tool for developing new Game Boy software.</li>
+              <li style="margin-bottom:0.5rem;"><strong>Exhaustive Hardware Profiler:</strong> Trace execution cycles, inspect register state, and benchmark instruction timings.</li>
+              <li style="margin-bottom:0.5rem;"><strong>Link Cable Emulation:</strong> Excellent TCP/IP and local link cable multiplayer emulation support.</li>
+              <li>Official Site: <a href="https://bgb.bircd.org/" target="_blank" rel="noopener">bgb.bircd.org ↗</a></li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- REABOY VERIFICATION METHODOLOGY -->
+        <div class="reveal" style="background:var(--card-bg,#fff);border:1px solid var(--border,#d4ded4);border-radius:8px;padding:1.75rem 2rem;margin-bottom:3rem;">
+          <h2 style="font-size:1.4rem;margin:0 0 0.85rem;">Verification Methodology &amp; Transparency</h2>
+          <p style="font-size:0.92rem;color:var(--text-secondary);line-height:1.6;margin:0 0 1rem;">
+            ReaBoy v2.0 is validated through an extensive automated testing harness with 184 unit tests and 63 hardware acceptance suites:
+          </p>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;">
+            <div>
+              <h4 style="margin:0 0 0.4rem;font-size:0.95rem;color:var(--gb-0);">1. 63 / 63 Passing Hardware Test ROMs</h4>
+              <p style="margin:0;font-size:0.86rem;color:var(--text-muted);line-height:1.5;">
+                Every release passes 16 Blargg CPU/timing/halt_bug suites, 37 Mooneye-GB acceptance &amp; MBC2 tests, 2 Matt Currie Acid2 tests (<code>dmg-acid2</code> and <code>cgb-acid2</code> with 0/23,040 pixel diff), and 8 MagenTests CGB suites.
+              </p>
+            </div>
+            <div>
+              <h4 style="margin:0 0 0.4rem;font-size:0.95rem;color:var(--gb-0);">2. 1,592 Headless ROM Regression Runs</h4>
+              <p style="margin:0;font-size:0.86rem;color:var(--text-muted);line-height:1.5;">
+                Automated 240-frame headless execution across the entire 1,592 commercial Original Game Boy library, verifying memory bus reads, opcode traps, timer ticks, and boot stability.
+              </p>
+            </div>
+            <div>
+              <h4 style="margin:0 0 0.4rem;font-size:0.95rem;color:var(--gb-0);">3. Controlled Commercial Cartridge Matrix</h4>
+              <p style="margin:0;font-size:0.86rem;color:var(--text-muted);line-height:1.5;">
+                600–900 frame telemetry verification across 19 commercial cartridges spanning Category A (DMG), Category B (Dual $80), and Category C (CGB $C0), running at 1,020–1,354 FPS with zero heap allocations per frame.
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+        </div>
+
+
         <!-- DEMOSCENE BENCHMARKS & HARDWARE TEST SUITES (788+ STRESS TESTS) -->
         <div class="reveal" style="margin-top: 3.5rem; margin-bottom: 2.5rem;" id="demoscene-lab">
           <div style="margin-bottom: 1.5rem;">
@@ -522,7 +757,7 @@
         <!-- COMPATIBILITY CTA BANNER -->
         <div class="compat-cta-banner reveal">
           <div class="compat-cta-copy">
-            <h3 class="compat-cta-title">2,561 Game Boy &amp; Color Games Tested.<br>Explore the Unified Database.</h3>
+            <h3 class="compat-cta-title">2,516 Game Boy &amp; Color Games Tested.<br>Explore the Unified Database.</h3>
             <p class="compat-cta-desc">
               Every commercial original Game Boy and Game Boy Color release dynamically executed and verified in ReaBoy's bit-exact CPU and dot-accurate Pixel FIFO PPU core. Search 2,561+ titles, filter by platform and cartridge mapper, and inspect runtime cycle telemetry.
             </p>
@@ -567,8 +802,8 @@
         <h4>Technical</h4>
         <ul class="footer-links">
           <li><a href="development.html">Architecture &amp; Development</a></li>
-          <li><a href="comparison.html">Comparison (SameBoy &amp; BGB)</a></li>
-          <li><a href="compatibility.html">Compatibility Matrix (2,561+ Games)</a></li>
+          <li><a href="development.html#comparison">Comparison (SameBoy &amp; BGB)</a></li>
+          <li><a href="compatibility.html">Compatibility Matrix (2,516+ Games)</a></li>
           <li><a href="manual.html">Official User Manual</a></li>
           <li><a href="https://github.com/ScientificBrad/ReaBoy/blob/main/rom/BOOTIX-LICENSE.txt" target="_blank" rel="noopener">Bootix CC0-1.0 Licence ↗</a></li>
         </ul>
@@ -585,6 +820,6 @@
     </div>
   </footer>
 
-  <script src="js/app.js?v=1.2.5" defer></script>
+  <script src="js/app.js?v=2.0.0" defer></script>
 </body>
 </html>
