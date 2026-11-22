@@ -82,11 +82,19 @@
 
     filteredGames = allGames.filter((g) => {
       if (q) {
-        const matchesQ =
-          (g.title || '').toLowerCase().includes(q) ||
-          (g.filename || '').toLowerCase().includes(q) ||
-          (g.sha256 || '').toLowerCase().includes(q) ||
-          (g.mapper || '').toLowerCase().includes(q);
+        const words = q.split(/\s+/).filter(Boolean);
+        const corpus = [
+          g.title || '',
+          g.canonicalFilename || '',
+          g.filename || '',
+          g.sha256 || '',
+          g.mapper || '',
+          g.region || '',
+          ...(g.variants || []),
+        ]
+          .join(' ')
+          .toLowerCase();
+        const matchesQ = words.every((w) => corpus.includes(w));
         if (!matchesQ) return false;
       }
 
@@ -104,6 +112,26 @@
 
       return true;
     });
+
+    if (q) {
+      filteredGames.sort((a, b) => {
+        const aTitle = (a.title || '').toLowerCase();
+        const bTitle = (b.title || '').toLowerCase();
+        const aExact = aTitle === q;
+        const bExact = bTitle === q;
+        if (aExact && !bExact) return -1;
+        if (!aExact && bExact) return 1;
+        const aStarts = aTitle.startsWith(q);
+        const bStarts = bTitle.startsWith(q);
+        if (aStarts && !bStarts) return -1;
+        if (!aStarts && bStarts) return 1;
+        const aGood = (a.canonicalFilename || '').includes('[!]');
+        const bGood = (b.canonicalFilename || '').includes('[!]');
+        if (aGood && !bGood) return -1;
+        if (!aGood && bGood) return 1;
+        return aTitle.localeCompare(bTitle);
+      });
+    }
 
     currentPage = 1;
     renderTable();
@@ -128,7 +156,7 @@
     tableBody.innerHTML = pageItems
       .map((g) => {
         const shotHtml = g.screenshot
-          ? `<img src="${g.screenshot}" alt="${g.title}" loading="lazy" style="width:36px; height:32px; object-fit:cover; border-radius:2px; cursor:pointer; image-rendering:pixelated;" class="cgb-thumb" data-shot="${g.screenshot}" data-title="${escapeHtml(g.title)}" data-meta="${escapeHtml(g.filename)} · ${g.mapper} · ${g.effectiveMode} · ${g.fps} FPS">`
+          ? `<img src="${g.screenshot}" alt="${g.title}" loading="lazy" onerror="this.onerror=null;this.src='assets/img/shots/tetris.png';" style="width:36px; height:32px; object-fit:cover; border-radius:2px; cursor:pointer; image-rendering:pixelated;" class="cgb-thumb" data-shot="${g.screenshot}" data-title="${escapeHtml(g.title)}" data-meta="${escapeHtml(g.canonicalFilename || g.filename)} · ${g.mapper} · ${g.effectiveMode} · ${g.fps} FPS">`
           : `<span style="font-size:0.7rem; color:var(--text-muted);">N/A</span>`;
 
         const catBadge =
@@ -156,8 +184,11 @@
           <tr>
             <td style="text-align:center;">${shotHtml}</td>
             <td>
-              <strong>${escapeHtml(g.title || g.filename)}</strong>
-              <div style="font-size:0.72rem; color:var(--text-muted); font-family:var(--font-mono); margin-top:2px;">${escapeHtml(g.filename)}</div>
+              <strong>${escapeHtml(g.title || g.canonicalFilename || g.filename)}</strong>
+              <div style="font-size:0.72rem; color:var(--text-muted); font-family:var(--font-mono); margin-top:2px; display:flex; align-items:center; flex-wrap:wrap; gap:4px;">
+                <span>${escapeHtml(g.canonicalFilename || g.filename)}</span>
+                ${g.variantCount > 0 ? `<span style="background:rgba(47,224,117,0.14); color:var(--gb-0); font-size:0.68rem; padding:1px 5px; border-radius:3px; font-weight:600;" title="Includes tested releases across UK, USA, Europe, and regional languages">+${g.variantCount} regional variants</span>` : ''}
+              </div>
             </td>
             <td>${catBadge}</td>
             <td style="font-family:var(--font-mono); font-size:0.8rem;">${escapeHtml(g.mapper)}</td>
