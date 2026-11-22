@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="classic">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Boy Color Compatibility Lab (1,192 Titles) — ReaBoy v2.0</title>
+  <meta name="description" content="Searchable compatibility database for 1,192 canonical Nintendo Game Boy Color (CGB-001) titles tested in ReaBoy v2.0. Pixel FIFO PPU, 2× CPU speed, MBC5, MBC3+RTC, MBC7 tilt.">
+  <link rel="canonical" href="https://scientificbrad.github.io/ReaBoy/cgb-compatibility.html">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <meta property="og:title" content="Game Boy Color Compatibility Lab — ReaBoy v2.0">
+  <meta property="og:description" content="1,192 Game Boy Color titles dynamically tested and verified under ReaBoy v2.0. Search by title, mapper, category, and compatibility level.">
+  <meta property="og:image" content="assets/img/og-preview.png">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="css/styles.css?v=1.3.4">
+</head>
+<body class="page-compatibility">
+
+  <!-- TOP BETA BANNER -->
+  <aside class="beta-ribbon" role="note">
+    <div class="wrap beta-ribbon-inner">
+      <span class="beta-badge">REABOY v2.0</span>
+      <span class="beta-copy">Unified Game Boy &amp; Game Boy Color dual-system emulator for Windows x64.</span>
+      <a class="beta-link" href="https://github.com/ScientificBrad/ReaBoy/releases/latest" target="_blank" rel="noopener">
+        Release Notes ↗
+      </a>
+    </div>
+  </aside>
+
+  <!-- STICKY SITE HEADER -->
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="ReaBoy homepage">
+        <span class="brand-mark">RB</span>
+        <span class="brand-text">ReaBoy <span class="brand-ver">v2.0</span></span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Overview</a>
+        <a href="compatibility.html">Game Boy (1,592+)</a>
+        <a class="active" href="cgb-compatibility.html">Color Lab (1,192+)</a>
+        <a href="comparison.html">Comparison</a>
+        <a href="development.html">Architecture</a>
+        <a href="manual.html">User Manual</a>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle visual theme">
+          <span class="theme-icon" aria-hidden="true">◐</span>
+          <span class="theme-label">DMG Theme</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO SECTION -->
+    <section class="section compat-hero-section">
+      <div class="wrap">
+        <div class="compat-header-block reveal">
+          <p class="eyebrow" style="color:var(--gb-0); letter-spacing: 0.12em; font-weight:700;">
+            GAME BOY COLOR HARDWARE LAB · 1,192 CANONICAL RELEASES
+          </p>
+          <h1 style="font-size: clamp(2rem, 3.5vw, 2.9rem); line-height: 1.15; margin: 0 0 1rem;">
+            Game Boy Color Compatibility Lab.<br>
+            <span class="highlight">1,192 Titles Dynamically Executed &amp; Verified.</span>
+          </h1>
+          <p class="hero-lead" style="max-width: 900px; margin-bottom: 2rem;">
+            Every commercial Game Boy Color release tested on ReaBoy's dot-accurate Pixel FIFO PPU, 8.388 MHz 2× double-speed CPU, and advanced mapper architecture (MBC5, MBC3+RTC, MBC1, MBC7 Tilt, HuC1/HuC3). Filter by category, inspect telemetry, and view pixel-exact in-game screenshots.
+          </p>
+
+          <!-- PLATFORM SWITCHER TABS -->
+          <div style="display:flex; gap:0.75rem; margin-bottom:2rem; flex-wrap:wrap;">
+            <a class="btn btn-secondary" href="compatibility.html" style="font-size:0.85rem; padding:0.6rem 1.1rem;">
+              ← Switch to Original Game Boy Lab (1,592 DMG Games)
+            </a>
+            <span class="btn btn-primary" style="font-size:0.85rem; padding:0.6rem 1.1rem; pointer-events:none; background:var(--gb-0); color:#000; font-weight:700;">
+              ✓ Game Boy Color Lab Active (1,192 CGB Games)
+            </span>
+          </div>
+
+          <!-- SUMMARY TELEMETRY GRID -->
+          <div class="spec-matrix-grid" style="margin-bottom: 2.5rem;">
+            <div class="spec-tile">
+              <span class="spec-tile-label">TOTAL CGB GAMES TESTED</span>
+              <strong class="spec-tile-value" style="color:var(--gb-0);">1,192</strong>
+              <span class="spec-tile-sub">Canonical Good Dumps ([!])</span>
+            </div>
+            <div class="spec-tile">
+              <span class="spec-tile-label">PLAYABLE &amp; BOOTING</span>
+              <strong class="spec-tile-value">1,058</strong>
+              <span class="spec-tile-sub">88.8% Playable Across Library</span>
+            </div>
+            <div class="spec-tile">
+              <span class="spec-tile-label">LEVEL 5: EXTENDED STABILITY</span>
+              <strong class="spec-tile-value">516</strong>
+              <span class="spec-tile-sub">Sustained Execution Passed</span>
+            </div>
+            <div class="spec-tile">
+              <span class="spec-tile-label">GAMEPLAY VERIFIED (LVL 4)</span>
+              <strong class="spec-tile-value">564</strong>
+              <span class="spec-tile-sub">Active Scripted Joypad Delta</span>
+            </div>
+            <div class="spec-tile">
+              <span class="spec-tile-label">HARDWARE FREQUENCY</span>
+              <strong class="spec-tile-value">8.388 MHz</strong>
+              <span class="spec-tile-sub">2× KEY1 Speed Switch</span>
+            </div>
+            <div class="spec-tile">
+              <span class="spec-tile-label">PALETTE SUBSYSTEM</span>
+              <strong class="spec-tile-value">64 Palettes</strong>
+              <span class="spec-tile-sub">15-Bit RGB555 Color RAM</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- SEARCH AND FILTER INTERFACE -->
+        <div class="compat-browser-block reveal" id="browse">
+          <div class="compat-filter-bar" style="background:var(--bg-card); border:1px solid var(--border); border-radius:8px; padding:1.25rem; margin-bottom:1.5rem;">
+            <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:1rem; align-items:flex-end;">
+              <div>
+                <label for="cgb-search-input" style="display:block; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:0.4rem; color:var(--text-muted);">
+                  Search Game Title, File, or SHA-256
+                </label>
+                <input type="text" id="cgb-search-input" placeholder="e.g. Pokemon Crystal, Zelda, Wario, MBC5..." style="width:100%; padding:0.6rem 0.8rem; background:var(--bg); border:1px solid var(--border); border-radius:4px; color:var(--text); font-family:var(--font-mono); font-size:0.85rem;">
+              </div>
+
+              <div>
+                <label for="cgb-category-filter" style="display:block; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:0.4rem; color:var(--text-muted);">
+                  Cartridge Category
+                </label>
+                <select id="cgb-category-filter" style="width:100%; padding:0.6rem 0.8rem; background:var(--bg); border:1px solid var(--border); border-radius:4px; color:var(--text); font-size:0.85rem;">
+                  <option value="all">All Categories (1,192)</option>
+                  <option value="Exclusive">Category C: CGB Exclusive ($C0)</option>
+                  <option value="Dual">Category B: Dual-Compatible ($80)</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="cgb-level-filter" style="display:block; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:0.4rem; color:var(--text-muted);">
+                  Verification Level
+                </label>
+                <select id="cgb-level-filter" style="width:100%; padding:0.6rem 0.8rem; background:var(--bg); border:1px solid var(--border); border-radius:4px; color:var(--text); font-size:0.85rem;">
+                  <option value="all">All Verification Levels</option>
+                  <option value="Level5_ExtendedStability">Level 5: Extended Stability (516)</option>
+                  <option value="Level4_GameplayVerified">Level 4: Gameplay Verified (564)</option>
+                  <option value="Level3_MenuFunctional">Level 3: Menu Functional (1,029)</option>
+                  <option value="Level2_Boots">Level 2: Boots (1,058)</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="cgb-mapper-filter" style="display:block; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:0.4rem; color:var(--text-muted);">
+                  Memory Controller (MBC)
+                </label>
+                <select id="cgb-mapper-filter" style="width:100%; padding:0.6rem 0.8rem; background:var(--bg); border:1px solid var(--border); border-radius:4px; color:var(--text); font-size:0.85rem;">
+                  <option value="all">All Mappers</option>
+                  <option value="MBC5">MBC5 (1,129 Titles)</option>
+                  <option value="MBC3">MBC3 + RTC (35 Titles)</option>
+                  <option value="MBC1">MBC1 (12 Titles)</option>
+                  <option value="MBC7">MBC7 Tilt Sensor (3 Titles)</option>
+                  <option value="HuC">HuC1 / HuC3 (7 Titles)</option>
+                </select>
+              </div>
+            </div>
+
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-top:1rem; font-size:0.82rem; color:var(--text-muted);">
+              <div>
+                Showing <strong id="cgb-match-count" style="color:var(--text);">1,192</strong> of <strong>1,192</strong> verified Game Boy Color games
+              </div>
+              <div>
+                <button id="cgb-reset-filters" type="button" class="chip-btn" style="cursor:pointer;">Reset Filters</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- GAMES TABLE -->
+          <div class="table-wrap" style="background:var(--bg-card); border:1px solid var(--border); border-radius:8px; overflow:hidden;">
+            <table class="data-table" id="cgb-games-table">
+              <thead>
+                <tr>
+                  <th style="width:60px;">Shot</th>
+                  <th style="width:30%;">Game Title</th>
+                  <th>Category</th>
+                  <th>Mapper</th>
+                  <th>Size</th>
+                  <th>Mode</th>
+                  <th>FPS</th>
+                  <th>Verification Level</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="cgb-table-body">
+                <tr>
+                  <td colspan="9" style="text-align:center; padding:2rem; color:var(--text-muted);">
+                    Loading Game Boy Color compatibility database...
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- PAGINATION -->
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-top:1.25rem;">
+            <div id="cgb-pagination-info" style="font-size:0.85rem; color:var(--text-muted);">
+              Page 1 of 24
+            </div>
+            <div style="display:flex; gap:0.5rem;">
+              <button id="cgb-prev-page" class="btn btn-secondary" style="padding:0.4rem 0.9rem; font-size:0.82rem;" disabled>← Previous</button>
+              <button id="cgb-next-page" class="btn btn-secondary" style="padding:0.4rem 0.9rem; font-size:0.82rem;">Next →</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- SCREENSHOT MODAL -->
+  <dialog id="shot-dialog" style="background:var(--bg-card); border:1px solid var(--border); border-radius:8px; padding:1.5rem; max-width:90vw; color:var(--text); box-shadow:0 12px 36px rgba(0,0,0,0.4);">
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+      <h3 id="shot-dialog-title" style="margin:0; font-size:1.1rem;">Game Title</h3>
+      <button id="shot-dialog-close" type="button" class="chip-btn" style="cursor:pointer; font-size:1rem;">✕</button>
+    </div>
+    <div style="text-align:center; background:#000; padding:1rem; border-radius:6px; margin-bottom:0.8rem;">
+      <img id="shot-dialog-img" src="" alt="Screenshot" style="image-rendering:pixelated; width:320px; height:288px; max-width:100%; object-fit:contain;">
+    </div>
+    <div id="shot-dialog-meta" style="font-family:var(--font-mono); font-size:0.8rem; color:var(--text-muted); text-align:center;"></div>
+  </dialog>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div class="footer-col footer-col-brand">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">RB</span>
+          <span class="brand-text">ReaBoy <span class="brand-ver">v2.0</span></span>
+        </a>
+        <p class="footer-tagline">
+          Dual-system scientific Game Boy (DMG-01) and Game Boy Color (CGB-001) emulator for Windows x64.
+        </p>
+        <p class="footer-copy">© 2026 BJ Studios · Manchester, England</p>
+      </div>
+      <div class="footer-col">
+        <h4>Compatibility Labs</h4>
+        <ul class="footer-links">
+          <li><a href="compatibility.html">Game Boy Lab (1,592 DMG Games)</a></li>
+          <li><a href="cgb-compatibility.html">Color Lab (1,192 CGB Games)</a></li>
+          <li><a href="comparison.html">Comparison (SameBoy &amp; BGB)</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Architecture</h4>
+        <ul class="footer-links">
+          <li><a href="development.html">Dual Hardware Architecture</a></li>
+          <li><a href="development.html#phases">Engineering Phases 01–04</a></li>
+          <li><a href="manual.html">Official User Manual</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Project Releases</h4>
+        <ul class="footer-links">
+          <li><a href="https://github.com/ScientificBrad/ReaBoy/releases/latest" target="_blank" rel="noopener">Release Notes (v2.0) ↗</a></li>
+          <li><a href="https://github.com/ScientificBrad/ReaBoy" target="_blank" rel="noopener">Source Code on GitHub ↗</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/cgb-app.js"></script>
+</body>
+</html>

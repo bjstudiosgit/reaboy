@@ -1301,4 +1301,22 @@
     gamesList.slice(0, 5).forEach(g => preload(g.shot));
     startTimer();
   }
+
+  // Showcase Filter Logic (18 Best Handheld Masterpieces)
+  window.filterShowcase = function (filter) {
+    const items = document.querySelectorAll('.showcase-item');
+    const tabs = document.querySelectorAll('.showcase-filter-tabs .chip-btn');
+    tabs.forEach(t => t.classList.remove('active'));
+    const activeTab = document.getElementById('tab-' + filter);
+    if (activeTab) activeTab.classList.add('active');
+
+    items.forEach(item => {
+      const platform = item.getAttribute('data-platform');
+      if (filter === 'all' || platform === filter) {
+        item.style.display = '';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+  };
 })();

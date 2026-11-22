@@ -49,9 +49,10 @@
       <button class="mobile-menu-btn" id="mobile-menu-btn" type="button" aria-expanded="false" aria-controls="nav-links">MENU</button>
       <nav class="nav-links" id="nav-links" aria-label="Primary Navigation">
         <a href="index.html">Home</a>
-        <a href="development.html">Development</a>
+        <a class="active" href="compatibility.html">Game Boy (1,592+)</a>
+        <a href="cgb-compatibility.html">Color Lab (1,192+)</a>
         <a href="comparison.html">Comparison</a>
-        <a class="active" href="compatibility.html" title="Compatibility Lab: 1,592+ Game Boy games verified in ReaBoy">1,592+ Games Tested</a>
+        <a href="development.html">Architecture</a>
         <a href="manual.html">User Manual</a>
         <a href="https://github.com/ScientificBrad/ReaBoy/issues" target="_blank" rel="noopener">Report Bug ↗</a>
         <a href="https://github.com/ScientificBrad/ReaBoy" target="_blank" rel="noopener">GitHub ↗</a>
@@ -67,6 +68,16 @@
         <div style="margin-bottom: 1.5rem;">
           <a href="index.html" style="display:inline-flex;align-items:center;gap:0.4rem;font-family:var(--font-mono);font-size:0.85rem;font-weight:600;color:var(--gb-0);text-decoration:none;">
             ← Back to ReaBoy Home
+          </a>
+        </div>
+
+        <!-- Platform Switcher Tabs -->
+        <div style="display:flex; gap:0.75rem; margin-bottom:2rem; flex-wrap:wrap;">
+          <span class="btn btn-primary" style="font-size:0.85rem; padding:0.6rem 1.1rem; pointer-events:none; background:var(--gb-0); color:#000; font-weight:700;">
+            ✓ Original Game Boy Lab Active (1,592 DMG Games)
+          </span>
+          <a class="btn btn-secondary" href="cgb-compatibility.html" style="font-size:0.85rem; padding:0.6rem 1.1rem;">
+            Switch to Game Boy Color Lab (1,192 CGB Games) →
           </a>
         </div>
 
