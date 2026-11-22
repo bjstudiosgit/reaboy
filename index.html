@@ -30,7 +30,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Press+Start+2P&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/styles.css?v=1.3.5">
+  <link rel="stylesheet" href="css/styles.css?v=1.3.6">
 
     <!-- Structured Data (JSON-LD) for Game Boy Emulator SEO -->
   <script type="application/ld+json">
@@ -329,7 +329,7 @@
             </h2>
           </div>
           <p style="max-width: 540px; margin: 0; line-height: 1.65; color: var(--text-muted);">
-            No bloated frontends, no hunting for obscure BIOS files, no stretched blurry pixels. Every decision in ReaBoy respects the original DMG-01 hardware.
+            No bloated frontends, no hunting for obscure BIOS files, no stretched blurry pixels. Every decision in ReaBoy respects both the original 1989 Game Boy (DMG-01) and 1998 Game Boy Color (CGB-001) hardware.
           </p>
         </div>
 
@@ -359,6 +359,25 @@
             <p>Battery-backed RAM (MBC1, MBC2, MBC3+RTC, MBC5, MBC7) saves automatically on game switch, reset, cartridge removal, and exit — keyed by ROM content hash in <code>%APPDATA%\BJStudios\ReaBoy\saves</code>.</p>
           </article>
         </div>
+
+        <article class="feature-card cgb-spotlight-card reveal" style="margin-bottom: 2.25rem;">
+          <div>
+            <span class="num">04 / GAME BOY COLOR</span>
+            <h3>Full 15-Bit Colour &amp; Automatic Hardware Detection</h3>
+            <p style="margin: 0 0 1.1rem; line-height: 1.65;">
+              Drop any <code>.gbc</code> cartridge onto the window and ReaBoy automatically switches into authentic Game Boy Color mode — unlocking all 32,768 RGB555 colours across 64 hardware palettes, 8.388 MHz double-speed execution, 16 KiB dual-bank VRAM, and full MBC5 / MBC7 support right alongside your classic monochrome <code>.gb</code> games.
+            </p>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+              <span style="font-size: 0.8rem; padding: 0.25rem 0.65rem; background: rgba(21,59,42,0.08); border: 1px solid var(--border); border-radius: 4px; color: var(--text); font-weight: 600;">32,768 RGB555 Colours</span>
+              <span style="font-size: 0.8rem; padding: 0.25rem 0.65rem; background: rgba(21,59,42,0.08); border: 1px solid var(--border); border-radius: 4px; color: var(--text); font-weight: 600;">8.388 MHz Double-Speed</span>
+              <span style="font-size: 0.8rem; padding: 0.25rem 0.65rem; background: rgba(21,59,42,0.08); border: 1px solid var(--border); border-radius: 4px; color: var(--text); font-weight: 600;">Auto DMG / CGB Switching</span>
+              <span style="font-size: 0.8rem; padding: 0.25rem 0.65rem; background: rgba(21,59,42,0.08); border: 1px solid var(--border); border-radius: 4px; color: var(--text); font-weight: 600;">969 CGB Titles Verified</span>
+            </div>
+          </div>
+          <div>
+            <img src="assets/img/cgb-mario-deluxe-window.png" alt="ReaBoy v2.0 running Super Mario Bros. Deluxe in full 15-bit Game Boy Color mode" loading="lazy" style="width:100%; max-width:340px; height:auto; border-radius:8px; border:1px solid var(--border); box-shadow:0 10px 28px rgba(0,0,0,0.16); image-rendering:pixelated; display:block; margin:0 auto;">
+          </div>
+        </article>
 
         <div class="controls-grid reveal">
           <div class="kbd-card">

@@ -3504,3 +3504,17 @@ dialog#shot-dialog::backdrop {
     grid-template-columns: 1fr;
   }
 }
+
+/* Game Boy Color Philosophy Spotlight Card */
+.cgb-spotlight-card {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+@media (max-width: 820px) {
+  .cgb-spotlight-card {
+    grid-template-columns: 1fr;
+  }
+}
