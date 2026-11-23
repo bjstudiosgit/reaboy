@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en-GB" data-theme="classic">
 <head>
   <meta charset="utf-8">
@@ -142,8 +142,8 @@
         <ul>
           <li><strong>Emulation &gt; Remove Cartridge:</strong> Safely flushes battery-backed MBC1 RAM and returns to the empty-console boot logo.</li>
           <li><strong>Emulation &gt; Reset:</strong> Restarts the inserted cartridge (or the empty-console logo).</li>
-          <li><strong>Speed &amp; Execution:</strong> Pause / Resume, Normal Speed (1Ã—), and Fast Forward (targets 3Ã— speed depending on host CPU; intentionally mutes audio).</li>
-          <li><strong>Video:</strong> Fixed integer <strong>1Ã—, 2Ã—, 3Ã—, and 4Ã—</strong> scales locked to the native <code>160 Ã— 144</code> aspect ratio (capped automatically to fit your monitor), Fullscreen (<code>F11</code>), and <strong>Classic Green</strong> or <strong>Grayscale</strong> palettes. Stretched or maximized window states are rejected to keep pixels razor-sharp.</li>
+          <li><strong>Speed &amp; Execution:</strong> Pause / Resume, Normal Speed (1&times;), and Fast Forward (targets 3&times; speed depending on host CPU; intentionally mutes audio).</li>
+          <li><strong>Video:</strong> Fixed integer <strong>1&times;, 2&times;, 3&times;, and 4&times;</strong> scales locked to the native <code>160 &times; 144</code> aspect ratio (capped automatically to fit your monitor), Fullscreen (<code>F11</code>), and <strong>Classic Green</strong> or <strong>Grayscale</strong> palettes. Stretched or maximized window states are rejected to keep pixels razor-sharp.</li>
           <li><strong>Audio:</strong> Enable/Mute toggle and persistent volume control over native WinMM output.</li>
           <li><strong>Recent Games:</strong> Remembers up to 10 recently opened ROM paths.</li>
         </ul>
@@ -164,7 +164,7 @@
               <tr>
                 <td><strong>D-Pad (Up / Down / Left / Right)</strong></td>
                 <td>Game Boy Input</td>
-                <td><kbd>â†‘</kbd> <kbd>&darr;</kbd> <kbd>â†</kbd> <kbd>&rarr;</kbd> or <kbd>W</kbd> <kbd>S</kbd> <kbd>A</kbd> <kbd>D</kbd></td>
+                <td><kbd>&uarr;</kbd> <kbd>&darr;</kbd> <kbd>&larr;</kbd> <kbd>&rarr;</kbd> or <kbd>W</kbd> <kbd>S</kbd> <kbd>A</kbd> <kbd>D</kbd></td>
               </tr>
               <tr>
                 <td><strong>A Button</strong></td>
@@ -241,7 +241,7 @@
               <strong style="color:var(--gb-0); font-family:var(--font-display, inherit);">Game Boy Color (CGB-001) Firmware</strong>
               <span style="font-size:0.75rem; padding:0.15rem 0.45rem; background:rgba(30,90,180,0.1); border:1px solid rgba(30,90,180,0.25); border-radius:3px; color:#1a52b8; font-weight:700;">2,048 BYTES</span>
             </div>
-            <p style="font-size:0.88rem; margin:0 0 0.5rem; color:var(--text-muted);">Memory range: <code>$0000&ndash;$08FF</code>. Manages 2Ã— speed CPU negotiation, VRAM/WRAM banking registers, 15-bit RGB palette generation, cartridge mode detection (<code>$80</code> dual vs <code>$C0</code> CGB-only), and post-boot handoff.</p>
+            <p style="font-size:0.88rem; margin:0 0 0.5rem; color:var(--text-muted);">Memory range: <code>$0000&ndash;$08FF</code>. Manages 2&times; speed CPU negotiation, VRAM/WRAM banking registers, 15-bit RGB palette generation, cartridge mode detection (<code>$80</code> dual vs <code>$C0</code> CGB-only), and post-boot handoff.</p>
             <div style="font-size:0.82rem; color:var(--text-dim);">Default: <code>rom/cgb_boot.bin</code> (or embedded Bootix CGB)</div>
           </div>
         </div>
@@ -324,16 +324,16 @@ c313435280dda8ccfae0786c7159aab791a00930605101c647794f64bfa17b5e  dmg_boot.bin</
         <h3>Supported Hardware Models</h3>
         <ul>
           <li><strong>Original Game Boy (DMG-01):</strong> Authentic monochrome Sharp SM83 CPU, scanline PPU, 4-channel APU, and <strong>1,592 of 1,592 original Game Boy commercial titles (100% Playable)</strong>.</li>
-          <li><strong>Dual Game Boy &amp; Game Boy Color ($80):</strong> Switchable between 15-bit CGB colour and authentic monochrome DMG mode via <code>Emulation &gt; Hardware Mode</code> (e.g. Tetris DX, Zelda: Link's Awakening DX, PokÃ©mon Gold/Silver, Wario Land II).</li>
-          <li><strong>Game Boy Color Exclusive ($C0):</strong> Full CGB hardware exploitation with 2Ã— double-speed CPU (8.388 MHz), 16 KiB banked VRAM, 32 KiB banked WRAM, HDMA/GDMA, and custom RGB555 palettes (e.g. PokÃ©mon Crystal, Zelda: Oracle of Ages/Seasons, Super Mario Bros. Deluxe, Kirby's Tilt 'n' Tumble).</li>
+          <li><strong>Dual Game Boy &amp; Game Boy Color ($80):</strong> Switchable between 15-bit CGB colour and authentic monochrome DMG mode via <code>Emulation &gt; Hardware Mode</code> (e.g. Tetris DX, Zelda: Link's Awakening DX, Pok&eacute;mon Gold/Silver, Wario Land II).</li>
+          <li><strong>Game Boy Color Exclusive ($C0):</strong> Full CGB hardware exploitation with 2&times; double-speed CPU (8.388 MHz), 16 KiB banked VRAM, 32 KiB banked WRAM, HDMA/GDMA, and custom RGB555 palettes (e.g. Pok&eacute;mon Crystal, Zelda: Oracle of Ages/Seasons, Super Mario Bros. Deluxe, Kirby's Tilt 'n' Tumble).</li>
         </ul>
         <h3>Supported Cartridge Mappers</h3>
         <ul>
           <li><strong>ROM-Only:</strong> Standard 32 KiB cartridges.</li>
           <li><strong>MBC1:</strong> Up to 2 MiB ROM and 32 KiB battery-backed RAM.</li>
-          <li><strong>MBC2:</strong> Built-in 512Ã—4-bit internal RAM and battery saves (e.g. F-1 Race).</li>
-          <li><strong>MBC3:</strong> Full hardware Real-Time Clock (RTC) latching and battery saves (e.g. PokÃ©mon Red, Blue, Yellow, Gold, Silver, Crystal).</li>
-          <li><strong>MBC5:</strong> Up to 8 MiB ROM and 128 KiB RAM with rumble and battery saves (e.g. Zelda: Oracle of Ages, Oracle of Seasons, Wario Land 3, PokÃ©mon Pinball).</li>
+          <li><strong>MBC2:</strong> Built-in 512&times;4-bit internal RAM and battery saves (e.g. F-1 Race).</li>
+          <li><strong>MBC3:</strong> Full hardware Real-Time Clock (RTC) latching and battery saves (e.g. Pok&eacute;mon Red, Blue, Yellow, Gold, Silver, Crystal).</li>
+          <li><strong>MBC5:</strong> Up to 8 MiB ROM and 128 KiB RAM with rumble and battery saves (e.g. Zelda: Oracle of Ages, Oracle of Seasons, Wario Land 3, Pok&eacute;mon Pinball).</li>
           <li><strong>MBC7:</strong> Accelerometer analog tilt controls and 93LC56 SPI EEPROM (e.g. Kirby's Tilt 'n' Tumble).</li>
           <li><strong>HuC1 &amp; HuC3:</strong> Infrared transceiver and command parser with RTC/EEPROM (e.g. Pocket Family GB2).</li>
         </ul>
