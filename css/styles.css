@@ -1937,10 +1937,10 @@ html[data-theme="classic"] .compat-cta-banner {
 }
 
 .compat-hero-grid .compat-cta-title {
-  font-size: clamp(2rem, 3.2vw, 2.7rem);
+  font-size: clamp(1.35rem, 1.85vw, 1.75rem);
   font-weight: 700;
-  line-height: 1.12;
-  margin-bottom: 1.1rem;
+  line-height: 1.22;
+  margin-bottom: 0.85rem;
   color: var(--ink);
 }
 
@@ -2669,7 +2669,53 @@ kbd {
    ========================================================================== */
 
 @media (max-width: 1024px) {
-  .hero-grid,
+  .hero-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .hero-copy {
+    display: contents;
+  }
+
+  .hero-copy > .eyebrow {
+    order: 1;
+    text-align: center;
+    align-self: center;
+  }
+
+  .hero-copy > h1 {
+    order: 2;
+    text-align: center;
+  }
+
+  .dmg-stage {
+    order: 3;
+    width: 100%;
+    max-width: 360px;
+    margin: 0.25rem auto 1rem;
+  }
+
+  .hero-copy > .hero-lead {
+    order: 4;
+    text-align: center;
+  }
+
+  .hero-copy > .hero-actions {
+    order: 5;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 0.75rem;
+  }
+
+  .hero-copy > .hero-meta-block {
+    order: 6;
+    text-align: center;
+  }
+
   .drop-lab-grid,
   .install-grid,
   .pipeline-grid,
@@ -2703,6 +2749,17 @@ kbd {
 
   .manual-toc {
     position: static;
+  }
+}
+
+@media (max-width: 480px) {
+  .dmg-stage {
+    max-width: 320px;
+  }
+
+  .dmg-shell {
+    padding: 16px 18px 22px;
+    border-radius: 16px 16px 44px 16px;
   }
 }
 
