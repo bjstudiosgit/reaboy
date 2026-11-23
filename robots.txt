@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://scientificbrad.github.io/ReaBoy/sitemap.xml
+Sitemap: https://reaboy.org/sitemap.xml

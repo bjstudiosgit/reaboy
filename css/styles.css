@@ -2258,7 +2258,9 @@ html[data-theme="classic"] .compat-cta-banner {
   font-size: 0.85rem;
   padding: 0.6rem 0.95rem;
   border-radius: var(--radius-sm);
-  min-width: 260px;
+  min-width: 320px;
+  flex: 1;
+  max-width: 620px;
 }
 
 .compat-table-wrap {
