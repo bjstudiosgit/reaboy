@@ -14,7 +14,7 @@
     gtag('config', 'G-TS72SK33QS');
   </script>
   <title>User Manual &amp; Setup Guide | ReaBoy Game Boy &amp; Color Emulator</title>
-  <meta name="description" content="Official ReaBoy user manual: Game Boy &amp; Game Boy Color hardware modes, controls, ROM loading, battery saves, and MBC1â€“MBC7 mapper guide.">
+  <meta name="description" content="Official ReaBoy user manual: Game Boy &amp; Game Boy Color hardware modes, controls, ROM loading, battery saves, and MBC1&ndash;MBC7 mapper guide.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#0f380f">
   <link rel="canonical" href="https://reaboy.org/manual.html">
@@ -81,8 +81,8 @@
         <a href="rom-demos.html">ROM Demos</a>
         <a href="development.html">Development</a>
         <a class="active" href="manual.html">User Manual</a>
-        <a href="https://github.com/ScientificBrad/ReaBoy/issues" target="_blank" rel="noopener">Report Bug â†—</a>
-        <a href="https://github.com/ScientificBrad/ReaBoy" target="_blank" rel="noopener">GitHub â†—</a>
+        <a href="https://github.com/ScientificBrad/ReaBoy/issues" target="_blank" rel="noopener">Report Bug &#8599;</a>
+        <a href="https://github.com/ScientificBrad/ReaBoy" target="_blank" rel="noopener">GitHub &#8599;</a>
       </nav>
     </div>
   </header>
@@ -106,10 +106,10 @@
 
     <article class="manual-article">
       <div class="manual-block">
-        <p class="eyebrow">OFFICIAL DOCUMENTATION Â· PRODUCT VERSION 2.0.0</p>
+        <p class="eyebrow">OFFICIAL DOCUMENTATION &middot; PRODUCT VERSION 2.0.0</p>
         <h1 style="margin:0 0 0.6rem;font-size:clamp(1.9rem,3.4vw,2.6rem);">ReaBoy User Manual</h1>
         <p style="margin:0;color:var(--text-muted);font-size:1.02rem;line-height:1.6;">
-          Official technical reference for Windows 10/11 x64 Â· Cycle-accurate DMG-01 architecture, keyboard controls, Bootix firmware, and CLI flags.
+          Official technical reference for Windows 10/11 x64 &middot; Cycle-accurate DMG-01 architecture, keyboard controls, Bootix firmware, and CLI flags.
         </p>
       </div>
 
@@ -129,10 +129,10 @@
         <h2>2. Production Package Contents</h2>
         <p>The portable ZIP distribution (<code>ReaBoy-v2.0-win-x64.zip</code>) contains:</p>
         <ul>
-          <li><code>ReaBoy.exe</code> â€” Standalone application with bundled .NET 8 runtime and embedded Bootix DMG v1.2 &amp; CGB boot firmware.</li>
-          <li><code>README.md</code> â€” Bundled quick guide, controls reference, and version details.</li>
-          <li><code>LICENSES.txt</code> â€” Application copyright and complete Microsoft .NET runtime licence notices.</li>
-          <li><code>rom/</code> â€” Open-source Bootix boot ROMs (<code>dmg_boot.bin</code> and <code>cgb_boot.bin</code>), <code>BOOTIX-LICENSE.txt</code> (CC0-1.0), and ROM instructions.</li>
+          <li><code>ReaBoy.exe</code> &mdash; Standalone application with bundled .NET 8 runtime and embedded Bootix DMG v1.2 &amp; CGB boot firmware.</li>
+          <li><code>README.md</code> &mdash; Bundled quick guide, controls reference, and version details.</li>
+          <li><code>LICENSES.txt</code> &mdash; Application copyright and complete Microsoft .NET runtime licence notices.</li>
+          <li><code>rom/</code> &mdash; Open-source Bootix boot ROMs (<code>dmg_boot.bin</code> and <code>cgb_boot.bin</code>), <code>BOOTIX-LICENSE.txt</code> (CC0-1.0), and ROM instructions.</li>
         </ul>
         <p>The runtime unpacks native components into the standard per-user .NET temporary cache when needed. Nothing needs to be written beside <code>ReaBoy.exe</code>.</p>
       </section>
@@ -164,7 +164,7 @@
               <tr>
                 <td><strong>D-Pad (Up / Down / Left / Right)</strong></td>
                 <td>Game Boy Input</td>
-                <td><kbd>â†‘</kbd> <kbd>â†“</kbd> <kbd>â†</kbd> <kbd>â†’</kbd> or <kbd>W</kbd> <kbd>S</kbd> <kbd>A</kbd> <kbd>D</kbd></td>
+                <td><kbd>â†‘</kbd> <kbd>&darr;</kbd> <kbd>â†</kbd> <kbd>&rarr;</kbd> or <kbd>W</kbd> <kbd>S</kbd> <kbd>A</kbd> <kbd>D</kbd></td>
               </tr>
               <tr>
                 <td><strong>A Button</strong></td>
@@ -224,7 +224,7 @@
 
       <section class="manual-block" id="boot-rom">
         <h2>5. Boot Firmware &amp; Dual Bootix Engine (Game Boy &amp; Color)</h2>
-        <p>ReaBoy includes built-in open-source boot engines for both original <strong>Game Boy (DMG-01 Â· 256 Bytes)</strong> and <strong>Game Boy Color (CGB-001 Â· 2,048 Bytes)</strong>. Both firmware routines are embedded directly inside <code>ReaBoy.exe</code> and bundled in the portable <code>rom/</code> directory using <strong>Bootix</strong> (CC0-1.0 Public Domain). No external BIOS dumps or copyrighted files are requiredâ€”ReaBoy is 100% legal and playable out of the box.</p>
+        <p>ReaBoy includes built-in open-source boot engines for both original <strong>Game Boy (DMG-01 &middot; 256 Bytes)</strong> and <strong>Game Boy Color (CGB-001 &middot; 2,048 Bytes)</strong>. Both firmware routines are embedded directly inside <code>ReaBoy.exe</code> and bundled in the portable <code>rom/</code> directory using <strong>Bootix</strong> (CC0-1.0 Public Domain). No external BIOS dumps or copyrighted files are required&mdash;ReaBoy is 100% legal and playable out of the box.</p>
 
         <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin: 1.25rem 0;">
           <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; padding: 1.1rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
@@ -232,7 +232,7 @@
               <strong style="color:var(--gb-0); font-family:var(--font-display, inherit);">Game Boy (DMG-01) Firmware</strong>
               <span style="font-size:0.75rem; padding:0.15rem 0.45rem; background:rgba(21,59,42,0.08); border:1px solid rgba(21,59,42,0.2); border-radius:3px; color:var(--gb-0); font-weight:700;">256 BYTES</span>
             </div>
-            <p style="font-size:0.88rem; margin:0 0 0.5rem; color:var(--text-muted);">Memory range: <code>$0000â€“$00FF</code>. Executes CPU stack initialization, 8 KiB VRAM zeroing, 4-channel APU startup, scrolling logo decompression, and header checksum verification before unmapping at <code>$FF50</code>.</p>
+            <p style="font-size:0.88rem; margin:0 0 0.5rem; color:var(--text-muted);">Memory range: <code>$0000&ndash;$00FF</code>. Executes CPU stack initialization, 8 KiB VRAM zeroing, 4-channel APU startup, scrolling logo decompression, and header checksum verification before unmapping at <code>$FF50</code>.</p>
             <div style="font-size:0.82rem; color:var(--text-dim);">Default: <code>rom/dmg_boot.bin</code> (or embedded Bootix DMG v1.2)</div>
           </div>
 
@@ -241,7 +241,7 @@
               <strong style="color:var(--gb-0); font-family:var(--font-display, inherit);">Game Boy Color (CGB-001) Firmware</strong>
               <span style="font-size:0.75rem; padding:0.15rem 0.45rem; background:rgba(30,90,180,0.1); border:1px solid rgba(30,90,180,0.25); border-radius:3px; color:#1a52b8; font-weight:700;">2,048 BYTES</span>
             </div>
-            <p style="font-size:0.88rem; margin:0 0 0.5rem; color:var(--text-muted);">Memory range: <code>$0000â€“$08FF</code>. Manages 2Ã— speed CPU negotiation, VRAM/WRAM banking registers, 15-bit RGB palette generation, cartridge mode detection (<code>$80</code> dual vs <code>$C0</code> CGB-only), and post-boot handoff.</p>
+            <p style="font-size:0.88rem; margin:0 0 0.5rem; color:var(--text-muted);">Memory range: <code>$0000&ndash;$08FF</code>. Manages 2Ã— speed CPU negotiation, VRAM/WRAM banking registers, 15-bit RGB palette generation, cartridge mode detection (<code>$80</code> dual vs <code>$C0</code> CGB-only), and post-boot handoff.</p>
             <div style="font-size:0.82rem; color:var(--text-dim);">Default: <code>rom/cgb_boot.bin</code> (or embedded Bootix CGB)</div>
           </div>
         </div>
@@ -259,17 +259,17 @@
             </thead>
             <tbody>
               <tr>
-                <td><strong>1 Â· Highest</strong></td>
+                <td><strong>1 &middot; Highest</strong></td>
                 <td><strong>Custom User Boot ROM</strong><br><small style="color:var(--text-dim);">File &gt; Choose Boot ROM...</small></td>
                 <td>Loads any custom 256-byte DMG or 2,048-byte CGB binary. Supports genuine dumped Nintendo boot ROMs with original scrolling animation and chime sound.</td>
               </tr>
               <tr>
-                <td><strong>2 Â· Portable</strong></td>
+                <td><strong>2 &middot; Portable</strong></td>
                 <td><strong>Adjacent <code>rom/</code> Folder</strong><br><small style="color:var(--text-dim);">rom/dmg_boot.bin or rom/cgb_boot.bin</small></td>
                 <td>Automatically loaded if present beside <code>ReaBoy.exe</code>. Allows simple portable drop-in replacements without reconfiguring menus.</td>
               </tr>
               <tr>
-                <td><strong>3 Â· Safe Fallback</strong></td>
+                <td><strong>3 &middot; Safe Fallback</strong></td>
                 <td><strong>Embedded Bootix Firmware</strong><br><small style="color:var(--text-dim);">Compiled inside ReaBoy.exe</small></td>
                 <td>Guarantees 100% plug-and-play operation even if portable files are missing. Zero configuration or setup needed.</td>
               </tr>
@@ -375,7 +375,7 @@ c313435280dda8ccfae0786c7159aab791a00930605101c647794f64bfa17b5e  dmg_boot.bin</
           <span>ReaBoy</span>
         </a>
         <p class="footer-tagline">
-          Pure 1989 silicon fidelity: the scientific, bit-exact Game Boy &amp; Color emulator for Windows x64. Engineered by <strong>BJ Studios â€” Manchester, England</strong> Â· &copy; 2026 BJ Studios. Built with precision for emulation purists.
+          Pure 1989 silicon fidelity: the scientific, bit-exact Game Boy &amp; Color emulator for Windows x64. Engineered by <strong>BJ Studios &mdash; Manchester, England</strong> &middot; &copy; 2026 BJ Studios. Built with precision for emulation purists.
         </p>
         <p class="footer-disclaimer">
           ReaBoy is an independent open-source emulator. Not affiliated with or endorsed by Nintendo. All Game Boy trademarks and titles belong to their respective rights holders.
@@ -388,8 +388,8 @@ c313435280dda8ccfae0786c7159aab791a00930605101c647794f64bfa17b5e  dmg_boot.bin</
           <li><a href="https://github.com/ScientificBrad/ReaBoy/releases/latest/download/ReaBoy-v2.0-win-x64.zip">ReaBoy v2.0 (Windows x64)</a></li>
           <li><a href="downloads/ReaBoy-2.0-Android.apk">ReaBoy v2.0 for Android (.apk)</a></li>
           <li><a href="https://raw.githubusercontent.com/ScientificBrad/ReaBoy/main/install.ps1">install.ps1 (CLI Installer)</a></li>
-          <li><a href="https://github.com/ScientificBrad/ReaBoy/releases/latest/download/SHA256SUMS.txt">SHA256 Checksums â†—</a></li>
-          <li><a href="https://github.com/ScientificBrad/ReaBoy/releases" target="_blank" rel="noopener">Release Notes (v2.0) â†—</a></li>
+          <li><a href="https://github.com/ScientificBrad/ReaBoy/releases/latest/download/SHA256SUMS.txt">SHA256 Checksums &#8599;</a></li>
+          <li><a href="https://github.com/ScientificBrad/ReaBoy/releases" target="_blank" rel="noopener">Release Notes (v2.0) &#8599;</a></li>
         </ul>
       </div>
 
@@ -401,16 +401,16 @@ c313435280dda8ccfae0786c7159aab791a00930605101c647794f64bfa17b5e  dmg_boot.bin</
           <li><a href="compatibility.html">Games Tested (2,561+ Titles)</a></li>
           <li><a href="rom-demos.html">Non-Commercial ROM Demos</a></li>
           <li><a href="manual.html">Official User Manual</a></li>
-          <li><a href="https://github.com/ScientificBrad/ReaBoy/blob/main/rom/BOOTIX-LICENSE.txt" target="_blank" rel="noopener">Bootix CC0-1.0 Licence â†—</a></li>
+          <li><a href="https://github.com/ScientificBrad/ReaBoy/blob/main/rom/BOOTIX-LICENSE.txt" target="_blank" rel="noopener">Bootix CC0-1.0 Licence &#8599;</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
         <h4>Open Source</h4>
         <ul class="footer-links">
-          <li><a href="https://github.com/ScientificBrad/ReaBoy" target="_blank" rel="noopener">GitHub Repository â†—</a></li>
-          <li><a href="https://github.com/ScientificBrad/ReaBoy/issues" target="_blank" rel="noopener">Issue Tracker â†—</a></li>
-          <li><a href="https://github.com/ScientificBrad/ReaBoy/blob/main/LICENSE" target="_blank" rel="noopener">MIT License â†—</a></li>
+          <li><a href="https://github.com/ScientificBrad/ReaBoy" target="_blank" rel="noopener">GitHub Repository &#8599;</a></li>
+          <li><a href="https://github.com/ScientificBrad/ReaBoy/issues" target="_blank" rel="noopener">Issue Tracker &#8599;</a></li>
+          <li><a href="https://github.com/ScientificBrad/ReaBoy/blob/main/LICENSE" target="_blank" rel="noopener">MIT License &#8599;</a></li>
         </ul>
       </div>
     </div>

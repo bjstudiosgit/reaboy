@@ -15,7 +15,7 @@
   </script>
   <title>Development &amp; Architecture | ReaBoy Technical Deep Dive &amp; Comparison</title>
   <meta name="description" content="Technical architecture: machine-cycle SM83 CPU, dot-accurate Pixel FIFO PPU, CGB double-speed, and 63 hardware test ROMs in ReaBoy.">
-  <meta name="author" content="BJ Studios â€” Manchester, England">
+  <meta name="author" content="BJ Studios &mdash; Manchester, England">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#0f380f">
   <link rel="canonical" href="https://reaboy.org/development.html">
@@ -24,14 +24,14 @@
   <!-- Open Graph / Social SEO -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="ReaBoy by BJ Studios">
-  <meta property="og:title" content="ReaBoy Architecture &amp; Development â€” Sharp SM83 &amp; PPU Pipeline">
+  <meta property="og:title" content="ReaBoy Architecture &amp; Development &mdash; Sharp SM83 &amp; PPU Pipeline">
   <meta property="og:description" content="Deep-dive reverse engineering from byte $0000: 121 Sharp SM83 opcodes, 38 basic blocks, scanline PPU timing, and bit-exact $0100 execution handover.">
   <meta property="og:url" content="https://reaboy.org/development.html">
   <meta property="og:image" content="https://reaboy.org/assets/img/og-preview.png">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="ReaBoy Architecture &amp; Development â€” Sharp SM83 &amp; PPU Pipeline">
+  <meta name="twitter:title" content="ReaBoy Architecture &amp; Development &mdash; Sharp SM83 &amp; PPU Pipeline">
   <meta name="twitter:description" content="Deep-dive reverse engineering from byte $0000: 121 Sharp SM83 opcodes, 38 basic blocks, scanline PPU timing, and bit-exact $0100 execution handover.">
   <meta name="twitter:image" content="https://reaboy.org/assets/img/og-preview.png">
 
@@ -81,8 +81,8 @@
         <a href="rom-demos.html">ROM Demos</a>
         <a class="active" href="development.html">Development</a>
         <a href="manual.html">User Manual</a>
-        <a href="https://github.com/ScientificBrad/ReaBoy/issues" target="_blank" rel="noopener">Report Bug â†—</a>
-        <a href="https://github.com/ScientificBrad/ReaBoy" target="_blank" rel="noopener">GitHub â†—</a>
+        <a href="https://github.com/ScientificBrad/ReaBoy/issues" target="_blank" rel="noopener">Report Bug &#8599;</a>
+        <a href="https://github.com/ScientificBrad/ReaBoy" target="_blank" rel="noopener">GitHub &#8599;</a>
       </nav>
     </div>
   </header>
@@ -115,7 +115,7 @@
           <div class="reveal" style="background:var(--card-bg,#fff);border:1px solid var(--border,#d4ded4);border-radius:12px;padding:1.25rem;box-shadow:0 12px 36px rgba(0,0,0,0.08);">
             <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.85rem;border-bottom:1px solid var(--border);padding-bottom:0.6rem;">
               <span style="font-family:var(--font-mono);font-size:0.78rem;font-weight:700;color:var(--gb-0);letter-spacing:0.06em;">LIVE EMULATION TELEMETRY</span>
-              <span style="font-family:var(--font-mono);font-size:0.75rem;background:rgba(47,224,117,0.12);color:var(--gb-0);padding:2px 8px;border-radius:4px;font-weight:600;">60 FPS Â· PIXEL FIFO</span>
+              <span style="font-family:var(--font-mono);font-size:0.75rem;background:rgba(47,224,117,0.12);color:var(--gb-0);padding:2px 8px;border-radius:4px;font-weight:600;">60 FPS &middot; PIXEL FIFO</span>
             </div>
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;">
               <div style="background:#0f380f;padding:6px;border-radius:6px;text-align:center;">
@@ -143,9 +143,9 @@
         <!-- 3 ENGINEERING PHASES -->
         <div class="science-phases reveal">
           <article class="phase-card">
-            <span class="phase-num">PHASE 01 Â· STATIC REVERSE ENGINEERING</span>
+            <span class="phase-num">PHASE 01 &middot; STATIC REVERSE ENGINEERING</span>
             <h3>Byte-Identical Boot Reconstruction</h3>
-            <p>A custom Sharp SM83 disassembler and control-flow graph builder accounted for every single byte of the 256-byte DMG-01 boot ROM â€” then reassembled it with RGBDS v1.0.4 and proved 0 byte mismatches. Bundled directly inside the ReaBoy package as open-source Bootix DMG v1.2.</p>
+            <p>A custom Sharp SM83 disassembler and control-flow graph builder accounted for every single byte of the 256-byte DMG-01 boot ROM &mdash; then reassembled it with RGBDS v1.0.4 and proved 0 byte mismatches. Bundled directly inside the ReaBoy package as open-source Bootix DMG v1.2.</p>
             <div class="stat-pills">
               <span>256 / 256 bytes</span>
               <span>121 SM83 opcodes</span>
@@ -156,9 +156,9 @@
           </article>
 
           <article class="phase-card">
-            <span class="phase-num">PHASE 02 Â· DYNAMIC CPU VERIFICATION</span>
+            <span class="phase-num">PHASE 02 &middot; DYNAMIC CPU VERIFICATION</span>
             <h3>Bit-Exact Handover at $0100</h3>
-            <p>The C# Sharp SM83 core and memory bus execute the full boot sequence from <code>$0000</code> to <code>$FF50</code> unmapping â€” matching every single canonical DMG register and trapping corrupted logos/checksums in their hardware lockouts.</p>
+            <p>The C# Sharp SM83 core and memory bus execute the full boot sequence from <code>$0000</code> to <code>$FF50</code> unmapping &mdash; matching every single canonical DMG register and trapping corrupted logos/checksums in their hardware lockouts.</p>
             <div class="stat-pills">
               <span>2,206,435 instr</span>
               <span>23,454,204 T-cycles</span>
@@ -168,7 +168,7 @@
           </article>
 
           <article class="phase-card">
-            <span class="phase-num">PHASE 03 Â· PPU, APU &amp; WINDOWS HOST</span>
+            <span class="phase-num">PHASE 03 &middot; PPU, APU &amp; WINDOWS HOST</span>
             <h3>Rock-Solid Desktop Architecture</h3>
             <p>Paired with a scanline-timed 160Ã—144 PPU (including the v1.0.1 LCD-off STAT Mode 0 fix for Dr. Mario), a 4-channel APU with pinned WinMM audio buffers, and 59 automated Windows UI integration checks.</p>
             <div class="stat-pills">
@@ -180,7 +180,7 @@
           </article>
 
           <article class="phase-card">
-            <span class="phase-num">PHASE 04 Â· GAME BOY COLOR ARCHITECTURE UPGRADE</span>
+            <span class="phase-num">PHASE 04 &middot; GAME BOY COLOR ARCHITECTURE UPGRADE</span>
             <h3>Dual Pixel FIFO &amp; Full CGB Subsystems</h3>
             <p>Direct in-place architectural evolution to Game Boy Color (CGB). Upgraded to machine-cycle bus interleaving, a dot-accurate dual Pixel FIFO PPU, 2Ã— CPU double-speed, banked VRAM/WRAM, HDMA, and 63 passing hardware test ROMs.</p>
             <div class="stat-pills">
@@ -188,7 +188,7 @@
               <span>2Ã— Speed (8.388MHz)</span>
               <span>Acid2 0/23,040 Diff</span>
               <span>63 Test ROMs</span>
-              <span>MBC1â€“MBC7 &amp; HuC</span>
+              <span>MBC1&ndash;MBC7 &amp; HuC</span>
             </div>
           </article>
         </div>
@@ -221,32 +221,32 @@
               <tr>
                 <td><strong>Hardware Model</strong></td>
                 <td>DMG-01 Monochrome (1989)</td>
-                <td style="background:rgba(47,224,117,0.04);"><strong>CGB-001</strong> Â· Dual-Mode &amp; CGB-Only</td>
+                <td style="background:rgba(47,224,117,0.04);"><strong>CGB-001</strong> &middot; Dual-Mode &amp; CGB-Only</td>
               </tr>
               <tr>
                 <td><strong>CPU Frequency</strong></td>
                 <td>Sharp SM83 @ 4.194 MHz (1Ã—)</td>
-                <td style="background:rgba(47,224,117,0.04);"><strong>8.388 MHz</strong> Â· 2Ã— KEY1 Speed Switch</td>
+                <td style="background:rgba(47,224,117,0.04);"><strong>8.388 MHz</strong> &middot; 2Ã— KEY1 Speed Switch</td>
               </tr>
               <tr>
                 <td><strong>Video &amp; Palettes</strong></td>
                 <td>4-shade monochrome DMG palette</td>
-                <td style="background:rgba(47,224,117,0.04);"><strong>15-Bit RGB555</strong> Â· 64 Custom Palettes</td>
+                <td style="background:rgba(47,224,117,0.04);"><strong>15-Bit RGB555</strong> &middot; 64 Custom Palettes</td>
               </tr>
               <tr>
                 <td><strong>Pixel Pipeline</strong></td>
                 <td>Dot-accurate scanline PPU</td>
-                <td style="background:rgba(47,224,117,0.04);"><strong>Pixel FIFO</strong> Â· Acid2 0/23,040 Diff</td>
+                <td style="background:rgba(47,224,117,0.04);"><strong>Pixel FIFO</strong> &middot; Acid2 0/23,040 Diff</td>
               </tr>
               <tr>
                 <td><strong>VRAM &amp; WRAM Banking</strong></td>
                 <td>8 KiB VRAM / 8 KiB WRAM</td>
-                <td style="background:rgba(47,224,117,0.04);"><strong>16 KiB VRAM</strong> Â· 32 KiB Banked WRAM</td>
+                <td style="background:rgba(47,224,117,0.04);"><strong>16 KiB VRAM</strong> &middot; 32 KiB Banked WRAM</td>
               </tr>
               <tr>
                 <td><strong>DMA Controllers</strong></td>
                 <td>160-M-cycle OAM DMA</td>
-                <td style="background:rgba(47,224,117,0.04);"><strong>HDMA / GDMA</strong> Â· H-Blank &amp; General DMA</td>
+                <td style="background:rgba(47,224,117,0.04);"><strong>HDMA / GDMA</strong> &middot; H-Blank &amp; General DMA</td>
               </tr>
               <tr>
                 <td><strong>Commercial Game Library</strong></td>
@@ -261,7 +261,7 @@
               <tr>
                 <td><strong>Battery Save Persistence</strong></td>
                 <td>Standard <code>.sav</code> in <code>%APPDATA%</code></td>
-                <td style="background:rgba(47,224,117,0.04);"><strong>Atomic Saves</strong> Â· Automatic <code>.sav.bak</code></td>
+                <td style="background:rgba(47,224,117,0.04);"><strong>Atomic Saves</strong> &middot; Automatic <code>.sav.bak</code></td>
               </tr>
               <tr>
                 <td><strong>Automated Hardware Tests</strong></td>
@@ -281,14 +281,14 @@
           <div class="pipeline-top">
             <div>
               <span class="eyebrow" style="margin-bottom:0.25rem;">INTERACTIVE HARDWARE TRACE</span>
-              <h3 id="pipeline-title" style="margin:0;">DMG-01 Boot Execution Pipeline ($0000 â†’ $0100)</h3>
+              <h3 id="pipeline-title" style="margin:0;">DMG-01 Boot Execution Pipeline ($0000 &rarr; $0100)</h3>
               <div style="display:flex;gap:0.5rem;margin-top:0.75rem;">
-                <button class="chip-btn active" id="trace-tab-dmg" type="button" style="font-size:0.8rem;padding:0.35rem 0.85rem;">Original Game Boy (DMG-01 Â· 256B)</button>
-                <button class="chip-btn" id="trace-tab-cgb" type="button" style="font-size:0.8rem;padding:0.35rem 0.85rem;">Game Boy Color (CGB-001 Â· 2 KiB)</button>
+                <button class="chip-btn active" id="trace-tab-dmg" type="button" style="font-size:0.8rem;padding:0.35rem 0.85rem;">Original Game Boy (DMG-01 &middot; 256B)</button>
+                <button class="chip-btn" id="trace-tab-cgb" type="button" style="font-size:0.8rem;padding:0.35rem 0.85rem;">Game Boy Color (CGB-001 &middot; 2 KiB)</button>
               </div>
             </div>
             <div style="display:flex;gap:0.6rem;flex-wrap:wrap;align-self:flex-start;">
-              <button class="btn btn-primary" type="button" id="pipeline-play-btn" style="padding:0.55rem 1rem;font-size:0.84rem;">â–¶ Auto-Step Trace</button>
+              <button class="btn btn-primary" type="button" id="pipeline-play-btn" style="padding:0.55rem 1rem;font-size:0.84rem;">&#9654; Auto-Step Trace</button>
               <button class="btn btn-secondary" type="button" id="pipeline-reset-btn" style="padding:0.55rem 1rem;font-size:0.84rem;">â†º Reset to $0000</button>
             </div>
           </div>
@@ -335,21 +335,21 @@
       <div class="wrap">
         <div class="section-head reveal">
           <div>
-            <p class="eyebrow">FOUR-CHANNEL SYNTHESIS Â· LIVE OSCILLOSCOPE</p>
+            <p class="eyebrow">FOUR-CHANNEL SYNTHESIS &middot; LIVE OSCILLOSCOPE</p>
             <h2>Hear the Game Boy APU<br>in real time.</h2>
           </div>
           <p>
-            ReaBoy implements all four channels of the DMG-01 Audio Processing Unit (<code>Channel1.cs</code>â€“<code>Channel4.cs</code>) with pinned native WinMM audio buffers. Trigger each hardware channel below to see and hear how 1989 chiptune synthesis works.
+            ReaBoy implements all four channels of the DMG-01 Audio Processing Unit (<code>Channel1.cs</code>&ndash;<code>Channel4.cs</code>) with pinned native WinMM audio buffers. Trigger each hardware channel below to see and hear how 1989 chiptune synthesis works.
           </p>
         </div>
 
         <div class="apu-grid reveal">
           <div class="scope-card">
             <div class="scope-head" style="align-items:center;">
-              <span>REAL-TIME APU OSCILLOSCOPE Â· WEB AUDIO SYNTH</span>
+              <span>REAL-TIME APU OSCILLOSCOPE &middot; WEB AUDIO SYNTH</span>
               <div style="display:flex;align-items:center;gap:8px;">
                 <span id="scope-channel-label">STANDBY</span>
-                <button class="chip-btn" type="button" id="scope-chime-quick-btn" style="padding:3px 8px;font-size:0.72rem;">Play Chime â™ª</button>
+                <button class="chip-btn" type="button" id="scope-chime-quick-btn" style="padding:3px 8px;font-size:0.72rem;">Play Chime &#9834;</button>
               </div>
             </div>
             <canvas id="apu-scope" width="600" height="210" aria-label="Live audio oscilloscope"></canvas>
@@ -361,35 +361,35 @@
                 <strong>Nintendo Boot Chime</strong>
                 <span>Direct audio capture from ReaBoy's APU executing the 256-byte DMG boot ROM ($FF13/$FF14 registers).</span>
               </div>
-              <span class="apu-play-tag">PLAY â™ª</span>
+              <span class="apu-play-tag">PLAY &#9834;</span>
             </button>
             <button class="apu-btn" type="button" data-apu="ch1">
               <div>
-                <strong>CH1 Â· Pulse + Frequency Sweep</strong>
+                <strong>CH1 &middot; Pulse + Frequency Sweep</strong>
                 <span>Square wave with duty cycle &amp; hardware pitch sweep register (NR10).</span>
               </div>
-              <span class="apu-play-tag">PLAY â™ª</span>
+              <span class="apu-play-tag">PLAY &#9834;</span>
             </button>
             <button class="apu-btn" type="button" data-apu="ch2">
               <div>
-                <strong>CH2 Â· Pulse Lead Harmony</strong>
+                <strong>CH2 &middot; Pulse Lead Harmony</strong>
                 <span>Crisp 50%/25% duty square lead for classic Game Boy melodies.</span>
               </div>
-              <span class="apu-play-tag">PLAY â™ª</span>
+              <span class="apu-play-tag">PLAY &#9834;</span>
             </button>
             <button class="apu-btn" type="button" data-apu="ch3">
               <div>
-                <strong>CH3 Â· 4-Bit Programmable Wave RAM</strong>
+                <strong>CH3 &middot; 4-Bit Programmable Wave RAM</strong>
                 <span>32-sample custom waveform table powering deep 8-bit basslines.</span>
               </div>
-              <span class="apu-play-tag">PLAY â™ª</span>
+              <span class="apu-play-tag">PLAY &#9834;</span>
             </button>
             <button class="apu-btn" type="button" data-apu="ch4">
               <div>
-                <strong>CH4 Â· Polynomial LFSR Noise</strong>
+                <strong>CH4 &middot; Polynomial LFSR Noise</strong>
                 <span>Pseudo-random shift-register noise for snares, hi-hats, and explosions.</span>
               </div>
-              <span class="apu-play-tag">PLAY â™ª</span>
+              <span class="apu-play-tag">PLAY &#9834;</span>
             </button>
           </div>
         </div>
@@ -410,7 +410,7 @@
           <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:1rem;">
             <button class="chip-btn active" id="mmap-tab-dmg" type="button" style="font-size:0.82rem;padding:0.35rem 0.85rem;">Original Game Boy (DMG-01)</button>
             <button class="chip-btn" id="mmap-tab-cgb" type="button" style="font-size:0.82rem;padding:0.35rem 0.85rem;">Game Boy Color (CGB-001 Dual Bank)</button>
-            <button class="chip-btn" id="mmap-tab-regs" type="button" style="font-size:0.82rem;padding:0.35rem 0.85rem;">CGB Hardware Registers ($FF4Dâ€“$FF70)</button>
+            <button class="chip-btn" id="mmap-tab-regs" type="button" style="font-size:0.82rem;padding:0.35rem 0.85rem;">CGB Hardware Registers ($FF4D&ndash;$FF70)</button>
           </div>
         </div>
 
@@ -427,61 +427,61 @@
             </thead>
             <tbody>
               <tr>
-                <td><code>$0000â€“$00FF</code></td>
+                <td><code>$0000&ndash;$00FF</code></td>
                 <td>256 B</td>
                 <td><strong>Boot ROM / Cart ROM</strong></td>
                 <td>Overlayed during boot execution. Unmapped permanently when <code>$01</code> is written to register <code>$FF50</code>.</td>
               </tr>
               <tr>
-                <td><code>$0000â€“$3FFF</code></td>
+                <td><code>$0000&ndash;$3FFF</code></td>
                 <td>16 KiB</td>
                 <td><strong>Cartridge ROM Bank 00</strong></td>
-                <td>Fixed ROM bank from cartridge. Contains interrupt vectors ($0040â€“$0060) and game entry point ($0100).</td>
+                <td>Fixed ROM bank from cartridge. Contains interrupt vectors ($0040&ndash;$0060) and game entry point ($0100).</td>
               </tr>
               <tr>
-                <td><code>$4000â€“$7FFF</code></td>
+                <td><code>$4000&ndash;$7FFF</code></td>
                 <td>16 KiB</td>
                 <td><strong>Switchable ROM Bank</strong></td>
                 <td>Bank-switched via cartridge mapper (MBC1, MBC2, MBC3). Controls up to 2 MiB of commercial Game Boy ROM data.</td>
               </tr>
               <tr>
-                <td><code>$8000â€“$9FFF</code></td>
+                <td><code>$8000&ndash;$9FFF</code></td>
                 <td>8 KiB</td>
                 <td><strong>Video RAM (VRAM)</strong></td>
-                <td>Single 8 KiB bank. Character tile patterns ($8000â€“$97FF) and Background Tile Maps ($9800â€“$9BFF and $9C00â€“$9FFF).</td>
+                <td>Single 8 KiB bank. Character tile patterns ($8000&ndash;$97FF) and Background Tile Maps ($9800&ndash;$9BFF and $9C00&ndash;$9FFF).</td>
               </tr>
               <tr>
-                <td><code>$A000â€“$BFFF</code></td>
+                <td><code>$A000&ndash;$BFFF</code></td>
                 <td>8 KiB</td>
                 <td><strong>External Cartridge RAM</strong></td>
                 <td>Battery-backed game save state and scratch RAM. Gated by RAM Enable register ($0A).</td>
               </tr>
               <tr>
-                <td><code>$C000â€“$DFFF</code></td>
+                <td><code>$C000&ndash;$DFFF</code></td>
                 <td>8 KiB</td>
                 <td><strong>Work RAM (WRAM)</strong></td>
-                <td>Internal 8 KiB static RAM for game variables, stack pointers, and dynamic buffers ($C000â€“$CFFF Bank 0, $D000â€“$DFFF Bank 1).</td>
+                <td>Internal 8 KiB static RAM for game variables, stack pointers, and dynamic buffers ($C000&ndash;$CFFF Bank 0, $D000&ndash;$DFFF Bank 1).</td>
               </tr>
               <tr>
-                <td><code>$E000â€“$FDFF</code></td>
+                <td><code>$E000&ndash;$FDFF</code></td>
                 <td>7.5 KiB</td>
                 <td><strong>Echo RAM</strong></td>
-                <td>Mirror of internal RAM $C000â€“$DDFF. Accesses in ReaBoy forward transparently to WRAM.</td>
+                <td>Mirror of internal RAM $C000&ndash;$DDFF. Accesses in ReaBoy forward transparently to WRAM.</td>
               </tr>
               <tr>
-                <td><code>$FE00â€“$FE9F</code></td>
+                <td><code>$FE00&ndash;$FE9F</code></td>
                 <td>160 B</td>
                 <td><strong>Sprite Attribute Table (OAM)</strong></td>
                 <td>40 hardware sprite definitions (Y, X, Tile Index, Flags). Evaluated during PPU Mode 2 OAM search.</td>
               </tr>
               <tr>
-                <td><code>$FF00â€“$FF7F</code></td>
+                <td><code>$FF00&ndash;$FF7F</code></td>
                 <td>128 B</td>
                 <td><strong>I/O Registers (MMIO)</strong></td>
-                <td>Hardware controls for Joypad ($FF00), Serial ($FF01â€“$02), Timers ($FF04â€“$07), 4-Channel APU ($FF10â€“$FF3F), and PPU LCDC/STAT ($FF40â€“$FF4B).</td>
+                <td>Hardware controls for Joypad ($FF00), Serial ($FF01&ndash;$02), Timers ($FF04&ndash;$07), 4-Channel APU ($FF10&ndash;$FF3F), and PPU LCDC/STAT ($FF40&ndash;$FF4B).</td>
               </tr>
               <tr>
-                <td><code>$FF80â€“$FFFE</code></td>
+                <td><code>$FF80&ndash;$FFFE</code></td>
                 <td>127 B</td>
                 <td><strong>High RAM (HRAM)</strong></td>
                 <td>Zero-page ultra-fast internal CPU RAM used for OAM DMA transfer routines and high-frequency state.</td>
@@ -509,67 +509,67 @@
             </thead>
             <tbody>
               <tr>
-                <td><code>$0000â€“$08FF</code></td>
+                <td><code>$0000&ndash;$08FF</code></td>
                 <td>2,048 B (2 KiB)</td>
                 <td><strong>CGB Boot ROM / Cart ROM</strong></td>
                 <td>2 KiB color bootstrap ROM overlaid at boot. Unmapped permanently when <code>$01</code> written to <code>$FF50</code>.</td>
               </tr>
               <tr>
-                <td><code>$0000â€“$3FFF</code></td>
+                <td><code>$0000&ndash;$3FFF</code></td>
                 <td>16 KiB</td>
                 <td><strong>Cartridge ROM Bank 00</strong></td>
-                <td>Fixed ROM bank from cartridge. Contains CGB cart header ($0134â€“$014F) and game entry point ($0100).</td>
+                <td>Fixed ROM bank from cartridge. Contains CGB cart header ($0134&ndash;$014F) and game entry point ($0100).</td>
               </tr>
               <tr>
-                <td><code>$4000â€“$7FFF</code></td>
+                <td><code>$4000&ndash;$7FFF</code></td>
                 <td>16 KiB</td>
                 <td><strong>Switchable ROM Bank</strong></td>
                 <td>Bank-switched via MBC1, MBC2, MBC3, MBC5, or MBC7. Supports up to 8 MiB of Game Boy Color cartridge ROM.</td>
               </tr>
               <tr>
-                <td><code>$8000â€“$9FFF</code></td>
+                <td><code>$8000&ndash;$9FFF</code></td>
                 <td><strong>16 KiB (Dual Bank)</strong></td>
                 <td><strong>Banked Video RAM (VRAM)</strong></td>
-                <td>Switched via <code>$FF4F (VBK)</code>: <strong>Bank 0</strong> = 8 KiB Character Tiles; <strong>Bank 1</strong> = 8 KiB Tile Color Attributes (Palettes 0â€“7, VRAM bank select, priority, horizontal/vertical flip).</td>
+                <td>Switched via <code>$FF4F (VBK)</code>: <strong>Bank 0</strong> = 8 KiB Character Tiles; <strong>Bank 1</strong> = 8 KiB Tile Color Attributes (Palettes 0&ndash;7, VRAM bank select, priority, horizontal/vertical flip).</td>
               </tr>
               <tr>
-                <td><code>$A000â€“$BFFF</code></td>
+                <td><code>$A000&ndash;$BFFF</code></td>
                 <td>8 KiB</td>
                 <td><strong>External Cartridge RAM / RTC</strong></td>
                 <td>Battery-backed game save SRAM, Real-Time Clock registers (MBC3), or Accelerometer EEPROM (MBC7).</td>
               </tr>
               <tr>
-                <td><code>$C000â€“$CFFF</code></td>
+                <td><code>$C000&ndash;$CFFF</code></td>
                 <td>4 KiB</td>
                 <td><strong>Work RAM Bank 0</strong></td>
                 <td>Fixed internal 4 KiB RAM bank mapped permanently into address space.</td>
               </tr>
               <tr>
-                <td><code>$D000â€“$DFFF</code></td>
+                <td><code>$D000&ndash;$DFFF</code></td>
                 <td><strong>32 KiB (7 Banks)</strong></td>
                 <td><strong>Switchable Work RAM (WRAM)</strong></td>
                 <td>Switched via <code>$FF70 (SVBK)</code>: Selects <strong>Bank 1 through 7</strong> into the 4 KiB window (total 32 KiB internal Work RAM for fast CGB double-buffered variables).</td>
               </tr>
               <tr>
-                <td><code>$E000â€“$FDFF</code></td>
+                <td><code>$E000&ndash;$FDFF</code></td>
                 <td>7.5 KiB</td>
                 <td><strong>Echo RAM</strong></td>
-                <td>Mirrors WRAM $C000â€“$DDFF. Handled transparently in ReaBoy's MemoryBus dispatch.</td>
+                <td>Mirrors WRAM $C000&ndash;$DDFF. Handled transparently in ReaBoy's MemoryBus dispatch.</td>
               </tr>
               <tr>
-                <td><code>$FE00â€“$FE9F</code></td>
+                <td><code>$FE00&ndash;$FE9F</code></td>
                 <td>160 B</td>
                 <td><strong>Sprite Attribute Table (OAM)</strong></td>
-                <td>40 hardware sprites with extended CGB Byte 3 flags: Palette 0â€“7 select, VRAM Bank 0/1 select, priority, and mirroring.</td>
+                <td>40 hardware sprites with extended CGB Byte 3 flags: Palette 0&ndash;7 select, VRAM Bank 0/1 select, priority, and mirroring.</td>
               </tr>
               <tr>
-                <td><code>$FF00â€“$FF7F</code></td>
+                <td><code>$FF00&ndash;$FF7F</code></td>
                 <td>128 B</td>
                 <td><strong>CGB I/O Registers (MMIO)</strong></td>
-                <td>Includes KEY1 ($FF4D double-speed), VBK ($FF4F), HDMA ($FF51â€“55), Palette RAM ($FF68â€“6B), and SVBK ($FF70).</td>
+                <td>Includes KEY1 ($FF4D double-speed), VBK ($FF4F), HDMA ($FF51&ndash;55), Palette RAM ($FF68&ndash;6B), and SVBK ($FF70).</td>
               </tr>
               <tr>
-                <td><code>$FF80â€“$FFFE</code></td>
+                <td><code>$FF80&ndash;$FFFE</code></td>
                 <td>127 B</td>
                 <td><strong>High RAM (HRAM)</strong></td>
                 <td>Zero-page fast RAM executed during DMA transfers and critical hardware synchronization loops.</td>
@@ -606,19 +606,19 @@
                 <td><code>$FF4F</code></td>
                 <td><strong>VBK</strong></td>
                 <td>R/W</td>
-                <td><strong>VRAM Bank Select:</strong> Bit 0 selects active Video RAM bank (0 or 1) mapped into $8000â€“$9FFF. Bank 0 holds tile patterns; Bank 1 holds palette and attribute maps.</td>
+                <td><strong>VRAM Bank Select:</strong> Bit 0 selects active Video RAM bank (0 or 1) mapped into $8000&ndash;$9FFF. Bank 0 holds tile patterns; Bank 1 holds palette and attribute maps.</td>
               </tr>
               <tr>
-                <td><code>$FF51â€“$FF52</code></td>
-                <td><strong>HDMA1â€“2</strong></td>
+                <td><code>$FF51&ndash;$FF52</code></td>
+                <td><strong>HDMA1&ndash;2</strong></td>
                 <td>W</td>
-                <td><strong>New DMA Source Address:</strong> High &amp; Low bytes specify ROM or RAM source ($0000â€“$7FF0 or $A000â€“$DFF0) aligned to 16-byte boundaries.</td>
+                <td><strong>New DMA Source Address:</strong> High &amp; Low bytes specify ROM or RAM source ($0000&ndash;$7FF0 or $A000&ndash;$DFF0) aligned to 16-byte boundaries.</td>
               </tr>
               <tr>
-                <td><code>$FF53â€“$FF54</code></td>
-                <td><strong>HDMA3â€“4</strong></td>
+                <td><code>$FF53&ndash;$FF54</code></td>
+                <td><strong>HDMA3&ndash;4</strong></td>
                 <td>W</td>
-                <td><strong>New DMA Destination:</strong> High &amp; Low bytes specify VRAM destination ($8000â€“$9FF0) aligned to 16-byte boundaries.</td>
+                <td><strong>New DMA Destination:</strong> High &amp; Low bytes specify VRAM destination ($8000&ndash;$9FF0) aligned to 16-byte boundaries.</td>
               </tr>
               <tr>
                 <td><code>$FF55</code></td>
@@ -630,7 +630,7 @@
                 <td><code>$FF68</code></td>
                 <td><strong>BCPS</strong></td>
                 <td>R/W</td>
-                <td><strong>Background Palette Specification:</strong> Bits 0â€“5 index color bytes 0â€“63 (8 palettes Ã— 4 colors Ã— 2 bytes). Bit 7 enables Auto-Increment after every write to $FF69.</td>
+                <td><strong>Background Palette Specification:</strong> Bits 0&ndash;5 index color bytes 0&ndash;63 (8 palettes Ã— 4 colors Ã— 2 bytes). Bit 7 enables Auto-Increment after every write to $FF69.</td>
               </tr>
               <tr>
                 <td><code>$FF69</code></td>
@@ -642,19 +642,19 @@
                 <td><code>$FF6A</code></td>
                 <td><strong>OCPS</strong></td>
                 <td>R/W</td>
-                <td><strong>Object / Sprite Palette Specification:</strong> Bits 0â€“5 index sprite palette bytes 0â€“63 with optional Auto-Increment (bit 7).</td>
+                <td><strong>Object / Sprite Palette Specification:</strong> Bits 0&ndash;5 index sprite palette bytes 0&ndash;63 with optional Auto-Increment (bit 7).</td>
               </tr>
               <tr>
                 <td><code>$FF6B</code></td>
                 <td><strong>OCPD</strong></td>
                 <td>R/W</td>
-                <td><strong>Object / Sprite Palette Data:</strong> Read/write sprite 15-bit RGB555 palette RAM for hardware sprites 0â€“39.</td>
+                <td><strong>Object / Sprite Palette Data:</strong> Read/write sprite 15-bit RGB555 palette RAM for hardware sprites 0&ndash;39.</td>
               </tr>
               <tr>
                 <td><code>$FF70</code></td>
                 <td><strong>SVBK</strong></td>
                 <td>R/W</td>
-                <td><strong>WRAM Bank Select:</strong> Bits 0â€“2 select Work RAM bank 1 through 7 mapped into $D000â€“$DFFF (values 0 and 1 both map Bank 1). Total 32 KiB internal RAM.</td>
+                <td><strong>WRAM Bank Select:</strong> Bits 0&ndash;2 select Work RAM bank 1 through 7 mapped into $D000&ndash;$DFFF (values 0 and 1 both map Bank 1). Total 32 KiB internal RAM.</td>
               </tr>
             </tbody>
           </table>
@@ -717,7 +717,7 @@
               </tr>
               <tr>
                 <td><strong>Pixel Rendering Pipeline</strong></td>
-                <td style="background:rgba(47,224,117,0.04);"><strong>Dot-Accurate Dual Pixel FIFO</strong><br><span style="font-size:0.82rem;color:var(--text-muted);">Zero-heap BgFifo &amp; ObjFifo, Acid2 0/23,040 diff, 1,020â€“1,354 FPS</span></td>
+                <td style="background:rgba(47,224,117,0.04);"><strong>Dot-Accurate Dual Pixel FIFO</strong><br><span style="font-size:0.82rem;color:var(--text-muted);">Zero-heap BgFifo &amp; ObjFifo, Acid2 0/23,040 diff, 1,020&ndash;1,354 FPS</span></td>
                 <td><strong>Dot-Accurate Pixel FIFO</strong><br><span style="font-size:0.82rem;color:var(--text-muted);">Cycle-accurate LCD controller emulation</span></td>
                 <td><strong>Cycle-Accurate Scanline Renderer</strong><br><span style="font-size:0.82rem;color:var(--text-muted);">Highly refined timing validation</span></td>
               </tr>
@@ -768,7 +768,7 @@
               <li style="margin-bottom:0.5rem;"><strong>macOS Native Experience:</strong> First-class native Cocoa frontend with Metal acceleration on macOS.</li>
               <li style="margin-bottom:0.5rem;"><strong>Instruction Breakpoint Debugging:</strong> Powerful integrated assembly debugger, memory inspector, and VRAM viewer for reverse engineers.</li>
               <li style="margin-bottom:0.5rem;"><strong>Extensive Peripheral Emulation:</strong> Excellent Game Boy Camera, Barcode Boy, and WorkBoy support.</li>
-              <li>Official Site: <a href="https://sameboy.github.io/" target="_blank" rel="noopener">sameboy.github.io â†—</a></li>
+              <li>Official Site: <a href="https://sameboy.github.io/" target="_blank" rel="noopener">sameboy.github.io &#8599;</a></li>
             </ul>
           </div>
 
@@ -778,7 +778,7 @@
               <li style="margin-bottom:0.5rem;"><strong>Homebrew Production:</strong> BGB is universally revered as the benchmark tool for developing new Game Boy software.</li>
               <li style="margin-bottom:0.5rem;"><strong>Exhaustive Hardware Profiler:</strong> Trace execution cycles, inspect register state, and benchmark instruction timings.</li>
               <li style="margin-bottom:0.5rem;"><strong>Link Cable Emulation:</strong> Excellent TCP/IP and local link cable multiplayer emulation support.</li>
-              <li>Official Site: <a href="https://bgb.bircd.org/" target="_blank" rel="noopener">bgb.bircd.org â†—</a></li>
+              <li>Official Site: <a href="https://bgb.bircd.org/" target="_blank" rel="noopener">bgb.bircd.org &#8599;</a></li>
             </ul>
           </div>
 
@@ -806,7 +806,7 @@
             <div>
               <h4 style="margin:0 0 0.4rem;font-size:0.95rem;color:var(--gb-0);">3. Controlled Commercial Cartridge Matrix</h4>
               <p style="margin:0;font-size:0.86rem;color:var(--text-muted);line-height:1.5;">
-                600â€“900 frame telemetry verification across 19 commercial cartridges spanning Category A (DMG), Category B (Dual $80), and Category C (CGB $C0), running at 1,020â€“1,354 FPS with zero heap allocations per frame.
+                600&ndash;900 frame telemetry verification across 19 commercial cartridges spanning Category A (DMG), Category B (Dual $80), and Category C (CGB $C0), running at 1,020&ndash;1,354 FPS with zero heap allocations per frame.
               </p>
             </div>
           </div>
@@ -875,28 +875,28 @@
                   <td><span class="pill pill-sm">CGB PD (MBC5)</span></td>
                   <td>Palette RAM (BCPD/OCPD) rapid mid-scanline switching stress test</td>
                   <td><strong>VERIFIED PASS</strong></td>
-                  <td>524 FPS Â· Stable</td>
+                  <td>524 FPS &middot; Stable</td>
                 </tr>
                 <tr>
                   <td><strong>175 Sprite Parallax Starfield</strong></td>
                   <td><span class="pill pill-sm">CGB PD (ROM Only)</span></td>
                   <td>OAM DMA dynamic sprite multiplexing &amp; 10-sprite scanline limit</td>
                   <td><strong>VERIFIED PASS</strong></td>
-                  <td>340 FPS Â· Stable</td>
+                  <td>340 FPS &middot; Stable</td>
                 </tr>
                 <tr>
                   <td><strong>DarkFader 3D Red Rotating Cube</strong></td>
                   <td><span class="pill pill-sm">CGB PD (ROM Only)</span></td>
                   <td>8.388 MHz double-speed software matrix 3D projection &amp; double-buffering</td>
                   <td><strong>VERIFIED PASS</strong></td>
-                  <td>510 FPS Â· Stable</td>
+                  <td>510 FPS &middot; Stable</td>
                 </tr>
                 <tr>
                   <td><strong>40x18 / 40x24 High-Density Text</strong></td>
                   <td><span class="pill pill-sm">CGB PD (ROM Only)</span></td>
                   <td>Tile VRAM banking ($VBK=0/1) high-frequency mid-frame switching</td>
                   <td><strong>VERIFIED PASS</strong></td>
-                  <td>456 FPS Â· Stable</td>
+                  <td>456 FPS &middot; Stable</td>
                 </tr>
                 <tr>
                   <td><strong>Blargg SM83 Instruction &amp; Timing</strong></td>
@@ -926,7 +926,7 @@
             </p>
             <div class="compat-cta-actions">
               <a class="btn btn-primary btn-compat-cta" href="compatibility.html">
-                Open Games Tested Database (2,561+) â†’
+                Open Games Tested Database (2,561+) &rarr;
               </a>
             </div>
           </div>
@@ -944,7 +944,7 @@
           <span>ReaBoy</span>
         </a>
         <p class="footer-tagline">
-          Pure 1989 silicon fidelity: the scientific, bit-exact Game Boy &amp; Color emulator for Windows x64. Engineered by <strong>BJ Studios â€” Manchester, England</strong> Â· &copy; 2026 BJ Studios. Built with precision for emulation purists.
+          Pure 1989 silicon fidelity: the scientific, bit-exact Game Boy &amp; Color emulator for Windows x64. Engineered by <strong>BJ Studios &mdash; Manchester, England</strong> &middot; &copy; 2026 BJ Studios. Built with precision for emulation purists.
         </p>
         <p class="footer-disclaimer">
           ReaBoy is an independent open-source emulator. Not affiliated with or endorsed by Nintendo. All Game Boy trademarks and titles belong to their respective rights holders.
@@ -957,8 +957,8 @@
           <li><a href="https://github.com/ScientificBrad/ReaBoy/releases/latest/download/ReaBoy-v2.0-win-x64.zip">ReaBoy v2.0 (Windows x64)</a></li>
           <li><a href="downloads/ReaBoy-2.0-Android.apk">ReaBoy v2.0 for Android (.apk)</a></li>
           <li><a href="https://raw.githubusercontent.com/ScientificBrad/ReaBoy/main/install.ps1">install.ps1 (CLI Installer)</a></li>
-          <li><a href="https://github.com/ScientificBrad/ReaBoy/releases/latest/download/SHA256SUMS.txt">SHA256 Checksums â†—</a></li>
-          <li><a href="https://github.com/ScientificBrad/ReaBoy/releases" target="_blank" rel="noopener">Release Notes (v2.0) â†—</a></li>
+          <li><a href="https://github.com/ScientificBrad/ReaBoy/releases/latest/download/SHA256SUMS.txt">SHA256 Checksums &#8599;</a></li>
+          <li><a href="https://github.com/ScientificBrad/ReaBoy/releases" target="_blank" rel="noopener">Release Notes (v2.0) &#8599;</a></li>
         </ul>
       </div>
 
@@ -970,16 +970,16 @@
           <li><a href="compatibility.html">Games Tested (2,561+ Titles)</a></li>
           <li><a href="rom-demos.html">Non-Commercial ROM Demos</a></li>
           <li><a href="manual.html">Official User Manual</a></li>
-          <li><a href="https://github.com/ScientificBrad/ReaBoy/blob/main/rom/BOOTIX-LICENSE.txt" target="_blank" rel="noopener">Bootix CC0-1.0 Licence â†—</a></li>
+          <li><a href="https://github.com/ScientificBrad/ReaBoy/blob/main/rom/BOOTIX-LICENSE.txt" target="_blank" rel="noopener">Bootix CC0-1.0 Licence &#8599;</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
         <h4>Open Source</h4>
         <ul class="footer-links">
-          <li><a href="https://github.com/ScientificBrad/ReaBoy" target="_blank" rel="noopener">GitHub Repository â†—</a></li>
-          <li><a href="https://github.com/ScientificBrad/ReaBoy/issues" target="_blank" rel="noopener">Issue Tracker â†—</a></li>
-          <li><a href="https://github.com/ScientificBrad/ReaBoy/blob/main/LICENSE" target="_blank" rel="noopener">MIT License â†—</a></li>
+          <li><a href="https://github.com/ScientificBrad/ReaBoy" target="_blank" rel="noopener">GitHub Repository &#8599;</a></li>
+          <li><a href="https://github.com/ScientificBrad/ReaBoy/issues" target="_blank" rel="noopener">Issue Tracker &#8599;</a></li>
+          <li><a href="https://github.com/ScientificBrad/ReaBoy/blob/main/LICENSE" target="_blank" rel="noopener">MIT License &#8599;</a></li>
         </ul>
       </div>
     </div>
