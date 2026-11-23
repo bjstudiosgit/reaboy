@@ -513,7 +513,12 @@
       dmgVideo.hidden = false;
       dmgVideo.loop = true;
       dmgVideo.poster = game.poster;
-      if (dmgVideo.getAttribute('data-active-src') !== game.video) {
+
+      // Remove any lingering child <source> elements so browser relies solely on dmgVideo.src
+      const childSources = dmgVideo.querySelectorAll('source');
+      childSources.forEach(s => s.remove());
+
+      if (dmgVideo.getAttribute('data-active-src') !== game.video || !dmgVideo.src.includes(game.video.split('?')[0])) {
         dmgVideo.setAttribute('data-active-src', game.video);
         dmgVideo.src = game.video;
         dmgVideo.load();
@@ -523,6 +528,13 @@
       if (playPromise && typeof playPromise.catch === 'function') {
         playPromise.catch(() => {});
       }
+    }
+
+    if (dmgFrame) {
+      dmgFrame.classList.remove('cartridge-swap');
+      void dmgFrame.offsetWidth; // trigger reflow for css animation
+      dmgFrame.classList.add('cartridge-swap');
+      setTimeout(() => dmgFrame.classList.remove('cartridge-swap'), 240);
     }
 
     const nextGame = dmgPlaylist[(dmgGameIdx + 1) % dmgPlaylist.length];
@@ -542,8 +554,31 @@
   }
 
   if (dmgConsole) {
-    dmgConsole.setAttribute('title', 'Click to switch between Game Boy Color & Game Boy classics!');
+    dmgConsole.setAttribute('title', 'Click console or screen to switch between Game Boy Color & Game Boy classics!');
     renderDmgSlide(0);
+
+    // Direct click handler on the screen frame
+    if (dmgFrame) {
+      dmgFrame.addEventListener('click', (e) => {
+        e.stopPropagation();
+        playBootChime();
+        switchDmgGame(1);
+        dmgConsole.classList.add('dmg-active');
+        setTimeout(() => dmgConsole.classList.remove('dmg-active'), 160);
+      });
+    }
+
+    // Direct click handler on the now-playing badge
+    const dmgNowPlaying = $('#dmg-now-playing');
+    if (dmgNowPlaying) {
+      dmgNowPlaying.style.cursor = 'pointer';
+      dmgNowPlaying.setAttribute('title', 'Click to switch games');
+      dmgNowPlaying.addEventListener('click', () => {
+        playBootChime();
+        switchDmgGame(1);
+      });
+    }
+
     dmgConsole.addEventListener('click', (e) => {
       const isControl = e.target.closest('[data-gb-btn]');
       if (!isControl) {

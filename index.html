@@ -40,7 +40,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Press+Start+2P&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/styles.css?v=1.3.7">
+  <link rel="stylesheet" href="css/styles.css?v=1.3.8">
 
     <!-- Structured Data (JSON-LD) for Game Boy Emulator SEO -->
   <script type="application/ld+json">
@@ -141,14 +141,12 @@
                   <span class="led-dot"></span>
                   <span>BATTERY</span>
                 </div>
-                <div class="dmg-screen-frame" id="dmg-screen-frame">
-                  <img id="dmg-cgb-img" hidden src="assets/img/shots/cgb/super-mario-bros-deluxe-u-v11-c.png" alt="Super Mario Bros. Deluxe running in Game Boy Color mode" style="width:100%;height:100%;object-fit:cover;image-rendering:pixelated;vertical-align:top;">
-                  <video id="dmg-video" autoplay loop muted playsinline preload="auto" poster="assets/img/shots/cgb/super-mario-bros-deluxe-u-v11-c.png" aria-label="Real ReaBoy v2.0 gameplay capture">
-                    <source src="assets/video/cgb-super-mario-bros-deluxe.mp4?v=2.0.0" type="video/mp4">
+                <div class="dmg-screen-frame" id="dmg-screen-frame" style="cursor: pointer;" title="Click screen to switch games!">
+                  <video id="dmg-video" autoplay loop muted playsinline preload="auto" src="assets/video/cgb-super-mario-bros-deluxe.mp4?v=2.0.0" poster="assets/img/shots/cgb/super-mario-bros-deluxe-u-v11-c.png" aria-label="Real ReaBoy v2.0 gameplay capture" style="cursor: pointer;">
                     <img src="assets/img/boot-preview.gif" alt="ReaBoy gameplay capture">
                   </video>
                   <canvas id="dmg-canvas" width="160" height="144" hidden aria-label="Interactive pixel-art ReaBoy boot screen"></canvas>
-                  <div class="dmg-scanlines"></div>
+                  <div class="dmg-scanlines" style="pointer-events: none;"></div>
                 </div>
               </div>
             </div>
@@ -477,9 +475,6 @@
       <div class="wrap">
         <div class="section-head reveal" style="margin-bottom: 1.5rem;">
           <div>
-            <p class="eyebrow" style="color:var(--gb-0); letter-spacing: 0.12em; font-weight:700;">
-              HANDHELD MASTERPIECES · 12 BEST GAMES
-            </p>
             <h2 style="font-size: clamp(1.6rem, 2.6vw, 2.2rem); line-height: 1.15; margin:0 0 0.5rem;">
               The Best of Game Boy &amp; Game Boy Color.<br>
               <span class="highlight">Live Gameplay Animations at 60 FPS.</span>
@@ -870,6 +865,6 @@
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-  <script src="js/app.js?v=2.2.6" defer></script>
+  <script src="js/app.js?v=2.2.7" defer></script>
 </body>
 </html>
