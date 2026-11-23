@@ -3,6 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google Tag Manager / Google tag -->
+  <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-K8P8PT9Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  </script>
   <title>User Manual &amp; Setup Guide | ReaBoy Game Boy &amp; Color Emulator</title>
   <meta name="description" content="Official ReaBoy user manual: Game Boy &amp; Game Boy Color hardware modes, controls, ROM loading, battery saves, and MBC1–MBC7 mapper guide.">
   <meta name="robots" content="index, follow">
@@ -12,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Press+Start+2P&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=1.3.6">
+  <link rel="stylesheet" href="css/styles.css?v=1.3.7">
 
   <!-- Open Graph -->
   <meta property="og:type" content="article">
@@ -68,6 +75,7 @@
             <nav class="nav-links" id="nav-links" aria-label="Primary Navigation">
         <a href="index.html">Home</a>
         <a href="compatibility.html">Games Tested (2,561+)</a>
+        <a href="rom-demos.html">ROM Demos</a>
         <a href="development.html">Development</a>
         <a class="active" href="manual.html">User Manual</a>
         <a href="https://github.com/ScientificBrad/ReaBoy/issues" target="_blank" rel="noopener">Report Bug ↗</a>
@@ -89,6 +97,7 @@
         <li><a href="#cli">7. Command-Line &amp; Headless Mode</a></li>
         <li><a href="#checksums">8. SHA-256 Verification</a></li>
         <li><a href="#compatibility">9. Compatibility &amp; BETA Roadmap</a></li>
+        <li><a href="#android">10. Android Mobile Edition (.apk)</a></li>
       </ul>
     </aside>
 
@@ -105,9 +114,10 @@
         <h2>1. Quick Start &amp; System Requirements</h2>
         <p>Open <code>ReaBoy.exe</code>. No separate .NET installation and no administrator rights are required. The application starts directly on the no-cartridge logo screen using the bundled open-source Bootix firmware (unless <strong>File &gt; Skip Intro</strong> is checked).</p>
         <ul>
-          <li><strong>Load a game:</strong> Drag and drop any <code>.gb</code> ROM onto the ReaBoy window, choose <strong>File &gt; Open ROM</strong> (<code>Ctrl+O</code>), or pass the file path on the command line.</li>
-          <li><strong>OS requirement:</strong> Windows 10 or Windows 11 (64-bit x64).</li>
-          <li><strong>Audio requirement:</strong> Standard Windows WinMM audio output device.</li>
+          <li><strong>Load a game:</strong> Drag and drop any <code>.gb</code> or <code>.gbc</code> ROM onto the ReaBoy window, choose <strong>File &gt; Open ROM</strong> (<code>Ctrl+O</code>), or pass the file path on the command line. On Android, tap the folder icon or use the native file picker.</li>
+          <li><strong>Desktop requirement:</strong> Windows 10 or Windows 11 (64-bit x64).</li>
+          <li><strong>Mobile requirement:</strong> Android 7.0+ (API 24+) on ARM64, ARMv7, or x86_64 devices.</li>
+          <li><strong>Audio requirement:</strong> Standard Windows WinMM audio output device or Android OpenSL/AudioTrack.</li>
           <li><strong>Commercial games:</strong> Game ROMs are not supplied. Keep your legally owned dumps in the <code>rom/</code> folder or open them from any directory.</li>
         </ul>
       </section>
@@ -299,6 +309,7 @@ ReaBoy.exe game.gb --headless --skip-intro --frames 600</code></pre>
             <button class="copy-btn" type="button" data-copy-target="sha-sums">Copy</button>
           </div>
           <pre><code id="sha-sums">047ec920a3c96fd3ed8c72b8ff6a84f92cc85b6cc4396beef7da151d7a2a1860  ReaBoy-v2.0-win-x64.zip
+290d8b3ec9320628ea59df897b52edd397dfe1f3509b691e9100b3c489e08510  ReaBoy-2.0-Android.apk
 790dd6733e9055896e4ad6ca624ccd2053608613fc8bdaf0345d80de575d028d  ReaBoy.exe
 6f156240898855061e647fed63ddc0ec0dae76a527f6d23d0423fd435e8b716c  install.ps1
 c313435280dda8ccfae0786c7159aab791a00930605101c647794f64bfa17b5e  dmg_boot.bin</code></pre>
@@ -326,6 +337,29 @@ c313435280dda8ccfae0786c7159aab791a00930605101c647794f64bfa17b5e  dmg_boot.bin</
         <h3>Verified Test ROM Suites (63 / 63 Passing)</h3>
         <p>184 automated tests continuously executed, including 16 Blargg CPU/timing/halt_bug suites, 37 Mooneye-GB acceptance &amp; MBC2 tests, 2 Matt Currie Acid2 suites (<code>dmg-acid2.gb</code> and <code>cgb-acid2.gbc</code> with 0 / 23,040 pixel diff), and 8 MagenTests CGB suites.</p>
       </section>
+
+      <section class="manual-block" id="android">
+        <h2>10. Android Mobile Edition (.apk)</h2>
+        <p>ReaBoy v2.0 is officially available for Android devices (smartphones, tablets, and handheld consoles) via standalone APK sideloading.</p>
+        
+        <h3>Installation Guide</h3>
+        <ol>
+          <li>Download <code>ReaBoy-2.0-Android.apk</code> (29.8 MB) from the <a href="downloads/ReaBoy-2.0-Android.apk">Direct Downloads</a> link or GitHub Releases.</li>
+          <li>Tap the downloaded file in your browser's Downloads or file manager.</li>
+          <li>If prompted by Android security, toggle <strong>Allow from this source</strong> (under <em>Install unknown apps</em>).</li>
+          <li>Tap <strong>Install</strong>. Once complete, ReaBoy appears in your app launcher ready to play.</li>
+        </ol>
+
+        <h3>Features &amp; Mobile Architecture</h3>
+        <ul>
+          <li><strong>Universal Architecture:</strong> Supports 64-bit ARM (<code>arm64-v8a</code>), 32-bit ARM (<code>armeabi-v7a</code>), and 64-bit x86 (<code>x86_64</code>) in a single unified release package.</li>
+          <li><strong>Touch Controls:</strong> On-screen responsive D-Pad, A/B buttons, and Select/Start buttons with haptic tactile vibration feedback.</li>
+          <li><strong>Hardware Acceleration:</strong> Smooth integer scaling and scanline rendering via Android SurfaceView and hardware compositing.</li>
+          <li><strong>ROM Loading:</strong> Built-in storage picker supporting <code>.gb</code> and <code>.gbc</code> files directly from internal storage or SD cards.</li>
+          <li><strong>Battery Saves:</strong> Saves write automatically to standard <code>.sav</code> files in <code>Documents/ReaBoy/saves</code>, allowing seamless save sharing with the Windows desktop version.</li>
+          <li><strong>Privacy First:</strong> Requires zero internet access permissions, features zero advertising, and contains zero tracking analytics.</li>
+        </ul>
+      </section>
     </article>
   </main>
 
@@ -348,7 +382,8 @@ c313435280dda8ccfae0786c7159aab791a00930605101c647794f64bfa17b5e  dmg_boot.bin</
       <div class="footer-col">
         <h4>Downloads</h4>
         <ul class="footer-links">
-          <li><a href="https://github.com/ScientificBrad/ReaBoy/releases/latest/download/ReaBoy-v2.0-win-x64.zip">ReaBoy v2.0 (64-Bit ZIP)</a></li>
+          <li><a href="https://github.com/ScientificBrad/ReaBoy/releases/latest/download/ReaBoy-v2.0-win-x64.zip">ReaBoy v2.0 (Windows x64)</a></li>
+          <li><a href="downloads/ReaBoy-2.0-Android.apk">ReaBoy v2.0 for Android (.apk)</a></li>
           <li><a href="https://raw.githubusercontent.com/ScientificBrad/ReaBoy/main/install.ps1">install.ps1 (CLI Installer)</a></li>
           <li><a href="https://github.com/ScientificBrad/ReaBoy/releases/latest/download/SHA256SUMS.txt">SHA256 Checksums ↗</a></li>
           <li><a href="https://github.com/ScientificBrad/ReaBoy/releases" target="_blank" rel="noopener">Release Notes (v2.0) ↗</a></li>
@@ -361,6 +396,7 @@ c313435280dda8ccfae0786c7159aab791a00930605101c647794f64bfa17b5e  dmg_boot.bin</
           <li><a href="development.html">Architecture &amp; Development</a></li>
           <li><a href="development.html#comparison">Comparison (SameBoy &amp; BGB)</a></li>
           <li><a href="compatibility.html">Games Tested (2,561+ Titles)</a></li>
+          <li><a href="rom-demos.html">Non-Commercial ROM Demos</a></li>
           <li><a href="manual.html">Official User Manual</a></li>
           <li><a href="https://github.com/ScientificBrad/ReaBoy/blob/main/rom/BOOTIX-LICENSE.txt" target="_blank" rel="noopener">Bootix CC0-1.0 Licence ↗</a></li>
         </ul>
@@ -378,6 +414,6 @@ c313435280dda8ccfae0786c7159aab791a00930605101c647794f64bfa17b5e  dmg_boot.bin</
   </footer>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
-  <script src="js/app.js?v=2.2.5" defer></script>
+  <script src="js/app.js?v=2.2.6" defer></script>
 </body>
 </html>

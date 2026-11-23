@@ -458,21 +458,29 @@
   const dmgPlatformPill = $('#dmg-platform-pill');
   const dmgGameLabel = $('#dmg-game-label');
   const dmgPlaylist = [
-    { title: "Super Mario Bros. Deluxe (1999)", platform: "CGB", image: "assets/img/shots/cgb/super-mario-bros-deluxe-u-v11-c.png" },
-    { title: "Super Mario Land 2 (1992)", platform: "DMG", video: "assets/video/super-mario-land-2.mp4", poster: "assets/img/shots/super-mario-land-2-6-golden-coins.png" },
-    { title: "Pokémon Crystal (2000)", platform: "CGB", image: "assets/img/shots/cgb/pokemon-crystal-version-ue-v11-c.png" },
-    { title: "Tetris (1989)", platform: "DMG", video: "assets/video/tetris.mp4?v=1.1.0", poster: "assets/img/shots/tetris.png" },
-    { title: "Link's Awakening DX (1998)", platform: "CGB", image: "assets/img/shots/cgb/legend-of-zelda-the-links-awakening-dx-u-v12-c.png" },
-    { title: "Pokémon Red (1996)", platform: "DMG", video: "assets/video/pokemon-red.mp4", poster: "assets/img/shots/pokemon-red.png" },
-    { title: "Zelda: Oracle of Ages (2001)", platform: "CGB", image: "assets/img/shots/cgb/legend-of-zelda-the-oracle-of-ages-u-c.png" },
-    { title: "Metroid II: Return of Samus (1991)", platform: "DMG", video: "assets/video/metroid-2.mp4", poster: "assets/img/shots/metroid-ii-return-of-samus.png" },
-    { title: "Wario Land 3 (2000)", platform: "CGB", image: "assets/img/shots/cgb/wario-land-3-ju-m2-c.png" },
-    { title: "Kirby's Dream Land (1992)", platform: "DMG", video: "assets/video/kirbys-dream-land.mp4", poster: "assets/img/shots/kirby-s-dream-land.png" },
-    { title: "Shantae (2002)", platform: "CGB", image: "assets/img/shots/cgb/shantae-u-c.png" },
-    { title: "Donkey Kong '94 (1994)", platform: "DMG", video: "assets/video/donkey-kong.mp4", poster: "assets/img/shots/donkey-kong.png" }
+    { title: "Super Mario Bros. Deluxe (1999)", platform: "CGB", video: "assets/video/cgb-super-mario-bros-deluxe.mp4?v=2.0.0", poster: "assets/img/shots/cgb/super-mario-bros-deluxe-u-v11-c.png" },
+    { title: "Super Mario Land 2 (1992)", platform: "DMG", video: "assets/video/super-mario-land-2.mp4?v=2.0.0", poster: "assets/img/shots/super-mario-land-2-6-golden-coins.png" },
+    { title: "Pokémon Crystal (2000)", platform: "CGB", video: "assets/video/cgb-pokemon-crystal.mp4?v=2.0.0", poster: "assets/img/shots/cgb/pokemon-crystal-version-ue-v11-c.png" },
+    { title: "Tetris (1989)", platform: "DMG", video: "assets/video/tetris.mp4?v=2.0.0", poster: "assets/img/shots/tetris.png" },
+    { title: "Link's Awakening DX (1998)", platform: "CGB", video: "assets/video/cgb-links-awakening-dx.mp4?v=2.0.0", poster: "assets/img/shots/cgb/legend-of-zelda-the-links-awakening-dx-u-v12-c.png" },
+    { title: "Pokémon Red (1996)", platform: "DMG", video: "assets/video/pokemon-red.mp4?v=2.0.0", poster: "assets/img/shots/pokemon-red.png" },
+    { title: "Zelda: Oracle of Ages (2001)", platform: "CGB", video: "assets/video/cgb-oracle-of-ages.mp4?v=2.0.0", poster: "assets/img/shots/cgb/legend-of-zelda-the-oracle-of-ages-u-c.png" },
+    { title: "Metroid II: Return of Samus (1991)", platform: "DMG", video: "assets/video/metroid-2.mp4?v=2.0.0", poster: "assets/img/shots/metroid-ii-return-of-samus.png" },
+    { title: "Wario Land 3 (2000)", platform: "CGB", video: "assets/video/cgb-wario-land-3.mp4?v=2.0.0", poster: "assets/img/shots/cgb/wario-land-3-ju-m2-c.png" },
+    { title: "Kirby's Dream Land (1992)", platform: "DMG", video: "assets/video/kirbys-dream-land.mp4?v=2.0.0", poster: "assets/img/shots/kirby-s-dream-land.png" },
+    { title: "Metal Gear Solid (2000)", platform: "CGB", video: "assets/video/cgb-metal-gear-solid.mp4?v=2.0.0", poster: "assets/img/shots/cgb/metal-gear-solid-u-c.png" },
+    { title: "Donkey Kong '94 (1994)", platform: "DMG", video: "assets/video/donkey-kong.mp4?v=2.0.0", poster: "assets/img/shots/donkey-kong.png" }
   ];
   let dmgGameIdx = 0;
   let dmgSlideTimer = null;
+
+  function preloadHeroVideo(url) {
+    if (!url) return;
+    const v = document.createElement('video');
+    v.preload = 'metadata';
+    v.muted = true;
+    v.src = url;
+  }
 
   function renderDmgSlide(index) {
     clearTimeout(dmgSlideTimer);
@@ -498,30 +506,29 @@
       dmgGameLabel.textContent = game.title;
     }
 
-    if (game.platform === 'CGB') {
-      if (dmgVideo) {
-        dmgVideo.pause();
-        dmgVideo.hidden = true;
-      }
-      if (dmgCgbImg) {
-        dmgCgbImg.src = game.image;
-        dmgCgbImg.alt = `${game.title} running in Game Boy Color mode`;
-        dmgCgbImg.hidden = false;
-      }
-      dmgSlideTimer = setTimeout(() => switchDmgGame(1, true), 5000);
-    } else {
-      if (dmgCgbImg) {
-        dmgCgbImg.hidden = true;
-      }
-      if (dmgVideo) {
-        dmgVideo.hidden = false;
-        dmgVideo.src = game.video;
-        dmgVideo.poster = game.poster;
-        dmgVideo.currentTime = 0;
-        dmgVideo.play().catch(() => {});
-      }
-      dmgSlideTimer = setTimeout(() => switchDmgGame(1, true), 7000);
+    if (dmgCgbImg) {
+      dmgCgbImg.hidden = true;
     }
+    if (dmgVideo) {
+      dmgVideo.hidden = false;
+      dmgVideo.loop = true;
+      dmgVideo.poster = game.poster;
+      if (dmgVideo.getAttribute('data-active-src') !== game.video) {
+        dmgVideo.setAttribute('data-active-src', game.video);
+        dmgVideo.src = game.video;
+        dmgVideo.load();
+      }
+      try { dmgVideo.currentTime = 0; } catch (_) {}
+      const playPromise = dmgVideo.play();
+      if (playPromise && typeof playPromise.catch === 'function') {
+        playPromise.catch(() => {});
+      }
+    }
+
+    const nextGame = dmgPlaylist[(dmgGameIdx + 1) % dmgPlaylist.length];
+    if (nextGame && nextGame.video) preloadHeroVideo(nextGame.video);
+
+    dmgSlideTimer = setTimeout(() => switchDmgGame(1, true), 9000);
   }
 
   function switchDmgGame(step = 1, silent = false) {

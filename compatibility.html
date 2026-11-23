@@ -3,6 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google Tag Manager / Google tag -->
+  <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-K8P8PT9Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  </script>
   <title>Game Boy &amp; Color Compatibility Database (2,561 Games) | ReaBoy</title>
   <meta name="description" content="Search 2,561+ canonical Game Boy (DMG-01) and Game Boy Color (CGB) titles verified in ReaBoy. Real-time header inspection and verified test telemetry.">
   <meta name="robots" content="index, follow">
@@ -12,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Press+Start+2P&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=1.3.6">
+  <link rel="stylesheet" href="css/styles.css?v=1.3.7">
 
   <!-- OpenGraph -->
   <meta property="og:type" content="website">
@@ -54,6 +61,7 @@
             <nav class="nav-links" id="nav-links" aria-label="Primary Navigation">
         <a href="index.html">Home</a>
         <a class="active" href="compatibility.html">Games Tested (2,561+)</a>
+        <a href="rom-demos.html">ROM Demos</a>
         <a href="development.html">Development</a>
         <a href="manual.html">User Manual</a>
         <a href="https://github.com/ScientificBrad/ReaBoy/issues" target="_blank" rel="noopener">Report Bug ↗</a>
@@ -332,7 +340,8 @@
       <div class="footer-col">
         <h4>Downloads</h4>
         <ul class="footer-links">
-          <li><a href="https://github.com/ScientificBrad/ReaBoy/releases/latest/download/ReaBoy-v2.0-win-x64.zip">ReaBoy v2.0 (64-Bit ZIP)</a></li>
+          <li><a href="https://github.com/ScientificBrad/ReaBoy/releases/latest/download/ReaBoy-v2.0-win-x64.zip">ReaBoy v2.0 (Windows x64)</a></li>
+          <li><a href="downloads/ReaBoy-2.0-Android.apk">ReaBoy v2.0 for Android (.apk)</a></li>
           <li><a href="https://raw.githubusercontent.com/ScientificBrad/ReaBoy/main/install.ps1">install.ps1 (CLI Installer)</a></li>
           <li><a href="https://github.com/ScientificBrad/ReaBoy/releases/latest/download/SHA256SUMS.txt">SHA256 Checksums ↗</a></li>
           <li><a href="https://github.com/ScientificBrad/ReaBoy/releases" target="_blank" rel="noopener">Release Notes (v2.0) ↗</a></li>
@@ -345,6 +354,7 @@
           <li><a href="development.html">Architecture &amp; Development</a></li>
           <li><a href="development.html#comparison">Comparison (SameBoy &amp; BGB)</a></li>
           <li><a href="compatibility.html">Games Tested (2,561+ Titles)</a></li>
+          <li><a href="rom-demos.html">Non-Commercial ROM Demos</a></li>
           <li><a href="manual.html">Official User Manual</a></li>
           <li><a href="https://github.com/ScientificBrad/ReaBoy/blob/main/rom/BOOTIX-LICENSE.txt" target="_blank" rel="noopener">Bootix CC0-1.0 Licence ↗</a></li>
         </ul>
@@ -362,6 +372,6 @@
   </footer>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
-  <script src="js/app.js?v=2.2.5" defer></script>
+  <script src="js/app.js?v=2.2.6" defer></script>
 </body>
 </html>

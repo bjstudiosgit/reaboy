@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en-GB" data-theme="classic">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google Tag Manager / Google tag -->
+  <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-K8P8PT9Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  </script>
+  <title>ROM Demos &amp; Non-Commercial Showcase (1,163 Verified) | ReaBoy</title>
+  <meta name="description" content="Watch hardware-accurate video showcases of 1,163 non-commercial Game Boy and Game Boy Color ROM demos, hi-color screens, and demoscene productions verified in ReaBoy v2.0.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0f380f">
+  <link rel="canonical" href="https://scientificbrad.github.io/ReaBoy/rom-demos.html">
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Press+Start+2P&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=1.3.7">
+
+  <!-- OpenGraph -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:site_name" content="ReaBoy">
+  <meta property="og:title" content="ROM Demos &amp; Non-Commercial Showcase (1,163 Verified) | ReaBoy">
+  <meta property="og:description" content="Flagship 32-demo compilation video, 12 spotlight non-commercial clips, and searchable telemetry database of 1,163 verified Game Boy &amp; Color public domain demos.">
+  <meta property="og:url" content="https://scientificbrad.github.io/ReaBoy/rom-demos.html">
+  <meta property="og:image" content="https://scientificbrad.github.io/ReaBoy/assets/img/og-preview.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ROM Demos &amp; Non-Commercial Showcase (1,163 Verified) | ReaBoy">
+  <meta name="twitter:description" content="Watch hardware-accurate video captures of 1,163 non-commercial Game Boy &amp; Color demos verified in ReaBoy v2.0.">
+  <meta name="twitter:image" content="https://scientificbrad.github.io/ReaBoy/assets/img/og-preview.png">
+
+  <!-- Schema.org CollectionPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "ReaBoy Non-Commercial ROM Demos Showcase",
+    "description": "Video showcase and verified execution telemetry for 1,163 non-commercial Game Boy (DMG-01) and Game Boy Color (CGB) public domain and demoscene ROMs.",
+    "url": "https://scientificbrad.github.io/ReaBoy/rom-demos.html",
+    "creator": {
+      "@type": "Organization",
+      "name": "BJ Studios"
+    },
+    "inLanguage": "en-GB"
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- SITE HEADER / NAVIGATION -->
+  <header class="site-header">
+    <div class="wrap nav-bar">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">R</span>
+        <span>ReaBoy</span>
+      </a>
+      <button class="mobile-menu-btn" id="mobile-menu-btn" type="button" aria-expanded="false" aria-controls="nav-links">MENU</button>
+      <nav class="nav-links" id="nav-links" aria-label="Primary Navigation">
+        <a href="index.html">Home</a>
+        <a href="compatibility.html">Games Tested (2,561+)</a>
+        <a class="active" href="rom-demos.html">ROM Demos</a>
+        <a href="development.html">Development</a>
+        <a href="manual.html">User Manual</a>
+        <a href="https://github.com/ScientificBrad/ReaBoy/issues" target="_blank" rel="noopener">Report Bug ↗</a>
+        <a href="https://github.com/ScientificBrad/ReaBoy" target="_blank" rel="noopener">GitHub ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO & MASTER COMPILATION SHOWCASE -->
+    <section class="hero">
+      <div class="wrap">
+        <div class="demos-hero-grid">
+          <div>
+            <p class="eyebrow"><span class="led-dot" aria-hidden="true"></span> NON-COMMERCIAL &amp; DEMOSCENE SHOWCASE · 1,163 VERIFIED</p>
+            <h1>Non-Commercial ROM Demos.<br><span class="highlight">Silicon-Accurate Motion.</span></h1>
+            <p class="hero-lead">
+              Demoscene coders push handheld hardware far beyond retail cartridges—racing the HBlank beam to swap 2,560+ RGB555 colours mid-scanline, multiplexing 175 sprites, and streaming uncompressed FMV tiles. Every public domain demo below runs live on ReaBoy v2.0's cycle-exact SM83 CPU and Pixel FIFO PPU.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#featured-demos">Explore 12 Live Clips ↓</a>
+              <a class="btn btn-secondary" href="#demo-archive">Search All 1,163 Demos ↓</a>
+            </div>
+            <p class="hero-normal-note">
+              Looking for retail cartridge benchmarks? Inspect our <a href="compatibility.html">2,561+ Game Boy &amp; Color Compatibility Lab →</a>
+            </p>
+          </div>
+
+          <div class="showcase-theater">
+            <div class="showcase-theater-head">
+              <span>REABOY V2.0 MASTER COMPILATION · 32 DEMOS (64S)</span>
+              <span class="showcase-chapter-pill" id="active-chapter-pill">0:00 · CH #01</span>
+            </div>
+            <div class="showcase-video-frame">
+              <video id="showcase-master-video" controls autoplay muted loop playsinline preload="auto" width="640" height="640" poster="assets/img/demos/demo-2560-colors.png" aria-label="ReaBoy v2.0 32-Demo Non-Commercial Showcase Compilation Video">
+                <source src="assets/video/non-commercial-demos-showcase.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="showcase-theater-meta" id="showcase-theater-meta">
+              <div>
+                <strong id="active-chapter-title">2560 Colors Demo</strong>
+                <span id="active-chapter-sub">Game Boy Color · Hi-Color &amp; Palette · MBC5 · 2,562 Colours Verified</span>
+              </div>
+              <span class="verdict-badge verdict-pass">60 FPS HARDWARE</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="telemetry-strip reveal" style="margin-top: 2.25rem; margin-bottom: 2.25rem;">
+          <div class="telemetry-card">
+            <span class="telemetry-val">1,163</span>
+            <span class="telemetry-lbl">Verified Public Domain &amp; Demoscene ROMs</span>
+          </div>
+          <div class="telemetry-card">
+            <span class="telemetry-val">819</span>
+            <span class="telemetry-lbl">Game Boy Color (CGB) Hi-Color &amp; Homebrew</span>
+          </div>
+          <div class="telemetry-card">
+            <span class="telemetry-val">344</span>
+            <span class="telemetry-lbl">Original Game Boy (DMG-01) Demos &amp; FX</span>
+          </div>
+          <div class="telemetry-card">
+            <span class="telemetry-val">32 Clips</span>
+            <span class="telemetry-lbl">In the 64-Second Master Showcase Reel</span>
+          </div>
+        </div>
+
+        <!-- INTERACTIVE 32-CHAPTER COMPILATION NAVIGATOR -->
+        <div class="showcase-chapters-wrap reveal" id="showcase-chapters-wrap">
+          <div class="showcase-chapters-head">
+            <div>
+              <p class="eyebrow" style="margin-bottom: 0.35rem;">TIMECODE CHAPTERS · MASTER COMPILATION</p>
+              <h3>Jump Directly to Any of the 32 Showcase Demos</h3>
+            </div>
+            <div class="showcase-chapter-filters" id="chapter-platform-filters" role="group" aria-label="Filter showcase chapters by platform">
+              <button type="button" class="chip-btn active" data-ch-filter="all">All 32 Chapters</button>
+              <button type="button" class="chip-btn" data-ch-filter="CGB">Game Boy Color (16)</button>
+              <button type="button" class="chip-btn" data-ch-filter="DMG">Game Boy (16)</button>
+            </div>
+          </div>
+          <div class="showcase-chapters-grid" id="showcase-chapters-grid" aria-live="polite">
+            <p style="color: var(--text-muted); font-size: 0.88rem; margin: 0;">Loading 32 compilation chapters...</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12 SPOTLIGHT NON-COMMERCIAL VIDEO SHOWCASE CARDS -->
+    <section class="section section-alt" id="featured-demos">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">SPOTLIGHT CAPTURES · HARDWARE-ACCURATE VIDEO</p>
+            <h2>12 Flagship Non-Commercial Productions</h2>
+          </div>
+          <p>
+            Individual 10-second direct captures recorded natively inside ReaBoy v2.0 at integer scaling. Hover or scroll to watch real-time HBlank colour streaming, OAM multiplexing, rotozooming, and 3D software rendering.
+          </p>
+        </div>
+
+        <div class="showcase-filter-tabs" id="demo-spotlight-tabs" role="tablist" aria-label="Filter spotlight demo videos by platform" style="display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 1.75rem;">
+          <button type="button" class="chip-btn active" id="demo-tab-all" data-spotlight-filter="all">All 12 Productions</button>
+          <button type="button" class="chip-btn" id="demo-tab-cgb" data-spotlight-filter="CGB">Game Boy Color (6 Hi-Color &amp; FX)</button>
+          <button type="button" class="chip-btn" id="demo-tab-dmg" data-spotlight-filter="DMG">Original Game Boy (6 Classics)</button>
+        </div>
+
+        <div class="top12-grid" id="spotlight-demos-grid">
+          <article class="top12-card demo-spotlight-item reveal" data-demo-platform="CGB">
+            <div class="top12-head">
+              <div>
+                <h3 class="top12-title">2560 Colors Demo</h3>
+                <p class="top12-sub">Game Boy Color · Hi-Color &amp; Palette</p>
+              </div>
+              <span class="top12-year">2,562 Colours</span>
+            </div>
+            <div class="top12-media">
+              <video autoplay loop muted playsinline preload="metadata" width="320" height="288" poster="assets/img/demos/demo-2560-colors.png" aria-label="2560 Colors Demo gameplay capture on ReaBoy">
+                <source src="assets/video/demo-2560-colors.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="top12-body">
+              <p>Rapid mid-scanline BCPD/OCPD palette switching pushing 2,560 simultaneous RGB555 colours. (32 KiB · MBC5 · 443.3 FPS).</p>
+            </div>
+          </article>
+
+          <article class="top12-card demo-spotlight-item reveal" data-demo-platform="DMG">
+            <div class="top12-head">
+              <div>
+                <h3 class="top12-title">Distortion Demo by Anders Granlund</h3>
+                <p class="top12-sub">Original Game Boy · Demoscene Prod</p>
+              </div>
+              <span class="top12-year">HBlank FX</span>
+            </div>
+            <div class="top12-media">
+              <video autoplay loop muted playsinline preload="metadata" width="320" height="288" poster="assets/img/demos/demo-distortion.png" aria-label="Distortion Demo by Anders Granlund capture on ReaBoy">
+                <source src="assets/video/demo-distortion.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="top12-body">
+              <p>Cycle-exact HBlank SCX scanline raster manipulation producing liquid hardware screen waves. (32 KiB · ROM ONLY · 712.6 FPS).</p>
+            </div>
+          </article>
+
+          <article class="top12-card demo-spotlight-item reveal" data-demo-platform="CGB">
+            <div class="top12-head">
+              <div>
+                <h3 class="top12-title">Fli-Plasma</h3>
+                <p class="top12-sub">Game Boy Color · Raster &amp; FX</p>
+              </div>
+              <span class="top12-year">179 Colours</span>
+            </div>
+            <div class="top12-media">
+              <video autoplay loop muted playsinline preload="metadata" width="320" height="288" poster="assets/img/demos/demo-fli-plasma.png" aria-label="Fli-Plasma demo capture on ReaBoy">
+                <source src="assets/video/demo-fli-plasma.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="top12-body">
+              <p>Double-speed FLI mid-frame colour plasma effect stressing PPU dot timing and palette RAM. (64 KiB · MBC1 · 481.7 FPS).</p>
+            </div>
+          </article>
+
+          <article class="top12-card demo-spotlight-item reveal" data-demo-platform="DMG">
+            <div class="top12-head">
+              <div>
+                <h3 class="top12-title">WD Checkercube Demo V0.1</h3>
+                <p class="top12-sub">Original Game Boy · 3D Vector &amp; Matrix</p>
+              </div>
+              <span class="top12-year">3D Vector</span>
+            </div>
+            <div class="top12-media">
+              <video autoplay loop muted playsinline preload="metadata" width="320" height="288" poster="assets/img/demos/demo-wd-checkercube.png" aria-label="WD Checkercube Demo V0.1 capture on ReaBoy">
+                <source src="assets/video/demo-wd-checkercube.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="top12-body">
+              <p>Real-time rotating 3D checkered cube rendered cleanly on 1989 monochrome SM83 hardware. (32 KiB · ROM ONLY · 774.7 FPS).</p>
+            </div>
+          </article>
+
+          <article class="top12-card demo-spotlight-item reveal" data-demo-platform="CGB">
+            <div class="top12-head">
+              <div>
+                <h3 class="top12-title">CNCD Circle 1886 Demo</h3>
+                <p class="top12-sub">Game Boy Color · Raster &amp; FX</p>
+              </div>
+              <span class="top12-year">378 Colours</span>
+            </div>
+            <div class="top12-media">
+              <video autoplay loop muted playsinline preload="metadata" width="320" height="288" poster="assets/img/demos/demo-cncd-circle.png" aria-label="CNCD Circle 1886 Demo capture on ReaBoy">
+                <source src="assets/video/demo-cncd-circle.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="top12-body">
+              <p>Classic European demoscene production combining smooth sinusoidal sprites and layered palettes. (64 KiB · MBC5 · 427.7 FPS).</p>
+            </div>
+          </article>
+
+          <article class="top12-card demo-spotlight-item reveal" data-demo-platform="DMG">
+            <div class="top12-head">
+              <div>
+                <h3 class="top12-title">Greyscale Moving Globe Demo</h3>
+                <p class="top12-sub">Original Game Boy · Demoscene Prod</p>
+              </div>
+              <span class="top12-year">Globe FX</span>
+            </div>
+            <div class="top12-media">
+              <video autoplay loop muted playsinline preload="metadata" width="320" height="288" poster="assets/img/demos/demo-moving-globe.png" aria-label="Greyscale Moving Globe Demo capture on ReaBoy">
+                <source src="assets/video/demo-moving-globe.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="top12-body">
+              <p>Full-motion spinning planetary texture showcase with software frame dithering. (32 KiB · ROM ONLY · 692.7 FPS).</p>
+            </div>
+          </article>
+
+          <article class="top12-card demo-spotlight-item reveal" data-demo-platform="CGB">
+            <div class="top12-head">
+              <div>
+                <h3 class="top12-title">175 Sprite Parallax Starfield Demo</h3>
+                <p class="top12-sub">Game Boy Color · Sprite &amp; Scroll FX</p>
+              </div>
+              <span class="top12-year">175 Sprites</span>
+            </div>
+            <div class="top12-media">
+              <video autoplay loop muted playsinline preload="metadata" width="320" height="288" poster="assets/img/demos/demo-parallax-starfield.png" aria-label="175 Sprite Parallax Starfield Demo capture on ReaBoy">
+                <source src="assets/video/demo-parallax-starfield.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="top12-body">
+              <p>Dynamic OAM multiplexing displaying 175 scrolling depth-layered stars cleanly across scanlines. (32 KiB · ROM ONLY · 153.5 FPS).</p>
+            </div>
+          </article>
+
+          <article class="top12-card demo-spotlight-item reveal" data-demo-platform="DMG">
+            <div class="top12-head">
+              <div>
+                <h3 class="top12-title">Armageddon Video Trailer (GBTK Video)</h3>
+                <p class="top12-sub">Original Game Boy · Demoscene Prod</p>
+              </div>
+              <span class="top12-year">2 MiB FMV</span>
+            </div>
+            <div class="top12-media">
+              <video autoplay loop muted playsinline preload="metadata" width="320" height="288" poster="assets/img/demos/demo-armageddon-trailer.png" aria-label="Armageddon Video Trailer GBTK capture on ReaBoy">
+                <source src="assets/video/demo-armageddon-trailer.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="top12-body">
+              <p>Streaming full-motion FMV tile playback benchmarked with continuous VRAM DMA tile updates. (2,048 KiB · MBC1 · 761.9 FPS).</p>
+            </div>
+          </article>
+
+          <article class="top12-card demo-spotlight-item reveal" data-demo-platform="CGB">
+            <div class="top12-head">
+              <div>
+                <h3 class="top12-title">KOLOBOK ZOOM 1</h3>
+                <p class="top12-sub">Game Boy Color · CGB Homebrew (PD)</p>
+              </div>
+              <span class="top12-year">325 Colours</span>
+            </div>
+            <div class="top12-media">
+              <video autoplay loop muted playsinline preload="metadata" width="320" height="288" poster="assets/img/demos/demo-kolobok-zoom.png" aria-label="KOLOBOK ZOOM 1 demo capture on ReaBoy">
+                <source src="assets/video/demo-kolobok-zoom.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="top12-body">
+              <p>Classic software rotozoomer &amp; multi-colour plasma showcase pushing 325+ simultaneous RGB555 shades. (128 KiB · MBC1+RAM · 397.4 FPS).</p>
+            </div>
+          </article>
+
+          <article class="top12-card demo-spotlight-item reveal" data-demo-platform="DMG">
+            <div class="top12-head">
+              <div>
+                <h3 class="top12-title">Mango Flex Demo</h3>
+                <p class="top12-sub">Original Game Boy · Demoscene Prod</p>
+              </div>
+              <span class="top12-year">Raster Flex</span>
+            </div>
+            <div class="top12-media">
+              <video autoplay loop muted playsinline preload="metadata" width="320" height="288" poster="assets/img/demos/demo-mango-flex.png" aria-label="Mango Flex Demo capture on ReaBoy">
+                <source src="assets/video/demo-mango-flex.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="top12-body">
+              <p>Smooth vertical raster-flexing distortion effect with crisp OAM sprite synchronization. (32 KiB · ROM ONLY · 745.9 FPS).</p>
+            </div>
+          </article>
+
+          <article class="top12-card demo-spotlight-item reveal" data-demo-platform="CGB">
+            <div class="top12-head">
+              <div>
+                <h3 class="top12-title">Less is More Demo by Abyss</h3>
+                <p class="top12-sub">Game Boy Color · Demoscene Prod</p>
+              </div>
+              <span class="top12-year">Abyss</span>
+            </div>
+            <div class="top12-media">
+              <video autoplay loop muted playsinline preload="metadata" width="320" height="288" poster="assets/img/demos/demo-less-is-more.png" aria-label="Less is More Demo by Abyss capture on ReaBoy">
+                <source src="assets/video/demo-less-is-more.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="top12-body">
+              <p>Renowned Abyss demoscene demo featuring fluid copper bars, sine scrollers, and chiptune timing. (64 KiB · MBC1 · 349.8 FPS).</p>
+            </div>
+          </article>
+
+          <article class="top12-card demo-spotlight-item reveal" data-demo-platform="DMG">
+            <div class="top12-head">
+              <div>
+                <h3 class="top12-title">Blastroids</h3>
+                <p class="top12-sub">Original Game Boy · DMG Homebrew (PD)</p>
+              </div>
+              <span class="top12-year">Arcade PD</span>
+            </div>
+            <div class="top12-media">
+              <video autoplay loop muted playsinline preload="metadata" width="320" height="288" poster="assets/img/demos/demo-blastroids.png" aria-label="Blastroids public domain game demo capture on ReaBoy">
+                <source src="assets/video/demo-blastroids.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="top12-body">
+              <p>Fast-paced public domain arcade vector shooter with smooth 60 FPS collision &amp; sprite rotation. (32 KiB · ROM ONLY · 819.8 FPS).</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPLETE SEARCHABLE 1,163-DEMO ARCHIVE -->
+    <section class="section" id="demo-archive">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">COMPLETE NON-COMMERCIAL ARCHIVE · 1,163 VERIFIED DEMOS</p>
+            <h2>Public Domain, Homebrew &amp; Demoscene Database</h2>
+          </div>
+          <p>
+            Every verified non-commercial Game Boy Color (819) and original Game Boy (344) ROM verified live inside ReaBoy v2.0. Filter by platform, effect category, mapper, or title below.
+          </p>
+        </div>
+
+        <div class="compat-toolbar">
+          <input class="compat-search" id="demos-search" type="search" placeholder="Search 1,163 demos, authors, filenames, MBC5, raster..." aria-label="Search non-commercial ROM demos">
+          <div style="display: flex; flex-wrap: wrap; gap: 0.45rem;" id="demos-platform-tabs" role="group" aria-label="Filter archive by platform">
+            <button type="button" class="chip-btn active" data-demo-plat="all">All Platforms (1,163)</button>
+            <button type="button" class="chip-btn" data-demo-plat="CGB">Game Boy Color (819)</button>
+            <button type="button" class="chip-btn" data-demo-plat="DMG">Game Boy (344)</button>
+          </div>
+        </div>
+
+        <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.85rem; margin-bottom: 1rem;">
+          <div style="display: flex; flex-wrap: wrap; gap: 0.4rem;" id="demos-category-tabs" role="group" aria-label="Filter archive by category">
+            <button type="button" class="chip-btn active" data-demo-cat="all">All Categories</button>
+            <button type="button" class="chip-btn" data-demo-cat="Demoscene Prod">Demoscene Prod</button>
+            <button type="button" class="chip-btn" data-demo-cat="Hi-Color &amp; Palette">Hi-Color &amp; Palette</button>
+            <button type="button" class="chip-btn" data-demo-cat="Raster &amp; FX">Raster &amp; FX</button>
+            <button type="button" class="chip-btn" data-demo-cat="Sprite &amp; Scroll FX">Sprite &amp; Scroll FX</button>
+            <button type="button" class="chip-btn" data-demo-cat="3D Vector &amp; Matrix">3D Vector &amp; Matrix</button>
+            <button type="button" class="chip-btn" data-demo-cat="Chiptune &amp; Audio">Chiptune &amp; Audio</button>
+            <button type="button" class="chip-btn" data-demo-cat="CGB Homebrew (PD)">CGB Homebrew (PD)</button>
+            <button type="button" class="chip-btn" data-demo-cat="DMG Homebrew (PD)">DMG Homebrew (PD)</button>
+          </div>
+          <span id="demos-count-label" style="font-family: var(--font-mono); font-size: 0.82rem; color: var(--text-muted); font-weight: 600;">Loading 1,163 verified demos...</span>
+        </div>
+
+        <div class="compat-table-wrap">
+          <table class="compat-table" aria-label="Non-Commercial and Public Domain Game Boy ROM Demos Verified in ReaBoy">
+            <thead>
+              <tr>
+                <th>Demo Title</th>
+                <th>Platform</th>
+                <th>Category</th>
+                <th>Cartridge Hardware</th>
+                <th>Verified Frame &amp; Colour Telemetry</th>
+                <th style="text-align: right;">Tested</th>
+              </tr>
+            </thead>
+            <tbody id="demos-tbody">
+              <tr>
+                <td colspan="6" style="text-align: center; padding: 2rem; color: var(--text-muted);">Loading 1,163 non-commercial ROM demo verification telemetry...</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="demos-pagination" id="demos-pagination" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0.85rem; margin-top: 1.5rem;">
+          <button type="button" class="btn btn-primary" id="demos-load-more-btn">Load More (+50)</button>
+          <button type="button" class="btn btn-secondary" id="demos-show-all-btn">Show All Matching</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div class="footer-col footer-col-brand">
+        <a class="brand" href="index.html">
+          <span class="brand-mark" aria-hidden="true">R</span>
+          <span>ReaBoy</span>
+        </a>
+        <p class="footer-tagline">
+          Pure 1989 silicon fidelity: the scientific, bit-exact Game Boy &amp; Color emulator for Windows x64. Engineered by <strong>BJ Studios — Manchester, England</strong> · &copy; 2026 BJ Studios. Built with precision for emulation purists.
+        </p>
+        <p class="footer-disclaimer">
+          ReaBoy is an independent open-source emulator. Not affiliated with or endorsed by Nintendo. All Game Boy trademarks and titles belong to their respective rights holders.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Downloads</h4>
+        <ul class="footer-links">
+          <li><a href="https://github.com/ScientificBrad/ReaBoy/releases/latest/download/ReaBoy-v2.0-win-x64.zip">ReaBoy v2.0 (Windows x64)</a></li>
+          <li><a href="downloads/ReaBoy-2.0-Android.apk">ReaBoy v2.0 for Android (.apk)</a></li>
+          <li><a href="https://raw.githubusercontent.com/ScientificBrad/ReaBoy/main/install.ps1">install.ps1 (CLI Installer)</a></li>
+          <li><a href="https://github.com/ScientificBrad/ReaBoy/releases/latest/download/SHA256SUMS.txt">SHA256 Checksums ↗</a></li>
+          <li><a href="https://github.com/ScientificBrad/ReaBoy/releases" target="_blank" rel="noopener">Release Notes (v2.0) ↗</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Technical</h4>
+        <ul class="footer-links">
+          <li><a href="development.html">Architecture &amp; Development</a></li>
+          <li><a href="development.html#comparison">Comparison (SameBoy &amp; BGB)</a></li>
+          <li><a href="compatibility.html">Games Tested (2,561+ Titles)</a></li>
+          <li><a href="rom-demos.html">Non-Commercial ROM Demos</a></li>
+          <li><a href="manual.html">Official User Manual</a></li>
+          <li><a href="https://github.com/ScientificBrad/ReaBoy/blob/main/rom/BOOTIX-LICENSE.txt" target="_blank" rel="noopener">Bootix CC0-1.0 Licence ↗</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Open Source</h4>
+        <ul class="footer-links">
+          <li><a href="https://github.com/ScientificBrad/ReaBoy" target="_blank" rel="noopener">GitHub Repository ↗</a></li>
+          <li><a href="https://github.com/ScientificBrad/ReaBoy/issues" target="_blank" rel="noopener">Issue Tracker ↗</a></li>
+          <li><a href="https://github.com/ScientificBrad/ReaBoy/blob/main/LICENSE" target="_blank" rel="noopener">MIT License ↗</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="js/app.js?v=2.2.6" defer></script>
+  <script>
+    (function () {
+      'use strict';
+
+      function fmtSec(sec) {
+        var mins = Math.floor(sec / 60);
+        var rem = Math.floor(sec % 60);
+        return mins + ':' + String(rem).padStart(2, '0');
+      }
+
+      function platformLabel(plat) {
+        return plat === 'CGB' ? 'Game Boy Color' : 'Game Boy';
+      }
+
+      // 1. Master Showcase Chapter Grid & Live Sync
+      var masterVideo = document.getElementById('showcase-master-video');
+      var chaptersGrid = document.getElementById('showcase-chapters-grid');
+      var activePill = document.getElementById('active-chapter-pill');
+      var activeTitle = document.getElementById('active-chapter-title');
+      var activeSub = document.getElementById('active-chapter-sub');
+      var chapters = [];
+      var activeChapterFilter = 'all';
+
+      function updateActiveChapterDisplay(ch) {
+        if (!ch) return;
+        if (activePill) {
+          activePill.textContent = fmtSec(ch.timeSec) + ' · CH #' + String(ch.index).padStart(2, '0');
+        }
+        if (activeTitle) {
+          activeTitle.textContent = ch.title;
+        }
+        if (activeSub) {
+          activeSub.textContent =
+            platformLabel(ch.platform) +
+            ' · ' +
+            ch.category +
+            ' · ' +
+            ch.mapper +
+            ' · ' +
+            Number(ch.colors || 4).toLocaleString() +
+            ' Colours';
+        }
+        if (chaptersGrid) {
+          chaptersGrid.querySelectorAll('.showcase-chapter-btn').forEach(function (btn) {
+            btn.classList.toggle('active', Number(btn.dataset.chIdx) === ch.index);
+          });
+        }
+      }
+
+      var showcaseBlobUrl = null;
+      var showcaseBlobPromise = null;
+      var manualSeekLockUntil = 0;
+
+      function ensureSeekableAndJump(ch) {
+        if (!masterVideo) return;
+        var targetTime = Math.max(0.05, Number(ch.timeSec || 0) + 0.05);
+        manualSeekLockUntil = performance.now() + 900;
+        updateActiveChapterDisplay(ch);
+
+        var canSeekDirectly = false;
+        try {
+          if (masterVideo.seekable && masterVideo.seekable.length > 0) {
+            canSeekDirectly = masterVideo.seekable.end(masterVideo.seekable.length - 1) >= targetTime;
+          }
+        } catch (e) {}
+
+        if (canSeekDirectly) {
+          masterVideo.currentTime = targetTime;
+          masterVideo.play().catch(function () {});
+          return;
+        }
+
+        if (!showcaseBlobPromise) {
+          showcaseBlobPromise = fetch('assets/video/non-commercial-demos-showcase.mp4')
+            .then(function (resp) { return resp.blob(); })
+            .then(function (blob) {
+              showcaseBlobUrl = URL.createObjectURL(blob);
+              return showcaseBlobUrl;
+            });
+        }
+
+        showcaseBlobPromise.then(function (blobUrl) {
+          if (masterVideo.src !== blobUrl) {
+            masterVideo.src = blobUrl;
+            masterVideo.addEventListener('loadedmetadata', function onMeta() {
+              masterVideo.removeEventListener('loadedmetadata', onMeta);
+              masterVideo.currentTime = targetTime;
+              masterVideo.play().catch(function () {});
+            });
+            masterVideo.load();
+          } else {
+            masterVideo.currentTime = targetTime;
+            masterVideo.play().catch(function () {});
+          }
+        }).catch(function () {});
+      }
+
+      function renderChapters() {
+        if (!chaptersGrid) return;
+        chaptersGrid.innerHTML = '';
+        var visible = chapters.filter(function (c) {
+          return activeChapterFilter === 'all' || c.platform === activeChapterFilter;
+        });
+
+        if (!visible.length) {
+          var empty = document.createElement('p');
+          empty.textContent = 'No chapters match this filter.';
+          empty.style.margin = '0';
+          chaptersGrid.appendChild(empty);
+          return;
+        }
+
+        var currentTime = masterVideo ? masterVideo.currentTime || 0 : 0;
+        var currentCh = chapters.slice().reverse().find(function (c) { return currentTime >= c.timeSec; }) || chapters[0];
+
+        visible.forEach(function (ch) {
+          var btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'showcase-chapter-btn';
+          btn.dataset.chIdx = String(ch.index);
+          if (currentCh && currentCh.index === ch.index) {
+            btn.classList.add('active');
+          }
+
+          var topRow = document.createElement('div');
+          topRow.className = 'chapter-top';
+
+          var timeSpan = document.createElement('span');
+          timeSpan.className = 'chapter-time';
+          timeSpan.textContent = fmtSec(ch.timeSec) + ' · #' + String(ch.index).padStart(2, '0');
+
+          var platSpan = document.createElement('span');
+          platSpan.className = 'chapter-plat ' + (ch.platform === 'CGB' ? 'chapter-plat-cgb' : 'chapter-plat-dmg');
+          platSpan.textContent = ch.platform === 'CGB' ? 'CGB' : 'DMG';
+
+          topRow.appendChild(timeSpan);
+          topRow.appendChild(platSpan);
+
+          var nameStrong = document.createElement('strong');
+          nameStrong.className = 'chapter-title';
+          nameStrong.textContent = ch.title;
+
+          var catSmall = document.createElement('span');
+          catSmall.className = 'chapter-cat';
+          catSmall.textContent = ch.category + ' · ' + ch.mapper;
+
+          btn.appendChild(topRow);
+          btn.appendChild(nameStrong);
+          btn.appendChild(catSmall);
+
+          btn.addEventListener('click', function () {
+            ensureSeekableAndJump(ch);
+          });
+
+          chaptersGrid.appendChild(btn);
+        });
+      }
+
+      fetch('assets/demos_showcase_chapters.json')
+        .then(function (r) { return r.json(); })
+        .then(function (data) {
+          if (Array.isArray(data) && data.length) {
+            chapters = data;
+            renderChapters();
+            updateActiveChapterDisplay(chapters[0]);
+          }
+        })
+        .catch(function (err) {
+          console.warn('Could not load demos_showcase_chapters.json:', err);
+        });
+
+      if (masterVideo) {
+        masterVideo.addEventListener('timeupdate', function () {
+          if (!chapters.length || masterVideo.seeking || performance.now() < manualSeekLockUntil) return;
+          var t = masterVideo.currentTime || 0;
+          var match = chapters[0];
+          for (var i = chapters.length - 1; i >= 0; i--) {
+            if (t >= chapters[i].timeSec) {
+              match = chapters[i];
+              break;
+            }
+          }
+          updateActiveChapterDisplay(match);
+        });
+      }
+
+      var chapterFilters = document.getElementById('chapter-platform-filters');
+      if (chapterFilters) {
+        chapterFilters.querySelectorAll('.chip-btn').forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            chapterFilters.querySelectorAll('.chip-btn').forEach(function (b) { b.classList.remove('active'); });
+            btn.classList.add('active');
+            activeChapterFilter = btn.dataset.chFilter || 'all';
+            renderChapters();
+          });
+        });
+      }
+
+      // 2. Spotlight 12 Demo Cards Filter
+      var spotlightTabs = document.getElementById('demo-spotlight-tabs');
+      if (spotlightTabs) {
+        spotlightTabs.querySelectorAll('.chip-btn').forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            spotlightTabs.querySelectorAll('.chip-btn').forEach(function (b) { b.classList.remove('active'); });
+            btn.classList.add('active');
+            var plat = btn.dataset.spotlightFilter || 'all';
+            document.querySelectorAll('.demo-spotlight-item').forEach(function (card) {
+              var cardPlat = card.getAttribute('data-demo-platform');
+              card.hidden = !(plat === 'all' || cardPlat === plat);
+            });
+          });
+        });
+      }
+
+      // 3. Complete 1,163-Demo Archive Search & Table Renderer
+      var allDemos = [];
+      var activePlat = 'all';
+      var activeCat = 'all';
+      var query = '';
+      var limit = 50;
+
+      var searchEl = document.getElementById('demos-search');
+      var tbodyEl = document.getElementById('demos-tbody');
+      var countLabelEl = document.getElementById('demos-count-label');
+      var loadMoreBtn = document.getElementById('demos-load-more-btn');
+      var showAllBtn = document.getElementById('demos-show-all-btn');
+      var platTabs = document.getElementById('demos-platform-tabs');
+      var catTabs = document.getElementById('demos-category-tabs');
+
+      function renderArchive() {
+        if (!tbodyEl) return;
+        var q = query.trim().toLowerCase();
+
+        var filtered = allDemos.filter(function (d) {
+          if (activePlat !== 'all' && d.platform !== activePlat) return false;
+          if (activeCat !== 'all' && d.category !== activeCat) return false;
+          if (q) {
+            var hay = (
+              (d.title || '') + ' ' +
+              (d.filename || '') + ' ' +
+              (d.category || '') + ' ' +
+              (d.mapper || '') + ' ' +
+              (d.notes || '') + ' ' +
+              platformLabel(d.platform)
+            ).toLowerCase();
+            if (hay.indexOf(q) === -1) return false;
+          }
+          return true;
+        });
+
+        var shown = filtered.slice(0, limit);
+        if (countLabelEl) {
+          countLabelEl.textContent =
+            'Showing ' + shown.length.toLocaleString() + ' of ' + filtered.length.toLocaleString() + ' verified demos';
+        }
+
+        if (loadMoreBtn) {
+          loadMoreBtn.style.display = shown.length < filtered.length ? '' : 'none';
+        }
+        if (showAllBtn) {
+          showAllBtn.style.display = shown.length < filtered.length ? '' : 'none';
+        }
+
+        tbodyEl.innerHTML = '';
+        if (!shown.length) {
+          var trEmpty = document.createElement('tr');
+          var tdEmpty = document.createElement('td');
+          tdEmpty.colSpan = 6;
+          tdEmpty.style.textAlign = 'center';
+          tdEmpty.style.padding = '2rem';
+          tdEmpty.style.color = 'var(--text-muted)';
+          tdEmpty.textContent = 'No non-commercial ROM demos match your current filter.';
+          trEmpty.appendChild(tdEmpty);
+          tbodyEl.appendChild(trEmpty);
+          return;
+        }
+
+        var frag = document.createDocumentFragment();
+        shown.forEach(function (d) {
+          var tr = document.createElement('tr');
+
+          // Title + Filename
+          var tdTitle = document.createElement('td');
+          var titleStrong = document.createElement('strong');
+          titleStrong.textContent = d.title || d.filename;
+          tdTitle.appendChild(titleStrong);
+          if (d.filename) {
+            var br = document.createElement('br');
+            var fileCode = document.createElement('code');
+            fileCode.textContent = d.filename;
+            fileCode.style.fontSize = '0.73rem';
+            fileCode.style.opacity = '0.88';
+            tdTitle.appendChild(br);
+            tdTitle.appendChild(fileCode);
+          }
+
+          // Platform Pill
+          var tdPlat = document.createElement('td');
+          var platPill = document.createElement('span');
+          platPill.className = 'verdict-badge demos-plat-pill ' + (d.platform === 'CGB' ? 'demos-plat-cgb' : 'demos-plat-dmg');
+          platPill.textContent = platformLabel(d.platform);
+          tdPlat.appendChild(platPill);
+
+          // Category
+          var tdCat = document.createElement('td');
+          tdCat.textContent = d.category || 'Demoscene Prod';
+
+          // Mapper + ROM Size
+          var tdMapper = document.createElement('td');
+          var mapCode = document.createElement('code');
+          mapCode.textContent = (d.mapper || 'ROM ONLY') + ' · ' + (d.sizeKb || 32) + ' KiB';
+          tdMapper.appendChild(mapCode);
+
+          // Verified Telemetry
+          var tdNotes = document.createElement('td');
+          tdNotes.style.fontSize = '0.83rem';
+          tdNotes.style.color = 'var(--text-muted)';
+          tdNotes.textContent =
+            (d.uniqueFrames || 0).toLocaleString() +
+            ' frames · ' +
+            (d.distinctColors || 4).toLocaleString() +
+            ' colours · ' +
+            Number(d.fps || 60).toFixed(1) +
+            ' FPS';
+
+          // Tested PASSED badge
+          var tdStatus = document.createElement('td');
+          tdStatus.style.textAlign = 'right';
+          var passBadge = document.createElement('span');
+          passBadge.className = 'verdict-badge verdict-pass';
+          passBadge.textContent = 'PASSED';
+          tdStatus.appendChild(passBadge);
+
+          tr.appendChild(tdTitle);
+          tr.appendChild(tdPlat);
+          tr.appendChild(tdCat);
+          tr.appendChild(tdMapper);
+          tr.appendChild(tdNotes);
+          tr.appendChild(tdStatus);
+          frag.appendChild(tr);
+        });
+        tbodyEl.appendChild(frag);
+      }
+
+      fetch('assets/non_commercial_demos.json')
+        .then(function (r) { return r.json(); })
+        .then(function (data) {
+          if (Array.isArray(data)) {
+            allDemos = data;
+            renderArchive();
+          }
+        })
+        .catch(function (err) {
+          console.error('Could not load non_commercial_demos.json:', err);
+          if (countLabelEl) countLabelEl.textContent = 'Failed to load demo database.';
+        });
+
+      if (searchEl) {
+        searchEl.addEventListener('input', function () {
+          query = searchEl.value || '';
+          limit = 50;
+          renderArchive();
+        });
+      }
+
+      if (platTabs) {
+        platTabs.querySelectorAll('.chip-btn').forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            platTabs.querySelectorAll('.chip-btn').forEach(function (b) { b.classList.remove('active'); });
+            btn.classList.add('active');
+            activePlat = btn.dataset.demoPlat || 'all';
+            limit = 50;
+            renderArchive();
+          });
+        });
+      }
+
+      if (catTabs) {
+        catTabs.querySelectorAll('.chip-btn').forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            catTabs.querySelectorAll('.chip-btn').forEach(function (b) { b.classList.remove('active'); });
+            btn.classList.add('active');
+            activeCat = btn.dataset.demoCat || 'all';
+            limit = 50;
+            renderArchive();
+          });
+        });
+      }
+
+      if (loadMoreBtn) {
+        loadMoreBtn.addEventListener('click', function () {
+          limit += 50;
+          renderArchive();
+        });
+      }
+
+      if (showAllBtn) {
+        showAllBtn.addEventListener('click', function () {
+          limit = 99999;
+          renderArchive();
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
